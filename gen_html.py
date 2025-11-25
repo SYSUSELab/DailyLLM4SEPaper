@@ -193,7 +193,7 @@ class HTMLGenerator:
 
     <footer>
         <div class="container">
-            <p>© 2025 DailyPaper | 数据来源: ArXiv | <a href="https://github.com/yourusername/DailyPaper" target="_blank">GitHub</a></p>
+            <p>© 2025 DailyPaper | 数据来源: ArXiv | <a href="https://github.com/SYSUSELab/DailyPaper" target="_blank">GitHub</a></p>
         </div>
     </footer>
 
