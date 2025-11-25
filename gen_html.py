@@ -141,6 +141,14 @@ class HTMLGenerator:
                 </div>
             </div>
             <div class="filter-group">
+                <label class="filter-label">📊 benchmark：</label>
+                <div class="filters benchmark-filters">
+                    <button class="filter-btn benchmark-btn active" data-benchmark="all">全部 ({len(self.papers)})</button>
+                    <button class="filter-btn benchmark-btn" data-benchmark="benchmark">benchmark ({benchmark_count})</button>
+                    <button class="filter-btn benchmark-btn" data-benchmark="non-benchmark">non-benchmark ({non_benchmark_count})</button>
+                </div>
+            </div>
+            <div class="filter-group">
                 <label class="filter-label">🏷️ 研究领域：</label>
                 <div class="filters category-filters">
                     <button class="filter-btn category-btn active" data-category="all">全部 ({len(self.papers)})</button>
@@ -154,14 +162,6 @@ class HTMLGenerator:
                     <button class="filter-btn category-btn" data-category="Code Testing">Code Testing ({test_count})</button>
                     <button class="filter-btn category-btn" data-category="Code Pre-Training">Code Pre-Training ({pretrain_count})</button>
                     <button class="filter-btn category-btn" data-category="Code Instruction-Tuning">Code Instruction-Tuning ({tune_count})</button>
-                </div>
-            </div>
-            <div class="filter-group">
-                <label class="filter-label">📊 benchmark：</label>
-                <div class="filters benchmark-filters">
-                    <button class="filter-btn benchmark-btn active" data-benchmark="all">全部 ({len(self.papers)})</button>
-                    <button class="filter-btn benchmark-btn" data-benchmark="benchmark">benchmark ({benchmark_count})</button>
-                    <button class="filter-btn benchmark-btn" data-benchmark="non-benchmark">non-benchmark ({non_benchmark_count})</button>
                 </div>
             </div>
             <div class="filter-group">
@@ -193,7 +193,7 @@ class HTMLGenerator:
 
     <footer>
         <div class="container">
-            <p>© 2025 DailyPaper | 数据来源: ArXiv | <a href="https://github.com/SYSUSELab/DailyPaper" target="_blank">GitHub</a></p>
+            <p>© 2025 DailyPaper | 数据来源: ArXiv | <a href="https://github.com/SYSUSELab/DailyLLM4SEPaper" target="_blank">GitHub</a></p>
         </div>
     </footer>
 
