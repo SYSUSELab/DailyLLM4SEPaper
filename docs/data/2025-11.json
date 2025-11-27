@@ -668,5 +668,53 @@
     "published": "2025-11-24",
     "update_time": "2025-11-24",
     "download_time": "2025-11-26 01:46:33"
+  },
+  {
+    "id": "2511.20617",
+    "title": "Translating Large-Scale C Repositories to Idiomatic Rust",
+    "abstract": "Existing C to Rust translation techniques fail to balance quality and scalability: transpilation-based approaches scale to large projects but produce code with poor safety, idiomaticity, and readability. In contrast, LLM-based techniques are prohibitively expensive due to their reliance on frontier models (without which they cannot reliably generate compilable translations), thus limiting scalability. This paper proposes Rustine, a fully automated pipeline for effective and efficient repository-level C to idiomatic safe Rust translation. Evaluating on a diverse set of 23 C programs, ranging from 27 to 13,200 lines of code, Rustine can generate fully compilable Rust code for all and achieve 87% functional equivalence (passing 1,063,099 assertions out of 1,221,192 in test suites with average function and line coverage of 74.7% and 72.2%). Compared to six prior repository-level C to Rust translation techniques, the translations by Rustine are overall safer (fewer raw pointers, pointer arithmetic, and unsafe constructs), more idiomatic (fewer Rust linter violations), and more readable. When the translations cannot pass all tests to fulfill functional equivalence, human developers were able to complete the task in 4.5 hours, on average, using Rustine as debugging support.",
+    "arxiv_url": "https://arxiv.org/abs/2511.20617",
+    "authors": [
+      "Saman Dehghan",
+      "Tianran Sun",
+      "Tianxiang Wu",
+      "Zihan Li",
+      "Reyhaneh Jabbarvand"
+    ],
+    "first_author": "Saman Dehghan",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Translation"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.20617v1",
+    "published": "2025-11-25",
+    "update_time": "2025-11-25",
+    "download_time": "2025-11-27 01:43:56"
+  },
+  {
+    "id": "2511.20403",
+    "title": "LLMs for Automated Unit Test Generation and Assessment in Java: The AgoneTest Framework",
+    "abstract": "Unit testing is an essential but resource-intensive step in software development, ensuring individual code units function correctly. This paper introduces AgoneTest, an automated evaluation framework for Large Language Model-generated (LLM) unit tests in Java. AgoneTest does not aim to propose a novel test generation algorithm; rather, it supports researchers and developers in comparing different LLMs and prompting strategies through a standardized end-to-end evaluation pipeline under realistic conditions. We introduce the Classes2Test dataset, which maps Java classes under test to their corresponding test classes, and a framework that integrates advanced evaluation metrics, such as mutation score and test smells, for a comprehensive assessment. Experimental results show that, for the subset of tests that compile, LLM-generated tests can match or exceed human-written tests in terms of coverage and defect detection. Our findings also demonstrate that enhanced prompting strategies contribute to test quality. AgoneTest clarifies the potential of LLMs in software testing and offers insights for future improvements in model design, prompt engineering, and testing practices.",
+    "arxiv_url": "https://arxiv.org/abs/2511.20403",
+    "authors": [
+      "Andrea Lops",
+      "Fedelucio Narducci",
+      "Azzurra Ragone",
+      "Michelantonio Trizio",
+      "Claudio Barto"
+    ],
+    "first_author": "Andrea Lops",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": true,
+    "conference": "40th IEEE/ACM International Conference on Automated Software Engineering",
+    "pdf_url": "https://arxiv.org/pdf/2511.20403v1",
+    "published": "2025-11-25",
+    "update_time": "2025-11-25",
+    "download_time": "2025-11-27 01:44:11"
   }
 ]
