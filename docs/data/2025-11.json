@@ -814,5 +814,57 @@
     "published": "2025-11-25",
     "update_time": "2025-11-25",
     "download_time": "2025-11-29 01:44:11"
+  },
+  {
+    "id": "2511.21197",
+    "title": "Bug Detective and Quality Coach: Developers' Mental Models of AI-Assisted IDE Tools",
+    "abstract": "AI-assisted tools support developers in performing cognitively demanding tasks such as bug detection and code readability assessment. Despite the advancements in the technical characteristics of these tools, little is known about how developers mentally model them and how mismatches affect trust, control, and adoption. We conducted six co-design workshops with 58 developers to elicit their mental models about AI-assisted bug detection and readability features. It emerged that developers conceive bug detection tools as \\textit{bug detectives}, which warn users only in case of critical issues, guaranteeing transparency, actionable feedback, and confidence cues. Readability assessment tools, on the other hand, are envisioned as \\textit{quality coaches}, which provide contextual, personalized, and progressive guidance. Trust, in both tasks, depends on the clarity of explanations, timing, and user control. A set of design principles for Human-Centered AI in IDEs has been distilled, aiming to balance disruption with support, conciseness with depth, and automation with human agency.",
+    "arxiv_url": "https://arxiv.org/abs/2511.21197",
+    "authors": [
+      "Paolo Buono",
+      "Mary Cerullo",
+      "Stefano Cirillo",
+      "Giuseppe Desolda",
+      "Francesco Greco",
+      "Emanuela Guglielmi",
+      "Grazia Margarella",
+      "Giuseppe Polese",
+      "Simone Scalabrino",
+      "Cesare Tucci"
+    ],
+    "first_author": "Paolo Buono",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Debug"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.21197v1",
+    "published": "2025-11-26",
+    "update_time": "2025-11-26",
+    "download_time": "2025-11-30 01:56:35"
+  },
+  {
+    "id": "2511.19875",
+    "title": "CodeFuse-CommitEval: Towards Benchmarking LLM's Power on Commit Message and Code Change Inconsistency Detection",
+    "abstract": "Version control relies on commit messages to convey the rationale for code changes, but these messages are often low quality and, more critically, inconsistent with their diffs-known as message-code inconsistency (MCI). MCIs mislead reviewers, hinder maintenance, contaminate research datasets, and may obscure security patches. Yet, no dedicated benchmark exists to evaluate models for MCI detection. We introduce CODEFUSE-COMMITEVAL, the first benchmark designed for MCI detection using large language models (LLMs). Built on the ApacheCM dataset for diversity and quality, we generate seven types of inconsistent messages through rule-guided mutations of originally consistent commits and apply two-fold validation to verify both positive and negative samples. Using this labeled dataset of message-diff pairs, we evaluate six state-of-the-art open-source LLMs under a vanilla setting and with three augmentation strategies: few-shot prompting, chain-of-thought, and extended context. Results show models detect inconsistent commits more reliably than consistent ones (average Recall 85.95%, Precision 80.28%, Specificity 63.8%); gpt-oss-20B performs best overall but uses over twice the tokens of others. Augmentation effects vary: adjacent context helps larger models but adds noise for smaller ones; few-shot improves accuracy and reduces token use, yet increases universally incorrect predictions; chain-of-thought boosts precision and specificity at the cost of recall and higher token consumption. Type-wise analysis reveals higher detectability for component, file-path, and operation inconsistencies, but lower accuracy and higher token cost for intent-level \"purpose\" inconsistencies. CODEFUSE-COMMITEVAL provides a rigorous foundation for measuring, comparing, and advancing MCI detection, highlighting the need for richer context and balanced data to capture high-level semantic gaps.",
+    "arxiv_url": "https://arxiv.org/abs/2511.19875",
+    "authors": [
+      "Qingyu Zhang",
+      "Puzhuo Liu",
+      "Peng Di",
+      "Chenxiong Qian"
+    ],
+    "first_author": "Qingyu Zhang",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Debug"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.19875v1",
+    "published": "2025-11-25",
+    "update_time": "2025-11-25",
+    "download_time": "2025-11-30 01:58:09"
   }
 ]
