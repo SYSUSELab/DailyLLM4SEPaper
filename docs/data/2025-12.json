@@ -1,0 +1,51 @@
+[
+  {
+    "id": "2512.01939",
+    "title": "An Empirical Study of Agent Developer Practices in AI Agent Frameworks",
+    "abstract": "The rise of large language models (LLMs) has sparked a surge of interest in agents, leading to the rapid growth of agent frameworks. Agent frameworks are software toolkits and libraries that provide standardized components, abstractions, and orchestration mechanisms to simplify agent development. Despite widespread use of agent frameworks, their practical applications and how they influence the agent development process remain underexplored. Different agent frameworks encounter similar problems during use, indicating that these recurring issues deserve greater attention and call for further improvements in agent framework design. Meanwhile, as the number of agent frameworks continues to grow and evolve, more than 80% of developers report difficulties in identifying the frameworks that best meet their specific development requirements. In this paper, we conduct the first empirical study of LLM-based agent frameworks, exploring real-world experiences of developers in building AI agents. To compare how well the agent frameworks meet developer needs, we further collect developer discussions for the ten previously identified agent frameworks, resulting in a total of 11,910 discussions. Finally, by analyzing these discussions, we compare the frameworks across five dimensions: development efficiency, functional abstraction, learning cost, performance optimization, and maintainability, which refers to how easily developers can update and extend both the framework itself and the agents built upon it over time. Our comparative analysis reveals significant differences among frameworks in how they meet the needs of agent developers. Overall, we provide a set of findings and implications for the LLM-driven AI agent framework ecosystem and offer insights for the design of future LLM-based agent frameworks and agent developers.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01939",
+    "authors": [
+      "Yanlin Wang",
+      "Xinyi Xu",
+      "Jiachi Chen",
+      "Tingting Bi",
+      "Wenchao Gu",
+      "Zibin Zheng"
+    ],
+    "first_author": "Yanlin Wang",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Agent Framework Engineering"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01939v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-02 03:27:17"
+  },
+  {
+    "id": "2512.01690",
+    "title": "Generating REST API Tests With Descriptive Names",
+    "abstract": "Automated test generation has become a key technique for ensuring software quality, particularly in modern API-based architectures. However, automatically generated test cases are typically assigned non-descriptive names (e.g., test0, test1), which reduces their readability and hinders their usefulness during comprehension and maintenance. In this work, we present three novel deterministic techniques to generate REST API test names. We then compare eight techniques in total for generating descriptive names for REST API tests automatically produced by the fuzzer EvoMaster, using 10 test cases generated for 9 different open-source APIs. The eight techniques include rule-based heuristics and large language model (LLM)-based approaches. Their effectiveness was empirically evaluated through two surveys (involving up to 39 people recruited via LinkedIn). Our results show that a rule-based approach achieves the highest clarity ratings among deterministic methods, performs on par with state-of-the-art LLM-based models such as Gemini and GPT-4o, and significantly outperforms GPT-3.5.   To further evaluate the practical impact of our results, an industrial case study was carried out with practitioners who actively use EvoMaster at Volkswagen AG. A developer questionnaire was then carried out based on the use of EvoMaster on four different APIs by four different users, for a total of 74 evaluated test cases. Feedback from practitioners further confirms that descriptive names produced by this approach improve test suite readability.   These findings highlight that lightweight, deterministic techniques can serve as effective alternatives to computationally expensive and security-sensitive LLM-based approaches for automated system-level test naming, providing a practical step toward more developer-friendly API test generation.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01690",
+    "authors": [
+      "Philip Garrett",
+      "Juan P. Galeotti",
+      "Andrea Arcuri",
+      "Alexander Poth",
+      "Olsi Rrjolli"
+    ],
+    "first_author": "Philip Garrett",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01690v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-02 03:27:26"
+  }
+]
