@@ -1,7 +1,7 @@
 import argparse
 
 from search_paper import PaperSearch
-# from scan_paper_list import scan_paper_jsonl
+from add_paper import scan_paper_jsonl
 from gen_html import HTMLGenerator
 from convert_pdfs_to_md import run_convert
 from new_find_benchmark_links import extract_benchmark
@@ -13,9 +13,9 @@ def run_paper_pipeline(config_path='config.yaml'):
         search = PaperSearch(config_path)
         paper_meta_path = search.config['papers_metadata_path']
         # 处理手动添加到jsonl文件中的论文
-        # scan_paper_jsonl(search)
+        scan_paper_jsonl(search)
         # 更新已处理论文
-        # search.get_recent_paper(paper_meta_path)
+        search.get_recent_paper(paper_meta_path)
 
         search.search()
         run_convert()
