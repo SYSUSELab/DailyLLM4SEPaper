@@ -914,5 +914,52 @@
     "published": "2025-11-24",
     "update_time": "2025-11-24",
     "download_time": "2025-12-01 02:06:27"
+  },
+  {
+    "id": "2511.23408",
+    "title": "Evaluating LLMs for One-Shot Patching of Real and Artificial Vulnerabilities",
+    "abstract": "Automated vulnerability patching is crucial for software security, and recent advancements in Large Language Models (LLMs) present promising capabilities for automating this task. However, existing research has primarily assessed LLMs using publicly disclosed vulnerabilities, leaving their effectiveness on related artificial vulnerabilities largely unexplored. In this study, we empirically evaluate the patching effectiveness and complementarity of several prominent LLMs, such as OpenAI's GPT variants, LLaMA, DeepSeek, and Mistral models, using both real and artificial vulnerabilities. Our evaluation employs Proof-of-Vulnerability (PoV) test execution to concretely assess whether LLM-generated source code successfully patches vulnerabilities. Our results reveal that LLMs patch real vulnerabilities more effectively compared to artificial ones. Additionally, our analysis reveals significant variability across LLMs in terms of overlapping (multiple LLMs patching the same vulnerabilities) and complementarity (vulnerabilities patched exclusively by a single LLM), emphasizing the importance of selecting appropriate LLMs for effective vulnerability patching.",
+    "arxiv_url": "https://arxiv.org/abs/2511.23408",
+    "authors": [
+      "Aayush Garg",
+      "Zanis Ali Khan",
+      "Renzo Degiovanni",
+      "Qiang Tang"
+    ],
+    "first_author": "Aayush Garg",
+    "primary_category": "cs.CR",
+    "tag": [
+      "Code Debug"
+    ],
+    "benchmark": false,
+    "conference": "41st ACM/SIGAPP Symposium on Applied Computing (SAC) Smarter Engineering-Building AI and Building with AI (SEAI) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2511.23408v1",
+    "published": "2025-11-28",
+    "update_time": "2025-11-28",
+    "download_time": "2025-12-02 01:47:57"
+  },
+  {
+    "id": "2511.23321",
+    "title": "Chart2Code-MoLA: Efficient Multi-Modal Code Generation via Adaptive Expert Routing",
+    "abstract": "Chart-to-code generation is a critical task in automated data visualization, translating complex chart structures into executable programs. While recent Multi-modal Large Language Models (MLLMs) improve chart representation, existing approaches still struggle to achieve cross-type generalization, memory efficiency, and modular design. To address these challenges, this paper proposes C2C-MoLA, a multimodal framework that synergizes Mixture of Experts (MoE) with Low-Rank Adaptation (LoRA). The MoE component uses a complexity-aware routing mechanism with domain-specialized experts and load-balanced sparse gating, dynamically allocating inputs based on learnable structural metrics like element count and chart complexity. LoRA enables parameter-efficient updates for resource-conscious tuning, further supported by a tailored training strategy that aligns routing stability with semantic accuracy. Experiments on Chart2Code-160k show that the proposed model improves generation accuracy by up to 17%, reduces peak GPU memory by 18%, and accelerates convergence by 20%, when compared to standard fine-tuning and LoRA-only baselines, particularly on complex charts. Ablation studies validate optimal designs, such as 8 experts and rank-8 LoRA, and confirm scalability for real-world multimodal code generation.",
+    "arxiv_url": "https://arxiv.org/abs/2511.23321",
+    "authors": [
+      "Yifei Wang",
+      "Jacky Keung",
+      "Zhenyu Mao",
+      "Jingyu Zhang",
+      "Yuchen Cao"
+    ],
+    "first_author": "Yifei Wang",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Translation"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2511.23321v1",
+    "published": "2025-11-28",
+    "update_time": "2025-11-28",
+    "download_time": "2025-12-02 01:48:11"
   }
 ]
