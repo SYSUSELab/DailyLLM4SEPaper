@@ -1,0 +1,51 @@
+[
+  {
+    "id": "2401.12554",
+    "title": "Can Large Language Models Write Parallel Code?",
+    "abstract": "Large language models are increasingly becoming a popular tool for software development. Their ability to model and generate source code has been demonstrated in a variety of contexts, including code completion, summarization, translation, and lookup. However, they often struggle to generate code for complex programs. In this paper, we study the capabilities of state-of-the-art language models to generate parallel code. In order to evaluate language models, we create a benchmark, ParEval, consisting of prompts that represent 420 different coding tasks related to scientific and parallel computing. We use ParEval to evaluate the effectiveness of several state-of-the-art open- and closed-source language models on these tasks. We introduce novel metrics for evaluating the performance of generated code, and use them to explore how well each large language model performs for 12 different computational problem types and six different parallel programming models.",
+    "arxiv_url": "https://arxiv.org/abs/2401.12554",
+    "authors": [
+      "Daniel Nichols",
+      "Joshua H. Davis",
+      "Zhaojun Xie",
+      "Arjun Rajaram",
+      "Abhinav Bhatele"
+    ],
+    "first_author": "Daniel Nichols",
+    "primary_category": "cs.DC",
+    "tag": [
+      "Code Prompting"
+    ],
+    "benchmark": true,
+    "conference": "The 33rd International Symposium on High-Performance Parallel and Distributed Computing (HPDC '24), June 3-7, 2024, Pisa, Italy. ACM, New York, NY, USA, 14 pages",
+    "pdf_url": "https://arxiv.org/pdf/2401.12554v3",
+    "published": "2024-01-23",
+    "update_time": "2024-05-14",
+    "download_time": "2025-12-02 10:44:35"
+  },
+  {
+    "id": "2401.01062",
+    "title": "Experimenting a New Programming Practice with LLMs",
+    "abstract": "The recent development on large language models makes automatically constructing small programs possible. It thus has the potential to free software engineers from low-level coding and allow us to focus on the perhaps more interesting parts of software development, such as requirement engineering and system testing. In this project, we develop a prototype named AISD (AI-aided Software Development), which is capable of taking high-level (potentially vague) user requirements as inputs, generates detailed use cases, prototype system designs, and subsequently system implementation. Different from existing attempts, AISD is designed to keep the user in the loop, i.e., by repeatedly taking user feedback on use cases, high-level system designs, and prototype implementations through system testing. AISD has been evaluated with a novel benchmark of non-trivial software projects. The experimental results suggest that it might be possible to imagine a future where software engineering is reduced to requirement engineering and system testing only.",
+    "arxiv_url": "https://arxiv.org/abs/2401.01062",
+    "authors": [
+      "Simiao Zhang",
+      "Jiaping Wang",
+      "Guoliang Dong",
+      "Jun Sun",
+      "Yueling Zhang",
+      "Geguang Pu"
+    ],
+    "first_author": "Simiao Zhang",
+    "primary_category": "cs.SE",
+    "tag": [
+      "AI-aided Software Development"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2401.01062v1",
+    "published": "2024-01-02",
+    "update_time": "2024-01-02",
+    "download_time": "2025-12-02 10:52:03"
+  }
+]

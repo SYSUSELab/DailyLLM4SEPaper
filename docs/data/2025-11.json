@@ -961,5 +961,46 @@
     "published": "2025-11-28",
     "update_time": "2025-11-28",
     "download_time": "2025-12-02 01:48:11"
+  },
+  {
+    "id": "2512.01010",
+    "title": "Chain of Unit-Physics: A Primitive-Centric Approach to Scientific Code Synthesis",
+    "abstract": "Agentic large language models are proposed as autonomous code generators for scientific computing, yet their reliability in high-stakes problems remains unclear. Developing computational scientific software from natural-language queries remains challenging broadly due to (a) sparse representation of domain codes during training and (b) the limited feasibility of RLHF with a small expert community. To address these limitations, this work conceptualizes an inverse approach to code design, embodied in the Chain of Unit-Physics framework: a first-principles (or primitives)-centric, multi-agent system in which human expert knowledge is encoded as unit-physics tests that explicitly constrain code generation. The framework is evaluated on a nontrivial combustion task, used here as a representative benchmark for scientific problem with realistic physical constraints. Closed-weight systems and code-focused agentic variants fail to produce correct end-to-end solvers, despite tool and web access, exhibiting four recurrent error classes: interface (syntax/API) hallucinations, overconfident assumptions, numerical/physical incoherence, and configuration fragility. Open-weight models with chain-of-thought (CoT) decoding reduce interface errors but still yield incorrect solutions. On the benchmark task, the proposed framework converges within 5-6 iterations, matches the human-expert implementation (mean error of $3.1\\times10^{-3}$ %), with a $\\sim$33.4 % faster runtime and a $\\sim$30 % efficient memory usage at a cost comparable to mid-sized commercial APIs, yielding a practical template for physics-grounded scientific code generation. As datasets and models evolve, zero-shot code accuracy will improve; however, the Chain of Unit-Physics framework goes further by embedding first-principles analysis that is foundational to scientific codes.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01010",
+    "authors": [
+      "Vansh Sharma",
+      "Venkat Raman"
+    ],
+    "first_author": "Vansh Sharma",
+    "primary_category": "cs.MA",
+    "tag": [
+      "Scientific Code Synthesis"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01010v1",
+    "published": "2025-11-30",
+    "update_time": "2025-11-30",
+    "download_time": "2025-12-02 10:59:48"
+  },
+  {
+    "id": "2512.00867",
+    "title": "The AI Attribution Paradox: Transparency as Social Strategy in Open-Source Software Development",
+    "abstract": "AI coding assistants have transformed software development, raising questions about transparency and attribution practices. We examine the \"AI attribution paradox\": how developers strategically balance acknowledging AI assistance with managing community scrutiny. Analyzing 14,300 GitHub commits across 7,393 repositories from 2023-2025, we investigated attribution strategies and community responses across eight major AI tools. Results reveal widespread AI usage (95.2% of commits) but strategic attribution: only 29.5% employ explicit disclosure, with dramatic tool variation (Claude 80.5% versus Copilot 9.0%). Explicit attribution triggers modest scrutiny (23% more questions and 21% more comments) but tool choice matters 20-30 times more for predicting reception. Community sentiment remains neutral regardless of attribution type, suggesting curiosity rather than hostility. Temporal analyses show rapid norm evolution: explicit attribution increased from near-zero in early 2024 to 40% by late 2025, indicating community adaptation. These findings illuminate attribution as strategic communication rather than simple transparency, advancing understanding of algorithmic accountability and norm formation during technological transitions. We discuss implications for developers navigating disclosure decisions, platforms designing attribution mechanisms, and researchers studying emergent practices in AI-augmented collaborative work.",
+    "arxiv_url": "https://arxiv.org/abs/2512.00867",
+    "authors": [
+      "Obada Kraishan"
+    ],
+    "first_author": "Obada Kraishan",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Governance & Socio-Technical Practices"
+    ],
+    "benchmark": false,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.00867v1",
+    "published": "2025-11-30",
+    "update_time": "2025-11-30",
+    "download_time": "2025-12-02 11:00:16"
   }
 ]
