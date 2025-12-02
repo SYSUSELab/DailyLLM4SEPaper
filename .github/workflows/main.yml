@@ -60,6 +60,7 @@ jobs:
             results/
             docs/
             papers_metadata.jsonl
+            paper_manual.jsonl
 
           rebase: 'true'
           name: ${{ env.GITHUB_USER_NAME }}
