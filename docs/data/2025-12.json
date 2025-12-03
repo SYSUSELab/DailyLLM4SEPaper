@@ -92,5 +92,55 @@
     "published": "2025-12-01",
     "update_time": "2025-12-01",
     "download_time": "2025-12-02 03:34:57"
+  },
+  {
+    "id": "2512.01356",
+    "title": "LAURA: Enhancing Code Review Generation with Context-Enriched Retrieval-Augmented LLM",
+    "abstract": "Code review is critical for ensuring software quality and maintainability. With the rapid growth in software scale and complexity, code review has become a bottleneck in the development process because of its time-consuming and knowledge-intensive nature and the shortage of experienced developers willing to review code. Several approaches have been proposed for automatically generating code reviews based on retrieval, neural machine translation, pre-trained models, or large language models (LLMs). These approaches mainly leverage historical code changes and review comments. However, a large amount of crucial information for code review, such as the context of code changes and prior review knowledge, has been overlooked. This paper proposes an LLM-based review knowledge-augmented, context-aware framework for code review generation, named LAURA. The framework integrates review exemplar retrieval, context augmentation, and systematic guidance to enhance the performance of ChatGPT-4o and DeepSeek v3 in generating code review comments. Besides, given the extensive low-quality reviews in existing datasets, we also constructed a high-quality dataset. Experimental results show that for both models, LAURA generates review comments that are either completely correct or at least helpful to developers in 42.2% and 40.4% of cases, respectively, significantly outperforming SOTA baselines. Furthermore, our ablation studies demonstrate that all components of LAURA contribute positively to improving comment quality.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01356",
+    "authors": [
+      "Yuxin Zhang",
+      "Yuxia Zhang",
+      "Zeyu Sun",
+      "Yanjie Jiang",
+      "Hui Liu"
+    ],
+    "first_author": "Yuxin Zhang",
+    "primary_category": "cs.SE",
+    "tag": [
+      "Code Summarization"
+    ],
+    "benchmark": true,
+    "conference": "2025 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+    "pdf_url": "https://arxiv.org/pdf/2512.01356v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-03 01:49:15"
+  },
+  {
+    "id": "2512.01255",
+    "title": "Large Language Models Cannot Reliably Detect Vulnerabilities in JavaScript: The First Systematic Benchmark and Evaluation",
+    "abstract": "Researchers have proposed numerous methods to detect vulnerabilities in JavaScript, especially those assisted by Large Language Models (LLMs). However, the actual capability of LLMs in JavaScript vulnerability detection remains questionable, necessitating systematic evaluation and comprehensive benchmarks. Unfortunately, existing benchmarks suffer from three critical limitations: (1) incomplete coverage, such as covering a limited subset of CWE types; (2) underestimation of LLM capabilities caused by unreasonable ground truth labeling; and (3) overestimation due to unrealistic cases such as using isolated vulnerable files rather than complete projects.   In this paper, we introduce, for the first time, three principles for constructing a benchmark for JavaScript vulnerability detection that directly address these limitations: (1) comprehensiveness, (2) no underestimation, and (3) no overestimation. Guided by these principles, we propose FORGEJS, the first automatic benchmark generation framework for evaluating LLMs' capability in JavaScript vulnerability detection. Then, we use FORGEJS to construct ARENAJS-the first systematic benchmark for LLM-based JavaScript vulnerability detection-and further propose JUDGEJS, an automatic evaluation framework.   We conduct the first systematic evaluation of LLMs for JavaScript vulnerability detection, leveraging JUDGEJS to assess seven popular commercial LLMs on ARENAJS. The results show that LLMs not only exhibit limited reasoning capabilities, but also suffer from severe robustness defects, indicating that reliable JavaScript vulnerability detection with LLMs remains an open challenge.",
+    "arxiv_url": "https://arxiv.org/abs/2512.01255",
+    "authors": [
+      "Qingyuan Fei",
+      "Xin Liu",
+      "Song Li",
+      "Shujiang Wu",
+      "Jianwei Hou",
+      "Ping Chen",
+      "Zifeng Kang"
+    ],
+    "first_author": "Qingyuan Fei",
+    "primary_category": "cs.CR",
+    "tag": [
+      "Code Testing"
+    ],
+    "benchmark": true,
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.01255v1",
+    "published": "2025-12-01",
+    "update_time": "2025-12-01",
+    "download_time": "2025-12-03 01:49:24"
   }
 ]
