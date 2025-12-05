@@ -6,7 +6,7 @@ from utils import safe_json_loads
 api_key = os.environ.get("MY_API_KEY")
 
 def call_chatgpt(prompt, model='gpt-5-mini', temperature=0., top_p=1.0,
-                 max_tokens=1024):
+                 max_tokens=4096):
     """
     调用ChatGPT API以生成文本响应。
 
