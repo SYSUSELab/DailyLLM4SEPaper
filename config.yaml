@@ -16,14 +16,46 @@ categories:
 
 #论文的分类
 topic:
-    - Code Pre-Training
-    - Code Instruction-Tuning
-    - Code Alignment
-    - Code Prompting
-    - Code Completion
-    - Code Summarization
-    - Code Debug
-    - Code Editing
-    - Code Translation
-    - Code Testing
+    Requirements & Design:
+        - Elicitation
+        - Analysis
+        - Specification & Validation
+        - Management
+
+    Coding Assistant:
+        - Code Pre-Training
+        - Code Instruction-Tuning
+        - Code Alignment
+        - Code Prompting
+        - Code Completion
+        - Code Summarization
+        - Code Editing
+        - Code Translation
+        - Code Reasoning
+
+    Software Testing:
+        - Test Generation
+        - Assertion generation
+        - GUI test
+        - Testing automation
+        - Testing prediction
+        - Testing Repair
+
+    AIOps:
+        - Log Statement Generation
+        - Log Parsing
+
+    Maintenance:
+        - Code Review
+        - Clone Detection
+        - Refactoring
+
+    Quality Management:
+        - Defect Prediction
+        - Bug Localization
+        - Bug Repair
+        - Vulnerability Detection
+        - Vulnerability Repair
+
+
 

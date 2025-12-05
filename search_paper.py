@@ -8,6 +8,7 @@ from datetime import datetime
 from gpt import call_chatgpt
 from utils import save_last_position, load_last_position
 import requests
+import fitz
 
 logging.basicConfig(format='[%(asctime)s %(levelname)s] %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
@@ -18,7 +19,7 @@ class PaperSearch:
     def __init__(self, config_path):
         self.config = self.load_config(config_path)
         logging.info(self.config)
-        self.paper = []
+        self.paper = set()
         self.get_recent_paper(self.config['papers_metadata_path'])
 
     # def load_config(config_file: str) -> dict:
@@ -75,12 +76,13 @@ class PaperSearch:
                 for line in f:
                     try:
                         item = json.loads(line.strip())
-                        self.paper.append(item['id'])
+                        self.paper.add(item['id'])
                     except json.JSONDecodeError:
                         print(f"警告：无法解析JSON行: {line}")
                         continue
         except Exception as e:
             logging.error(f"读取文件 {file_path} 失败: {e}")
+
     # def get_recent_paper(self, file_path):
     #     """读取papers_metadata.jsonl文件从头到指定位置的内容"""
     #     last_position = load_last_position()
@@ -179,7 +181,29 @@ class PaperSearch:
             logging.error(f"下载 {result.get_short_id()} PDF 失败: {e}")
             return None
 
-    def save_paper_metadata(self, result, topic, pdf_path=None, jsonl_file="papers_metadata.jsonl"):
+    def get_3_page_paper(self, pdf_path):
+        try:
+            doc = fitz.open(pdf_path)
+            all_text = []
+
+            for page_num in range(3):
+                page = doc.load_page(page_num)
+                all_text.append(page.get_text("text"))
+
+            doc.close()
+
+            final_text = "\n\n".join(all_text)
+
+            return final_text
+
+        except Exception as e:
+            logging.error(f"获取论文前三页失败: {e}")
+            try:
+                doc.close()
+            except:
+                pass
+
+    def save_paper_metadata(self, result, resp, pdf_path=None, jsonl_file="papers_metadata.jsonl"):
         """
         保存论文元数据到JSONL文件
 
@@ -199,13 +223,24 @@ class PaperSearch:
             paper_abstract = result.summary.replace("\n", " ")
             paper_authors = [author.name for author in result.authors]
             paper_first_author = self.get_authors(result.authors, first_author=True)
-            primary_category = result.primary_category
+            # primary_category = result.primary_category
             publish_time = result.published.date()
             update_time = result.updated.date()
-            comment = result.comment if result.comment else None
-            journal_ref = result.journal_ref if hasattr(result, 'journal_ref') and result.journal_ref else None
-            conference = self.extract_venue_from_journal_ref(journal_ref) or \
-                         self.extract_venue_from_comment(comment)
+            # comment = result.comment if result.comment else None
+            # journal_ref = result.journal_ref if hasattr(result, 'journal_ref') and result.journal_ref else None
+            # journal_ref = self.extract_venue_by_llm(journal_ref).strip()
+            # conference = self.extract_venue_from_journal_ref(journal_ref)
+            # if conference is None:
+            #     comment = self.extract_venue_by_llm(comment).strip()
+            #     conference = self.extract_venue_from_comment(comment)
+            conference = resp['venue']
+            if resp['venue'] and resp['year']:
+                conference = resp['venue'] + ' ' + str(resp['year'])
+            conference = self.extract_venue_from_journal_ref(conference) or self.extract_venue_from_comment(conference)
+
+            text = self.get_3_page_paper(pdf_path)
+            resp = self.build_paper_analyse_prompt(text)
+
 
             # 获取当前时间作为下载时间
             download_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -218,9 +253,12 @@ class PaperSearch:
                 'arxiv_url': paper_url,  # 论文URL
                 'authors': paper_authors,  # 所有作者
                 'first_author': paper_first_author,  # 第一作者
-                'primary_category': primary_category,  # 主要分类
-                'tag': [topic['topic']],  # 主题
-                "benchmark": topic['benchmark'],  # 是否benchmark相关
+                # 'primary_category': primary_category,  # 主要分类
+                "category": resp['category'],
+                "field": resp['field'],
+                "tag": resp['task'],
+                "summary": resp['summary'],
+                "quality": resp['quality'],
                 "conference": conference,  # 会议/期刊
                 'pdf_url': result.pdf_url,  # PDF路径
                 'published': str(publish_time),  # 发布日期
@@ -232,8 +270,8 @@ class PaperSearch:
             with open(jsonl_file, 'a', encoding='utf-8') as f:
                 # 将字典转换为JSON字符串并写入文件，末尾添加换行符
                 f.write(json.dumps(paper_metadata, ensure_ascii=False) + '\n')
-                current_position = f.tell()
-                save_last_position(current_position)
+                # current_position = f.tell()
+                # save_last_position(current_position)
 
             logging.info(f"保存元数据: {paper_key} - {paper_title}")
 
@@ -260,15 +298,13 @@ class PaperSearch:
                 paper_title = result.title
                 paper_abstract = result.summary
                 content = paper_title + '\n' + paper_abstract
-                system_prompt, user_prompt = self.build_benchmark_finder_prompt(content)
-                messages = [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ]
+                if result.journal_ref:
+                    content += '\n' + "journal_ref: " + result.journal_ref
+                if result.comment:
+                    content += '\n' + "comment: " + result.comment
+                resp = self.filter_paper(content)
 
-                resp = call_chatgpt(messages)
-
-                if resp['topic']:
+                if resp['isLLM4SE']:
                     # 下载PDF文件
                     pdf_path = self.download_paper_pdf(result, download_dir)
 
@@ -284,58 +320,106 @@ class PaperSearch:
 
         return success
 
-    def build_benchmark_finder_prompt(self, text_content) -> tuple[str, str]:
+    def build_paper_analyse_prompt(self, text_content) -> tuple[str, str]:
         """
-        构建一个精确的提示，指导大模型从论文文本中查找代码评测基准的 *详细* 信息。
-        返回系统提示和用户提示。
+        构建一个精确的提示，指导大模型对论文文本分类的 *详细* 信息。
         """
-        system_prompt = f"""
-        You are an expert in LLM4SE (Large Language Models for Software Engineering).
-        Your task is to analyze the provided academic paper's title and abstract to identify the research problem addressed and whether the paper proposes a new code capability evaluation benchmark.
+        system_prompt = """You are an expert researcher in Large Language Models for Software Engineering (LLM4SE).
+        Your task is to classify and summarize academic papers with high accuracy.
+        """
 
-        Step 1: Analyze the research problem of the paper and determine if it is related to LLM4SE. If not related, set topic to null;
-        If related, determine which field the paper belongs to from: {self.config['topic']}. If the paper's research field doesn't belong to any of these, please summarize a new field.
+        user_prompt = f"""Classify the following LLM4SE paper according to four criteria. Follow the instructions exactly and output only the JSON.
 
-        Step 2: Determine whether the paper proposes a new dataset (benchmark).
+        1. Paper Category
+        
+            Assign one or more of the following categories (multiple allowed):
+            
+            (1) Survey / Review — synthesizes, summarizes, or organizes existing research or tools.
+            (2) Experience / Empirical — analyzes existing phenomena in LLM4SE (e.g., evaluating current LLMs on tasks, understanding behavior, measuring performance); does not introduce a new method or dataset.
+            (3) Technical / Method — proposes a new method, model, algorithm, or tool for an SE task using LLMs.
+            (4) Benchmark / Dataset —  introduces a brand‑new benchmark, dataset, or evaluation suite for LLM4SE.
+                  - What does NOT qualify as “Benchmark / Dataset” :
+                      1. Using an existing, publicly available benchmark or dataset for experiments or evaluation.
+                      2. Presenting only evaluation results on a pre‑existing benchmark without providing any new data or evaluation framework. 
+            
+            Note: If a paper possesses multiple type features (e.g., proposing a new method + publishing a new dataset), multiple categories can be returned, for example: ["Technical", "Benchmark"]
+        
+        2. Field & Task Classification
+        
+            You will be provided with a field->task mapping relationship in JSON format. Your goal is to match the paper's content to the most specific `field` and `task` from this taxonomy.
+            Output the **field** name (the top-level key) and the **task** name (the specific string from the list) that best describe the paper's main focus.
+            If the paper's focus does not clearly match any provided `field` or `task`, summarize a new `field` or `task`.
+            **Provided Taxonomy:** `{self.config['topic']}`
+        
+        3. One-Sentence Summary
+        
+            Summarize the paper in one concise sentence in Chinese.
+        
+        4. Quality Assessment
+        
+            Rate the overall quality as exactly one of:
+            
+                - High: Well-written, clearly motivated, methodologically sound (or promising), and presents a significant contribution. Worth following closely.
+                - Middle: Clearly written with a reasonable contribution, but may have limitations in scope, evaluation, or novelty. Worth skimming.
+                - Low: Poorly structured, weakly motivated, or contributes minimally. Low priority.
+            
+            Quality considers writing clarity, rigor, novelty/insight, and value for LLM4SE.
+        
+        Output Format (must match exactly)
+        {{
+          "category": [],
+          "field": "",
+          "task": "",
+          "summary": "",
+          "quality": ""
+        }}
+        
+        Please analyze the following paper text and extract relevant information about the paper.:**\n---\n{text_content}\n---
+        """
 
-        Notice:
-        1. If a paper cannot be categorized into any of the provided research field, assign it a new field that is both high-dimensional and conceptually aligned with the given fields.
-        2. When determining whether a paper introduces a new benchmark, ensure that the benchmark is originally proposed in that paper—not merely a new method evaluated on an existing benchmark.
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ]
 
+        resp = call_chatgpt(messages)
+
+        return resp
+
+    def filter_paper(self, text_content):
+
+        system_prompt = """
+        You are an expert researcher in Large Language Models for Software Engineering (LLM4SE).
+        Your task is to analyze the provided academic paper's title and abstract to determine if it is related to LLM4SE. 
+        
+        If the paper is NOT related to LLM4SE, set the value for `isLLM4SE` to false, `venue` and `year` to null.
+        
+        If the paper is related to LLM4SE, identify the venue (conference or journal) where the paper was formally published and its publication year.
+        If the paper is a preprint, set the values for both 'venue' and 'year' to null.
+        
         Return output strictly in the specified JSON format, only return the JSON object, without any explanations.
 
         **Required JSON structure:**
-        {{
-          "topic": (which field the paper's research content belongs to),
-          "benchmark": (true if the paper proposes a new benchmark, otherwise false)
-        }}
-
-        Example 1:
-        Input:
-        GenSIaC: Toward Security-Aware Infrastructure-as-Code Generation with Large Language Models
-        In recent years, Infrastructure as Code (IaC) has emerged as a critical approach for managing and provisioning IT infrastructure through code and automation. IaC enables organizations to create scalable and consistent environments, effectively managing servers and development settings. However, the growing complexity of cloud infrastructures has led to an increased risk of misconfigurations and security vulnerabilities in IaC scripts. To address this problem, this paper investigates the potential of Large Language Models (LLMs) in generating security-aware IaC code, avoiding misconfigurations introduced by developers and administrators. While LLMs have made significant progress in natural language processing and code generation, their ability to generate secure IaC scripts remains unclear. This paper addresses two major problems: 1) the lack of understanding of security weaknesses in IaC scripts generated by LLMs, and 2) the absence of techniques for enhancing security in generating IaC code with LLMs. To assess the extent to which LLMs contain security knowledge, we first conduct a comprehensive evaluation of base LLMs in recognizing major IaC security weaknesses during the generation and inspection of IaC code. Then, we propose GenSIaC, an instruction fine-tuning dataset designed to improve LLMs' ability to recognize potential security weaknesses. Leveraging GenSIaC, we fine-tune LLMs and instruct models to generate security-aware IaC code. Our evaluation demonstrates that our models achieve substantially improved performance in recognizing and preventing IaC security misconfigurations, e.g., boosting the F1-score from 0.303 to 0.858. Additionally, we perform ablation studies and explore GenSIaC's generalizability to other LLMs and its cross-language capabilities.
-
-        Output:
-        {{
-          "topic": Code Instruction-Tuning,
-          "benchmark": true
-        }}
-
-        Example 2:
-        Input:
-        Beyond Accuracy: Behavioral Dynamics of Agentic Multi-Hunk Repair
-        Automated program repair has traditionally focused on single-hunk defects, overlooking multi-hunk bugs that are prevalent in real-world systems. Repairing these bugs requires coordinated edits across multiple, disjoint code regions, posing substantially greater challenges. We present the first systematic study of LLM-driven coding agents (Claude Code, Codex, Gemini-cli, and Qwen Code) on this task. We evaluate these agents on 372 multi-hunk bugs from the Hunk4J dataset, analyzing 1,488 repair trajectories using fine-grained metrics that capture localization, repair accuracy, regression behavior, and operational dynamics. Results reveal substantial variation: repair accuracy ranges from 25.8% (Qwen Code) to 93.3% (Claude Code) and consistently declines with increasing bug dispersion and complexity. High-performing agents demonstrate superior semantic consistency, achieving positive regression reduction, whereas lower-performing agents often introduce new test failures. Notably, agents do not fail fast; failed repairs consume substantially more resources (39%-343% more tokens) and require longer execution time (43%-427%). Additionally, we developed Maple to provide agents with repository-level context. Empirical results show that Maple improves the repair accuracy of Gemini-cli by 30% through enhanced localization. By analyzing fine-grained metrics and trajectory-level analysis, this study moves beyond accuracy to explain how coding agents localize, reason, and act during multi-hunk repair.
-
-        Output:
-        {{
-          "topic": Code Debug,
-          "benchmark": false
-        }}
+        {
+          "isLLM4SE": (true if the paper is related to LLM4SE, otherwise false),
+          "venue": (Name of the conference or journal. Null if preprint/unpublished),
+          "year": (Four-digit publication year. Null if preprint/unpublished)
+        }
         """
 
-        user_prompt = f"**Please analyze the following paper text and extract relevant information about the paper.:**\n---\n{text_content}\n---"
+        user_prompt = f"""
+        Please analyze the following text of paper and extract relevant information about the paper:
+        {text_content}
+        """
 
-        return system_prompt, user_prompt
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ]
+
+        resp = call_chatgpt(messages)
+
+        return resp
 
     def extract_venue_from_journal_ref(self, journal_ref: str) -> str:
         """从 journal_ref 字段提取会议/期刊信息

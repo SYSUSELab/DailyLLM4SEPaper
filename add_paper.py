@@ -40,18 +40,16 @@ def scan_paper_jsonl(paper_search):
                             print(paper_title)
                             paper_abstract = result.summary
                             content = paper_title + '\n' + paper_abstract
-                            system_prompt, user_prompt = paper_search.build_benchmark_finder_prompt(content)
-                            messages = [
-                                {"role": "system", "content": system_prompt},
-                                {"role": "user", "content": user_prompt}
-                            ]
-                            # print(messages)
-                            resp = call_chatgpt(messages)
+                            print(result.journal_ref)
+                            if result.journal_ref:
+                                content += '\n' + "journal_ref: " + result.journal_ref
+                            if result.comment:
+                                content += '\n' + "comment: " + result.comment
+                            resp = paper_search.filter_paper(content)
                             print(resp)
-                            if resp['topic']:
+                            if resp['isLLM4SE']:
                                 # 下载PDF文件
-                                pdf_path = paper_search.download_paper_pdf(result, paper_search.config[
-                                    'download_papers_path'])
+                                pdf_path = paper_search.download_paper_pdf(result, paper_search.config['download_papers_path'])
 
                                 # 保存元数据到jsonl
                                 # 提取论文的基本信息
@@ -60,14 +58,17 @@ def scan_paper_jsonl(paper_search):
                                 paper_abstract = result.summary.replace("\n", " ")
                                 paper_authors = [author.name for author in result.authors]
                                 paper_first_author = paper_search.get_authors(result.authors, first_author=True)
-                                primary_category = result.primary_category
+                                # primary_category = result.primary_category
                                 publish_time = result.published.date()
                                 update_time = result.updated.date()
-                                comment = result.comment if result.comment else None
-                                journal_ref = result.journal_ref if hasattr(result,
-                                                                            'journal_ref') and result.journal_ref else None
-                                conference = paper_search.extract_venue_from_journal_ref(journal_ref) or \
-                                             paper_search.extract_venue_from_comment(comment)
+
+                                conference = resp['venue']
+                                if resp['venue'] and resp['year']:
+                                    conference = resp['venue'] + ' ' + str(resp['year'])
+                                conference = paper_search.extract_venue_from_journal_ref(conference) or paper_search.extract_venue_from_comment(conference)
+
+                                text = paper_search.get_3_page_paper(pdf_path)
+                                resp = paper_search.build_paper_analyse_prompt(text)
 
                                 # 获取当前时间作为下载时间
                                 download_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -80,9 +81,12 @@ def scan_paper_jsonl(paper_search):
                                     'arxiv_url': paper_url,  # 论文URL
                                     'authors': paper_authors,  # 所有作者
                                     'first_author': paper_first_author,  # 第一作者
-                                    'primary_category': primary_category,  # 主要分类
-                                    'tag': [resp['topic']],  # 主题
-                                    "benchmark": resp['benchmark'],  # 是否benchmark相关
+                                    # 'primary_category': primary_category,  # 主要分类
+                                    "category": resp['category'],
+                                    "field": resp['field'],
+                                    "tag": resp['task'],
+                                    "summary": resp['summary'],
+                                    "quality": resp['quality'],
                                     "conference": conference,  # 会议/期刊
                                     'pdf_url': result.pdf_url,  # PDF路径
                                     'published': str(publish_time),  # 发布日期
@@ -92,6 +96,7 @@ def scan_paper_jsonl(paper_search):
 
                                 file.write(json.dumps(paper_metadata, ensure_ascii=False) + '\n')
                                 file.flush()
+                                paper_search.paper.add(paper_key)
 
                         except Exception as e:
                             print(f"处理{result.get_short_id()}论文时出错: {e}")
