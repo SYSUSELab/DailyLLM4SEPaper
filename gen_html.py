@@ -68,9 +68,7 @@ class HTMLGenerator:
                 'month': year_month,
                 'count': len(papers),
                 'published_count': sum(1 for p in papers if p.get('conference')),
-                'preprint_count': sum(1 for p in papers if not p.get('conference')),
-                'benchmark_count': sum(1 for p in papers if p.get('benchmark')),
-                'non-benchmark_count': sum(1 for p in papers if not p.get('benchmark'))
+                'preprint_count': sum(1 for p in papers if not p.get('conference'))
             })
 
         with open(data_dir / "index.json", 'w', encoding='utf-8') as f:
@@ -93,18 +91,16 @@ class HTMLGenerator:
         # 计算各分类数量
         published_count = sum(1 for p in self.papers if p.get('conference'))
         preprint_count = sum(1 for p in self.papers if not p.get('conference'))
-        benchmark_count = sum(1 for p in self.papers if p.get('benchmark'))
-        non_benchmark_count = sum(1 for p in self.papers if not p.get('benchmark'))
-        test_count = sum(1 for p in self.papers if 'Code Testing' in p.get('tag', []))
-        translate_count = sum(1 for p in self.papers if 'Code Translation' in p.get('tag', []))
-        edit_count = sum(1 for p in self.papers if 'Code Editing' in p.get('tag', []))
-        debug_count = sum(1 for p in self.papers if 'Code Debug' in p.get('tag', []))
-        summary_count = sum(1 for p in self.papers if 'Code Summarization' in p.get('tag', []))
-        complete_count = sum(1 for p in self.papers if 'Code Completion' in p.get('tag', []))
-        prompt_count = sum(1 for p in self.papers if 'Code Prompting' in p.get('tag', []))
-        align_count = sum(1 for p in self.papers if 'Code Alignment' in p.get('tag', []))
-        tune_count = sum(1 for p in self.papers if 'Code Instruction-Tuning' in p.get('tag', []))
-        pretrain_count = sum(1 for p in self.papers if 'Code Pre-Training' in p.get('tag', []))
+        survey_count = sum(1 for p in self.papers if 'Survey' in p.get('category', []))
+        empirical_count = sum(1 for p in self.papers if 'Empirical' in p.get('category', []))
+        benchmark_count = sum(1 for p in self.papers if 'Benchmark' in p.get('category', []))
+        technical_count = sum(1 for p in self.papers if 'Technical' in p.get('category', []))
+        require_count = sum(1 for p in self.papers if 'Requirements & Design' in p.get('field'))
+        code_count = sum(1 for p in self.papers if 'Coding Assistant' in p.get('field'))
+        test_count = sum(1 for p in self.papers if 'Software Testing' in p.get('field'))
+        ops_count = sum(1 for p in self.papers if 'AIOps' in p.get('field'))
+        maintenance_count = sum(1 for p in self.papers if 'Maintenance' in p.get('field'))
+        quality_count = sum(1 for p in self.papers if 'Quality Management' in p.get('field'))
 
         html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -141,27 +137,31 @@ class HTMLGenerator:
                 </div>
             </div>
             <div class="filter-group">
-                <label class="filter-label">📊 benchmark：</label>
-                <div class="filters benchmark-filters">
-                    <button class="filter-btn benchmark-btn active" data-benchmark="all">全部 ({len(self.papers)})</button>
-                    <button class="filter-btn benchmark-btn" data-benchmark="benchmark">benchmark ({benchmark_count})</button>
-                    <button class="filter-btn benchmark-btn" data-benchmark="non-benchmark">non-benchmark ({non_benchmark_count})</button>
+                <label class="filter-label">📑 论文类型：</label>
+                <div class="filters category-filters">
+                    <button class="filter-btn category-btn active" data-category="all">全部 ({len(self.papers)})</button>
+                    <button class="filter-btn category-btn" data-category="Survey">Survey ({survey_count})</button>
+                    <button class="filter-btn category-btn" data-category="Empirical">Empirical ({empirical_count})</button>
+                    <button class="filter-btn category-btn" data-category="Technical">Technical ({technical_count})</button>
+                    <button class="filter-btn category-btn" data-category="Benchmark">Benchmark ({benchmark_count})</button>
                 </div>
             </div>
             <div class="filter-group">
                 <label class="filter-label">🏷️ 研究领域：</label>
-                <div class="filters category-filters">
-                    <button class="filter-btn category-btn active" data-category="all">全部 ({len(self.papers)})</button>
-                    <button class="filter-btn category-btn" data-category="Code Completion">Code Completion ({complete_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Editing">Code Editing ({edit_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Debug">Code Debug ({debug_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Summarization">Code Summarization ({summary_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Prompting">Code Prompting ({prompt_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Alignment">Code Alignment ({align_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Translation">Code Translation ({translate_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Testing">Code Testing ({test_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Pre-Training">Code Pre-Training ({pretrain_count})</button>
-                    <button class="filter-btn category-btn" data-category="Code Instruction-Tuning">Code Instruction-Tuning ({tune_count})</button>
+                <div class="filters field-filters">
+                    <button class="filter-btn field-btn active" data-field="all">全部 ({len(self.papers)})</button>
+                    <button class="filter-btn field-btn" data-field="Requirements & Design">Requirements & Design ({require_count})</button>
+                    <button class="filter-btn field-btn" data-field="Coding Assistant">Coding Assistant ({code_count})</button>
+                    <button class="filter-btn field-btn" data-field="Software Testing">Software Testing ({test_count})</button>
+                    <button class="filter-btn field-btn" data-field="AIOps">AIOps ({ops_count})</button>
+                    <button class="filter-btn field-btn" data-field="Maintenance">Maintenance ({maintenance_count})</button>
+                    <button class="filter-btn field-btn" data-field="Quality Management">Quality Management ({quality_count})</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label class="filter-label">🎯 task：</label>
+                <div class="filters sort-filters">
+                    <button class="filter-btn task-btn active" data-task="all">全部 ({len(self.papers)})</button>
                 </div>
             </div>
             <div class="filter-group">
@@ -299,7 +299,7 @@ class HTMLGenerator:
                 authors_html += ' et al.'
 
             # 获取友好的类别名称
-            primary_category = paper.get('primary_category')
+            primary_category = paper.get('category')
             category_name = self.get_category_name(primary_category)
 
             # 获取会议信息和徽章样式
@@ -818,7 +818,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const monthBtns = document.querySelectorAll('.month-btn');
     const statusBtns = document.querySelectorAll('.status-btn');
     const categoryBtns = document.querySelectorAll('.category-btn');
-    const benchmarkBtns = document.querySelectorAll('.benchmark-btn');
+    const fieldBtns = document.querySelectorAll('.field-btn');
+    const taskBtns = document.querySelectorAll('.task-btn');
     const sortBtns = document.querySelectorAll('.sort-btn');
     const searchInput = document.getElementById('searchInput');
     const exportBtn = document.getElementById('exportBtn');
@@ -832,7 +833,8 @@ document.addEventListener('DOMContentLoaded', function() {
         monthBtns: monthBtns.length,
         statusBtns: statusBtns.length,
         categoryBtns: categoryBtns.length,
-        benchmarkBtns: benchmarkBtns.length,
+        fieldBtns: fieldBtns.length,
+        taskBtns: taskBtns.length,
         sortBtns: sortBtns.length,
         searchInput: !!searchInput,
         exportBtn: !!exportBtn,
@@ -847,7 +849,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentMonth = 'all';  // 当前选中的月份
     let currentStatus = 'all';
     let currentCategory = 'all';
-    let currentBenchmark = 'all';
+    let currentField = 'all';
+    let currentTask = 'all';
     let currentSort = 'date-desc';
     let searchTerm = '';
     let filteredPapers = [];
@@ -857,6 +860,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let isLoading = false;
     let observer = null;
     let monthsCache = {};  // 缓存已加载的月份数据
+
+    const field2task = {'Requirements & Design': ['Elicitation', 'Analysis', 'Specification &Validation', 'Management'],
+        'Coding Assistant': ['Code Pre-Training', 'Code Instruction-Tuning', 'Code Alignment', 'Code Prompting', 'Code Completion', 'Code Summarization', 'Code Editing', 'Code Translation', 'Code Reasoning'],
+        'Software Testing': ['Test Generation', 'Assertion generation', 'GUI test', 'Testing automation', 'Testing prediction', 'Testing Repair'],
+        'AIOps': ['Log Statement Generation', 'Log Parsing'],
+        'Maintenance': ['Code Review', 'Clone Detection', 'Refactoring'],
+        'Quality Management': ['Defect Prediction', 'Bug Localization', 'Bug Repair', 'Vulnerability Detection', 'Vulnerability Repair']}
 
     // 加载月份索引
     async function loadMonthsIndex() {
@@ -955,6 +965,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="paper-authors">
                         👥 ${paper.authors}
                     </div>
+                    <div class="paper-summary">
+                        🤖 ${paper.summary}
+                    </div>
                     <div class="paper-tags">
                         ${tags}
                     </div>
@@ -1006,70 +1019,102 @@ document.addEventListener('DOMContentLoaded', function() {
         return { class: badgeClass, text: conference };
     }
     
-    // 更新benchmark按钮的数量
-    function updateBenchmarkButtonCounts() {
+    // 更新task按钮的数量
+    function updateTaskButtonCounts() {
         // 先筛选出符合当前状态的论文
         const statusFilteredPapers = allPapersData.filter(paper => {
             const status = paper.conference ? 'published' : 'preprint';
-            return currentStatus === 'all' || status === currentStatus;
+            const category = paper.category || [];
+            const field = paper.field;
+
+            const matchStatus = currentStatus === 'all' || status === currentStatus;
+            const matchCategory = currentCategory === 'all' || category.includes(currentCategory);
+            const matchField = currentField === 'all' || field === currentField;
+
+            return matchStatus && matchCategory && matchField;
         });
 
         // 计算各个领域的数量
-        const benchmarkCounts = {
-            'all': statusFilteredPapers.length,
-            'benchmark': 0,
-            'non-benchmark': 0,
+        const taskCounts = {
+            'all': statusFilteredPapers.length
         };
+        field2task[currentField].forEach(task => {
+            taskCounts[task] = 0;
+        });
 
         statusFilteredPapers.forEach(paper => {
-            if (paper.benchmark) {
-                benchmarkCounts['benchmark']++;
-            }
-            else {
-                benchmarkCounts['non-benchmark']++;
-            }
+            const task = paper.tag;
+            taskCounts[task]++;
         });
 
         // 更新按钮文本
-        benchmarkBtns.forEach(btn => {
-            const benchmark = btn.dataset.benchmark;
-            const displayName = benchmark === 'all' ? '全部' : 
-                               benchmark === 'benchmark' ? 'benchmark' : 'non-benchmark';
-            const count = benchmarkCounts[benchmark] || 0;
+        taskBtns.forEach(btn => {
+            const task = btn.dataset.task;
+            const displayName = task === 'all' ? '全部' : task;
+                               // category === 'Natural Language Processing' ? 'NLP' : category;
+            const count = taskCounts[task] || 0;
             btn.textContent = `${displayName} (${count})`;
         });
     }
 
     // 更新研究领域按钮的数量
+    function updateFieldButtonCounts() {
+        // 先筛选出符合当前状态的论文
+        const statusFilteredPapers = allPapersData.filter(paper => {
+            const status = paper.conference ? 'published' : 'preprint';
+            const category = paper.category || [];
+
+            const matchStatus = currentStatus === 'all' || status === currentStatus;
+            const matchCategory = currentCategory === 'all' || category.includes(currentCategory);
+
+            return matchStatus && matchCategory;
+        });
+
+        // 计算各个领域的数量
+        const fieldCounts = {
+            'all': statusFilteredPapers.length,
+            'Requirements & Design': 0,
+            'Coding Assistant': 0,
+            'Software Testing': 0,
+            'AIOps': 0,
+            'Maintenance': 0,
+            'Quality Management': 0
+        };
+
+        statusFilteredPapers.forEach(paper => {
+            const field = paper.field;
+            fieldCounts[field]++;
+        });
+
+        // 更新按钮文本
+        fieldBtns.forEach(btn => {
+            const field = btn.dataset.field;
+            const displayName = field === 'all' ? '全部' : field;
+                               // category === 'Natural Language Processing' ? 'NLP' : category;
+            const count = fieldCounts[field] || 0;
+            btn.textContent = `${displayName} (${count})`;
+        });
+    }
+
+    // 更新论文类型按钮的数量
     function updateCategoryButtonCounts() {
         // 先筛选出符合当前状态的论文
         const statusFilteredPapers = allPapersData.filter(paper => {
             const status = paper.conference ? 'published' : 'preprint';
-            const benchmark = paper.benchmark ? 'benchmark' : 'non-benchmark';
-
-            const matchStatus = currentStatus === 'all' || status === currentStatus;
-            const matchBenchmark = currentBenchmark === 'all' || benchmark === currentBenchmark;
-
-            return matchStatus && matchBenchmark;
+            return  currentStatus === 'all' || status === currentStatus;
         });
 
         // 计算各个领域的数量
         const categoryCounts = {
             'all': statusFilteredPapers.length,
-            'Code Completion': 0,
-            'Code Editing': 0,
-            'Code Debug': 0,
-            'Code Summarization': 0,
-            'Code Prompting': 0,
-            'Code Alignment': 0,
-            'Code Translation': 0,
-            'Code Testing': 0,
-            'Code Pre-Training': 0,
-            'Code Instruction-Tuning': 0
+            'Empirical': 0,
+            'Survey': 0,
+            'Benchmark': 0,
+            'Technical': 0
         };
 
         statusFilteredPapers.forEach(paper => {
-            const tags = paper.tag || [];
+            const tags = paper.category || [];
             tags.forEach(tag => {
                 if (categoryCounts.hasOwnProperty(tag)) {
                     categoryCounts[tag]++;
@@ -1080,30 +1125,60 @@ document.addEventListener('DOMContentLoaded', function() {
         // 更新按钮文本
         categoryBtns.forEach(btn => {
             const category = btn.dataset.category;
-            const displayName = category === 'all' ? '全部' : 
-                               category === 'Natural Language Processing' ? 'NLP' : category;
+            const displayName = category === 'all' ? '全部' : category;
             const count = categoryCounts[category] || 0;
+            btn.textContent = `${displayName} (${count})`;
+        });
+    }
+
+    // 更新发表状态按钮的数量
+    function updateStatusButtonCounts() {
+
+        // 计算各个领域的数量
+        const statusCounts = {
+            'all': allPapersData.length,
+            'published': 0,
+            'preprint': 0
+        };
+
+        allPapersData.forEach(paper => {
+            if (paper.conference) {
+                statusCounts['published']++;
+            }
+            else {
+                statusCounts['preprint']++;
+            }
+        });
+
+        // 更新按钮文本
+        statusBtns.forEach(btn => {
+            const status = btn.dataset.status;
+            const displayName = status === 'all' ? '全部' :
+                               status === 'published' ? '已发表' : '预印本';
+            const count = statusCounts[status] || 0;
             btn.textContent = `${displayName} (${count})`;
         });
     }
 
     // 筛选和排序论文
     function filterAndSortPapers() {
-        console.log('Filtering papers:', { currentStatus, currentCategory, currentBenchmark, searchTerm, currentSort });
+        console.log('Filtering papers:', { currentStatus, currentCategory, currentField, currentTask, searchTerm, currentSort });
 
         // 筛选
         filteredPapers = allPapersData.filter(paper => {
             const status = paper.conference ? 'published' : 'preprint';
-            const tags = paper.tag || [];
-            const benchmark = paper.benchmark ? 'benchmark' : 'non-benchmark';
+            const category = paper.category || [];
+            const field = paper.field;
+            const task = paper.tag;
             const text = `${paper.title} ${paper.authors} ${paper.abstract}`.toLowerCase();
 
             const matchStatus = currentStatus === 'all' || status === currentStatus;
-            const matchCategory = currentCategory === 'all' || tags.includes(currentCategory);
-            const matchBenchmark = currentBenchmark === 'all' || benchmark === currentBenchmark;
+            const matchCategory = currentCategory === 'all' || category.includes(currentCategory);
+            const matchField = currentField === 'all' || field === currentField;
+            const matchTask = currentTask === 'all' || task === currentTask;
             const matchSearch = searchTerm === '' || text.includes(searchTerm);
 
-            return matchStatus && matchCategory && matchBenchmark && matchSearch;
+            return matchStatus && matchCategory && matchField && matchTask && matchSearch;
         });
 
         console.log(`Filtered to ${filteredPapers.length} papers`);
@@ -1120,11 +1195,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // 更新task按钮的数量
+        updateTaskButtonCounts();
+
         // 更新研究领域按钮的数量
+        updateFieldButtonCounts();
+
+        // 更新论文类型按钮的数量
         updateCategoryButtonCounts();
 
-        // 更新benchmark按钮的数量
-        updateBenchmarkButtonCounts();
+        // 更新发表状态按钮的数量
+        updateStatusButtonCounts();
 
         // 更新显示
         if (resultsCount) {
@@ -1253,7 +1334,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 研究领域筛选
+    // 论文类型筛选
     categoryBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             console.log('Category button clicked:', this.dataset.category);
@@ -1264,13 +1345,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // benchmark筛选
-    benchmarkBtns.forEach(btn => {
+    // field筛选
+    fieldBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            console.log('Benchmark button clicked:', this.dataset.benchmark);
-            benchmarkBtns.forEach(b => b.classList.remove('active'));
+            console.log('Field button clicked:', this.dataset.field);
+            fieldBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            currentBenchmark = this.dataset.benchmark;
+            currentField = this.dataset.field;
+            filterAndSortPapers();
+        });
+    });
+
+    // task筛选
+    taskBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            console.log('Task button clicked:', this.dataset.task);
+            taskBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            currentTask = this.dataset.task;
             filterAndSortPapers();
         });
     });
@@ -1363,15 +1455,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const arxivId = paper.id;
             const year = paper.published.split('-')[0];
 
-            bibtex += `@article{${arxivId.replace('.', '_')},\\n`;
-            bibtex += `  title={${paper.title}},\\n`;
-            bibtex += `  author={${paper.authors}},\\n`;
-            bibtex += `  year={${year}},\\n`;
+            bibtex += `@article{${arxivId.replace('.', '_')},\n`;
+            bibtex += `  title={${paper.title}},\n`;
+            bibtex += `  author={${paper.authors}},\n`;
+            bibtex += `  year={${year}},\n`;
             bibtex += `  journal={arXiv preprint arXiv:${arxivId}}`;
             if (paper.conference) {
-                bibtex += `,\\n  note={${paper.conference}}`;
+                bibtex += `,\n  note={${paper.conference}}`;
             }
-            bibtex += `\\n}\\n\\n`;
+            bibtex += `\n}\n\n`;
         });
 
         console.log(`Exporting ${selectedPapers.length} selected papers`);
