@@ -265,5 +265,61 @@
     "published": "2025-12-03",
     "update_time": "2025-12-03",
     "download_time": "2025-12-05 17:25:58"
+  },
+  {
+    "id": "2512.05073",
+    "title": "David vs. Goliath: Can Small Models Win Big with Agentic AI in Hardware Design?",
+    "abstract": "Large Language Model(LLM) inference demands massive compute and energy, making domain-specific tasks expensive and unsustainable. As foundation models keep scaling, we ask: Is bigger always better for hardware design? Our work tests this by evaluating Small Language Models coupled with a curated agentic AI framework on NVIDIA's Comprehensive Verilog Design Problems(CVDP) benchmark. Results show that agentic workflows: through task decomposition, iterative feedback, and correction - not only unlock near-LLM performance at a fraction of the cost but also create learning opportunities for agents, paving the way for efficient, adaptive solutions in complex design tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2512.05073",
+    "authors": [
+      "Shashwat Shankar",
+      "Subhranshu Pandey",
+      "Innocent Dengkhw Mochahari",
+      "Bhabesh Mali",
+      "Animesh Basak Chowdhury",
+      "Sukanta Bhattacharjee",
+      "Chandan Karfa"
+    ],
+    "first_author": "Shashwat Shankar",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文提出并在NVIDIA CVDP基准上评估了一个为小型语言模型（SLM）定制的多智能体 agentic AI 框架，通过任务分解、SLM 优化提示、迭代验证与回滚机制，使低成本 SLM 在 Verilog 硬件设计与理解任务中接近或匹配大模型性能并显著降低能耗与成本。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.05073v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-06 23:50:18"
+  },
+  {
+    "id": "2512.04680",
+    "title": "Generative AI for Self-Adaptive Systems: State of the Art and Research Roadmap",
+    "abstract": "Self-adaptive systems (SASs) are designed to handle changes and uncertainties through a feedback loop with four core functionalities: monitoring, analyzing, planning, and execution. Recently, generative artificial intelligence (GenAI), especially the area of large language models, has shown impressive performance in data comprehension and logical reasoning. These capabilities are highly aligned with the functionalities required in SASs, suggesting a strong potential to employ GenAI to enhance SASs. However, the specific benefits and challenges of employing GenAI in SASs remain unclear. Yet, providing a comprehensive understanding of these benefits and challenges is complex due to several reasons: limited publications in the SAS field, the technological and application diversity within SASs, and the rapid evolution of GenAI technologies. To that end, this paper aims to provide researchers and practitioners a comprehensive snapshot that outlines the potential benefits and challenges of employing GenAI's within SAS. Specifically, we gather, filter, and analyze literature from four distinct research fields and organize them into two main categories to potential benefits: (i) enhancements to the autonomy of SASs centered around the specific functions of the MAPE-K feedback loop, and (ii) improvements in the interaction between humans and SASs within human-on-the-loop settings. From our study, we outline a research roadmap that highlights the challenges of integrating GenAI into SASs. The roadmap starts with outlining key research challenges that need to be tackled to exploit the potential for applying GenAI in the field of SAS. The roadmap concludes with a practical reflection, elaborating on current shortcomings of GenAI and proposing possible mitigation strategies.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04680",
+    "authors": [
+      "Jialong Li",
+      "Mingyue Zhang",
+      "Nianyu Li",
+      "Danny Weyns",
+      "Zhi Jin",
+      "Kenji Tei"
+    ],
+    "first_author": "Jialong Li",
+    "category": [
+      "Survey"
+    ],
+    "field": "Self-Adaptive Systems",
+    "tag": "GenAI for MAPE-K (Monitoring, Analysis, Planning, Execution) and Human-on-the-loop Interaction",
+    "summary": "本文综述了将生成式AI（尤其是大型语言模型）应用于自适应系统的最新进展，分析其在增强MAPE‑K各功能和改善人机协作中的潜力与挑战，并提出了面向研究与实践的路线图与缓解策略。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04680v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-06 23:50:52"
   }
 ]
