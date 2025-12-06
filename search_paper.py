@@ -334,10 +334,10 @@ class PaperSearch:
         
             Assign one or more of the following categories (multiple allowed):
             
-            (1) Survey / Review — synthesizes, summarizes, or organizes existing research or tools.
-            (2) Experience / Empirical — analyzes existing phenomena in LLM4SE (e.g., evaluating current LLMs on tasks, understanding behavior, measuring performance); does not introduce a new method or dataset.
-            (3) Technical / Method — proposes a new method, model, algorithm, or tool for an SE task using LLMs.
-            (4) Benchmark / Dataset —  introduces a brand‑new benchmark, dataset, or evaluation suite for LLM4SE.
+            (1) Survey — synthesizes, summarizes, or organizes existing research or tools.
+            (2) Empirical — analyzes existing phenomena in LLM4SE (e.g., evaluating current LLMs on tasks, understanding behavior, measuring performance); does not introduce a new method or dataset.
+            (3) Technical — proposes a new method, model, algorithm, or tool for an SE task using LLMs.
+            (4) Benchmark —  introduces a brand‑new benchmark, dataset, or evaluation suite for LLM4SE.
                   - What does NOT qualify as “Benchmark / Dataset” :
                       1. Using an existing, publicly available benchmark or dataset for experiments or evaluation.
                       2. Presenting only evaluation results on a pre‑existing benchmark without providing any new data or evaluation framework. 

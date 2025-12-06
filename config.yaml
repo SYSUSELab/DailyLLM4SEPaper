@@ -13,6 +13,7 @@ papers_metadata_path: 'papers_metadata.jsonl'
 # 列表之间用AND连接，列表内每个词用OR连接
 categories:
     - cs.SE # software engineering
+    - cs.AI
 
 #论文的分类
 topic:
