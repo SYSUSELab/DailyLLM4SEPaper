@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 生成论文HTML
     function createPaperHTML(paper) {
-        const tags = paper.tag ? paper.tag.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+        const tags = paper.tag ? `<span class="tag">${paper.tag}</span>` : '';
 
         // 提取代码链接
         let codeLink = '';
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstCategory = paper.primary_category;
 
         return `
-            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-tags="${paper.tag ? paper.tag.join(',') : ''}" data-paper-id="${paper.id}">
+            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-tags="${paper.tag ? paper.tag : ''}" data-paper-id="${paper.id}">
                 <div class="paper-select">
                     <input type="checkbox" class="paper-checkbox" id="check-${paper.id}" data-paper-id="${paper.id}">
                     <label for="check-${paper.id}"></label>
@@ -302,10 +302,10 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         statusFilteredPapers.forEach(paper => {
-            const tags = paper.category || [];
-            tags.forEach(tag => {
-                if (categoryCounts.hasOwnProperty(tag)) {
-                    categoryCounts[tag]++;
+            const categories = paper.category || [];
+            categories.forEach(cat => {
+                if (categoryCounts.hasOwnProperty(cat)) {
+                    categoryCounts[cat]++;
                 }
             });
         });
