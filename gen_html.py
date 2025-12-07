@@ -287,15 +287,30 @@ class HTMLGenerator:
         return ('venue-other', conference)
 
     def generate_papers_html(self) -> str:
-        """生成论文列表 HTML"""
+        """生成论文列表 HTML（兼容 paper['tag'] 为 string 或 list）"""
         if not self.papers:
             return '<p class="no-results">暂无论文数据</p>'
 
         html_parts = []
         for paper in self.papers:
-            tags_html = ''.join([f'<span class="tag">{tag}</span>' for tag in paper.get('tag', [])])
-            authors_html = ', '.join(paper['authors'][:5])
-            if len(paper['authors']) > 5:
+            # 兼容 tag 为 string 或 list。若是 string，支持单个标签或逗号分隔多个标签。
+            raw_tag = paper.get('tag', '')
+            if isinstance(raw_tag, list):
+                tags_list = [t for t in raw_tag if isinstance(t, str) and t.strip()]
+            elif isinstance(raw_tag, str):
+                if ',' in raw_tag:
+                    tags_list = [t.strip() for t in raw_tag.split(',') if t.strip()]
+                else:
+                    tags_list = [raw_tag.strip()] if raw_tag.strip() else []
+            else:
+                tags_list = []
+
+            tags_html = ''.join([f'<span class="tag">{tag}</span>' for tag in tags_list])
+            data_tags_attr = ','.join(tags_list)  # 用于 data-tags 属性
+
+            authors = paper.get('authors', [])
+            authors_html = ', '.join(authors[:5])
+            if len(authors) > 5:
                 authors_html += ' et al.'
 
             # 获取友好的类别名称
@@ -310,7 +325,7 @@ class HTMLGenerator:
             is_published = 'published' if conference else 'preprint'
 
             # 提取代码链接
-            code_links = self.extract_code_links(paper['abstract'])
+            code_links = self.extract_code_links(paper.get('abstract', ''))
             code_links_html = ''
             if code_links.get('code'):
                 code_links_html += f'<a href="{code_links["code"]}" target="_blank" class="btn-link btn-code">💻 Code</a>'
@@ -318,13 +333,13 @@ class HTMLGenerator:
                 code_links_html += f'<a href="{code_links["project"]}" target="_blank" class="btn-link btn-project">🌐 Project</a>'
 
             paper_html = f"""
-            <article class="paper-card" data-tags="{','.join(paper.get('tag', []))}" data-status="{is_published}" data-date="{paper['published']}">
+            <article class="paper-card" data-tags="{data_tags_attr}" data-status="{is_published}" data-date="{paper.get('published', '')}">
                 <div class="venue-badge {venue_class}">{venue_display}</div>
                 <h2 class="paper-title">
-                    <a href="{paper['arxiv_url']}" target="_blank">{paper['title']}</a>
+                    <a href="{paper.get('arxiv_url', '')}" target="_blank">{paper.get('title', '')}</a>
                 </h2>
                 <div class="paper-meta">
-                    <span class="meta-item">📅 {paper['published']}</span>
+                    <span class="meta-item">📅 {paper.get('published', '')}</span>
                     <span class="meta-item">📖 ArXiv {category_name}</span>
                 </div>
                 <div class="paper-authors">
@@ -336,12 +351,12 @@ class HTMLGenerator:
                 <div class="paper-abstract">
                     <details>
                         <summary>查看摘要</summary>
-                        <p>{paper['abstract']}</p>
+                        <p>{paper.get('abstract', '')}</p>
                     </details>
                 </div>
                 <div class="paper-links">
-                    <a href="{paper['pdf_url']}" target="_blank" class="btn-link">📄 PDF</a>
-                    <a href="{paper['arxiv_url']}" target="_blank" class="btn-link">🔗 ArXiv</a>
+                    <a href="{paper.get('pdf_url', '')}" target="_blank" class="btn-link">📄 PDF</a>
+                    <a href="{paper.get('arxiv_url', '')}" target="_blank" class="btn-link">🔗 ArXiv</a>
                     {code_links_html}
                 </div>
             </article>
@@ -819,7 +834,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const statusBtns = document.querySelectorAll('.status-btn');
     const categoryBtns = document.querySelectorAll('.category-btn');
     const fieldBtns = document.querySelectorAll('.field-btn');
-    const taskBtns = document.querySelectorAll('.task-btn');
+    let taskBtns = document.querySelectorAll('.task-btn');
     const sortBtns = document.querySelectorAll('.sort-btn');
     const searchInput = document.getElementById('searchInput');
     const exportBtn = document.getElementById('exportBtn');
@@ -1088,6 +1103,65 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('updateTaskButtonCounts error:', err);
         }
     }
+
+    // 渲染 task 按钮（基于 field2task）
+    function renderTaskButtons(field) {
+        // 1) 找到任务按钮容器：优先使用已有的 taskBtns 的父容器
+        let container = null;
+        if (taskBtns && taskBtns.length > 0) {
+            container = taskBtns[0].parentElement;
+        } else {
+            // 尝试几种常见选择器（你可以把 HTML 中的容器加上 id="task-buttons" 或 class="task-buttons"）
+            container = document.querySelector('#task-buttons') || document.querySelector('.task-buttons') || null;
+        }
+
+        if (!container) {
+            console.warn('No container found for task buttons. Please add a container with id="task-buttons" or class="task-buttons", or ensure at least one .task-btn exists in HTML.');
+            return;
+        }
+
+        // 2) 清空现有
+        container.innerHTML = '';
+
+        // Helper: 创建一个按钮并附带 dataset、class、事件监听
+        function makeTaskButton(taskKey, isActive=false) {
+            const btn = document.createElement('button');
+            btn.className = 'task-btn';
+            btn.dataset.task = taskKey;
+            if (isActive) btn.classList.add('active');
+            btn.type = 'button';
+            btn.textContent = `${taskKey} (0)`; // 先给占位计数，稍后 updateTaskButtonCounts 会更新
+            btn.addEventListener('click', function() {
+                // 点击后设置 active 并触发筛选
+                document.querySelectorAll('.task-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentTask = this.dataset.task;
+                filterAndSortPapers();
+            });
+            return btn;
+        }
+
+        // 3) 根据 field 渲染按钮
+        // 总是放一个 'all' 按钮
+        const allBtn = makeTaskButton('all', currentTask === 'all');
+        allBtn.textContent = `全部 (0)`; // 占位
+        container.appendChild(allBtn);
+
+        if (field !== 'all') {
+            const tasks = field2task[field] || [];
+            tasks.forEach(t => {
+                const b = makeTaskButton(t, currentTask === t);
+                container.appendChild(b);
+            });
+        }
+
+        // 4) 重新查询 taskBtns 以反映新的 DOM
+        taskBtns = document.querySelectorAll('.task-btn');
+
+        // 5) 刷新计数与显示文本
+        // updateTaskButtonCounts();
+    }
+
 
     // 更新研究领域按钮的数量
     function updateFieldButtonCounts() {
@@ -1384,9 +1458,15 @@ document.addEventListener('DOMContentLoaded', function() {
             fieldBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             currentField = this.dataset.field;
+
+            // 先渲染对应的 task 按钮（如果 currentField === 'all' 则只渲染 'all'）
+            renderTaskButtons(currentField);
+
+            // 再进行筛选与统计（渲染后 updateTaskButtonCounts 会立即更新计数）
             filterAndSortPapers();
         });
     });
+
 
     // task筛选
     taskBtns.forEach(btn => {
