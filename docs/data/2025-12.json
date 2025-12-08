@@ -431,5 +431,114 @@
     "published": "2025-12-04",
     "update_time": "2025-12-04",
     "download_time": "2025-12-07 02:04:42"
+  },
+  {
+    "id": "2512.04611",
+    "title": "PBFuzz: Agentic Directed Fuzzing for PoV Generation",
+    "abstract": "Proof-of-Vulnerability (PoV) input generation is a critical task in software security and supports downstream applications such as path generation and validation. Generating a PoV input requires solving two sets of constraints: (1) reachability constraints for reaching vulnerable code locations, and (2) triggering constraints for activating the target vulnerability. Existing approaches, including directed greybox fuzzing and LLM-assisted fuzzing, struggle to efficiently satisfy these constraints. This work presents an agentic method that mimics human experts. Human analysts iteratively study code to extract semantic reachability and triggering constraints, form hypotheses about PoV triggering strategies, encode them as test inputs, and refine their understanding using debugging feedback. We automate this process with an agentic directed fuzzing framework called PBFuzz. PBFuzz tackles four challenges in agentic PoV generation: autonomous code reasoning for semantic constraint extraction, custom program-analysis tools for targeted inference, persistent memory to avoid hypothesis drift, and property-based testing for efficient constraint solving while preserving input structure. Experiments on the Magma benchmark show strong results. PBFuzz triggered 57 vulnerabilities, surpassing all baselines, and uniquely triggered 17 vulnerabilities not exposed by existing fuzzers. PBFuzz achieved this within a 30-minute budget per target, while conventional approaches use 24 hours. Median time-to-exposure was 339 seconds for PBFuzz versus 8680 seconds for AFL++ with CmpLog, giving a 25.6x efficiency improvement with an API cost of 1.83 USD per vulnerability.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04611",
+    "authors": [
+      "Haochen Zeng",
+      "Andrew Bao",
+      "Jiajun Cheng",
+      "Chengyu Song"
+    ],
+    "first_author": "Haochen Zeng",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "tag": "Test Generation",
+    "summary": "本文提出PBFuzz——一种基于LLM代理的定向模糊测试框架，通过自主演绎代码约束、工具编排、持久化记忆与基于属性的测试生成PoV输入，并在Magma基准上显著优于现有方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04611v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 01:51:09"
+  },
+  {
+    "id": "2512.04538",
+    "title": "Completion by Comprehension: Guiding Code Generation with Multi-Granularity Understanding",
+    "abstract": "As code completion task from function-level to repository-level, leveraging contextual information from large-scale codebases becomes a core challenge. However, existing retrieval-augmented generation (RAG) methods typically treat code as plain natural language, relying primarily on shallow semantic matching while overlooking structural semantics and code-specific dependencies. This limits their ability to capture control flow and underlying intent, ultimately constraining the quality of generated code. Therefore, we propose CoCo, a novel framework that enables code Completion by Comprehension of multi-granularity context from large-scale code repositories. CoCo employs static code analysis to extract structured context at the function, file, and project levels, capturing execution logic and semantic dependencies. It then adopts an graph-based multi-granularity context selection mechanism to filter out redundant information and remove noise. Consequently, the information is converted into natural language in a consistent manner, thereby functioning as explicit contextual prompts to guide subsequent code completion. Additionally, a structure-aware code re-ranker mechanism ensures alignment at both semantic and structural levels. Extensive experiments on CrossCodeEval and RepoEval benchmarks demonstrate that CoCo consistently surpasses state-of-the-art baselines, achieving up to 20.2% gains in EM. Moreover, the framework is model-agnostic and can be seamlessly integrated into existing methods, leading to significant performance.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04538",
+    "authors": [
+      "Xinkui Zhao",
+      "Rongkai Liu",
+      "Yifan Zhang",
+      "Chen Zhi",
+      "Lufei Zhang",
+      "Guanjie Cheng",
+      "Yueshen Xu",
+      "Shuiguang Deng",
+      "Jianwei Yin"
+    ],
+    "first_author": "Xinkui Zhao",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Completion",
+    "summary": "本文提出CoCo框架，通过静态代码分析提取函数、文件和仓库三级结构化上下文，使用图式多粒度上下文选择与结构感知重排序将关键信息转为自然语言提示，从而指导检索增强的模型进行仓库级代码补全并在基准上显著优于现有方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04538v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 01:51:40"
+  },
+  {
+    "id": "2512.04738",
+    "title": "OsmT: Bridging OpenStreetMap Queries and Natural Language with Open-source Tag-aware Language Models",
+    "abstract": "Bridging natural language and structured query languages is a long-standing challenge in the database community. While recent advances in language models have shown promise in this direction, existing solutions often rely on large-scale closed-source models that suffer from high inference costs, limited transparency, and lack of adaptability for lightweight deployment. In this paper, we present OsmT, an open-source tag-aware language model specifically designed to bridge natural language and Overpass Query Language (OverpassQL), a structured query language for accessing large-scale OpenStreetMap (OSM) data. To enhance the accuracy and structural validity of generated queries, we introduce a Tag Retrieval Augmentation (TRA) mechanism that incorporates contextually relevant tag knowledge into the generation process. This mechanism is designed to capture the hierarchical and relational dependencies present in the OSM database, addressing the topological complexity inherent in geospatial query formulation. In addition, we define a reverse task, OverpassQL-to-Text, which translates structured queries into natural language explanations to support query interpretation and improve user accessibility. We evaluate OsmT on a public benchmark against strong baselines and observe consistent improvements in both query generation and interpretation. Despite using significantly fewer parameters, our model achieves competitive accuracy, demonstrating the effectiveness of open-source pre-trained language models in bridging natural language and structured query languages within schema-rich geospatial environments.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04738",
+    "authors": [
+      "Zhuoyue Wan",
+      "Wentao Hu",
+      "Chen Jason Zhang",
+      "Yuanfeng Song",
+      "Shuaimin Li",
+      "Ruiqiang Xiao",
+      "Xiao-Yong Wei",
+      "Raymond Chi-Wing Wong"
+    ],
+    "first_author": "Zhuoyue Wan",
+    "category": [
+      "Technical"
+    ],
+    "field": "Natural Language Interfaces for Structured Geospatial Data",
+    "tag": "Text-to-OverpassQL and OverpassQL-to-Text (bidirectional NL ↔ OverpassQL translation)",
+    "summary": "本文提出OSMT，一种开源的标签感知预训练语言模型，并通过Tag Retrieval Augmentation和混合预训练策略实现对自然语言与OverpassQL的双向翻译，在参数量较小的情况下仍能在Text-to-OverpassQL和OverpassQL-to-Text任务上取得有竞争力的性能与更好的结构化生成质量。",
+    "quality": "High",
+    "conference": "42nd IEEE International Conference on Data Engineering (ICDE 2026)",
+    "pdf_url": "https://arxiv.org/pdf/2512.04738v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 02:00:39"
+  },
+  {
+    "id": "2512.04419",
+    "title": "Solving LLM Repetition Problem in Production: A Comprehensive Study of Multiple Solutions",
+    "abstract": "The repetition problem, where Large Language Models (LLMs) continuously generate repetitive content without proper termination, poses a critical challenge in production deployments, causing severe performance degradation and system stalling. This paper presents a comprehensive investigation and multiple practical solutions for the repetition problem encountered in real-world batch code interpretation tasks.   We identify three distinct repetition patterns: (1) business rule generation repetition, (2) method call relationship analysis repetition, and (3) PlantUML diagram syntax generation repetition. Through rigorous theoretical analysis based on Markov models, we establish that the root cause lies in greedy decoding's inability to escape repetitive loops, exacerbated by self-reinforcement effects.   Our comprehensive experimental evaluation demonstrates three viable solutions: (1) Beam Search decoding with early_stopping=True serves as a universal post-hoc mechanism that effectively resolves all three repetition patterns; (2) presence_penalty hyperparameter provides an effective solution specifically for BadCase 1; and (3) Direct Preference Optimization (DPO) fine-tuning offers a universal model-level solution for all three BadCases.   The primary value of this work lies in combining first-hand production experience with extensive experimental validation. Our main contributions include systematic theoretical analysis of repetition mechanisms, comprehensive evaluation of multiple solutions with task-specific applicability mapping, identification of early_stopping as the critical parameter for Beam Search effectiveness, and practical production-ready solutions validated in real deployment environments.",
+    "arxiv_url": "https://arxiv.org/abs/2512.04419",
+    "authors": [
+      "Weiwei Wang",
+      "Weijie Zou",
+      "Jiyong Min"
+    ],
+    "first_author": "Weiwei Wang",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "tag": "Code Prompting",
+    "summary": "本文结合生产环境中的一手经验、理论分析与大规模实验，提出并验证了三类可行的解决方案（启用early_stopping的Beam Search、presence_penalty参数调整和基于DPO的微调）以在批量代码解析任务中根治或缓解LLM的重复生成问题。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04419v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-08 02:07:41"
   }
 ]
