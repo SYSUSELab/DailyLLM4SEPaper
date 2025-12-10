@@ -23,7 +23,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文引入了两个用于Python程序合成的新数据集（MBPP和MathQA-Python），并实证评估了不同规模的大型语言模型在few-shot与微调情形下从自然语言描述生成短Python程序的性能、与人类交互以修复代码的能力及模型的语义归属限制。",
     "quality": "High",
     "conference": null,

@@ -18,7 +18,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出Coder-Reviewer重排方法：通过prompt将生成的程序放在前并估计p(x|y)，与原始p(y|x)的乘积用于重排候选代码，从而减少退化解并在多数据集、多模型上显著提升代码生成准确率且无需额外训练。",
     "quality": "High",
     "conference": null,
@@ -49,7 +49,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出并发布了DS-1000——一个包含1000个来自StackOverflow的真实数据科学Python问题的基准，配备可执行的多准则自动评测并通过扰动问题防止模型记忆化，以可靠评估代码生成模型性能。",
     "quality": "High",
     "conference": null,

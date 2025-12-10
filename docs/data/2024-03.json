@@ -22,7 +22,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Holistic Benchmarking & Contamination-free Evaluation",
+    "task": "Holistic Benchmarking & Contamination-free Evaluation",
     "summary": "本文提出 LiveCodeBench，一个持续更新且防止训练数据污染的综合性代码评测基准，收集 2023–2024 年竞赛题并在代码生成、自我修复、代码执行与测试输出预测等多种场景上对多款 LLM 进行广泛评估与污染分析。",
     "quality": "High",
     "conference": null,
@@ -60,7 +60,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Reasoning",
+    "task": "Code Reasoning",
     "summary": "本文提出DevEval，一个覆盖软件设计、环境搭建、实现与验收/单元测试等软件全生命周期任务的基准，并通过对多种LLM（含GPT‑4系列）的评估发现其在仓库级实现与测试上仍存在显著不足。",
     "quality": "High",
     "conference": null,

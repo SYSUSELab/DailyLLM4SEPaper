@@ -25,7 +25,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出 MultiPL-E，将 HumanEval 和 MBPP 翻译并扩展到 19 种编程语言，构建首个大规模多语言并行代码生成基准并用其评估多款模型以分析语言特性、流行度、类型系统和提示敏感性对生成性能的影响。",
     "quality": "High",
     "conference": null,

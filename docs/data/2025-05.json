@@ -15,7 +15,7 @@
       "Benchmark"
     ],
     "field": "Quality Management",
-    "tag": "Vulnerability Detection",
+    "task": "Vulnerability Detection",
     "summary": "ICVul 提供了一个面向 C/C++ 的高质量漏洞数据集，包含详细的元数据、Vulnerability-Contributing-Commits (VCCs) 追溯以及用于去除噪声提交的 ESC 筛选技术，并公开了可复现的构建框架。",
     "quality": "High",
     "conference": "MSR 2025",

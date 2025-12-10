@@ -17,7 +17,7 @@
       "Empirical"
     ],
     "field": "Requirements & Design",
-    "tag": "Management",
+    "task": "Management",
     "summary": "本文通过对1,575个LLM代理项目及11,910条开发者讨论进行大规模挖掘与分析，提出了基于SDLC的代理开发挑战分类并比较了十个主流代理框架在学习成本、开发效率、功能抽象、性能优化与可维护性五个维度的差异与优劣。",
     "quality": "High",
     "conference": null,
@@ -44,7 +44,7 @@
       "Empirical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出三种确定性方法为自动生成的REST API测试用例生成描述性名称，并通过用户调研（39名参与者）与大众汽车的工业案例比较规则与LLM方法，结果表明基于规则的方法在可读性上与先进LLM（如Gemini、GPT-4o）相当且已集成至EvoMaster作为默认策略。",
     "quality": "High",
     "conference": null,
@@ -69,7 +69,7 @@
       "Technical"
     ],
     "field": "Software Testing",
-    "tag": "Testing automation",
+    "task": "Testing automation",
     "summary": "GPTrace提出一种利用大语言模型生成堆栈跟踪和ASan报告的嵌入向量并对其进行聚类的崩溃去重工作流，从而在多目标大规模模糊测试崩溃集上显著优于现有基于栈跟踪的去重方法。",
     "quality": "High",
     "conference": "ICSE 2026",
@@ -94,7 +94,7 @@
       "Empirical"
     ],
     "field": "Maintenance",
-    "tag": "Patch Backporting",
+    "task": "Patch Backporting",
     "summary": "本文提出 BackportBench——一个包含来自 PyPI、Maven 和 npm 的 202 个多语言可执行补丁回移任务的基准，并用该基准评估现有补丁移植方法与多种 LLM 技术以分析其在不同语言与场景下的表现差异。",
     "quality": "High",
     "conference": null,
@@ -121,7 +121,7 @@
       "Benchmark"
     ],
     "field": "Maintenance",
-    "tag": "Code Review",
+    "task": "Code Review",
     "summary": "本文提出LAURA框架，通过上下文增强、相似评审示例检索与系统化引导对LLM进行检索增强生成代码评审，并构建了包含301,256条高质量diff‑comment序列的数据集，从而显著提升了ChatGPT-4o和DeepSeek v3的评审质量。",
     "quality": "High",
     "conference": "ASE 2025",
@@ -151,7 +151,7 @@
       "Technical"
     ],
     "field": "Quality Management",
-    "tag": "Vulnerability Detection",
+    "task": "Vulnerability Detection",
     "summary": "本文提出了面向JavaScript漏洞检测的自动基准生成框架FORGEJS，构建了系统性基准ARENAJS和自动评估框架JUDGEJS，并使用其对多款主流商用LLM进行系统评估，揭示了模型在推理能力、鲁棒性和可部署性方面的显著缺陷。",
     "quality": "High",
     "conference": null,
@@ -174,7 +174,7 @@
       "Benchmark"
     ],
     "field": "Software Testing",
-    "tag": "Testing automation",
+    "task": "Testing automation",
     "summary": "本文提出 Observation Lakehouse —— 一个基于 Parquet + Iceberg + DuckDB 的可持续、可交互的观测数据湖屋，用于以细粒度调用步骤记录运行时行为并按需重构 SRM/SRC，从而实现无需重执行即可进行 n 版评估、行为聚类与共识 Oracle 并开源了相应数据集与实现。",
     "quality": "High",
     "conference": null,
@@ -201,7 +201,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文报道了一次在巴西公立大学举办的一日“vibe coding”教育黑客松，通过观察、问卷与访谈分析31名本科生在以自然语言提示驱动的软件开发中的协作、工具使用与学习成果，发现其有利于快速原型和跨学科合作但存在早期思路收敛、代码质量不均与对工程实践参与有限等问题，建议通过引导发散思维与批判性评估来提升教学效果。",
     "quality": "Middle",
     "conference": null,
@@ -229,7 +229,7 @@
       "Benchmark"
     ],
     "field": "Quality Management",
-    "tag": "Bug Localization",
+    "task": "Bug Localization",
     "summary": "本文构建了新的BugT数据集并在Codeflaws、Condefects与BugT上系统评估多种开源与闭源LLM，实证分析了它们在新手程序故障定位中的性能、难度影响、推理过度与计算成本，并通过用户研究验证了LLM解释对新手的教学价值。",
     "quality": "High",
     "conference": "The Journal of Systems & Software",
@@ -257,7 +257,7 @@
       "Empirical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出HarnessAgent，一种工具增强的agent框架，通过编译错误分流、混合检索工具池与强化验证流水线，实现对大型C/C++代码库中内部函数的自动化模糊测试驱动（harness）构建，并在243个OSS-Fuzz目标上显著提高生成成功率与模糊覆盖率。",
     "quality": "High",
     "conference": null,
@@ -286,7 +286,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文提出并在NVIDIA CVDP基准上评估了一个为小型语言模型（SLM）定制的多智能体 agentic AI 框架，通过任务分解、SLM 优化提示、迭代验证与回滚机制，使低成本 SLM 在 Verilog 硬件设计与理解任务中接近或匹配大模型性能并显著降低能耗与成本。",
     "quality": "High",
     "conference": null,
@@ -313,7 +313,7 @@
       "Survey"
     ],
     "field": "Self-Adaptive Systems",
-    "tag": "GenAI for MAPE-K (Monitoring, Analysis, Planning, Execution) and Human-on-the-loop Interaction",
+    "task": "GenAI for MAPE-K (Monitoring, Analysis, Planning, Execution) and Human-on-the-loop Interaction",
     "summary": "本文综述了将生成式AI（尤其是大型语言模型）应用于自适应系统的最新进展，分析其在增强MAPE‑K各功能和改善人机协作中的潜力与挑战，并提出了面向研究与实践的路线图与缓解策略。",
     "quality": "High",
     "conference": null,
@@ -338,7 +338,7 @@
       "Technical"
     ],
     "field": "Self-Adaptive Systems",
-    "tag": "Multi-Agentic Runtime Adaptation (LLM-based reasoning & meta-learning)",
+    "task": "Multi-Agentic Runtime Adaptation (LLM-based reasoning & meta-learning)",
     "summary": "提出POLARIS——一个三层多智能体自适应框架，结合低延迟适配器、可解释的推理代理和元学习来实现预测性、可验证且能随经验持续演化的自适应系统，并在SWIM和SWITCH示例上显示出优于现有基线的性能提升。",
     "quality": "High",
     "conference": null,
@@ -362,7 +362,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Summarization",
+    "task": "Code Summarization",
     "summary": "本文对多款通用与代码专用大型语言模型在六个自然语言与推理基准及CoNaLa代码解释任务上进行了系统的横向评估与对比，发现代码优化模型在推理能力和语法精确性上具有显著优势。",
     "quality": "Middle",
     "conference": null,
@@ -390,7 +390,7 @@
       "Technical"
     ],
     "field": "Structured Document Translation",
-    "tag": "XML/HTML Structured Document Translation",
+    "task": "XML/HTML Structured Document Translation",
     "summary": "本文提出FORMATRL，一种基于Group Relative Policy Optimization的强化学习方法，通过TreeSim和Node-chrF等结构感知奖励以及StrucAUC评估，将结构信息直接纳入模型优化以提升带XML/HTML标记的软件文档翻译的结构保真度与翻译质量。",
     "quality": "High",
     "conference": null,
@@ -423,7 +423,7 @@
       "Benchmark"
     ],
     "field": "Requirements & Design",
-    "tag": "Analysis",
+    "task": "Analysis",
     "summary": "本文提出ASTRIDE——一个面向智能体式AI应用的自动化威胁建模平台，扩展STRIDE引入AI特有威胁类别并结合微调的视觉-语言模型与推理LLM从架构图端到端自动生成可解释的威胁模型。",
     "quality": "High",
     "conference": null,
@@ -448,7 +448,7 @@
       "Technical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出PBFuzz——一种基于LLM代理的定向模糊测试框架，通过自主演绎代码约束、工具编排、持久化记忆与基于属性的测试生成PoV输入，并在Magma基准上显著优于现有方法。",
     "quality": "High",
     "conference": null,
@@ -478,7 +478,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出CoCo框架，通过静态代码分析提取函数、文件和仓库三级结构化上下文，使用图式多粒度上下文选择与结构感知重排序将关键信息转为自然语言提示，从而指导检索增强的模型进行仓库级代码补全并在基准上显著优于现有方法。",
     "quality": "High",
     "conference": null,
@@ -507,7 +507,7 @@
       "Technical"
     ],
     "field": "Natural Language Interfaces for Structured Geospatial Data",
-    "tag": "Text-to-OverpassQL and OverpassQL-to-Text (bidirectional NL ↔ OverpassQL translation)",
+    "task": "Text-to-OverpassQL and OverpassQL-to-Text (bidirectional NL ↔ OverpassQL translation)",
     "summary": "本文提出OSMT，一种开源的标签感知预训练语言模型，并通过Tag Retrieval Augmentation和混合预训练策略实现对自然语言与OverpassQL的双向翻译，在参数量较小的情况下仍能在Text-to-OverpassQL和OverpassQL-to-Text任务上取得有竞争力的性能与更好的结构化生成质量。",
     "quality": "High",
     "conference": "42nd IEEE International Conference on Data Engineering (ICDE 2026)",
@@ -532,7 +532,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文结合生产环境中的一手经验、理论分析与大规模实验，提出并验证了三类可行的解决方案（启用early_stopping的Beam Search、presence_penalty参数调整和基于DPO的微调）以在批量代码解析任务中根治或缓解LLM的重复生成问题。",
     "quality": "High",
     "conference": null,
@@ -558,7 +558,7 @@
       "Empirical"
     ],
     "field": "Quality Management",
-    "tag": "Bug Localization",
+    "task": "Bug Localization",
     "summary": "本文提出将多仓库微服务代码库转化为分层的自然语言摘要，并采用先将错误报告路由到相关仓库、再自上而下进行目录与文件级搜索的两阶段 LLM 推理流程，实现对大规模工业系统的可解释缺陷定位，显著优于检索与 RAG 基线。",
     "quality": "High",
     "conference": "LLM4Code Workshop, ICSE 2026",
@@ -583,7 +583,7 @@
       "Empirical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出 Germinator：一种从 MLIR 方言的 TableGen 自动提取语法并结合语法约束的大型语言模型生成多样化种子以引导覆盖驱动的模糊测试，从而在 91 个方言上显著提升覆盖率并发现大量未知缺陷。",
     "quality": "High",
     "conference": null,
@@ -609,7 +609,7 @@
       "Empirical"
     ],
     "field": "Reasoning & Verification",
-    "tag": "Theorem Proving / Proof Search",
+    "task": "Theorem Proving / Proof Search",
     "summary": "本文提出了DMVR框架与α-DPG方法，通过以验证器过滤构造显式目标分布并利用α-散度在mode-seeking与mass-covering之间插值，从而可控地在精确性与多样性之间权衡，并在Lean定理证明基准上取得覆盖率-精度前沿上的最优表现，显著缓解了RLVR类方法导致的多样性下降。 ",
     "quality": "High",
     "conference": null,
@@ -635,7 +635,7 @@
       "Empirical"
     ],
     "field": "Quality Management",
-    "tag": "Bug Localization",
+    "task": "Bug Localization",
     "summary": "本文将多仓库微服务代码转换为层次化的自然语言摘要，并通过仓库路由与目录/文件自上而下的两阶段NL‑to‑NL搜索，利用LLM实现可解释且可扩展的多仓库缺陷定位，在工业级DNext系统上显著优于RAG与检索基线。",
     "quality": "High",
     "conference": "LLM4Code Workshop, ICSE 2026",
@@ -643,5 +643,151 @@
     "published": "2025-12-05",
     "update_time": "2025-12-05",
     "download_time": "2025-12-09 01:52:21"
+  },
+  {
+    "id": "2512.07814",
+    "title": "Understanding Privacy Risks in Code Models Through Training Dynamics: A Causal Approach",
+    "abstract": "Large language models for code (LLM4Code) have greatly improved developer productivity but also raise privacy concerns due to their reliance on open-source repositories containing abundant personally identifiable information (PII). Prior work shows that commercial models can reproduce sensitive PII, yet existing studies largely treat PII as a single category and overlook the heterogeneous risks among different types. We investigate whether distinct PII types vary in their likelihood of being learned and leaked by LLM4Code, and whether this relationship is causal. Our methodology includes building a dataset with diverse PII types, fine-tuning representative models of different scales, computing training dynamics on real PII data, and formulating a structural causal model to estimate the causal effect of learnability on leakage. Results show that leakage risks differ substantially across PII types and correlate with their training dynamics: easy-to-learn instances such as IP addresses exhibit higher leakage, while harder types such as keys and passwords leak less frequently. Ambiguous types show mixed behaviors. This work provides the first causal evidence that leakage risks are type-dependent and offers guidance for developing type-aware and learnability-aware defenses for LLM4Code.",
+    "arxiv_url": "https://arxiv.org/abs/2512.07814",
+    "authors": [
+      "Hua Yang",
+      "Alejandro Velasco",
+      "Sen Fang",
+      "Bowen Xu",
+      "Denys Poshyvanyk"
+    ],
+    "first_author": "Hua Yang",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Privacy & Security",
+    "task": "PII Leakage Analysis (causal)",
+    "tags": [
+      "PII Types",
+      "Training Dynamics",
+      "Memorization and Leakage",
+      "Structural Causal Model",
+      "PII Dataset from Code",
+      "LLM4Code Fine-tuning",
+      "Type-aware Privacy Risk",
+      "Leakage Attack Evaluation"
+    ],
+    "summary": "本文构建多类型PII数据集并在不同规模和架构的代码模型上计算训练动态，基于结构因果模型实证证明不同PII类型的可学性与推理时泄露风险存在因果关联，为类型感知的防护策略提供依据。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.07814v1",
+    "published": "2025-12-08",
+    "update_time": "2025-12-08",
+    "download_time": "2025-12-10 01:51:03"
+  },
+  {
+    "id": "2512.07666",
+    "title": "Bridging Code Graphs and Large Language Models for Better Code Understanding",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in code intelligence tasks such as code generation, summarization, and translation. However, their reliance on linearized token sequences limits their ability to understand the structural semantics of programs. While prior studies have explored graphaugmented prompting and structure-aware pretraining, they either suffer from prompt length constraints or require task-specific architectural changes that are incompatible with large-scale instructionfollowing LLMs. To address these limitations, this paper proposes CGBridge, a novel plug-and-play method that enhances LLMs with Code Graph information through an external, trainable Bridge module. CGBridge first pre-trains a code graph encoder via selfsupervised learning on a large-scale dataset of 270K code graphs to learn structural code semantics. It then trains an external module to bridge the modality gap among code, graph, and text by aligning their semantics through cross-modal attention mechanisms. Finally, the bridge module generates structure-informed prompts, which are injected into a frozen LLM, and is fine-tuned for downstream code intelligence tasks. Experiments show that CGBridge achieves notable improvements over both the original model and the graphaugmented prompting method. Specifically, it yields a 16.19% and 9.12% relative gain in LLM-as-a-Judge on code summarization, and a 9.84% and 38.87% relative gain in Execution Accuracy on code translation. Moreover, CGBridge achieves over 4x faster inference than LoRA-tuned models, demonstrating both effectiveness and efficiency in structure-aware code understanding.",
+    "arxiv_url": "https://arxiv.org/abs/2512.07666",
+    "authors": [
+      "Zeqi Chen",
+      "Zhaoyang Chu",
+      "Yi Gui",
+      "Feng Guo",
+      "Yao Wan",
+      "Chuan Shi"
+    ],
+    "first_author": "Zeqi Chen",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Summarization",
+    "tags": [
+      "Code Property Graph (CPG)",
+      "GNN-based code graph encoder",
+      "Self-supervised graph pretraining",
+      "Cross-modal attention / alignment",
+      "Bridge module (plug-and-play)",
+      "Structure-informed soft prompts",
+      "Graph-text contrastive learning",
+      "Code translation"
+    ],
+    "summary": "本文提出CGBridge——一种可插拔的桥接模块，通过对约27万条异构代码图进行自监督预训练、采用跨模态对齐（图-文本对比与匹配）并生成结构感知提示注入冻结的LLM，从而在代码摘要与翻译等代码理解任务上显著提升性能并提高推理效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.07666v1",
+    "published": "2025-12-08",
+    "update_time": "2025-12-08",
+    "download_time": "2025-12-10 01:51:28"
+  },
+  {
+    "id": "2512.07814",
+    "title": "Understanding Privacy Risks in Code Models Through Training Dynamics: A Causal Approach",
+    "abstract": "Large language models for code (LLM4Code) have greatly improved developer productivity but also raise privacy concerns due to their reliance on open-source repositories containing abundant personally identifiable information (PII). Prior work shows that commercial models can reproduce sensitive PII, yet existing studies largely treat PII as a single category and overlook the heterogeneous risks among different types. We investigate whether distinct PII types vary in their likelihood of being learned and leaked by LLM4Code, and whether this relationship is causal. Our methodology includes building a dataset with diverse PII types, fine-tuning representative models of different scales, computing training dynamics on real PII data, and formulating a structural causal model to estimate the causal effect of learnability on leakage. Results show that leakage risks differ substantially across PII types and correlate with their training dynamics: easy-to-learn instances such as IP addresses exhibit higher leakage, while harder types such as keys and passwords leak less frequently. Ambiguous types show mixed behaviors. This work provides the first causal evidence that leakage risks are type-dependent and offers guidance for developing type-aware and learnability-aware defenses for LLM4Code.",
+    "arxiv_url": "https://arxiv.org/abs/2512.07814",
+    "authors": [
+      "Hua Yang",
+      "Alejandro Velasco",
+      "Sen Fang",
+      "Bowen Xu",
+      "Denys Poshyvanyk"
+    ],
+    "first_author": "Hua Yang",
+    "category": [
+      "Empirical",
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "tags": [
+      "PII in code",
+      "Privacy leakage",
+      "Training dynamics",
+      "Structural causal model",
+      "PII dataset",
+      "PII extraction attacks",
+      "Fine-tuning LLM4Code",
+      "Type-specific leakage risk"
+    ],
+    "summary": "本文通过构建多类型PII代码数据集、测量模型训练动态并引入结构因果模型，实证并因果证明不同类型的PII在LLM4Code中存在显著且可解释的漏泄风险差异，为面向类型与可学性防御设计提供依据。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.07814v1",
+    "published": "2025-12-08",
+    "update_time": "2025-12-08",
+    "download_time": "2025-12-10 01:52:21"
+  },
+  {
+    "id": "2512.07631",
+    "title": "The Agent Capability Problem: Predicting Solvability Through Information-Theoretic Bounds",
+    "abstract": "When should an autonomous agent commit resources to a task? We introduce the Agent Capability Problem (ACP), a framework for predicting whether an agent can solve a problem under resource constraints. Rather than relying on empirical heuristics, ACP frames problem-solving as information acquisition: an agent requires $\\Itotal$ bits to identify a solution and gains $\\Istep$ bits per action at cost $\\Cstep$, yielding an effective cost $\\Ceff = (\\Itotal/\\Istep), \\Cstep$ that predicts resource requirements before search. We prove that $\\Ceff$ lower-bounds expected cost and provide tight probabilistic upper bounds. Experimental validation shows that ACP predictions closely track actual agent performance, consistently bounding search effort while improving efficiency over greedy and random strategies. The framework generalizes across LLM-based and agentic workflows, linking principles from active learning, Bayesian optimization, and reinforcement learning through a unified information-theoretic lens. \\",
+    "arxiv_url": "https://arxiv.org/abs/2512.07631",
+    "authors": [
+      "Shahar Lutati"
+    ],
+    "first_author": "Shahar Lutati",
+    "category": [
+      "Technical"
+    ],
+    "field": "Agent Decision & Planning",
+    "task": "Solvability Prediction / Resource Allocation",
+    "tags": [
+      "Agent Capability Problem",
+      "Solvability Prediction",
+      "Information-Theoretic Bounds",
+      "Effective Cost (Ceffective)",
+      "Mutual Information per Action",
+      "Stopping Time Analysis",
+      "Lorden's Inequality",
+      "Gaussian Process Approximation",
+      "Resource Allocation for LLM-based Agents"
+    ],
+    "summary": "本文提出了代理能力问题（ACP），用信息论视角将解决所需信息量 Itotal 与每步信息增益 Is 及每步代价 Cs 结合成 Ceffective，并给出该量的下界与概率性上界以在资源受限下预测并引导代理求解可行性，实验以高斯过程近似验证了理论预测的有效性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.07631v1",
+    "published": "2025-12-08",
+    "update_time": "2025-12-08",
+    "download_time": "2025-12-10 01:55:01"
   }
 ]

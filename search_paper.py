@@ -354,12 +354,12 @@ class PaperSearch:
         
         3. Tags Summary
         
-            Your goal is to summarize more detailed tags for the paper. The tags need to be at the same level as the task, or more detailed.
+            Your goal is to summarize more detailed tags for the paper. The tags need to be more detailed than task.
                 - Identify the most salient concepts, techniques, or application areas described in the paper.
                 - Avoid overly general tags such as “Large Language Models”, “Datasets and Benchmarks”, “Fine‑tuning”, etc.
                 - Avoid dataset or model names (e.g., “HumanEval”, “Qwen2.5‑72B”).
-                - If a tag is ambiguous or not clearly supported, omit it.
                 - Do not invent tags that are unrelated to the content.
+                - Tags may be single words or short phrases (e.g., “Model Editing”, “Deprecated API”).
             Return the list ["tag1", "tag2", ...].
             For example, input text: "Title: Lightweight Model Editing for LLMs to Correct Deprecated API Recommendations", output tags: ["Model Editing", "Deprecated API", "API Recommendations"]
             

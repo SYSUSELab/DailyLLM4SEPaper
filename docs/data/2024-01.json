@@ -25,7 +25,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文提出并开源DeepSeek-Coder系列（1.3B–33B），在包含仓库级语料的2万亿tokens上从零预训练并采用Fill-In-Middle训练与16K上下文，显著提升开源代码模型性能并在多项基准上超越现有开源及部分闭源模型。",
     "quality": "High",
     "conference": null,
@@ -52,7 +52,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出了用于并行/HPC代码生成与翻译的基准ParEval、以及新的性能评估指标（speedup_n@k 和 efficiency_n@k），并用该基准评估多种开源与闭源大模型，发现模型普遍难以生成高质量并行代码，尤其在MPI和稀疏/非结构化问题上表现最差。",
     "quality": "High",
     "conference": "HPDC 2024",
@@ -80,7 +80,7 @@
       "Benchmark"
     ],
     "field": "Requirements & Design",
-    "tag": "Elicitation",
+    "task": "Elicitation",
     "summary": "本文提出AISD，一个以保持用户全程参与的LLM驱动软件开发框架，并构建了用于评估自动化软件开发能力的新基准CAASD，实验证明在用例生成、设计迭代与原型测试下对比现有方法有显著提升。",
     "quality": "High",
     "conference": null,

@@ -37,7 +37,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文发布并开源了Code Llama——一系列基于Llama 2 的代码专用大模型（多种规模与变体），支持中间填充、超长上下文与指令微调，并在多项代码基准上达到了开源模型的最先进表现。",
     "quality": "High",
     "conference": null,
@@ -69,7 +69,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Instruction-Tuning",
+    "task": "Code Instruction-Tuning",
     "summary": "本文发布了用于指令微调的COMMITPACK（4TB Git 提交数据）及其高质量子集COMMITPACKFT，构建了多语言的HUMANEVALPACK基准，并基于这些数据训练出OCTOCODER/OCTOGEEX，在多语言的代码合成、修复与解释任务上在可许可模型中取得最优表现。",
     "quality": "High",
     "conference": null,
@@ -94,7 +94,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文提出了面向Java API误用的基准数据集ROBUSTAPI及基于AST的API使用检测器，收集了1208个Stack Overflow问题并评估多款主流LLM，发现即使GPT-4也存在大量API误用（约62%）。",
     "quality": "High",
     "conference": null,
@@ -122,7 +122,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "BioCoder 提出一个面向生物信息学的大规模代码生成基准（共 2,269 个问题），从 GitHub 与 Rosalind 提取并清洗函数，提供多文件上下文、依赖解析、执行式模糊测试与 Docker 化评测工具，用以评估并分析不同 LLM 在生物信息学代码生成中的性能和领域知识需求。",
     "quality": "High",
     "conference": null,

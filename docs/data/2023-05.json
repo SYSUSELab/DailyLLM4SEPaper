@@ -79,7 +79,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文发布并评估了开源代码语言模型StarCoder与StarCoderBase（15.5B参数、8K上下文、填空能力与多查询注意力），在大规模许可代码语料上预训练并对Python进行微调，同时提供PII脱敏与归属追踪工具，且在多项基准上优于其他开源代码模型。",
     "quality": "High",
     "conference": null,
@@ -106,7 +106,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文提出CodeT5+，一种可灵活组合组件的encoder-decoder代码大模型族，通过混合预训练目标（span denoising、对比学习、文本-代码匹配与因果语言建模）、冻结大解码器并仅训练浅编码器与交叉注意力以高效扩展，并结合instruction-tuning，在多项代码理解与生成基准上取得显著提升并在HumanEval上达成新SOTA。",
     "quality": "High",
     "conference": null,
@@ -133,7 +133,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "该工作通过对模型架构、学习目标、infill 采样和数据分布的大规模消融实验，提出并验证了用于代码与自然语言统一预训练的简洁混合目标与训练配方，并开源了 CodeGen2 模型与训练框架。",
     "quality": "High",
     "conference": null,
@@ -159,7 +159,7 @@
       "Benchmark"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出EvalPlus，通过结合LLM驱动的种子输入生成与类型感知变异的大规模测试输入扩充并将HUMANEVAL扩展为HUMANEVAL+，从而更严格地评估LLM生成代码的功能正确性并揭示大量先前未被检测的错误与模型排名变化。",
     "quality": "High",
     "conference": null,
@@ -184,7 +184,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Editing",
+    "task": "Code Editing",
     "summary": "该论文提出Coeditor——一种基于repo级行diff编码、扩展CodeT5并采用块稀疏注意力的多轮代码自动编辑模型，同时构建并开源了PYCOMMITS数据集与评测框架，并在多轮编辑任务上显著优于现有基线。",
     "quality": "High",
     "conference": "The Twelfth International Conference on Learning Representations 2024",

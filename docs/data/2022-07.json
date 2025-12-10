@@ -16,7 +16,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Reasoning",
+    "task": "Code Reasoning",
     "summary": "本文提出CodeRL框架，将预训练代码语言模型作为actor并引入critic与基于单元测试的奖励和关键采样策略，通过深度强化学习优化代码生成与自动修复，在APPS和MBPP上取得新的SOTA表现。",
     "quality": "High",
     "conference": "NeurIPS 2022",
@@ -44,7 +44,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "论文提出CODET方法，利用同一预训练模型自动生成测试用例并通过双重执行一致性（基于生成测试的输出匹配和候选程序间的一致性）从多个候选解中选出最佳代码，从而在HumanEval、MBPP、APPS等基准上显著提升了pass@1性能。",
     "quality": "High",
     "conference": null,

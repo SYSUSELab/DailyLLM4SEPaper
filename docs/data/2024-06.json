@@ -51,7 +51,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文提出了开源的DeepSeek-Coder-V2——基于Mixture-of-Experts的大规模代码模型，通过在DeepSeek-V2上继续使用额外6万亿tokens的预训练并结合指令微调与GRPO对齐，使得236B参数模型在代码与数学推理基准上达到并在若干任务上超越GPT-4-Turbo等闭源模型，支持338种编程语言和128K上下文长度。",
     "quality": "High",
     "conference": null,
@@ -76,7 +76,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Instruction-Tuning",
+    "task": "Code Instruction-Tuning",
     "summary": "本文提出PLUM，一种通过自动从自然语言题目生成测试用例并对模型自采样候选解进行执行反馈的在线在策略偏好学习框架，以无需训练奖励模型的方式显著提升代码语言模型的正确率。",
     "quality": "High",
     "conference": null,
@@ -108,7 +108,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出了分层上下文剪枝（HCP）策略，在函数级别保留文件间拓扑依赖并裁剪无关实现，从而大幅减少仓库级预训练代码LLM的输入长度并显著提升代码补全准确率。",
     "quality": "High",
     "conference": null,

@@ -16,7 +16,7 @@
       "Technical"
     ],
     "field": "Quality Management",
-    "tag": "Bug Repair",
+    "task": "Bug Repair",
     "summary": "提出MGDebugger，一种将代码分解为子函数层次、为子函数生成测试并利用LLM模拟执行自底向上定位与修复错误的分层调试方法，显著提升对LLM生成代码与真实软件缺陷的修复率。",
     "quality": "High",
     "conference": "ICSE 2026",

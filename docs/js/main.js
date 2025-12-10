@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 生成论文HTML
     function createPaperHTML(paper) {
-        const tags = paper.tag ? `<span class="tag">${paper.tag}</span>` : '';
+        const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
 
         // 提取代码链接
         let codeLink = '';
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstCategory = paper.primary_category;
 
         return `
-            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-tags="${paper.tag ? paper.tag : ''}" data-paper-id="${paper.id}">
+            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-task="${paper.task ? paper.task : ''}" data-paper-id="${paper.id}">
                 <div class="paper-select">
                     <input type="checkbox" class="paper-checkbox" id="check-${paper.id}" data-paper-id="${paper.id}">
                     <label for="check-${paper.id}"></label>
@@ -159,8 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="paper-summary">
                         🤖 ${paper.summary}
                     </div>
-                    <div class="paper-tags">
-                        ${tags}
+                    <div class="paper-task">
+                        ${task}
                     </div>
                     <div class="paper-abstract">
                         <details>
@@ -251,13 +251,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 统计
             statusFilteredPapers.forEach(paper => {
-                const tag = paper.tag || '';
-                if (!tag) return;
-                if (taskCounts.hasOwnProperty(tag)) {
-                    taskCounts[tag]++;
+                const task = paper.task || '';
+                if (!task) return;
+                if (taskCounts.hasOwnProperty(task)) {
+                    taskCounts[task]++;
                 } else {
-                    // 若 tag 不在预定义 tasksForField 中，也把它计入
-                    taskCounts[tag] = (taskCounts[tag] || 0) + 1;
+                    // 若 task 不在预定义 tasksForField 中，也把它计入
+                    taskCounts[task] = (taskCounts[task] || 0) + 1;
                 }
             });
 
@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const status = paper.conference ? 'published' : 'preprint';
             const category = paper.category || [];
             const field = paper.field;
-            const task = paper.tag;
+            const task =paper.task;
             const text = `${paper.title} ${paper.authors} ${paper.abstract}`.toLowerCase();
 
             const matchStatus = currentStatus === 'all' || status === currentStatus;

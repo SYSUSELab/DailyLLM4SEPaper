@@ -23,7 +23,7 @@
       "Benchmark"
     ],
     "field": "Quality Management",
-    "tag": "Vulnerability Detection",
+    "task": "Vulnerability Detection",
     "summary": "本文构建了包含 Python、Java、JavaScript 函数级漏洞的大规模数据集，并对五个开源大模型在提示工程、指令微调和序列分类微调下进行全面基准评测，比较其与小型模型和静态扫描工具的表现，同时探索通过均衡重采样与模型集成提升检测效果。",
     "quality": "High",
     "conference": null,

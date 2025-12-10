@@ -36,7 +36,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文介绍了Qwen2.5-Coder系列（0.5B–32B），在继承Qwen2.5架构的基础上用超过5.5万亿token的代码与相关文本进行大规模预训练并通过精心设计的指令微调与数据清洗策略显著提升代码生成、补全与推理任务的性能并开源发布。",
     "quality": "High",
     "conference": null,

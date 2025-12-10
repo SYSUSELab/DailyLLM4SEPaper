@@ -54,7 +54,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "该技术报告介绍了BigCode社区训练的1.1B参数代码模型SantaCoder，包含PII删减管道、架构（MQA、FIM）与数据预处理的消融实验，并在MultiPL-E上优于之前开源多语言模型。",
     "quality": "High",
     "conference": null,
@@ -79,7 +79,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "该论文提出PPOCoder——一种将预训练代码模型与PPO强化学习结合、利用编译器执行和代码结构对齐作为不可微奖励来优化代码生成以提高可编译性和功能正确性的通用框架，并在多种编程语言与任务上显著优于现有方法。",
     "quality": "High",
     "conference": "TMLR 2023",

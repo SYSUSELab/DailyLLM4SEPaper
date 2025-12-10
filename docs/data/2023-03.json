@@ -25,7 +25,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文提出并开源了一个13B参数的多语言代码生成预训练模型CodeGeeX，同时构建了用于多语言函数正确性评估的HumanEval-X基准，并展示了模型在生成与翻译任务上的优势与实际IDE部署带来的用户增效。",
     "quality": "High",
     "conference": null,

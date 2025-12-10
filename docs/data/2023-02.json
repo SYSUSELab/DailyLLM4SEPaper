@@ -18,7 +18,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Reasoning",
+    "task": "Code Reasoning",
     "summary": "本文提出LEVER，一种通过对代码LLM生成的候选程序结合其执行结果训练判别器并据此重排序的方法，以提高语言到代码生成的执行准确率，在四个基准上显著优于基线并达成SOTA。",
     "quality": "High",
     "conference": "ICML 2023",
