@@ -23,7 +23,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Instruction-Tuning",
+    "task": "Code Instruction-Tuning",
     "summary": "本文提出了RRTF（Rank Responses to align Test&Teacher Feedback）框架，并基于该框架对StarCoder进行排序反馈式指令微调得到PanGu-Coder2，从而在HumanEval、CoderEval和LeetCode等基准上显著提升代码生成性能并达成新的SOTA。",
     "quality": "High",
     "conference": null,
@@ -51,7 +51,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Reasoning",
+    "task": "Code Reasoning",
     "summary": "本文提出 RLTF，一种基于在线强化学习并利用多粒度单元测试反馈（细粒度与自适应反馈）的框架，用以细化代码大模型并在 APPS 与 MBPP 基准上取得显著提升。",
     "quality": "High",
     "conference": "TMLR 2023",

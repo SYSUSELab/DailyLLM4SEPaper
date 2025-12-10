@@ -18,7 +18,7 @@
       "Experience"
     ],
     "field": "Technical Debt",
-    "tag": "SATD Identification and Classification (including Scientific Debt) in Scientific Software",
+    "task": "SATD Identification and Classification (including Scientific Debt) in Scientific Software",
     "summary": "本文构建并扩充了面向科学软件的SATD数据集、微调并比较了10种Transformer/大型语言模型用于自动识别与分类包括新定义的“Scientific Debt”在内的自认技术债务，并发现科学软件中的SATD显著多于通用软件且所提模型优于现有基线。",
     "quality": "High",
     "conference": null,
@@ -46,7 +46,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Reasoning",
+    "task": "Code Reasoning",
     "summary": "提出AutoRocq——一个与Rocq/Coq交互的agent式LLM证明代理，通过迭代地从定理证明器获取上下文与反馈并精炼策略，自动生成可被证明器检验的程序证明，在SV-COMP基准与Linux内核模块上显著提高了自动化程序验证效果。",
     "quality": "High",
     "conference": null,
@@ -70,7 +70,7 @@
       "Benchmark"
     ],
     "field": "Serverless Computing",
-    "tag": "Function Recommendation / Reuse",
+    "task": "Function Recommendation / Reuse",
     "summary": "本文提出SlsReuse——一个基于大型语言模型的无服务器函数重用框架，利用少样本提示工程构建语义增强表示并通过多级剪枝与相似度匹配实现意图感知的函数发现与推荐，在自建的500个函数与110个查询数据集上显著优于现有基线。",
     "quality": "High",
     "conference": null,
@@ -97,7 +97,7 @@
       "Benchmark"
     ],
     "field": "Quality Management",
-    "tag": "Vulnerability Assessment (Severity Classification)",
+    "task": "Vulnerability Assessment (Severity Classification)",
     "summary": "本文提出ReVul-CoT框架，将检索增强生成(RAG)与链式思维(CoT)提示结合，利用从NVD/CWE构建的本地知识库对12,070条漏洞进行动态检索与逐步推理，从而显著提升基于LLM的CVSS v3漏洞严重性评估效果并公开数据与代码。",
     "quality": "High",
     "conference": null,
@@ -122,7 +122,7 @@
       "Empirical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文在仓库级别的自动程序修复任务上，使用Agentless与e-Otter++并基于Claude-3.7-Sonnet与GPT-4o实证量化了LLM生成补丁对白盒测试的过拟合程度，评估了基于白盒测试的补丁改进对过拟合的影响并探索了缓解手段。",
     "quality": "High",
     "conference": null,
@@ -149,7 +149,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文提出了一种用于孟加拉语指令到Python代码生成的多智能体流水线：先由生成代理产生初始程序，运行pytest单元测试仅将失败样例连同错误追踪交给调试代理进行最小化修复，最终在BLP-2025共享任务中以95.4% Pass@1获胜并开源代码。",
     "quality": "High",
     "conference": null,
@@ -174,7 +174,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Translation",
+    "task": "Code Translation",
     "summary": "提出CorrectHDL框架，利用HLS生成的HDL作为功能参考，结合LLM、RAG与差分验证迭代修复LLM生成的HDL，从而实现功能正确且在面积与功耗上显著优于传统HLS的硬件设计。",
     "quality": "High",
     "conference": null,
@@ -198,7 +198,7 @@
       "Technical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出一种基于多代理的自动化验证框架，利用LLM生成问题级测试接口、测试用例和针对优化模型的变异体，并通过变异覆盖率评估来自自然语言描述的线性规划模型的正确性。",
     "quality": "High",
     "conference": null,
@@ -224,7 +224,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文系统评估了四款大型模型在从自然语言描述生成Solidity智能合约函数时的语义相似度、功能可行性、gas效率与代码复杂度，发现尽管语义相似但功能正确率较低，而检索增强生成（RAG）能显著提升表现并降低gas消耗。",
     "quality": "High",
     "conference": null,
@@ -253,7 +253,7 @@
       "Technical"
     ],
     "field": "Vulnerability Analysis & Documentation",
-    "tag": "Textual Vulnerability Description Synthesis",
+    "task": "Textual Vulnerability Description Synthesis",
     "summary": "本文提出一种域约束的大模型合成框架（包含提取、基于领域锚词的自评估和基于信息熵的融合）及 Digest Labels 可视化工具，用以统一并保全来自不同漏洞库中不一致的关键要素，从而提高漏洞描述的完整性与分析效率。",
     "quality": "High",
     "conference": null,
@@ -277,7 +277,7 @@
       "Survey"
     ],
     "field": "Requirements & Design",
-    "tag": "Analysis",
+    "task": "Analysis",
     "summary": "本文为一次Shonan会议报告，综述并讨论了AI基础模型对软件开发环境（IDE）的影响、可能带来的挑战与风险，并提出若干未来研究问题与方向。",
     "quality": "Middle",
     "conference": null,
@@ -300,7 +300,7 @@
       "Benchmark"
     ],
     "field": "Quality Management",
-    "tag": "Defect Prediction",
+    "task": "Defect Prediction",
     "summary": "本文提出CodeX-Verify，一种由正确性、 安全、 性能与风格四个专用智能体组成的多智能体静态代码验证系统，并基于条件独立下互信息的次模性质证明组合智能体可提高缺陷检测率，实验在99个有验证标签样本上达到76.1%检出率并开源数据集。",
     "quality": "Middle",
     "conference": null,
@@ -332,7 +332,7 @@
       "Benchmark"
     ],
     "field": "Quality Management",
-    "tag": "Bug Repair",
+    "task": "Bug Repair",
     "summary": "本文提出InfCode-C++，结合意图引导的语义检索与基于AST的结构化查询，为复杂C++代码库构建语言感知的上下文检索与修复流程，在MultiSWE-bench-CPP上将问题解决率提升至25.58%，显著优于现有代理。",
     "quality": "High",
     "conference": null,
@@ -363,7 +363,7 @@
       "Technical"
     ],
     "field": "Quality Management",
-    "tag": "Bug Repair",
+    "task": "Bug Repair",
     "summary": "本文提出 InfCode —— 一个在容器化环境中通过测试生成器与代码补丁生成器的对抗迭代、多代理协作来强化仓库级别缺陷定位与修复的框架，并在 SWE-bench 验证集上取得了新的 SOTA（79.4%）。",
     "quality": "High",
     "conference": null,
@@ -392,7 +392,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文从因果视角验证并应用PSC指标，系统测量、解释并缓解LLM生成代码中的code smells，量化解码策略、模型架构与提示设计的影响并发布基准与数据集。",
     "quality": "High",
     "conference": null,
@@ -419,7 +419,7 @@
       "Technical"
     ],
     "field": "Requirements & Design",
-    "tag": "Elicitation",
+    "task": "Elicitation",
     "summary": "本文提出了名为AutoSW的迭代端到端自动化软件开发范式，基于协同代理在分析-规划-实现-交付的循环中将AI作为第一类参与者，从自然语言意图出发自动化产生可测试、可部署的软件并支持可追溯的演化。",
     "quality": "Middle",
     "conference": null,
@@ -448,7 +448,7 @@
       "Benchmark"
     ],
     "field": "Quality Management",
-    "tag": "Bug Repair",
+    "task": "Bug Repair",
     "summary": "本文提出 RGym——一个可在本地运行的轻量级内核APR评估框架，发布并验证了包含143个KASAN内核漏洞的数据集，并设计了基于bug-inducing commit与调用栈的现实定位策略与简单高效的LLM补丁流水线，实现在低成本下显著提升修复通过率并进行了消融分析。",
     "quality": "High",
     "conference": "NeurIPS 2025 Workshop: Evaluating the Evolving LLM Lifecycle: Benchmarks, Emergent Abilities, and Scaling 2025",
@@ -478,7 +478,7 @@
       "Benchmark"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出一种针对Selenium表单交互的LLM微调方法并构建并发布首个表单交互测试数据集，通过合成与人工标注数据训练模型生成语法正确、可执行且覆盖率高的Selenium测试脚本，实验证明在语法正确性、脚本可执行性和输入字段覆盖率上优于多种强基线（含GPT‑4o）。",
     "quality": "High",
     "conference": "Proceedings of KSE 2025",
@@ -501,7 +501,7 @@
       "Empirical"
     ],
     "field": "AIOps",
-    "tag": "Incident Response / Decision Support",
+    "task": "Incident Response / Decision Support",
     "summary": "本文通过可复现的容器化框架 MyAntFarm.ai，在348次受控试验中比较单体 LLM 与分工多智能体编排，提出多维决策质量（Decision Quality）指标并证明多智能体在可执行性、具体性与正确性上显著优于单体方案，使其在事故响应场景中实现确定性、高质量的决策支持。",
     "quality": "Middle",
     "conference": null,
@@ -530,7 +530,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文提出了语义工程并引入语言级的语义上下文注释SemText，将自然语言意图绑定到程序构造中以扩展MTP的中间表示，从而在显著减少开发者手工提示成本的同时将自动生成的提示性能提升到接近或优于传统Prompt Engineering，并通过在Jac中实现及一套更贴近实际场景的基准评测验证其有效性。",
     "quality": "High",
     "conference": null,
@@ -555,7 +555,7 @@
       "Empirical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出一种基于大型语言模型（如GPT‑4o）的实时故障注入测试用例生成方法，能够从功能安全需求自动进行传感器/执行器分类并生成单点及并发故障测试用例，并在硬件在环（HIL）仿真中验证，取得分类F1=88%与测试用例生成F1=97.5%的优异结果。",
     "quality": "High",
     "conference": null,
@@ -583,7 +583,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Editing",
+    "task": "Code Editing",
     "summary": "本文提出SLMFix：在不微调大型模型的前提下，利用经强化学习微调的小型语言模型修复LLM生成的DSL代码中的静态错误，并构建了Ansible数据集以验证方法在低资源语言上的有效性。",
     "quality": "High",
     "conference": null,
@@ -608,7 +608,7 @@
       "Empirical"
     ],
     "field": "Program Analysis & Reverse Engineering",
-    "tag": "Deobfuscation / Program Semantics Recovery",
+    "task": "Deobfuscation / Program Semantics Recovery",
     "summary": "本文构建包含四种常见混淆变换的数据集，并提出将 KLEE 符号执行产生的约束、路径统计和测试用例等工件与 LLM 微调相结合的混合方法以恢复被混淆程序的可编译性与语义一致性，实验证明该方法显著提升了语法正确性、语义保真度和代码可读性。",
     "quality": "High",
     "conference": null,
@@ -636,7 +636,7 @@
       "Empirical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出AGONETEST——一个用于端到端自动化评估LLM生成的Java类级别单元测试的框架，并发布了映射类到测试类的CLASSES2TEST数据集，结合覆盖率、变异分数和测试味等指标对生成测试进行综合评估，实验证明在可编译测试子集上LLM生成的测试在覆盖率和缺陷检测能力上可与人工测试媲美。",
     "quality": "High",
     "conference": "ASE 2025",
@@ -663,7 +663,7 @@
       "Survey"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文对2021–2025年间115篇关于利用大语言模型生成单元测试的研究进行了系统综述，提出基于生成生命周期的统一分类，梳理了核心策略与增强技术，指出了评估基准不足与缺陷检测能力薄弱等关键挑战并给出未来路线图。",
     "quality": "High",
     "conference": null,
@@ -689,7 +689,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Editing",
+    "task": "Code Editing",
     "summary": "本文首次对基于大型语言模型的多智能体系统（以GitHub Copilot agent为代表）在软件工程研究工件的数据集适配任务上进行了系统实证评估，提出五阶段评估流程并发现当前系统能识别关键文件并生成部分适配代码但很少产生功能正确的实现，且提供执行错误信息与参考代码等提示能显著提升生成代码的结构相似度。",
     "quality": "High",
     "conference": null,
@@ -718,7 +718,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文构建了用于评估过时API知识编辑的基准EDAPIBench、比较了10种轻量级模型编辑方法在三款代码模型上的表现，并提出AdaLoRA-L通过区分“通用API层”和“特定API层”显著提高编辑的特异性同时保持效果与泛化能力。",
     "quality": "High",
     "conference": null,
@@ -745,7 +745,7 @@
       "Empirical"
     ],
     "field": "Requirements & Design",
-    "tag": "Analysis",
+    "task": "Analysis",
     "summary": "本文提出了一个可控的分层评估基准与方法，系统生成带有内聚与耦合缺陷的代码片段并在不同引导级别与噪声条件下评测DeepSeek‑R1系列模型，发现在噪声与开放式任务下耦合推理高度脆弱而内聚分析相对稳健。",
     "quality": "High",
     "conference": null,
@@ -776,7 +776,7 @@
       "Empirical"
     ],
     "field": "Quality Management",
-    "tag": "Defect Prediction",
+    "task": "Defect Prediction",
     "summary": "本文通过六场涵盖58名开发者的共创工作坊，探讨了开发者对IDE中AI辅助缺陷检测与代码可读性评估工具的心智模型，提出“Bug Detective”和“Quality Coach”两种隐喻并归纳出以解释清晰、时机与可控性为核心的设计原则以增强信任与协作。",
     "quality": "High",
     "conference": null,
@@ -802,7 +802,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Alignment",
+    "task": "Code Alignment",
     "summary": "本文提出了CODEFUSE-COMMITEVAL——基于ApacheCM并通过规则化突变与双重验证构建的首个用于提交信息与代码差异不一致（MCI）检测的基准数据集，并在六个开源大模型与多种增强策略下进行了系统评估与类型分析。",
     "quality": "High",
     "conference": null,
@@ -832,7 +832,7 @@
       "Empirical"
     ],
     "field": "Software Testing",
-    "tag": "Testing automation",
+    "task": "Testing automation",
     "summary": "本文提出DUALGAUGE及DUALGAUGE-BENCH，一个自动化的联合功能与安全性基准测试框架与覆盖驱动的测试套件，通过沙箱执行、依赖自动解析和基于LLM的语义评估来同时评估LLM生成代码的正确性与可被利用的漏洞，并对多款主流模型进行了大规模测试揭示关键缺陷。",
     "quality": "High",
     "conference": null,
@@ -856,7 +856,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出Agint——一种将自然语言意图逐步编译为类型化、具效应感知的代码DAG并通过混合LLM/函数JIT运行时进行增量解析、并行执行与可重现部署的代理图编译器与运行时，旨在提高代码生成的可靠性、低延迟和可组合性。",
     "quality": "High",
     "conference": "NeurIPS Workshop: Deep Learning for Code in the Agentic Era 2025",
@@ -881,7 +881,7 @@
       "Empirical"
     ],
     "field": "Quality Management",
-    "tag": "Vulnerability Repair",
+    "task": "Vulnerability Repair",
     "summary": "本文通过对14款主流LLM在15个真实漏洞及41个对应人工漏洞上进行一次性补丁生成并以PoV测试执行验证，发现LLM对真实漏洞的修复效果优于人工漏洞且不同模型在修复上存在显著的互补性与重叠性。",
     "quality": "High",
     "conference": null,
@@ -907,7 +907,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Translation",
+    "task": "Code Translation",
     "summary": "本文提出C2C-MoLA，一种将Mixture of Experts与LoRA结合的多模态图表到代码生成框架，通过复杂度感知的动态路由、参数高效微调与语法语义联合训练在Chart2Code-160k上显著提升生成准确率、降低显存占用并加速收敛。",
     "quality": "High",
     "conference": null,
@@ -931,7 +931,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Reasoning",
+    "task": "Code Reasoning",
     "summary": "本文提出 Chain of Unit-Physics 框架，通过人类专家编写的基于第一性原理的“单元物理”可测试约束与多智能体迭代生成/验证流程，显著提升基于LLM的科学计算代码合成的物理一致性与可靠性，并在一个12自由度燃烧求解器任务上达到接近人工实现的精度同时提升性能。",
     "quality": "High",
     "conference": null,
@@ -953,7 +953,7 @@
       "Empirical"
     ],
     "field": "Human-AI Collaboration",
-    "tag": "Attribution & Transparency in Open-Source Software",
+    "task": "Attribution & Transparency in Open-Source Software",
     "summary": "基于对2023–2025年14,300次GitHub提交的实证分析，本文揭示了开发者在开源项目中对AI生成代码的归属披露是一种战略性沟通（“AI归属悖论”），并比较了不同工具、社区响应及其随时间的演进。",
     "quality": "High",
     "conference": null,
@@ -976,7 +976,7 @@
       "Technical"
     ],
     "field": "Software Testing",
-    "tag": "Test Generation",
+    "task": "Test Generation",
     "summary": "本文提出一个结合TDD与QUBO优化的端到端框架：先用LLM生成带功能标签的冗余测试集，再将测试用例最小化问题建模为QUBO并使用量子退火（或经典求解器）求解，以显著减少token消耗并提升LLM生成代码的质量与效率；实验证明量子退火在核心优化上比模拟退火快约16倍，整体token减少36.5%、代码复杂度降低26.1%、生成时间缩短54.3%。",
     "quality": "Middle",
     "conference": "IEEE CASCON 2025",
@@ -1001,7 +1001,7 @@
       "Empirical"
     ],
     "field": "Maintenance",
-    "tag": "Trouble Report Retrieval",
+    "task": "Trouble Report Retrieval",
     "summary": "本文提出 CREST，一种基于准则的故障报告检索方法，通过为故障报告中不同的观察准则训练专门模型并融合其输出，提高检索准确性、得分校准与可解释性，从而加速 Ericsson 的故障排查与维护流程。",
     "quality": "High",
     "conference": null,

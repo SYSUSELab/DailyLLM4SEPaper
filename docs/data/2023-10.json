@@ -20,7 +20,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Editing",
+    "task": "Code Editing",
     "summary": "本文提出SWE-bench——一个由真实GitHub issue及其修复PR构成的库级代码编辑基准（2,294个实例），并评估多种大型语言模型、发布训练集SWE-bench-train及微调模型SWE-Llama，结果显示现有模型仅能解决极少数实际问题。",
     "quality": "High",
     "conference": "ICLR 2024",

@@ -78,7 +78,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文介绍了基于 Software Heritage 构建的 The Stack v2 数据集并在其上训练并公开了 StarCoder2（3B/7B/15B）系列代码大模型，同时发布训练数据标识与权重并在多项代码基准上进行全面评估以展示其性能优势。",
     "quality": "High",
     "conference": null,
@@ -102,7 +102,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Editing",
+    "task": "Code Editing",
     "summary": "本文提出LDB，一种通过将程序分解为基本块并采集每块的运行时中间变量，让LLM逐步验证每个代码块并定位错误以迭代修复生成代码的方法，在HumanEval、MBPP和TransCoder上显著提升了调试与代码生成性能。",
     "quality": "High",
     "conference": null,

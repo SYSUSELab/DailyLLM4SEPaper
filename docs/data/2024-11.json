@@ -31,7 +31,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "OpenCoder提出并开源了一个顶级代码LLM，发布模型权重、可复现的数据与训练流水线，并通过数据清洗、去重与高质量合成数据等策略揭示构建高性能代码模型的关键要素。",
     "quality": "High",
     "conference": null,
@@ -59,7 +59,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Alignment",
+    "task": "Code Alignment",
     "summary": "本文提出PROSEC，一种在后训练阶段通过基于CWE合成易触发漏洞的指令、从目标模型采样易受攻击与修复代码并构建偏好学习数据来对代码LLM进行主动安全对齐的方法，从而显著减少生成不安全代码而不损害模型实用性。",
     "quality": "High",
     "conference": null,
@@ -137,7 +137,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出了FullStack Bench——一个覆盖多领域、16种编程语言且基于真实使用场景与单元测试的全栈代码评测基准，并发布了支持多语言与依赖管理的执行沙箱SandboxFusion以自动化评估LLM的全栈编程能力。",
     "quality": "High",
     "conference": null,
@@ -166,7 +166,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出了GitChameleon，一个包含116个带可执行单元测试的Python库版本条件代码补全基准，用于评估LLM在库版本变化下生成语法与功能正确代码的能力，并展示了当前模型在该任务上的显著不足。",
     "quality": "High",
     "conference": null,

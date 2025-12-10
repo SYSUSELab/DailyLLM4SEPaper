@@ -21,7 +21,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Instruction-Tuning",
+    "task": "Code Instruction-Tuning",
     "summary": "本文提出了面向代码领域的Code Evol-Instruct指令微调方法，并基于此训练出WizardCoder模型，在多项代码生成基准（HumanEval、MBPP等）上显著优于现有开源模型，部分规模也超越了若干闭源模型。",
     "quality": "High",
     "conference": "ICLR 2024",
@@ -62,7 +62,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Pre-Training",
+    "task": "Code Pre-Training",
     "summary": "本文提出 phi-1：一个仅1.3B参数、以精选“教科书质量”文本与合成编程练习训练的小型代码生成模型，能在HumanEval和MBPP上以极小规模取得接近或超越更大模型的高性能。",
     "quality": "High",
     "conference": null,
@@ -86,7 +86,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Prompting",
+    "task": "Code Prompting",
     "summary": "本文提出SELFEVOLVE，一种两阶段的LLM驱动代码演化框架：先让模型自生成与题目相关的知识再生成代码，随后基于解释器错误信息对代码进行自我调试与迭代，从而在多套数据集上显著提升执行正确率。",
     "quality": "High",
     "conference": null,
@@ -112,7 +112,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Editing",
+    "task": "Code Editing",
     "summary": "本文在HumanEval和APPS数据集上系统评估了Code Llama、GPT-3.5和GPT-4的自我修复能力，发现考虑修复计算成本后收益常常有限且随数据子集波动较大，而提升反馈质量（由更强模型或人工提供）能显著提高修复效果。",
     "quality": "High",
     "conference": "ICLR 2024",
@@ -136,7 +136,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出RepoBench，一个面向仓库级别的代码自动补全基准（含检索、下一行补全与端到端流水线三项任务），并提供覆盖Python/Java的数据集与评测分析。",
     "quality": "High",
     "conference": null,
@@ -163,7 +163,7 @@
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Completion",
+    "task": "Code Completion",
     "summary": "本文提出LongCoder——一种用于长代码上下文的稀疏预训练Transformer，采用滑动窗口注意力并引入桥接（bridge）与记忆（memory）令牌以实现全局信息访问，同时构建并发布长代码补全数据集LCC，实验证明在长/常规代码补全上性能优于既有模型且推理效率相当。",
     "quality": "High",
     "conference": "ICML 2023",

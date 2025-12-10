@@ -23,7 +23,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Alignment",
+    "task": "Code Alignment",
     "summary": "本文提出了面向人类偏好的代码评估基准 CodeArena 与大规模合成指令语料 SynCode-Instruct，并基于此训练与评测多款 codeLLM，揭示开放模型与闭源模型在人类偏好对齐上的差距。",
     "quality": "High",
     "conference": null,

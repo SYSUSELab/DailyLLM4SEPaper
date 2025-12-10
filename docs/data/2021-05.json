@@ -23,7 +23,7 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Reasoning",
+    "task": "Code Reasoning",
     "summary": "本文提出并发布了APPS基准——一个包含10000道自然语言编程题及超过130,000条测试用例的Python代码生成数据集，并通过测试展示和分析了多种大规模语言模型在不同难度题目上的生成性能与错误模式。",
     "quality": "High",
     "conference": "NeurIPS 2021",

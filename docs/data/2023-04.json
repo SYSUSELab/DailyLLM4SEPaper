@@ -15,7 +15,7 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "tag": "Code Editing",
+    "task": "Code Editing",
     "summary": "本文提出 SELF-DEBUGGING，一种通过少量示例提示让大语言模型执行其生成的代码、生成自然语言解释并基于执行结果迭代自我修复程序的调试方法，在多项代码生成基准上显著提升了准确率与样本效率。",
     "quality": "High",
     "conference": null,
