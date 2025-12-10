@@ -356,6 +356,8 @@ class PaperSearch:
         
             Your goal is to summarize more detailed tags for the paper. The tags need to be at the same level as the task, or more detailed.
                 - Identify the most salient concepts, techniques, or application areas described in the paper.
+                - Avoid overly general tags such as “Large Language Models”, “Datasets and Benchmarks”, “Fine‑tuning”, etc.
+                - Avoid dataset or model names (e.g., “HumanEval”, “Qwen2.5‑72B”).
                 - If a tag is ambiguous or not clearly supported, omit it.
                 - Do not invent tags that are unrelated to the content.
             Return the list ["tag1", "tag2", ...].
