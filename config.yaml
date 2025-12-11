@@ -33,6 +33,10 @@ topic:
         - Code Editing
         - Code Translation
         - Code Reasoning
+        - Code Retrieval
+        - Code Understanding
+        - Code Performance Optimization
+        - Code Representation Learning
 
     Software Testing:
         - Test Generation
@@ -57,6 +61,9 @@ topic:
         - Bug Repair
         - Vulnerability Detection
         - Vulnerability Repair
+
+    Version Control & Collaboration:
+        - Git VCS
 
 
 

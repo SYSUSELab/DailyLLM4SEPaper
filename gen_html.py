@@ -101,6 +101,7 @@ class HTMLGenerator:
         ops_count = sum(1 for p in self.papers if 'AIOps' in p.get('field'))
         maintenance_count = sum(1 for p in self.papers if 'Maintenance' in p.get('field'))
         quality_count = sum(1 for p in self.papers if 'Quality Management' in p.get('field'))
+        version_count = sum(1 for p in self.papers if 'Version Control & Collaboration' in p.get('field'))
 
         html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -156,6 +157,7 @@ class HTMLGenerator:
                     <button class="filter-btn field-btn" data-field="AIOps">AIOps ({ops_count})</button>
                     <button class="filter-btn field-btn" data-field="Maintenance">Maintenance ({maintenance_count})</button>
                     <button class="filter-btn field-btn" data-field="Quality Management">Quality Management ({quality_count})</button>
+                    <button class="filter-btn field-btn" data-field="Version Control & Collaboration">Version Control & Collaboration ({version_count})</button>
                 </div>
             </div>
             <div class="filter-group">
@@ -877,11 +879,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let monthsCache = {};  // 缓存已加载的月份数据
 
     const field2task = {'Requirements & Design': ['Elicitation', 'Analysis', 'Specification &Validation', 'Management'],
-        'Coding Assistant': ['Code Pre-Training', 'Code Instruction-Tuning', 'Code Alignment', 'Code Prompting', 'Code Completion', 'Code Summarization', 'Code Editing', 'Code Translation', 'Code Reasoning'],
+        'Coding Assistant': ['Code Pre-Training', 'Code Instruction-Tuning', 'Code Alignment', 'Code Prompting', 'Code Completion', 'Code Summarization', 'Code Editing', 'Code Translation', 'Code Reasoning', 'Code Retrieval', 'Code Understanding', 'Code Performance Optimization', 'Code Representation Learning'],
         'Software Testing': ['Test Generation', 'Assertion generation', 'GUI test', 'Testing automation', 'Testing prediction', 'Testing Repair'],
         'AIOps': ['Log Statement Generation', 'Log Parsing'],
         'Maintenance': ['Code Review', 'Clone Detection', 'Refactoring'],
-        'Quality Management': ['Defect Prediction', 'Bug Localization', 'Bug Repair', 'Vulnerability Detection', 'Vulnerability Repair']}
+        'Quality Management': ['Defect Prediction', 'Bug Localization', 'Bug Repair', 'Vulnerability Detection', 'Vulnerability Repair'],
+        'Version Control & Collaboration': ['Git VCS']}
 
     // 加载月份索引
     async function loadMonthsIndex() {
@@ -1210,7 +1213,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'Software Testing': 0,
             'AIOps': 0,
             'Maintenance': 0,
-            'Quality Management': 0
+            'Quality Management': 0,
+            'Version Control & Collaboration': 0
         };
 
         statusFilteredPapers.forEach(paper => {
