@@ -1048,5 +1048,188 @@
     "published": "2025-12-09",
     "update_time": "2025-12-09",
     "download_time": "2025-12-12 02:05:43"
+  },
+  {
+    "id": "2512.04355",
+    "title": "Counting Without Running: Evaluating LLMs' Reasoning About Code Complexity",
+    "abstract": "Modern GPU software stacks demand developers who can anticipate performance bottlenecks before ever launching a kernel; misjudging floating-point workloads upstream can derail tuning, scheduling, and even hardware procurement. Yet despite rapid progress in code generation, today's Large Language Models (LLMs) are rarely tested on this kind of forward-looking reasoning. We close that gap with gpuFLOPBench, a benchmark that asks models to \"count without running\" by predicting single and double-precision FLOP counts for 577 CUDA kernels drawn from HeCBench, annotated with ground-truth profiles and eight execution attributes that distinguish trivially analyzable code from kernels whose FLOPs depend on hidden compiler or runtime behavior. Evaluating current closed-source reasoning models shows clear but uneven progress: the newest LLMs achieve perfect classification on straightforward kernels but still incur multiple order-of-magnitude errors whenever implicit FLOPs arise from division, intrinsic math functions, or common subexpressions. These results surface a core limitation of existing code assistants -- the inability to internalize hardware-specific microcode effects -- and position gpuFLOPBench as a focused testbed for developing LLM tooling that can reason about performance with the same rigor as experienced GPU developers. Sources are available at our repository: https://github.com/Scientific-Computing-Lab/gpuFLOPBench",
+    "arxiv_url": "https://arxiv.org/abs/2512.04355",
+    "authors": [
+      "Gregory Bolet",
+      "Giorgis Georgakoudis",
+      "Konstantinos Parasyris",
+      "Harshitha Menon",
+      "Niranjan Hasabnis",
+      "Kirk W. Cameron",
+      "Gal Oren"
+    ],
+    "first_author": "Gregory Bolet",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Static FLOP counting",
+      "CUDA kernel FLOP estimation",
+      "Execution-attribute annotations",
+      "Implicit/hidden FLOPs (division, intrinsics, templates)",
+      "Single vs double-precision FLOP labels",
+      "Prompting for structured performance predictions",
+      "Hardware/microcode execution effects",
+      "Benchmark for static performance reasoning"
+    ],
+    "summary": "本文提出GPUFLOPBENCH数据集与评测框架，包含577个CUDA内核的单/双精度FLOP计数与执行属性标注，并评估现有封闭式推理模型在静态预测代码FLOP时的表现，揭示其在处理隐式FLOP来源（如除法、内建函数、编译器/运行时行为）时的显著失败模式。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.04355v1",
+    "published": "2025-12-04",
+    "update_time": "2025-12-04",
+    "download_time": "2025-12-12 21:46:22"
+  },
+  {
+    "id": "2512.10713",
+    "title": "PACIFIC: a framework for generating benchmarks to check Precise Automatically Checked Instruction Following In Code",
+    "abstract": "Large Language Model (LLM)-based code assistants have emerged as a powerful application of generative AI, demonstrating impressive capabilities in code generation and comprehension. A key requirement for these systems is their ability to accurately follow user instructions. We present Precise Automatically Checked Instruction Following In Code (PACIFIC), a novel framework designed to automatically generate benchmarks that rigorously assess sequential instruction-following and code dry-running capabilities in LLMs, while allowing control over benchmark difficulty. PACIFIC produces benchmark variants with clearly defined expected outputs, enabling straightforward and reliable evaluation through simple output comparisons. In contrast to existing approaches that often rely on tool usage or agentic behavior, our work isolates and evaluates the LLM's intrinsic ability to reason through code behavior step-by-step without execution (dry running) and to follow instructions. Furthermore, our framework mitigates training data contamination by facilitating effortless generation of novel benchmark variations. We validate our framework by generating a suite of benchmarks spanning a range of difficulty levels and evaluating multiple state-of-the-art LLMs. Our results demonstrate that PACIFIC can produce increasingly challenging benchmarks that effectively differentiate instruction-following and dry running capabilities, even among advanced models. Overall, our framework offers a scalable, contamination-resilient methodology for assessing core competencies of LLMs in code-related tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10713",
+    "authors": [
+      "Itay Dreyfuss",
+      "Antonio Abu Nassar",
+      "Samuel Ackerman",
+      "Axel Ben David",
+      "Rami Katan",
+      "Orna Raz",
+      "Marcel Zalmanovici"
+    ],
+    "first_author": "Itay Dreyfuss",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Automated benchmark generation",
+      "Deterministic expected-result checking",
+      "Code dry-running simulation",
+      "Instruction concatenation pipelines",
+      "Contamination-resistant variant generation",
+      "Difficulty control via instruction count and output length",
+      "Prompt vs chat mode evaluation"
+    ],
+    "summary": "本文提出了PACIFIC框架，用可控的指令拼接与引用实现自动生成可确定性评估样本，以检测大型模型的代码逐步推理（干运行）与指令遵循能力，并通过可变难度和去污染的基准区分模型表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10713v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:45:41"
+  },
+  {
+    "id": "2512.10493",
+    "title": "Decoding Human-LLM Collaboration in Coding: An Empirical Study of Multi-Turn Conversations in the Wild",
+    "abstract": "Large language models (LLMs) are increasingly acting as dynamic conversational interfaces, supporting multi-turn interactions that mimic human-like conversation and facilitate complex tasks like coding. While datasets such as LMSYS-Chat-1M and WildChat capture real-world user-LLM conversations, few studies systematically explore the mechanisms of human-LLM collaboration in coding scenarios. What tortuous paths do users experience during the interaction process? How well do the LLMs follow instructions? Are users satisfied? In this paper, we conduct an empirical analysis on human-LLM coding collaboration using LMSYS-Chat-1M and WildChat datasets to explore the human-LLM collaboration mechanism, LLMs' instruction following ability, and human satisfaction. This study yields interesting findings: 1) Task types shape interaction patterns(linear, star and tree), with code quality optimization favoring linear patterns, design-driven tasks leaning toward tree structures, and queries preferring star patterns; 2) Bug fixing and code refactoring pose greater challenges to LLMs' instruction following, with non-compliance rates notably higher than in information querying; 3) Code quality optimization and requirements-driven development tasks show lower user satisfaction, whereas structured knowledge queries and algorithm designs yield higher levels. These insights offer recommendations for improving LLM interfaces and user satisfaction in coding collaborations, while highlighting avenues for future research on adaptive dialogue systems. We believe this work broadens understanding of human-LLM synergies and supports more effective AI-assisted development.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10493",
+    "authors": [
+      "Binquan Zhang",
+      "Li Zhang",
+      "Haoyuan Zhang",
+      "Fang Liu",
+      "Song Wang",
+      "Bo Shen",
+      "An Fu",
+      "Lin Shi"
+    ],
+    "first_author": "Binquan Zhang",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Multi-turn dialogue patterns",
+      "Interaction topology (linear/star/tree)",
+      "Instruction-following compliance",
+      "User satisfaction trajectory",
+      "Task taxonomy for coding interactions",
+      "LLM-assisted data disentanglement",
+      "Open card sorting annotation",
+      "Statistical significance testing of interaction effects"
+    ],
+    "summary": "本文基于真实多轮对话数据实证分析了编码场景下的人-LLM协作，归纳出五类任务与线性/星状/树状三种交互模式，评估模型指令遵循能力与用户满意度并提出改进建议。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10493v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:46:15"
+  },
+  {
+    "id": "2512.10789",
+    "title": "Natural Language Interface for Firewall Configuration",
+    "abstract": "This paper presents the design and prototype implementation of a natural language interface for configuring enterprise firewalls. The framework allows administrators to express access control policies in plain language, which are then translated into vendor specific configurations. A compact schema bound intermediate representation separates human intent from device syntax and in the current prototype compiles to Palo Alto PAN OS command line configuration while remaining extensible to other platforms. Large language models are used only as assistive parsers that generate typed intermediate representation objects, while compilation and enforcement remain deterministic. The prototype integrates three validation layers, namely a static linter that checks structural and vendor specific constraints, a safety gate that blocks overly permissive rules such as any to any allows, and a Batfish based simulator that validates configuration syntax and referential integrity against a synthetic device model. The paper describes the architecture, implementation, and test methodology on synthetic network context datasets and discusses how this approach can evolve into a scalable auditable and human centered workflow for firewall policy management.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10789",
+    "authors": [
+      "F. Taghiyev",
+      "A. Aslanbayli"
+    ],
+    "first_author": "F. Taghiyev",
+    "category": [
+      "Technical"
+    ],
+    "field": "Network Security & Configuration",
+    "task": "Natural Language to Firewall Configuration",
+    "tags": [
+      "Schema-bound intermediate representation",
+      "Schema-constrained LLM parsing",
+      "Resolver agent for entity grounding",
+      "Vendor-agnostic compiler (Palo Alto backend prototype)",
+      "IR linter (general and vendor-specific)",
+      "Safety Gate preventing any-to-any and missing-fields",
+      "Batfish-based configuration simulation",
+      "Role-conditioned prompting and constrained decoding",
+      "Least-privilege policy synthesis",
+      "Audit logging and stage-only (side-effect free) compilation"
+    ],
+    "summary": "本文提出并实现了一个原型系统，利用受约束的LLM将管理员的自然语言访问策略解析为类型化中间表示，并通过静态lint、安全门控和Batfish仿真将其无副作用地编译为供应商特定的防火墙配置以确保安全与可审计性。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10789v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:50:04"
+  },
+  {
+    "id": "2512.10563",
+    "title": "NormCode: A Semi-Formal Language for Context-Isolated AI Planning",
+    "abstract": "Multistep workflows that chain large language model (LLM) calls suffer from context pollution: as information accumulates across steps, models hallucinate, confuse intermediate outputs, and lose track of task constraints. We present NormCode, a semiformal language for constructing plans of inferences, structured decompositions where each step operates in data isolation and receives only explicitly passed inputs, which eliminates crossstep contamination by design. NormCode enforces a strict separation between semantic operations (LLMdriven reasoning, nondeterministic) and syntactic operations (deterministic data restructuring), enabling precise cost and reliability tracing. The language exists in three isomorphic formats: .ncds for human authoring, .ncd for machine execution, and .ncn for human verification, supporting progressive formalization from sketch to production. We validate NormCode through two demonstrations: (1) a base X addition algorithm achieving 100 percent accuracy on arbitrary length inputs, and (2) self hosted execution of NormCode's own five phase compiler pipeline. The working orchestrator provides dependency driven scheduling, SQLite backed checkpointing, and loop management, making AI workflows auditable by design and addressing a critical need for transparency in high stakes domains such as legal reasoning, medical decision making, and financial analysis.",
+    "arxiv_url": "https://arxiv.org/abs/2512.10563",
+    "authors": [
+      "Xin Guan"
+    ],
+    "first_author": "Xin Guan",
+    "category": [
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Context Isolation",
+      "Inference Decomposition",
+      "Semi-Formal Intermediate Representation",
+      "Semantic vs Syntactic Separation",
+      "Progressive Formalization (.ncds/.ncd/.ncn)",
+      "Auditable AI Workflows",
+      "Dependency-Driven Orchestration",
+      "Checkpointed Execution and Loop Management"
+    ],
+    "summary": "NormCode提出一种半形式化语言与执行框架，通过在多步LLM推理中强制显式数据隔离、将语义（非确定性LLM推理）与句法（确定性数据重构）分离，并提供三种同构格式与可检查的编译/运行时支持，从而实现可审计、可靠的AI工作流编排与执行。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.10563v1",
+    "published": "2025-12-11",
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-13 01:53:27"
   }
 ]
