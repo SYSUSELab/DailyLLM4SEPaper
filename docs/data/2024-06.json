@@ -382,5 +382,91 @@
     "published": "2024-06-12",
     "update_time": "2024-06-12",
     "download_time": "2025-12-12 22:22:52"
+  },
+  {
+    "id": "2406.06025",
+    "title": "RepoQA: Evaluating Long Context Code Understanding",
+    "abstract": "Recent advances have been improving the context windows of Large Language Models (LLMs). To quantify the real long-context capabilities of LLMs, evaluators such as the popular Needle in a Haystack have been developed to test LLMs over a large chunk of raw texts. While effective, current evaluations overlook the insight of how LLMs work with long-context code, i.e., repositories. To this end, we initiate the RepoQA benchmark to evaluate LLMs on long-context code understanding. Traditional needle testers ask LLMs to directly retrieve the answer from the context without necessary deep understanding. In RepoQA, we built our initial task, namely Searching Needle Function (SNF), which exercises LLMs to search functions given their natural-language description, i.e., LLMs cannot find the desired function if they cannot understand the description and code. RepoQA is multilingual and comprehensive: it includes 500 code search tasks gathered from 50 popular repositories across 5 modern programming languages. By evaluating 26 general and code-specific LLMs on RepoQA, we show (i) there is still a small gap between the best open and proprietary models; (ii) different models are good at different languages; and (iii) models may understand code better without comments.",
+    "arxiv_url": "https://arxiv.org/abs/2406.06025",
+    "authors": [
+      "Jiawei Liu",
+      "Jia Le Tian",
+      "Vijay Daita",
+      "Yuxiang Wei",
+      "Yifeng Ding",
+      "Yuhan Katherine Wang",
+      "Jun Yang",
+      "Lingming Zhang"
+    ],
+    "first_author": "Jiawei Liu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Repo-level function search",
+      "Long-context code retrieval",
+      "Function description decomposition",
+      "Automatic dataset curation pipeline",
+      "Multilingual repository evaluation",
+      "Context-depth placement (needle depth)",
+      "BLEU-based retrieval scoring"
+    ],
+    "summary": "RepoQA 提出并发布了一个用于评估模型在仓库级长上下文中理解与检索函数能力的多语言基准（Searching Needle Function），包含 50 个仓库共 500 个任务，并通过自动化构建流水线和对 33 个模型的评测展示当前模型的长上下文代码理解现状。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2406.06025v1",
+    "published": "2024-06-10",
+    "update_time": "2024-06-10",
+    "download_time": "2025-12-12 23:32:31"
+  },
+  {
+    "id": "2406.09961",
+    "title": "ChartMimic: Evaluating LMM's Cross-Modal Reasoning Capability via Chart-to-Code Generation",
+    "abstract": "We introduce a new benchmark, ChartMimic, aimed at assessing the visually-grounded code generation capabilities of large multimodal models (LMMs). ChartMimic utilizes information-intensive visual charts and textual instructions as inputs, requiring LMMs to generate the corresponding code for chart rendering. ChartMimic includes 4,800 human-curated (figure, instruction, code) triplets, which represent the authentic chart use cases found in scientific papers across various domains (e.g., Physics, Computer Science, Economics, etc). These charts span 18 regular types and 4 advanced types, diversifying into 201 subcategories. Furthermore, we propose multi-level evaluation metrics to provide an automatic and thorough assessment of the output code and the rendered charts. Unlike existing code generation benchmarks, ChartMimic places emphasis on evaluating LMMs' capacity to harmonize a blend of cognitive capabilities, encompassing visual understanding, code generation, and cross-modal reasoning. The evaluation of $3$ proprietary models and 14 open-weight models highlights the substantial challenges posed by ChartMimic. Even the advanced GPT-4o, InternVL2-Llama3-76B only achieved an average score across Direct Mimic and Customized Mimic tasks of 82.2 and 61.6, respectively, indicating significant room for improvement. We anticipate that ChartMimic will inspire the development of LMMs, advancing the pursuit of artificial general intelligence.",
+    "arxiv_url": "https://arxiv.org/abs/2406.09961",
+    "authors": [
+      "Cheng Yang",
+      "Chufan Shi",
+      "Yaxin Liu",
+      "Bo Shui",
+      "Junjie Wang",
+      "Mohan Jing",
+      "Linran Xu",
+      "Xinyu Zhu",
+      "Siheng Li",
+      "Yuxiang Zhang",
+      "Gongye Liu",
+      "Xiaomei Nie",
+      "Deng Cai",
+      "Yujiu Yang"
+    ],
+    "first_author": "Cheng Yang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Chart-to-Code Generation",
+    "tags": [
+      "Chart-to-code generation",
+      "Multimodal visual understanding",
+      "Chart rendering code synthesis",
+      "Direct Mimic and Customized Mimic tasks",
+      "Human-curated (figure,instruction,code) triplets",
+      "Multi-level execution and visual-similarity metrics",
+      "Chart taxonomy (types and subcategories)",
+      "Prompting analysis and System 2 self-reflection",
+      "Hallucination and error analysis"
+    ],
+    "summary": "本文提出ChartMimic基准，收集4800个人工标注的图表-指令-代码三元组并定义Direct Mimic与Customized Mimic两项任务与多层次自动评估指标，用以评测大规模多模态模型在图表到代码生成中的视觉理解、跨模态推理与代码合成能力并进行广泛实验与分析。",
+    "quality": "High",
+    "conference": "ICLR (International Conference on Learning Representations) 2025",
+    "pdf_url": "https://arxiv.org/pdf/2406.09961v2",
+    "published": "2024-06-14",
+    "update_time": "2025-02-28",
+    "download_time": "2025-12-12 23:57:00"
   }
 ]

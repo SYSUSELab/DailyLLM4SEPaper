@@ -133,5 +133,43 @@
     "published": "2024-01-09",
     "update_time": "2024-06-06",
     "download_time": "2025-12-11 17:01:33"
+  },
+  {
+    "id": "2401.03065",
+    "title": "CRUXEval: A Benchmark for Code Reasoning, Understanding and Execution",
+    "abstract": "We present CRUXEval (Code Reasoning, Understanding, and eXecution Evaluation), a benchmark consisting of 800 Python functions (3-13 lines). Each function comes with an input-output pair, leading to two natural tasks: input prediction and output prediction. First, we propose a generic recipe for generating our execution benchmark which can be used to create future variation of the benchmark. Second, we evaluate twenty code models on our benchmark and discover that many recent high-scoring models on HumanEval do not show the same improvements on our benchmark. Third, we show that simple CoT and fine-tuning schemes can improve performance on our benchmark but remain far from solving it. The best setup, GPT-4 with chain of thought (CoT), achieves a pass@1 of 75% and 81% on input and output prediction, respectively. In contrast, Code Llama 34B achieves a pass@1 of 50% and 46% on input and output prediction, highlighting the gap between open and closed source models. As no model is close to acing CRUXEval, we provide examples of consistent GPT-4 failures on simple programs as a lens into its code reasoning capabilities and areas for improvement.",
+    "arxiv_url": "https://arxiv.org/abs/2401.03065",
+    "authors": [
+      "Alex Gu",
+      "Baptiste Rozière",
+      "Hugh Leather",
+      "Armando Solar-Lezama",
+      "Gabriel Synnaeve",
+      "Sida I. Wang"
+    ],
+    "first_author": "Alex Gu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Output prediction (execution)",
+      "Input prediction (reverse execution)",
+      "Execution tracing of short Python programs",
+      "Generate-and-filter benchmark construction",
+      "Chain-of-thought prompting evaluation",
+      "Fine-tuning on I/O assertion data",
+      "Open-source vs closed-source model performance gap",
+      "Analysis of consistent model failure cases"
+    ],
+    "summary": "本文提出CRUXEval，一个包含800个短Python函数的基准（包含输出预测与输入预测两项任务），并在20个代码模型上评估，展示了模型在代码执行推理上的短板以及链式思维与微调的改进效果。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2401.03065v1",
+    "published": "2024-01-05",
+    "update_time": "2024-01-05",
+    "download_time": "2025-12-12 23:29:31"
   }
 ]

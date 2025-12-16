@@ -442,5 +442,77 @@
     "published": "2024-11-12",
     "update_time": "2025-03-17",
     "download_time": "2025-12-12 22:27:52"
+  },
+  {
+    "id": "2411.03012",
+    "title": "Leveraging Large Language Models in Code Question Answering: Baselines and Issues",
+    "abstract": "Question answering over source code provides software engineers and project managers with helpful information about the implemented features of a software product. This paper presents a work devoted to using large language models for question answering over source code in Python. The proposed method for implementing a source code question answering system involves fine-tuning a large language model on a unified dataset of questions and answers for Python code. To achieve the highest quality answers, we tested various models trained on datasets preprocessed in different ways: a dataset without grammar correction, a dataset with grammar correction, and a dataset augmented with the generated summaries. The model answers were also analyzed for errors manually. We report BLEU-4, BERTScore F1, BLEURT, and Exact Match metric values, along with the conclusions from the manual error analysis. The obtained experimental results highlight the current problems of the research area, such as poor quality of the public genuine question-answering datasets. In addition, the findings include the positive effect of the grammar correction of the training data on the testing metric values. The addressed findings and issues could be important for other researchers who attempt to improve the quality of source code question answering solutions. The training and evaluation code is publicly available at https://github.com/IU-AES-AI4Code/CodeQuestionAnswering.",
+    "arxiv_url": "https://arxiv.org/abs/2411.03012",
+    "authors": [
+      "Georgy Andryushchenko",
+      "Vladimir Ivanov",
+      "Vladimir Makharev",
+      "Elizaveta Tukhtina",
+      "Aidar Valeev"
+    ],
+    "first_author": "Georgy Andryushchenko",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Code question answering baselines",
+      "Fine-tuning for code QA",
+      "Grammar correction of QA data",
+      "Summary-based data augmentation",
+      "Manual error analysis of answers",
+      "Evaluation with BLEU/BERTScore/BLEURT/ExactMatch",
+      "Quality issues in public QA datasets",
+      "File-level vs function-level context"
+    ],
+    "summary": "本文通过对不同预处理（语法修正、摘要增强）下的开源代码大模型进行微调并以自动指标与人工错误分析评估，构建了Python代码问答的基线并揭示了公共问答数据质量等问题。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2411.03012v1",
+    "published": "2024-11-05",
+    "update_time": "2024-11-05",
+    "download_time": "2025-12-12 23:41:50"
+  },
+  {
+    "id": "2411.18932",
+    "title": "ScratchEval: Are GPT-4o Smarter than My Child? Evaluating Large Multimodal Models with Visual Programming Challenges",
+    "abstract": "Recent advancements in large multimodal models (LMMs) have showcased impressive code generation capabilities, primarily evaluated through image-to-code benchmarks. However, these benchmarks are limited to specific visual programming scenarios where the logic reasoning and the multimodal understanding capacities are split apart. To fill this gap, we propose ScratchEval, a novel benchmark designed to evaluate the visual programming reasoning ability of LMMs. ScratchEval is based on Scratch, a block-based visual programming language widely used in children's programming education. By integrating visual elements and embedded programming logic, ScratchEval requires the model to process both visual information and code structure, thereby comprehensively evaluating its programming intent understanding ability. Our evaluation approach goes beyond the traditional image-to-code mapping and focuses on unified logical thinking and problem-solving abilities, providing a more comprehensive and challenging framework for evaluating the visual programming ability of LMMs. ScratchEval not only fills the gap in existing evaluation methods, but also provides new insights for the future development of LMMs in the field of visual programming. Our benchmark can be accessed at https://github.com/HKBUNLP/ScratchEval .",
+    "arxiv_url": "https://arxiv.org/abs/2411.18932",
+    "authors": [
+      "Rao Fu",
+      "Ziyang Luo",
+      "Hongzhan Lin",
+      "Zhen Ye",
+      "Jing Ma"
+    ],
+    "first_author": "Rao Fu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Scratch (block-based programming)",
+      "Visual program reasoning",
+      "Multimodal multiple-choice QA",
+      "Cross-lingual evaluation (English/Chinese)",
+      "Chain-of-Thought and eCoT prompting analysis",
+      "Spatial and graphic perception tasks",
+      "Mathematical and logical reasoning in visual code"
+    ],
+    "summary": "本文提出了基于儿童图形化编程语言Scratch的ScratchEval基准，通过305道中英双语的可视化编程多项选择题评估大规模多模态模型在图像与嵌入式程序逻辑理解与推理上的能力，并分析了不同提示策略的影响。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2411.18932v1",
+    "published": "2024-11-28",
+    "update_time": "2024-11-28",
+    "download_time": "2025-12-12 23:43:36"
   }
 ]

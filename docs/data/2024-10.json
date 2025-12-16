@@ -353,5 +353,123 @@
     "published": "2024-10-30",
     "update_time": "2024-10-30",
     "download_time": "2025-12-12 22:25:38"
+  },
+  {
+    "id": "2410.01999",
+    "title": "CodeMMLU: A Multi-Task Benchmark for Assessing Code Understanding & Reasoning Capabilities of CodeLLMs",
+    "abstract": "Recent advances in Code Large Language Models (CodeLLMs) have primarily focused on open-ended code generation, often overlooking the crucial aspect of code understanding and reasoning. To bridge this gap, we introduce CodeMMLU, a comprehensive multiple-choice benchmark designed to evaluate the depth of software and code comprehension in LLMs. CodeMMLU includes nearly 20,000 questions spanning diverse domains, including code analysis, defect detection, and software engineering principles across multiple programming languages. Unlike traditional benchmarks that emphasize code generation, CodeMMLU assesses a model's ability to reason about programs across a wide-range of tasks such as code repair, execution reasoning, and fill-in-the-blank challenges. Our extensive evaluation reveals that even state-of-the-art models struggle with CodeMMLU, highlighting significant gaps in comprehension beyond generation. By emphasizing the essential connection between code understanding and effective AI-assisted development, CodeMMLU provides a critical resource for advancing more reliable and capable coding assistants.",
+    "arxiv_url": "https://arxiv.org/abs/2410.01999",
+    "authors": [
+      "Dung Nguyen Manh",
+      "Thang Phan Chau",
+      "Nam Le Hai",
+      "Thong T. Doan",
+      "Nam V. Nguyen",
+      "Quang Pham",
+      "Nghi D. Q. Bui"
+    ],
+    "first_author": "Dung Nguyen Manh",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "MCQ format for code evaluation",
+      "Code comprehension and reasoning",
+      "Execution/behavior prediction",
+      "Defect detection / code repair questions",
+      "Answer-choice permutation and debiasing",
+      "Cross-language / multi-domain coverage",
+      "Prompting sensitivity (CoT harms)",
+      "Model scaling and family-specific effects"
+    ],
+    "summary": "CodeMMLU 提出一个近两万题的多项选择基准用于评估 CodeLLMs 的代码理解与推理能力，实验证明现有模型在理解方面存在显著不足并揭示了诸多偏差与模型族/提示策略的影响。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.01999v4",
+    "published": "2024-10-02",
+    "update_time": "2025-04-09",
+    "download_time": "2025-12-12 23:41:10"
+  },
+  {
+    "id": "2410.12381",
+    "title": "HumanEval-V: Benchmarking High-Level Visual Reasoning with Complex Diagrams in Coding Tasks",
+    "abstract": "Understanding and reasoning over diagrams is a fundamental aspect of human intelligence. While Large Multimodal Models (LMMs) have demonstrated impressive capabilities across various tasks, existing benchmarks lack comprehensive evaluation of their diagram interpretation and reasoning abilities, particularly in coding contexts. We present HumanEval-V, a rigorous benchmark of human-annotated coding tasks that spans six task types and evaluates diverse visual reasoning capabilities. Each task features carefully crafted diagrams paired with function signatures and test cases, employing novel code generation tasks to thoroughly assess models' diagram comprehension. Through extensive experiments with 22 LMMs, we find that even top-performing models achieve modest success rates, with Claude 3.5 Sonnet reaching only 36.8% pass@1, highlighting substantial room for improvement. Our analysis reveals that current LMMs struggle with spatial transformations, topological relationships, and dynamic patterns that humans find intuitive. These findings provide valuable insights for advancing LMMs' visual reasoning abilities. We have open-sourced our code and benchmark at https://github.com/HumanEval-V/HumanEval-V-Benchmark.",
+    "arxiv_url": "https://arxiv.org/abs/2410.12381",
+    "authors": [
+      "Fengji Zhang",
+      "Linquan Wu",
+      "Huiyu Bai",
+      "Guancheng Lin",
+      "Xiao Li",
+      "Xiao Yu",
+      "Yue Wang",
+      "Bei Chen",
+      "Jacky Keung"
+    ],
+    "first_author": "Fengji Zhang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Diagram-to-code evaluation",
+      "High-level visual reasoning",
+      "Spatial transformation reasoning",
+      "Topological relationship reasoning",
+      "Dynamic pattern reasoning",
+      "Two-stage evaluation (diagram description then coding)",
+      "Human-annotated coding tasks",
+      "Test-case-based correctness verification",
+      "LLM-assisted data diversification",
+      "Execution-guided self-refinement"
+    ],
+    "summary": "本文提出HumanEval-V——一个包含253个人工注释的图示编程任务基准，用以评估模型对复杂图表的高层视觉推理（如空间变换、拓扑关系和动态模式）的理解能力，并通过对22个多模态模型的大规模实验揭示当前模型在该类任务上存在显著不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2410.12381v3",
+    "published": "2024-10-16",
+    "update_time": "2025-02-18",
+    "download_time": "2025-12-13 00:03:46"
+  },
+  {
+    "id": "2411.00264",
+    "title": "TurtleBench: A Visual Programming Benchmark in Turtle Geometry",
+    "abstract": "Humans have the ability to reason about geometric patterns in images and scenes from a young age. However, developing large multimodal models (LMMs) capable of similar reasoning remains a challenge, highlighting the need for robust evaluation methods to assess these capabilities. We introduce \\Turtle, a benchmark designed to evaluate LMMs' capacity to interpret geometric patterns -- given visual examples, textual instructions, or both -- and generate precise code outputs. Inspired by turtle geometry, a notion used to teach children foundational coding and geometric concepts, TurtleBench features tasks with patterned shapes that have underlying algorithmic logic. Our evaluation reveals that leading LMMs struggle significantly with these tasks, with GPT-4o achieving only 19\\% accuracy on the simplest tasks and few-shot prompting only marginally improves their performance ($<2\\%$). \\Turtle highlights the gap between human and AI performance in intuitive and visual geometrical understanding, setting the stage for future research in this area. \\Turtle stands as one of the few benchmarks to evaluate the integration of visual understanding and code generation capabilities in LMMs, setting the stage for future research. Code and Dataset for this paper is provided here: \\href{https://github.com/sinaris76/TurtleBench}{https://github.com/sinaris76/TurtleBench}",
+    "arxiv_url": "https://arxiv.org/abs/2411.00264",
+    "authors": [
+      "Sina Rismanchian",
+      "Yasaman Razeghi",
+      "Sameer Singh",
+      "Shayan Doroudi"
+    ],
+    "first_author": "Sina Rismanchian",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Turtle geometry",
+      "Visual-to-code synthesis",
+      "Image-guided code editing",
+      "Multimodal benchmark",
+      "Automated render-based evaluation",
+      "Bitwise image similarity metric",
+      "Scratch vs Tweak task taxonomy",
+      "Sandboxed code execution"
+    ],
+    "summary": "本文提出TurtleBench——一个包含260个基于海龟几何的图像/文本到代码的多模态视觉编程基准，提供自动化执行与像素相似性评估并实证显示当前多模态模型在此类视觉几何到代码任务上性能较差。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2411.00264v2",
+    "published": "2024-10-31",
+    "update_time": "2025-04-11",
+    "download_time": "2025-12-13 00:04:46"
   }
 ]

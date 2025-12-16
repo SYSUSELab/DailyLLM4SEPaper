@@ -119,5 +119,45 @@
     "published": "2024-09-03",
     "update_time": "2025-01-20",
     "download_time": "2025-12-12 22:23:35"
+  },
+  {
+    "id": "2409.12866",
+    "title": "SpecEval: Evaluating Code Comprehension in Large Language Models via Program Specifications",
+    "abstract": "Large Language models have achieved impressive performance in automated software engineering. Extensive efforts have been made to evaluate the abilities of code LLMs in various aspects, with an increasing number of benchmarks and evaluation frameworks proposed. Apart from the most sought-after capability of code generation, the capability of code comprehension is being granted growing attention. Nevertheless, existing works assessing the code comprehension capability of LLMs exhibit varied limitations. Evaluation frameworks like CRUXEval and REval usually focus on code reasoning tasks over a certain input case, leading to a limited range of execution traces covered, resulting in a loss in code semantics examined and the inability to assess the comprehensive understanding of LLMs concerning the target program. To tackle these challenges, we propose SpecEval, a novel black-box evaluation framework to evaluate code comprehension in LLMs via program specifications. Inspired by the idea that specifications can act as a comprehensive articulation of program behaviors concerning all possible execution traces, we employ formalized program specifications to represent program semantics and perform comprehensive evaluations. In particular, four specification-related tasks are designed meticulously to assess the capability of LLMs from basic to advanced levels. Counterfactual analysis is further conducted to study the performance variance of LLMs under semantics-preserving perturbations. Systematic experiments are conducted on six state-of-the-art LLMs. Extensive experimental results present a below-satisfactory performance of LLMs on specification-related tasks, revealing the limitations of existing LLMs in terms of articulating program semantics with formal specifications. Counterfactual analysis also reveals the sensitivity of LLMs towards semantic-preserving perturbations.",
+    "arxiv_url": "https://arxiv.org/abs/2409.12866",
+    "authors": [
+      "Lezhi Ma",
+      "Shangqing Liu",
+      "Lei Bu",
+      "Shangru Li",
+      "Yida Wang",
+      "Yang Liu"
+    ],
+    "first_author": "Lezhi Ma",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Formal program specifications",
+      "JML specifications",
+      "Specification correctness judgment",
+      "Specification selection",
+      "Specification infilling",
+      "Specification generation",
+      "Black-box evaluation",
+      "Counterfactual semantic-preserving perturbations",
+      "Mutation operators",
+      "Semantics-equivalent program variants"
+    ],
+    "summary": "本文提出SpecEval，一个基于形式化程序规格（JML）的黑盒评估框架，设计四类规格相关任务并构建含204个带可验证规格的Java程序基准，通过对六种主流LLM的系统性实验及反事实扰动分析，揭示模型在用形式化规格表述程序语义方面的不足及对语义保持扰动的敏感性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2409.12866v2",
+    "published": "2024-09-19",
+    "update_time": "2025-03-22",
+    "download_time": "2025-12-12 23:34:48"
   }
 ]
