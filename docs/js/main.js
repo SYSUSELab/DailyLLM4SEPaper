@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 生成论文HTML
     function createPaperHTML(paper) {
-        # const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
+        // const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
         const task = paper.tags ? paper.tags.map(tags => `<span class="task">${task}</span>`).join('') : '';
 
         // 提取代码链接
