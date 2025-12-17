@@ -26,13 +26,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文提出并开源DeepSeek-Coder系列（1.3B–33B），在包含仓库级语料的2万亿tokens上从零预训练并采用Fill-In-Middle训练与16K上下文，显著提升开源代码模型性能并在多项基准上超越现有开源及部分闭源模型。",
+    "tags": [
+      "Repository-level data construction",
+      "Repository-level deduplication",
+      "Fill-in-the-middle pretraining",
+      "16K long-context modeling",
+      "Project-level/cross-file code understanding",
+      "Training-from-scratch on large-scale code corpus",
+      "Instruction-tuned code models",
+      "Open-source permissive licensing"
+    ],
+    "summary": "本文提出了DeepSeek-Coder系列从零训练的开源代码大模型（1.3B–33B），使用基于仓库的高质量项目级语料、填空中间任务和16K上下文窗口，在多项基准上取得领先的开源性能并提供宽松商业许可。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2401.14196v2",
     "published": "2024-01-25",
     "update_time": "2024-01-26",
-    "download_time": "2025-12-04 23:12:47"
+    "download_time": "2025-12-16 10:40:55"
   },
   {
     "id": "2401.12554",
@@ -52,14 +62,23 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "task": "Code Completion",
-    "summary": "本文提出了用于并行/HPC代码生成与翻译的基准ParEval、以及新的性能评估指标（speedup_n@k 和 efficiency_n@k），并用该基准评估多种开源与闭源大模型，发现模型普遍难以生成高质量并行代码，尤其在MPI和稀疏/非结构化问题上表现最差。",
+    "task": "Code Translation",
+    "tags": [
+      "Parallel code generation",
+      "HPC benchmarking",
+      "Execution-model translation",
+      "Performance and scaling metrics",
+      "Shared- and distributed-memory models",
+      "Automated compile-and-run evaluation",
+      "Sparse/unstructured problem difficulties"
+    ],
+    "summary": "本文提出了ParEval基准并引入新的性能与可扩展性评估指标，用以自动化评测多种大型语言模型生成和翻译并行/HPC代码的正确性、性能与伸缩性。",
     "quality": "High",
-    "conference": "HPDC 2024",
+    "conference": "The 33rd International Symposium on High-Performance Parallel and Distributed Computing (HPDC '24) 2024",
     "pdf_url": "https://arxiv.org/pdf/2401.12554v3",
     "published": "2024-01-23",
     "update_time": "2024-05-14",
-    "download_time": "2025-12-05 10:08:05"
+    "download_time": "2025-12-16 14:28:06"
   },
   {
     "id": "2401.01062",
@@ -81,13 +100,23 @@
     ],
     "field": "Requirements & Design",
     "task": "Elicitation",
-    "summary": "本文提出AISD，一个以保持用户全程参与的LLM驱动软件开发框架，并构建了用于评估自动化软件开发能力的新基准CAASD，实验证明在用例生成、设计迭代与原型测试下对比现有方法有显著提升。",
+    "tags": [
+      "Human-in-the-loop requirement elicitation",
+      "Use-case centric requirement generation",
+      "LLM-based multi-agent orchestration",
+      "Iterative prototype generation and refinement",
+      "System-level automated code synthesis",
+      "Test-driven validation and feedback loop",
+      "System-level evaluation benchmark",
+      "Token-efficient interaction"
+    ],
+    "summary": "本文提出AISD——一个以用户为中心的LLM驱动软件开发框架，通过交互式需求获取、生成简洁高层设计并自动分解实现原型，结合系统级测试和用户反馈迭代改进，同时构建了用于评估此类系统的系统级基准以验证效果。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2401.01062v1",
     "published": "2024-01-02",
     "update_time": "2024-01-02",
-    "download_time": "2025-12-05 10:08:32"
+    "download_time": "2025-12-16 14:28:39"
   },
   {
     "id": "2401.04621",

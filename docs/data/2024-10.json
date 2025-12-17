@@ -17,13 +17,22 @@
     ],
     "field": "Quality Management",
     "task": "Bug Repair",
-    "summary": "提出MGDebugger，一种将代码分解为子函数层次、为子函数生成测试并利用LLM模拟执行自底向上定位与修复错误的分层调试方法，显著提升对LLM生成代码与真实软件缺陷的修复率。",
+    "tags": [
+      "Hierarchical code decomposition",
+      "Subfunction-level unit test generation",
+      "LLM-simulated execution for variable-state tracing",
+      "Bottom-up recursive debugging",
+      "Automated bug localization",
+      "Propagation of fixes across call-tree",
+      "Program repair for LLM-generated and real-world code"
+    ],
+    "summary": "本文提出MGDebugger，一种通过将程序分解为子函数树并结合子函数级测试与LLM模拟执行进行自底向上的层级调试方法，显著提高了对LLM生成代码及真实软件缺陷的修复成功率。",
     "quality": "High",
     "conference": "ICSE 2026",
     "pdf_url": "https://arxiv.org/pdf/2410.01215v4",
     "published": "2024-10-02",
     "update_time": "2025-11-22",
-    "download_time": "2025-12-04 23:20:17"
+    "download_time": "2025-12-16 13:29:02"
   },
   {
     "id": "2410.01353",

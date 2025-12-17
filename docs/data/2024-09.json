@@ -37,13 +37,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文介绍了Qwen2.5-Coder系列（0.5B–32B），在继承Qwen2.5架构的基础上用超过5.5万亿token的代码与相关文本进行大规模预训练并通过精心设计的指令微调与数据清洗策略显著提升代码生成、补全与推理任务的性能并开源发布。",
+    "tags": [
+      "file-level pretraining",
+      "repo-level pretraining",
+      "instruction-tuning recipe",
+      "scalable synthetic code data generation",
+      "data decontamination and filtering",
+      "balanced code/math/natural-language mixture",
+      "long-context code modeling",
+      "evaluation across code generation/completion/reasoning/repair"
+    ],
+    "summary": "本文介绍并发布了Qwen2.5-Coder系列代码专用大模型，通过在超大规模混合语料上继续预训练并结合精细的数据清洗、合成数据生成与指令微调，从而在多项代码基准上取得了领先性能。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2409.12186v3",
     "published": "2024-09-18",
     "update_time": "2024-11-12",
-    "download_time": "2025-12-04 23:08:44"
+    "download_time": "2025-12-16 10:36:02"
   },
   {
     "id": "2409.04183",

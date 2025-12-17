@@ -38,13 +38,22 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文发布并开源了Code Llama——一系列基于Llama 2 的代码专用大模型（多种规模与变体），支持中间填充、超长上下文与指令微调，并在多项代码基准上达到了开源模型的最先进表现。",
+    "tags": [
+      "Infilling-capable autoregressive training",
+      "RoPE positional embedding scaling for 100k-token contexts",
+      "Instruction fine-tuning with synthetic self-instruct unit tests",
+      "Python-specialized fine-tuning",
+      "Foundation-model specialization from general LLM",
+      "Mixed code and natural-language training batches",
+      "Permissive commercial-friendly model release"
+    ],
+    "summary": "本文提出并开源了 Code Llama，一系列基于 Llama 2 的代码专用大模型，集成了中间填充能力、指令式微调、Python 专化及扩展到 100k 令牌的长上下文支持，并在多个代码生成基准上达成开源模型的领先性能。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2308.12950v3",
     "published": "2023-08-24",
     "update_time": "2024-01-31",
-    "download_time": "2025-12-04 23:09:20"
+    "download_time": "2025-12-16 10:36:41"
   },
   {
     "id": "2308.07124",
@@ -70,13 +79,21 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Instruction-Tuning",
-    "summary": "本文发布了用于指令微调的COMMITPACK（4TB Git 提交数据）及其高质量子集COMMITPACKFT，构建了多语言的HUMANEVALPACK基准，并基于这些数据训练出OCTOCODER/OCTOGEEX，在多语言的代码合成、修复与解释任务上在可许可模型中取得最优表现。",
+    "tags": [
+      "Commit-based code edit pairs",
+      "Commit message as natural instructions",
+      "Instruction tuning for code LLMs",
+      "Multilingual multi-task code evaluation (synthesis, repair, explanation)",
+      "Permissive-license data curation",
+      "Single-file commit filtering and quality heuristics"
+    ],
+    "summary": "本文构建了基于 Git 提交的巨量 COMMITPACK 数据集并以其为指令数据对代码大模型进行指令调优，同时推出覆盖多语言与多任务的评测套件以验证所训模型的跨语言与任务泛化能力。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2308.07124v2",
     "published": "2023-08-14",
     "update_time": "2024-02-18",
-    "download_time": "2025-12-04 23:17:10"
+    "download_time": "2025-12-16 10:46:22"
   },
   {
     "id": "2308.10335",
@@ -90,18 +107,27 @@
     "first_author": "Li Zhong",
     "category": [
       "Benchmark",
-      "Empirical",
-      "Technical"
+      "Empirical"
     ],
     "field": "Coding Assistant",
-    "task": "Code Prompting",
-    "summary": "本文提出了面向Java API误用的基准数据集ROBUSTAPI及基于AST的API使用检测器，收集了1208个Stack Overflow问题并评估多款主流LLM，发现即使GPT-4也存在大量API误用（约62%）。",
+    "task": "Code Completion",
+    "tags": [
+      "API Misuse Detection",
+      "AST-based Evaluator",
+      "Structured Call Sequences",
+      "Stack Overflow-derived Questions",
+      "Java API Usage Patterns",
+      "Robustness and Reliability Benchmarking",
+      "Zero-shot and One-shot Prompting",
+      "Resource Leak and Crash Analysis"
+    ],
+    "summary": "本文提出了ROBUSTAPI基准，基于1208条来自Stack Overflow 的Java API问题与AST检测器，系统评估LLM生成代码的API误用与鲁棒性，并发现即使GPT‑4也存在大量API误用（约62%）。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2308.10335v5",
     "published": "2023-08-20",
     "update_time": "2024-01-27",
-    "download_time": "2025-12-04 23:28:56"
+    "download_time": "2025-12-16 13:56:38"
   },
   {
     "id": "2308.16458",
@@ -118,18 +144,28 @@
     ],
     "first_author": "Xiangru Tang",
     "category": [
-      "Benchmark",
-      "Empirical"
+      "Benchmark"
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "BioCoder 提出一个面向生物信息学的大规模代码生成基准（共 2,269 个问题），从 GitHub 与 Rosalind 提取并清洗函数，提供多文件上下文、依赖解析、执行式模糊测试与 Docker 化评测工具，用以评估并分析不同 LLM 在生物信息学代码生成中的性能和领域知识需求。",
+    "tags": [
+      "Domain-specific code generation",
+      "Bioinformatics data formats and workflows",
+      "Cross-file dependency extraction",
+      "AST-based code parsing",
+      "Execution-based fuzz testing",
+      "Dockerized evaluation environment",
+      "Context-rich / repository-level prompts",
+      "Prompt length and full-context effects",
+      "Benchmark curation and anti-memorization filtering"
+    ],
+    "summary": "BioCoder 提出并发布了一个面向生物信息学的代码生成基准（含来自 GitHub 与 Rosalind 的 2,269 个问题），并提供 AST 解析工具、上下文构建与 Docker 化的模糊测试框架以基于执行评估 LLM 的域特定代码生成能力。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2308.16458v5",
     "published": "2023-08-31",
     "update_time": "2024-05-20",
-    "download_time": "2025-12-04 23:29:24"
+    "download_time": "2025-12-16 13:57:19"
   },
   {
     "id": "2308.10620",

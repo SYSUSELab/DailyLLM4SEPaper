@@ -18,13 +18,21 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Instruction-Tuning",
-    "summary": "本文提出OSS-INSTRUCT方法从开源代码片段自动生成多样且可控的指令微调数据，并基于此训练并开源了Magicoder系列7B级代码生成模型，在多项代码生成基准上显著提升表现且部分模型超越ChatGPT。",
+    "tags": [
+      "Open-source-seed-driven instruction synthesis",
+      "Synthetic instruction-tuning dataset",
+      "Prompting teacher LLMs with code snippets",
+      "Teacher-student distillation via synthetic data",
+      "Data decontamination for leakage control",
+      "Combining multiple synthetic-data generation methods"
+    ],
+    "summary": "本文提出 OSS-INSTRUCT，一种以开源代码片段为种子由强模型生成多样化合成指令数据的方法，并基于此训练并开源了在多项代码生成基准上超越同规模模型的 Magicoder 系列。",
     "quality": "High",
     "conference": "ICML 2024",
     "pdf_url": "https://arxiv.org/pdf/2312.02120v2",
     "published": "2023-12-04",
     "update_time": "2024-06-07",
-    "download_time": "2025-12-04 23:16:40"
+    "download_time": "2025-12-16 10:45:42"
   },
   {
     "id": "2312.15223",

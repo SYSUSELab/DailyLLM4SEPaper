@@ -18,18 +18,28 @@
     ],
     "first_author": "Naman Jain",
     "category": [
-      "Empirical",
-      "Benchmark"
+      "Benchmark",
+      "Empirical"
     ],
     "field": "Coding Assistant",
-    "task": "Holistic Benchmarking & Contamination-free Evaluation",
-    "summary": "本文提出 LiveCodeBench，一个持续更新且防止训练数据污染的综合性代码评测基准，收集 2023–2024 年竞赛题并在代码生成、自我修复、代码执行与测试输出预测等多种场景上对多款 LLM 进行广泛评估与污染分析。",
+    "task": "Code Understanding",
+    "tags": [
+      "Contamination-free evaluation",
+      "Time-segmented / cutoff-aware benchmarking",
+      "Contest-problem harvesting (LeetCode/AtCoder/CodeForces)",
+      "Self-repair (debug from execution feedback)",
+      "Test output prediction",
+      "Code execution / program emulation evaluation",
+      "Holistic multi-scenario benchmarking",
+      "Public prompts and completions toolkit"
+    ],
+    "summary": "本文提出LiveCodeBench——一个从线上编程比赛实时收集并按发布时间切分以避免训练数据污染的综合代码基准，支持代码生成、自我修复、程序执行与测试输出预测等多场景评估，并对多款模型进行了广泛评测和污染/过拟合分析，同时发布了提示与模型完成结果工具包。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2403.07974v2",
     "published": "2024-03-12",
     "update_time": "2024-06-06",
-    "download_time": "2025-12-04 23:26:44"
+    "download_time": "2025-12-16 13:53:17"
   },
   {
     "id": "2403.08604",
@@ -59,15 +69,25 @@
       "Benchmark",
       "Empirical"
     ],
-    "field": "Coding Assistant",
-    "task": "Code Reasoning",
-    "summary": "本文提出DevEval，一个覆盖软件设计、环境搭建、实现与验收/单元测试等软件全生命周期任务的基准，并通过对多种LLM（含GPT‑4系列）的评估发现其在仓库级实现与测试上仍存在显著不足。",
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "End-to-end lifecycle evaluation",
+      "Repository-level codebase construction",
+      "UML class and sequence diagram generation",
+      "Dependency file and environment setup generation",
+      "Acceptance and unit test generation and execution",
+      "Execution-based metrics and coverage measurement",
+      "LLM-as-a-judge automated design evaluation",
+      "Multi-language benchmark (Python/Java/C/C++/JavaScript)"
+    ],
+    "summary": "本文提出了DevEval——一个覆盖软件设计、环境配置、实现与测试等全生命周期、多语言的仓库级评估基准，并通过执行与覆盖率等度量展示了现有大模型在真实软件开发任务上的显著不足与改进方向。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2403.08604v3",
     "published": "2024-03-13",
     "update_time": "2024-12-14",
-    "download_time": "2025-12-04 23:27:14"
+    "download_time": "2025-12-16 13:54:13"
   },
   {
     "id": "2404.00599",

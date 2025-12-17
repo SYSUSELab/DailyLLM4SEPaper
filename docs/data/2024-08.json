@@ -14,19 +14,28 @@
     ],
     "first_author": "Jiawei Liu",
     "category": [
-      "Empirical",
       "Technical",
       "Benchmark"
     ],
     "field": "Coding Assistant",
-    "task": "Code Completion",
-    "summary": "本文提出差异化性能评估（DPE）框架并构建了 EVALPERF 基准，通过自动合成性能测试输入、性能聚类与参考解比较，可靠地评估和量化大语言模型生成代码的运行效率，并基于此对模型规模、指令微调和提示进行了实证分析。",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Differential Performance Evaluation",
+      "Synthesizing a Synthesizer",
+      "Performance-exercising input generation",
+      "Exponential input sampling",
+      "Performance clustering and reference matching",
+      "Cluster-percentile efficiency scoring",
+      "Chain-of-thought few-shot generator prompting",
+      "Cross-platform profiling and robustness"
+    ],
+    "summary": "本文提出 Differential Performance Evaluation (DPE) 框架，通过自动合成性能压力测试输入、对正确解进行性能聚类并以参考解匹配的方式为新生成代码打分，基于此构建了一个用于评估代码效率的基准并开展了实证分析。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2408.06450v1",
     "published": "2024-08-12",
     "update_time": "2024-08-12",
-    "download_time": "2025-12-04 23:26:06"
+    "download_time": "2025-12-16 13:52:36"
   },
   {
     "id": "2408.14354",

@@ -67,17 +67,28 @@
     "first_author": "Mark Chen",
     "category": [
       "Technical",
-      "Benchmark"
+      "Benchmark",
+      "Empirical"
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文介绍并评估了在公开代码上微调的GPT模型Codex，提出并发布了HumanEval数据集与pass@k评测以衡量从docstring合成Python函数的功能正确性，展示了模型性能、局限性及潜在影响。",
+    "tags": [
+      "unit-test-based evaluation",
+      "pass@k metric",
+      "docstring-conditioned program synthesis",
+      "multi-sample generation and selection",
+      "log-probability ranking of samples",
+      "fine-tuning on standalone functions",
+      "sandboxed execution for safe evaluation",
+      "analysis of failure modes (long operation chains, variable binding)"
+    ],
+    "summary": "本文提出并评估了基于公开代码微调的GPT类模型用于从Python docstring生成函数的方法，发布了基于单元测试的基准与pass@k评估指标，展示了模型性能、采样策略效果、局限性及潜在影响。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2107.03374v2",
     "published": "2021-07-07",
     "update_time": "2021-07-14",
-    "download_time": "2025-12-04 23:11:30"
+    "download_time": "2025-12-16 10:39:10"
   },
   {
     "id": "2107.05373",

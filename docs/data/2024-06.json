@@ -48,17 +48,28 @@
     ],
     "first_author": "DeepSeek-AI",
     "category": [
-      "Technical"
+      "Technical",
+      "Benchmark"
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文提出了开源的DeepSeek-Coder-V2——基于Mixture-of-Experts的大规模代码模型，通过在DeepSeek-V2上继续使用额外6万亿tokens的预训练并结合指令微调与GRPO对齐，使得236B参数模型在代码与数学推理基准上达到并在若干任务上超越GPT-4-Turbo等闭源模型，支持338种编程语言和128K上下文长度。",
+    "tags": [
+      "Mixture-of-Experts (MoE) architecture with activation-parameter efficiency",
+      "Continued large-scale pre-training (additional 6T tokens, total 10.2T)",
+      "Large multilingual code corpus curation (338 programming languages)",
+      "128K long-context code modeling",
+      "Reinforcement learning from compiler-and-test-based preferences",
+      "Group Relative Policy Optimization (GRPO) for alignment",
+      "Fill-in-middle fine-tuning for code completion",
+      "Open-source release of hundred-billion-parameter code models"
+    ],
+    "summary": "DeepSeek-Coder-V2是一个开源的MoE大规模代码语言模型，通过在额外6兆训练令牌上继续预训练、扩展到338种语言和128K上下文并结合基于编译器/测试的RL对齐方法，实现了在代码与数学推理任务上匹敌或超越多款闭源模型的性能并公开发布模型。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2406.11931v1",
     "published": "2024-06-17",
     "update_time": "2024-06-17",
-    "download_time": "2025-12-04 23:11:56"
+    "download_time": "2025-12-16 10:39:48"
   },
   {
     "id": "2406.06887",
@@ -77,13 +88,22 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Instruction-Tuning",
-    "summary": "本文提出PLUM，一种通过自动从自然语言题目生成测试用例并对模型自采样候选解进行执行反馈的在线在策略偏好学习框架，以无需训练奖励模型的方式显著提升代码语言模型的正确率。",
+    "tags": [
+      "On-policy preference learning",
+      "Synthetic test-case synthesis",
+      "Execution-guided preference labeling",
+      "Reward-model-free training",
+      "Online preference data collection",
+      "Self-consistency as oracle",
+      "Runtime execution feedback"
+    ],
+    "summary": "提出 PLUM：一种通过自动从自然语言说明生成测试用例并基于模型自采样解的执行结果构建偏好标签，进行在线在策略偏好学习以提升代码大模型生成正确性且无需训练奖励模型的方法。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2406.06887v4",
     "published": "2024-06-11",
     "update_time": "2024-10-12",
-    "download_time": "2025-12-04 23:18:09"
+    "download_time": "2025-12-16 13:24:27"
   },
   {
     "id": "2406.18294",
@@ -104,18 +124,26 @@
     ],
     "first_author": "Lei Zhang",
     "category": [
-      "Technical",
-      "Empirical"
+      "Technical"
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文提出了分层上下文剪枝（HCP）策略，在函数级别保留文件间拓扑依赖并裁剪无关实现，从而大幅减少仓库级预训练代码LLM的输入长度并显著提升代码补全准确率。",
+    "tags": [
+      "Repository-level context pruning",
+      "Function-level modeling",
+      "Topological dependency preservation",
+      "Prompt construction for code completion",
+      "Context window reduction",
+      "Cross-file information selection",
+      "Token-efficient completion"
+    ],
+    "summary": "该论文提出了分层上下文剪枝（HCP）方法，通过在函数级别保留文件间拓扑依赖并移除无关实现，大幅减少输入上下文令牌数以提升仓库级预训练代码模型的跨文件代码补全准确性。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2406.18294v2",
     "published": "2024-06-26",
     "update_time": "2024-06-27",
-    "download_time": "2025-12-04 23:20:47"
+    "download_time": "2025-12-16 13:29:33"
   },
   {
     "id": "2406.12902",

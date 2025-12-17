@@ -19,18 +19,28 @@
     ],
     "first_author": "Jacob Austin",
     "category": [
-      "Empirical",
-      "Benchmark"
+      "Benchmark",
+      "Empirical"
     ],
     "field": "Coding Assistant",
-    "task": "Code Completion",
-    "summary": "本文引入了两个用于Python程序合成的新数据集（MBPP和MathQA-Python），并实证评估了不同规模的大型语言模型在few-shot与微调情形下从自然语言描述生成短Python程序的性能、与人类交互以修复代码的能力及模型的语义归属限制。",
+    "task": "Code Prompting",
+    "tags": [
+      "Natural-language-to-code synthesis",
+      "Few-shot prompting with exemplars",
+      "Small-scale fine-tuning for code",
+      "Unit-test based functional evaluation",
+      "Model-size scaling laws for synthesis",
+      "Human-in-the-loop natural language feedback",
+      "Semantic grounding / execution-result prediction",
+      "Error analysis of synthesis failures"
+    ],
+    "summary": "本文提出用于评估Python程序合成的两个新基准并系统性评估不同规模的Transformer模型在few-shot与微调设置下的代码生成能力，研究尺寸扩展、交互式人类反馈及语义执行能力等问题。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2108.07732v1",
     "published": "2021-08-16",
     "update_time": "2021-08-16",
-    "download_time": "2025-12-04 23:31:49"
+    "download_time": "2025-12-16 14:01:40"
   },
   {
     "id": "2108.11590",

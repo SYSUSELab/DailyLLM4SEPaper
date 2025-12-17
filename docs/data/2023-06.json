@@ -22,13 +22,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Instruction-Tuning",
-    "summary": "本文提出了面向代码领域的Code Evol-Instruct指令微调方法，并基于此训练出WizardCoder模型，在多项代码生成基准（HumanEval、MBPP等）上显著优于现有开源模型，部分规模也超越了若干闭源模型。",
+    "tags": [
+      "Code Evol-Instruct",
+      "Heuristic-driven instruction evolution",
+      "Adversarial instruction generation",
+      "Instruction complexity augmentation",
+      "Time/space complexity constraints",
+      "Instruction-following fine-tuning",
+      "Robustness via evolved prompts",
+      "Performance-oriented instruction design"
+    ],
+    "summary": "本文提出面向代码的Code Evol-Instruct指令进化方法，对开源代码大模型进行指令微调以得到显著提升代码生成性能的模型，并实验证明在多项代码生成基准上优于现有开源（且部分闭源）模型，同时强调指令复杂性对性能的关键作用。",
     "quality": "High",
-    "conference": "ICLR 2024",
+    "conference": "International Conference on Learning Representations (ICLR 2024)",
     "pdf_url": "https://arxiv.org/pdf/2306.08568v2",
     "published": "2023-06-14",
     "update_time": "2025-05-27",
-    "download_time": "2025-12-04 23:10:59"
+    "download_time": "2025-12-16 10:38:29"
   },
   {
     "id": "2306.11644",
@@ -59,17 +69,28 @@
     "first_author": "Suriya Gunasekar",
     "category": [
       "Technical",
-      "Benchmark"
+      "Benchmark",
+      "Empirical"
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文提出 phi-1：一个仅1.3B参数、以精选“教科书质量”文本与合成编程练习训练的小型代码生成模型，能在HumanEval和MBPP上以极小规模取得接近或超越更大模型的高性能。",
+    "tags": [
+      "Textbook-quality data curation",
+      "Synthetic textbook/exercise generation from a teacher LLM",
+      "Data-driven scaling (quality over quantity)",
+      "Finetuning on exercise-style prompts",
+      "Compute- and parameter-efficient code model",
+      "Emergence analysis in small code models",
+      "Training data contamination analysis",
+      "Pass@1-based code generation evaluation"
+    ],
+    "summary": "本文提出phi-1，一种仅1.3B参数但通过精选“教科书质量”语料与对抗性合成练习进行预训练与微调，从而在代码生成基准上以远小于常规模型的计算与数据规模取得极高性能，并观察到小模型的涌现行为与数据质量驱动的性能提升。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2306.11644v2",
     "published": "2023-06-20",
     "update_time": "2023-10-02",
-    "download_time": "2025-12-04 23:13:17"
+    "download_time": "2025-12-16 10:41:36"
   },
   {
     "id": "2306.02907",
@@ -87,13 +108,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Prompting",
-    "summary": "本文提出SELFEVOLVE，一种两阶段的LLM驱动代码演化框架：先让模型自生成与题目相关的知识再生成代码，随后基于解释器错误信息对代码进行自我调试与迭代，从而在多套数据集上显著提升执行正确率。",
+    "tags": [
+      "Self-generated knowledge extraction",
+      "Interpreter-feedback debugging",
+      "Iterative self-refinement",
+      "Execution-guided program synthesis",
+      "Retrieval-free augmentation",
+      "Prompt-based code evolution",
+      "Error-message-driven repair",
+      "Two-stage generation-and-refinement pipeline"
+    ],
+    "summary": "该文提出SELF-EVOLVE，一个不依赖检索器的两阶段代码生成框架：先让模型自我生成问题相关知识并基于其生成初始代码，再通过解释器返回的错误信息让模型自我调试迭代改进，从而在多项代码生成与翻译数据集上显著提升性能。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2306.02907v1",
     "published": "2023-06-05",
     "update_time": "2023-06-05",
-    "download_time": "2025-12-04 23:21:45"
+    "download_time": "2025-12-16 13:35:10"
   },
   {
     "id": "2306.09896",
@@ -113,13 +144,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Editing",
-    "summary": "本文在HumanEval和APPS数据集上系统评估了Code Llama、GPT-3.5和GPT-4的自我修复能力，发现考虑修复计算成本后收益常常有限且随数据子集波动较大，而提升反馈质量（由更强模型或人工提供）能显著提高修复效果。",
+    "tags": [
+      "Self-repair pipeline (generate→execute→feedback→repair)",
+      "Feedback quality ablation",
+      "Compute-budget vs sampling tradeoff",
+      "Unit-test-driven debugging",
+      "Cross-model feedback substitution",
+      "Human-in-the-loop debugging comparison",
+      "Pass@k baseline analysis",
+      "Error-message to natural-language feedback"
+    ],
+    "summary": "本文在HumanEval和APPS上实证评估了CodeLlama、GPT-3.5与GPT-4的自我修复能力，发现计入修复成本后收益常常有限且不稳定，修复效果高度依赖反馈质量，且人类反馈显著优于自动反馈。",
     "quality": "High",
     "conference": "ICLR 2024",
     "pdf_url": "https://arxiv.org/pdf/2306.09896v5",
     "published": "2023-06-16",
     "update_time": "2024-02-02",
-    "download_time": "2025-12-04 23:22:09"
+    "download_time": "2025-12-16 13:41:23"
   },
   {
     "id": "2306.03091",
@@ -137,13 +178,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文提出RepoBench，一个面向仓库级别的代码自动补全基准（含检索、下一行补全与端到端流水线三项任务），并提供覆盖Python/Java的数据集与评测分析。",
+    "tags": [
+      "Repository-level evaluation",
+      "Cross-file retrieval",
+      "Next-line code prediction",
+      "Retrieval–completion pipeline",
+      "Python and Java multi-file projects",
+      "Temporal test split to reduce leakage",
+      "Long-context benchmarking",
+      "Retrieval-augmented completion"
+    ],
+    "summary": "本文提出RepoBench，一个针对仓库级（跨文件）代码自动补全的基准，包含检索、补全与端到端流水线三项任务，并在大量 Python 和 Java 仓库上评估检索方法与补全模型以揭示处理长上下文与跨文件依赖的挑战。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2306.03091v2",
     "published": "2023-06-05",
     "update_time": "2023-10-04",
-    "download_time": "2025-12-04 23:28:06"
+    "download_time": "2025-12-16 13:55:21"
   },
   {
     "id": "2306.14893",
@@ -164,13 +215,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文提出LongCoder——一种用于长代码上下文的稀疏预训练Transformer，采用滑动窗口注意力并引入桥接（bridge）与记忆（memory）令牌以实现全局信息访问，同时构建并发布长代码补全数据集LCC，实验证明在长/常规代码补全上性能优于既有模型且推理效率相当。",
+    "tags": [
+      "sliding-window sparse attention",
+      "bridge tokens for local aggregation",
+      "memory tokens for global memorization",
+      "long-context / file-level code modeling",
+      "linearized attention complexity",
+      "autoregressive pre-training for completion",
+      "construction of long-code completion benchmark",
+      "code-driven dynamic global attention"
+    ],
+    "summary": "该文提出一种用于长代码上下文补全的稀疏Transformer预训练模型，通过滑动窗口注意力及两类全局令牌（桥接令牌与记忆令牌）在保持线性复杂度的同时建模文件级长上下文，并构建了面向长代码的补全基准以验证方法有效性。",
     "quality": "High",
     "conference": "ICML 2023",
     "pdf_url": "https://arxiv.org/pdf/2306.14893v1",
     "published": "2023-06-26",
     "update_time": "2023-06-26",
-    "download_time": "2025-12-04 23:28:30"
+    "download_time": "2025-12-16 13:55:58"
   },
   {
     "id": "2306.10763",

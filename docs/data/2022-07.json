@@ -17,13 +17,22 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Reasoning",
-    "summary": "本文提出CodeRL框架，将预训练代码语言模型作为actor并引入critic与基于单元测试的奖励和关键采样策略，通过深度强化学习优化代码生成与自动修复，在APPS和MBPP上取得新的SOTA表现。",
+    "tags": [
+      "Actor-Critic RL for code generation",
+      "Unit-test-driven reward signals",
+      "Critic as token-level error predictor",
+      "Critic-guided resampling (critical sampling)",
+      "Compiler-error-conditioned program repair",
+      "Fine-tuning encoder-decoder code LM",
+      "Optimizing functional correctness"
+    ],
+    "summary": "本文提出CodeRL框架，将预训练代码语言模型作为actor并引入critic进行错误预测，利用基于单元测试的回报和critic导向的重采样与修复策略，在训练与生成阶段优化程序的功能性正确性以提升代码生成性能。",
     "quality": "High",
     "conference": "NeurIPS 2022",
     "pdf_url": "https://arxiv.org/pdf/2207.01780v3",
     "published": "2022-07-05",
     "update_time": "2022-11-03",
-    "download_time": "2025-12-04 23:19:47"
+    "download_time": "2025-12-16 13:27:58"
   },
   {
     "id": "2207.10397",
@@ -45,12 +54,20 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "论文提出CODET方法，利用同一预训练模型自动生成测试用例并通过双重执行一致性（基于生成测试的输出匹配和候选程序间的一致性）从多个候选解中选出最佳代码，从而在HumanEval、MBPP、APPS等基准上显著提升了pass@1性能。",
+    "tags": [
+      "LM-generated unit tests",
+      "Dual execution agreement",
+      "RANSAC-inspired consensus clustering",
+      "Execution-based code ranking",
+      "Test-driven code selection",
+      "Zero-shot test synthesis"
+    ],
+    "summary": "本文提出CODET，一种利用同一预训练语言模型自动生成测试用例并通过受RANSAC启发的双重执行一致性在候选代码中选出最优解的无监督方法，从而在多项基准上显著提升了pass@1性能。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2207.10397v2",
     "published": "2022-07-21",
     "update_time": "2022-11-23",
-    "download_time": "2025-12-04 23:24:02"
+    "download_time": "2025-12-16 13:50:06"
   }
 ]

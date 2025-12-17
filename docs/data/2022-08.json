@@ -22,17 +22,26 @@
     "first_author": "Federico Cassano",
     "category": [
       "Benchmark",
-      "Empirical"
+      "Empirical",
+      "Technical"
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文提出 MultiPL-E，将 HumanEval 和 MBPP 翻译并扩展到 19 种编程语言，构建首个大规模多语言并行代码生成基准并用其评估多款模型以分析语言特性、流行度、类型系统和提示敏感性对生成性能的影响。",
+    "tags": [
+      "Multilingual code‑generation benchmarking",
+      "Unit-test translation and compilation",
+      "Parallel problem instances across languages",
+      "Prompt translation and sensitivity analysis",
+      "Language feature and popularity impact study",
+      "Containerized sandboxed execution and error classification"
+    ],
+    "summary": "本文提出 MultiPL‑E，将基于单元测试的 Python 代码生成基准自动翻译到 18 种编程语言，构建大规模多语言并行基准并用其评估现有模型以分析语言特性、流行度、类型注解与提示设计对代码生成正确率的影响。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2208.08227v4",
     "published": "2022-08-17",
     "update_time": "2022-12-19",
-    "download_time": "2025-12-04 23:31:19"
+    "download_time": "2025-12-16 14:00:43"
   },
   {
     "id": "2208.04415",

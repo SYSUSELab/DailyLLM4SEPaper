@@ -14,15 +14,23 @@
     "category": [
       "Technical"
     ],
-    "field": "Coding Assistant",
-    "task": "Code Editing",
-    "summary": "本文提出 SELF-DEBUGGING，一种通过少量示例提示让大语言模型执行其生成的代码、生成自然语言解释并基于执行结果迭代自我修复程序的调试方法，在多项代码生成基准上显著提升了准确率与样本效率。",
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Self-debugging prompts",
+      "Rubber-duck code explanation",
+      "Execution-guided feedback",
+      "Unit-test feedback integration",
+      "Iterative program repair",
+      "Sample-efficiency improvement"
+    ],
+    "summary": "本文提出SELF-DEBUGGING，通过少样例提示让大模型在执行生成的代码后输出自然语言解释与执行结果作为反馈，并基于此迭代自我修复代码，从而在多项代码生成任务上显著提高准确率与样本效率。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2304.05128v2",
     "published": "2023-04-11",
     "update_time": "2023-10-05",
-    "download_time": "2025-12-04 23:22:35"
+    "download_time": "2025-12-16 13:47:52"
   },
   {
     "id": "2304.01102",

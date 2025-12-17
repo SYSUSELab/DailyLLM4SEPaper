@@ -79,13 +79,26 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文介绍了基于 Software Heritage 构建的 The Stack v2 数据集并在其上训练并公开了 StarCoder2（3B/7B/15B）系列代码大模型，同时发布训练数据标识与权重并在多项代码基准上进行全面评估以展示其性能优势。",
+    "tags": [
+      "software-archive-based corpus",
+      "multilingual source-code corpus",
+      "license-aware filtering",
+      "deduplication and provenance (SWHIDs)",
+      "PII redaction and malicious-code removal",
+      "notebook and pull-request curation",
+      "two-stage context window training (4k→16k)",
+      "training with trillions of tokens (overcompute vs Chinchilla)",
+      "open-weight release with transparent data provenance",
+      "opt-out/governance tooling",
+      "comprehensive cross-benchmark evaluation"
+    ],
+    "summary": "BigCode项目基于Software Heritage构建了大规模多语言代码语料并发布了新版数据集与可公开权重的Code LLM，通过许可证感知去重、PII/恶意代码处理和两阶段（4k→16k）训练在多项代码基准上进行了全面评估并公开了数据可溯源标识。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2402.19173v1",
     "published": "2024-02-29",
     "update_time": "2024-02-29",
-    "download_time": "2025-12-04 23:12:22"
+    "download_time": "2025-12-16 10:40:22"
   },
   {
     "id": "2402.16906",
@@ -103,12 +116,21 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Editing",
-    "summary": "本文提出LDB，一种通过将程序分解为基本块并采集每块的运行时中间变量，让LLM逐步验证每个代码块并定位错误以迭代修复生成代码的方法，在HumanEval、MBPP和TransCoder上显著提升了调试与代码生成性能。",
+    "tags": [
+      "Runtime Execution Traces",
+      "Basic Block Segmentation",
+      "Control-Flow Graph Profiling",
+      "Intermediate Variable Inspection",
+      "Block-wise Correctness Verification",
+      "Iterative Regeneration",
+      "Visible Test Case Guided Debugging"
+    ],
+    "summary": "本文提出LDB，一种将运行时执行信息（基于控制流图的基本块与中间变量值）引入大语言模型的调试框架，按块逐步验证并迭代修正生成的程序，显著提升多项代码生成基准的性能。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2402.16906v6",
     "published": "2024-02-25",
     "update_time": "2024-06-06",
-    "download_time": "2025-12-04 23:21:15"
+    "download_time": "2025-12-16 13:30:15"
   }
 ]

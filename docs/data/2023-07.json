@@ -24,13 +24,24 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Instruction-Tuning",
-    "summary": "本文提出了RRTF（Rank Responses to align Test&Teacher Feedback）框架，并基于该框架对StarCoder进行排序反馈式指令微调得到PanGu-Coder2，从而在HumanEval、CoderEval和LeetCode等基准上显著提升代码生成性能并达成新的SOTA。",
+    "tags": [
+      "Ranking-feedback fine-tuning",
+      "Test-case-guided ranking",
+      "Preference-ranking objective",
+      "RLHF-alternative (ranking-based)",
+      "Evol-Instruct sampling",
+      "Instruction tuning for code",
+      "Data-quality focused curation",
+      "Efficient SFT-style optimization",
+      "Pass-rate optimization"
+    ],
+    "summary": "本文提出RRTF（Rank Responses to align Test&Teacher Feedback）框架，使用基于测试与教师偏好的响应排序作为反馈对预训练代码模型进行高效指令微调，从而得到PanGu‑Coder2并在多项基准上显著提升代码生成通过率。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2307.14936v1",
     "published": "2023-07-27",
     "update_time": "2023-07-27",
-    "download_time": "2025-12-04 23:10:29"
+    "download_time": "2025-12-16 10:37:54"
   },
   {
     "id": "2307.04349",
@@ -51,14 +62,23 @@
       "Technical"
     ],
     "field": "Coding Assistant",
-    "task": "Code Reasoning",
-    "summary": "本文提出 RLTF，一种基于在线强化学习并利用多粒度单元测试反馈（细粒度与自适应反馈）的框架，用以细化代码大模型并在 APPS 与 MBPP 基准上取得显著提升。",
+    "task": "Code Completion",
+    "tags": [
+      "Online Reinforcement Learning",
+      "Unit-test-guided rewards",
+      "Fine-grained error localization",
+      "Adaptive reward scaling",
+      "Online sample buffer",
+      "Critic sampling",
+      "Policy optimization for program synthesis"
+    ],
+    "summary": "该文提出RLTF，一种针对程序合成的在线强化学习框架，通过实时生成样本并从单元测试中提取多粒度（细粒度与自适应）反馈来对代码大模型进行优化，在APPS和MBPP上达到领先性能。",
     "quality": "High",
-    "conference": "TMLR 2023",
+    "conference": "Transactions on Machine Learning Research (TMLR) 2024",
     "pdf_url": "https://arxiv.org/pdf/2307.04349v2",
     "published": "2023-07-10",
     "update_time": "2023-11-13",
-    "download_time": "2025-12-04 23:18:42"
+    "download_time": "2025-12-16 13:25:42"
   },
   {
     "id": "2308.00147",

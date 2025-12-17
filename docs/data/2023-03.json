@@ -26,13 +26,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文提出并开源了一个13B参数的多语言代码生成预训练模型CodeGeeX，同时构建了用于多语言函数正确性评估的HumanEval-X基准，并展示了模型在生成与翻译任务上的优势与实际IDE部署带来的用户增效。",
+    "tags": [
+      "Multilingual code pretraining",
+      "Autoregressive transformer pretraining",
+      "Hand-crafted cross-language test suites",
+      "Functional correctness evaluation via unit tests",
+      "IDE integrations and real-world user study",
+      "Large-scale code corpus (850B tokens, 23 languages)",
+      "Cross-language code translation",
+      "Open-source model and toolchain"
+    ],
+    "summary": "论文提出并开源了 CodeGeeX——一个 13B 参数的多语言代码预训练模型，构建了用于多语言功能性评测的手工跨语种测试集并展示了在代码生成、翻译任务上的性能与实际 IDE 集成及用户增效效果。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2303.17568v2",
     "published": "2023-03-30",
     "update_time": "2024-07-10",
-    "download_time": "2025-12-04 23:15:01"
+    "download_time": "2025-12-16 10:43:41"
   },
   {
     "id": "2303.12570",

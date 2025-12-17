@@ -55,13 +55,25 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "该技术报告介绍了BigCode社区训练的1.1B参数代码模型SantaCoder，包含PII删减管道、架构（MQA、FIM）与数据预处理的消融实验，并在MultiPL-E上优于之前开源多语言模型。",
+    "tags": [
+      "PII redaction pipeline",
+      "PII annotation benchmark (400 files)",
+      "Fill-in-the-middle pretraining objective",
+      "Multi-Query Attention (MQA) ablations",
+      "Near-duplicate filtering",
+      "Repository-star filtering as data-quality proxy",
+      "Comments-to-code and char-to-token ratio filters",
+      "1.1B-parameter code model training",
+      "Text-to-code benchmark evaluation",
+      "Open-source release and governance"
+    ],
+    "summary": "本文总结了 BigCode 社区在训练 1.1B 参数代码模型过程中的工作，包含 PII 删除管道与 400 文件标注基准、对 MQA 与 FIM 的消融实验、对多种数据预处理（如近重复、仓库 star 筛选、注释比率等）对性能影响的研究，并在多语言 text-to-code 基准上展示小型模型优于更大开源模型的结果且公开发布模型与工具。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2301.03988v2",
     "published": "2023-01-09",
     "update_time": "2023-02-24",
-    "download_time": "2025-12-04 23:15:33"
+    "download_time": "2025-12-16 10:44:24"
   },
   {
     "id": "2301.13816",
@@ -80,13 +92,21 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "该论文提出PPOCoder——一种将预训练代码模型与PPO强化学习结合、利用编译器执行和代码结构对齐作为不可微奖励来优化代码生成以提高可编译性和功能正确性的通用框架，并在多种编程语言与任务上显著优于现有方法。",
+    "tags": [
+      "Execution-based reward design",
+      "PPO fine-tuning of pre-trained code models",
+      "Compiler and unit-test feedback",
+      "AST and DFG structural matching",
+      "KL-divergence penalty to prevent forgetting",
+      "Model- and task-agnostic RL framework"
+    ],
+    "summary": "本文提出PPOCoder，将PPO强化学习与基于执行（编译/单元测试）和AST/DFG结构对齐的非可微奖励相结合，对预训练代码模型进行微调，从而在代码补全、代码翻译和程序合成等任务上显著提升可编译性与功能正确性。",
     "quality": "High",
-    "conference": "TMLR 2023",
+    "conference": "Transactions on Machine Learning Research (TMLR) 2023",
     "pdf_url": "https://arxiv.org/pdf/2301.13816v4",
     "published": "2023-01-31",
     "update_time": "2023-07-19",
-    "download_time": "2025-12-04 23:19:17"
+    "download_time": "2025-12-16 13:26:46"
   },
   {
     "id": "2301.03270",

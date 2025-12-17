@@ -16,18 +16,28 @@
     "first_author": "Carlos E. Jimenez",
     "category": [
       "Benchmark",
-      "Empirical",
-      "Technical"
+      "Empirical"
     ],
     "field": "Coding Assistant",
     "task": "Code Editing",
-    "summary": "本文提出SWE-bench——一个由真实GitHub issue及其修复PR构成的库级代码编辑基准（2,294个实例），并评估多种大型语言模型、发布训练集SWE-bench-train及微调模型SWE-Llama，结果显示现有模型仅能解决极少数实际问题。",
+    "tags": [
+      "Repository-scale code editing",
+      "GitHub issue-to-PR construction",
+      "Unit-test execution-based evaluation",
+      "Fail-to-pass test filtering",
+      "Long-context codebase understanding",
+      "Cross-file and multi-function coordination",
+      "Continually updatable benchmark pipeline",
+      "Training corpus for fine-tuning",
+      "Patch-based edit generation"
+    ],
+    "summary": "该论文提出SWE-bench，一个基于真实GitHub issue与合并PR构造的可持续、可执行的Python代码库级别修复基准，要求模型生成补丁并通过原项目测试，实验证明现有模型仅能解决极少数实际问题，同时发布了用于微调的训练集合并评估了微调模型性能。",
     "quality": "High",
     "conference": "ICLR 2024",
     "pdf_url": "https://arxiv.org/pdf/2310.06770v3",
     "published": "2023-10-10",
     "update_time": "2024-11-11",
-    "download_time": "2025-12-04 23:27:45"
+    "download_time": "2025-12-16 13:54:49"
   },
   {
     "id": "2310.17903",

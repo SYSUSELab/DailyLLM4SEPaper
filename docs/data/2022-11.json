@@ -15,17 +15,27 @@
     ],
     "first_author": "Tianyi Zhang",
     "category": [
-      "Technical"
+      "Technical",
+      "Empirical"
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文提出Coder-Reviewer重排方法：通过prompt将生成的程序放在前并估计p(x|y)，与原始p(y|x)的乘积用于重排候选代码，从而减少退化解并在多数据集、多模型上显著提升代码生成准确率且无需额外训练。",
+    "tags": [
+      "Prompt-based Reviewer Model",
+      "MMI-style bidirectional reranking",
+      "Sampling and reranking",
+      "Length-bias mitigation",
+      "Executable-filtering compatibility",
+      "Zero-/few-shot code generation",
+      "Cross-language generalization"
+    ],
+    "summary": "本文提出通过提示构造的 Reviewer 模型估计 p(x|y)，与 Coder 的 p(y|x) 相乘进行重排（Coder-Reviewer reranking），在多数据集、多模型和多语言设置下显著提升代码生成准确率并易于实现与执行性过滤结合。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2211.16490v1",
     "published": "2022-11-29",
     "update_time": "2022-11-29",
-    "download_time": "2025-12-04 23:23:28"
+    "download_time": "2025-12-16 13:48:58"
   },
   {
     "id": "2211.11501",
@@ -46,17 +56,27 @@
     ],
     "first_author": "Yuhang Lai",
     "category": [
-      "Benchmark"
+      "Benchmark",
+      "Empirical"
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文提出并发布了DS-1000——一个包含1000个来自StackOverflow的真实数据科学Python问题的基准，配备可执行的多准则自动评测并通过扰动问题防止模型记忆化，以可靠评估代码生成模型性能。",
+    "tags": [
+      "StackOverflow-sourced problems",
+      "Execution-based multi-criteria evaluation",
+      "Surface-form constraints",
+      "Memorization mitigation (problem perturbation)",
+      "Executable code contexts",
+      "Library-version controlled environment",
+      "False discovery rate validation"
+    ],
+    "summary": "该论文提出了DS-1000——一个包含1000个来源于StackOverflow的真实数据科学代码生成基准，覆盖NumPy/Pandas等库，结合可执行的多准则自动评估并通过题目扰动防止模型记忆化，展示了现有模型在此基准上的性能表现。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2211.11501v1",
     "published": "2022-11-18",
     "update_time": "2022-11-18",
-    "download_time": "2025-12-04 23:30:49"
+    "download_time": "2025-12-16 13:59:53"
   },
   {
     "id": "2211.05100",

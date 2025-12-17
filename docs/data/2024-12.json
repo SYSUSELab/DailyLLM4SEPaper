@@ -24,13 +24,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Alignment",
-    "summary": "本文提出了面向人类偏好的代码评估基准 CodeArena 与大规模合成指令语料 SynCode-Instruct，并基于此训练与评测多款 codeLLM，揭示开放模型与闭源模型在人类偏好对齐上的差距。",
+    "tags": [
+      "Human preference evaluation",
+      "Human-curated code QA benchmark",
+      "Synthetic instruction corpus from web",
+      "Instruction fine-tuning at scale",
+      "LLM-as-judge pairwise comparison",
+      "Decontamination and data filtering",
+      "Multi-language and multi-category tasks",
+      "Annotation protocol and quality control"
+    ],
+    "summary": "本文提出了面向人类偏好的代码评估基准 CodeArena、构建了近200亿标记的合成指令语料 SynCode‑Instruct，并基于此对40余款模型进行了系统评测与指令微调以研究代码LLM与人类偏好的对齐问题。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2412.05210v1",
     "published": "2024-12-06",
     "update_time": "2024-12-06",
-    "download_time": "2025-12-04 23:24:39"
+    "download_time": "2025-12-16 13:50:46"
   },
   {
     "id": "2412.18843",

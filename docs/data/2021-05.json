@@ -23,14 +23,22 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "task": "Code Reasoning",
-    "summary": "本文提出并发布了APPS基准——一个包含10000道自然语言编程题及超过130,000条测试用例的Python代码生成数据集，并通过测试展示和分析了多种大规模语言模型在不同难度题目上的生成性能与错误模式。",
+    "task": "Code Generation from Natural Language Specifications",
+    "tags": [
+      "Natural-language-to-code synthesis",
+      "Algorithmic / programming-contest problems",
+      "Test-case-driven functional evaluation",
+      "Difficulty stratification (intro / interview / competition)",
+      "Python-only benchmark",
+      "Large test-case bank (~130k test cases)"
+    ],
+    "summary": "APPS 提出一个包含 10,000 道不同难度的 Python 自然语言到代码生成基准并配有约 130,000 个测试用例，通过测试用例评估模型的功能正确性，展示模型随规模和微调而提升但仍面临挑战的表现。",
     "quality": "High",
     "conference": "NeurIPS 2021",
     "pdf_url": "https://arxiv.org/pdf/2105.09938v3",
     "published": "2021-05-20",
     "update_time": "2021-11-08",
-    "download_time": "2025-12-04 23:32:17"
+    "download_time": "2025-12-16 14:02:12"
   },
   {
     "id": "2105.14242",

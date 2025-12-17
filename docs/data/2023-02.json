@@ -19,13 +19,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Reasoning",
-    "summary": "本文提出LEVER，一种通过对代码LLM生成的候选程序结合其执行结果训练判别器并据此重排序的方法，以提高语言到代码生成的执行准确率，在四个基准上显著优于基线并达成SOTA。",
+    "tags": [
+      "Execution-based verifier",
+      "Verifier-guided reranking",
+      "Aggregation by execution result",
+      "Sampling with deduplication",
+      "Training with execution-derived labels",
+      "Weakly-supervised verification",
+      "Few-shot language-to-code",
+      "Binary classification reranker"
+    ],
+    "summary": "本文提出LEVER，通过训练一个基于自然语言描述、程序文本及其执行结果的验证器来对代码生成候选进行重排序并对相同执行结果的程序进行概率聚合，从而显著提升语言到代码任务的执行准确率并在多个基准上达到新SOTA。",
     "quality": "High",
     "conference": "ICML 2023",
     "pdf_url": "https://arxiv.org/pdf/2302.08468v3",
     "published": "2023-02-16",
     "update_time": "2023-09-01",
-    "download_time": "2025-12-04 23:22:58"
+    "download_time": "2025-12-16 13:48:26"
   },
   {
     "id": "2302.04026",

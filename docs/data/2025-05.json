@@ -16,13 +16,23 @@
     ],
     "field": "Quality Management",
     "task": "Vulnerability Detection",
-    "summary": "ICVul 提供了一个面向 C/C++ 的高质量漏洞数据集，包含详细的元数据、Vulnerability-Contributing-Commits (VCCs) 追溯以及用于去除噪声提交的 ESC 筛选技术，并公开了可复现的构建框架。",
+    "tags": [
+      "VCC tracing",
+      "SZZ blame analysis",
+      "Eliminate Suspicious Commit (ESC) filtering",
+      "C/C++ function-level vulnerability labels",
+      "CWE-to-commit mapping",
+      "GitHub CVE-to-fix-commit linking",
+      "Relational schema for repo/commit/file/function",
+      "Noise reduction in fix commits"
+    ],
+    "summary": "本文构建并公开了一个面向C/C++的高质量漏洞数据集，包含详细元数据、VCC（引入漏洞的提交）追溯以及用于剔除可疑修复提交的ESC过滤流程，以提升漏洞检测训练数据的可靠性与可用性。",
     "quality": "High",
-    "conference": "MSR 2025",
+    "conference": "IEEE/ACM International Conference on Mining Software Repositories (MSR) 2025",
     "pdf_url": "https://arxiv.org/pdf/2505.08503v1",
     "published": "2025-05-13",
     "update_time": "2025-05-13",
-    "download_time": "2025-12-04 23:08:14"
+    "download_time": "2025-12-16 13:23:44"
   },
   {
     "id": "2505.16901",

@@ -75,18 +75,28 @@
     ],
     "first_author": "Raymond Li",
     "category": [
-      "Technical",
-      "Benchmark"
+      "Technical"
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文发布并评估了开源代码语言模型StarCoder与StarCoderBase（15.5B参数、8K上下文、填空能力与多查询注意力），在大规模许可代码语料上预训练并对Python进行微调，同时提供PII脱敏与归属追踪工具，且在多项基准上优于其他开源代码模型。",
+    "tags": [
+      "8K-context code modeling",
+      "Fill-in-the-Middle infilling",
+      "Multi-Query Attention for fast large-batch inference",
+      "PII detection and redaction pipeline with annotated dataset",
+      "Attribution tracing via lightweight membership check + BM25 search",
+      "Open-source responsible model release under OpenRAIL-M",
+      "Python fine-tuning for specialized performance",
+      "Comprehensive multi-benchmark evaluation",
+      "Data governance and opt-out tooling for training corpora"
+    ],
+    "summary": "本文介绍了BigCode社区开源的15.5B参数代码模型StarCoder及其基座StarCoderBase，具备8K上下文、代码填充能力和基于多查询注意力的快速大批量推理，并辅以PII去识别数据集、归属追踪工具及以更可商用的OpenRAIL-M许可进行的安全开放发布。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2305.06161v2",
     "published": "2023-05-09",
     "update_time": "2023-12-13",
-    "download_time": "2025-12-04 23:09:51"
+    "download_time": "2025-12-16 10:37:26"
   },
   {
     "id": "2305.07922",
@@ -107,13 +117,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "本文提出CodeT5+，一种可灵活组合组件的encoder-decoder代码大模型族，通过混合预训练目标（span denoising、对比学习、文本-代码匹配与因果语言建模）、冻结大解码器并仅训练浅编码器与交叉注意力以高效扩展，并结合instruction-tuning，在多项代码理解与生成基准上取得显著提升并在HumanEval上达成新SOTA。",
+    "tags": [
+      "Modular encoder-decoder design",
+      "Mixture of pretraining objectives",
+      "Span denoising and causal LM combination",
+      "Text-code contrastive learning",
+      "Text-code matching for cross-modal alignment",
+      "Shallow-encoder / deep-frozen-decoder initialization",
+      "Instruction tuning for code",
+      "Retrieval-augmented generation"
+    ],
+    "summary": "本文提出CodeT5+—一种可灵活组合模块的编码器-解码器代码大模型，采用跨度去噪、对比学习、文本-代码匹配与因果语言建模等混合预训练目标，并通过冻结大型解码器加浅层编码器的初始化与指令调优，在多种代码理解与生成基准上取得领先性能。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2305.07922v2",
     "published": "2023-05-13",
     "update_time": "2023-05-20",
-    "download_time": "2025-12-04 23:13:45"
+    "download_time": "2025-12-16 10:42:08"
   },
   {
     "id": "2305.02309",
@@ -134,13 +154,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Pre-Training",
-    "summary": "该工作通过对模型架构、学习目标、infill 采样和数据分布的大规模消融实验，提出并验证了用于代码与自然语言统一预训练的简洁混合目标与训练配方，并开源了 CodeGen2 模型与训练框架。",
+    "tags": [
+      "Prefix-LM unification",
+      "mixture objective (causal + span corruption)",
+      "infill / fill-in-the-middle sampling",
+      "code and natural language data mixture",
+      "multi-epoch pretraining",
+      "extensive ablation study of training choices",
+      "training recipe and engineering",
+      "open-source model & training release"
+    ],
+    "summary": "本文通过对Prefix-LM架构、因果语言建模与span损坏混合目标、infill采样策略以及代码与自然语言混合多轮训练的系统消融实验，总结出训练CodeGen2系列模型的经验并开源训练配方与模型。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2305.02309v2",
     "published": "2023-05-03",
     "update_time": "2023-07-11",
-    "download_time": "2025-12-04 23:14:12"
+    "download_time": "2025-12-16 10:42:46"
   },
   {
     "id": "2305.01210",
@@ -155,18 +185,30 @@
     ],
     "first_author": "Jiawei Liu",
     "category": [
+      "Benchmark",
       "Technical",
-      "Benchmark"
+      "Empirical"
     ],
-    "field": "Software Testing",
-    "task": "Test Generation",
-    "summary": "本文提出EvalPlus，通过结合LLM驱动的种子输入生成与类型感知变异的大规模测试输入扩充并将HUMANEVAL扩展为HUMANEVAL+，从而更严格地评估LLM生成代码的功能正确性并揭示大量先前未被检测的错误与模型排名变化。",
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Automated test-input generation",
+      "LLM-seeded seed input generation",
+      "Type-aware mutation testing",
+      "Differential testing against reference implementation",
+      "Test-suite reduction",
+      "Greedy set-cover selection for tests",
+      "Benchmark augmentation for evaluation",
+      "Detection of evaluation-induced model misranking",
+      "Ground-truth oracle validation"
+    ],
+    "summary": "本文提出EvalPlus，通过LLM引导的种子输入与类型感知变异自动生成并精简大量测试用例以扩充程序合成基准，从而更严格地评估LLM生成代码的功能正确性并揭示现有基准高估模型性能与可能导致的模型错排。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2305.01210v3",
     "published": "2023-05-02",
     "update_time": "2023-10-30",
-    "download_time": "2025-12-04 23:29:49"
+    "download_time": "2025-12-16 13:57:55"
   },
   {
     "id": "2305.18584",
@@ -185,13 +227,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Editing",
-    "summary": "该论文提出Coeditor——一种基于repo级行diff编码、扩展CodeT5并采用块稀疏注意力的多轮代码自动编辑模型，同时构建并开源了PYCOMMITS数据集与评测框架，并在多轮编辑任务上显著优于现有基线。",
+    "tags": [
+      "Multi-round code auto-editing",
+      "Repo-level diff conditioning",
+      "Line-based diff representation",
+      "Masked span infilling for edits",
+      "Static analysis for context retrieval",
+      "Block-sparse attention for long contexts",
+      "Commit-history-derived training data",
+      "Interactive IDE integration"
+    ],
+    "summary": "本文提出了面向多轮仓库级代码自动编辑的新任务与评测，设计了基于行差异编码、静态分析和块稀疏注意力的编辑模型，并构建了来自提交历史的新数据集以验证其在编辑自动化上的显著提升。",
     "quality": "High",
-    "conference": "The Twelfth International Conference on Learning Representations 2024",
+    "conference": "International Conference on Learning Representations (ICLR 2024)",
     "pdf_url": "https://arxiv.org/pdf/2305.18584v2",
     "published": "2023-05-29",
     "update_time": "2024-04-28",
-    "download_time": "2025-12-04 23:30:18"
+    "download_time": "2025-12-16 13:58:36"
   },
   {
     "id": "2305.05959",

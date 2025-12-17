@@ -16,15 +16,26 @@
     "category": [
       "Empirical"
     ],
-    "field": "Requirements & Design",
-    "task": "Management",
-    "summary": "本文通过对1,575个LLM代理项目及11,910条开发者讨论进行大规模挖掘与分析，提出了基于SDLC的代理开发挑战分类并比较了十个主流代理框架在学习成本、开发效率、功能抽象、性能优化与可维护性五个维度的差异与优劣。",
+    "field": "Agent Frameworks & Developer Practices",
+    "task": "Developer practices and SDLC challenges in LLM-based agent frameworks",
+    "tags": [
+      "Mining GitHub discussions",
+      "Agent framework adoption patterns",
+      "SDLC challenges taxonomy",
+      "Logic control & task termination",
+      "Tool integration and API compatibility",
+      "Context retention and memory management",
+      "Version and dependency compatibility",
+      "Comparative framework evaluation (learning cost, efficiency, abstraction, performance, maintainability)",
+      "Multi-framework composition"
+    ],
+    "summary": "本文通过分析1,575个基于LLM的代理项目及近1.2万条开发者讨论，构建了代理开发面向SDLC的挑战分类、识别十个代表性框架并基于五维度比较其对开发者需求的满足情况，揭示常见问题并提出改进建议。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01939v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-05 10:10:06"
+    "download_time": "2025-12-16 14:30:54"
   },
   {
     "id": "2512.01690",
@@ -45,13 +56,23 @@
     ],
     "field": "Software Testing",
     "task": "Test Generation",
-    "summary": "本文提出三种确定性方法为自动生成的REST API测试用例生成描述性名称，并通过用户调研（39名参与者）与大众汽车的工业案例比较规则与LLM方法，结果表明基于规则的方法在可读性上与先进LLM（如Gemini、GPT-4o）相当且已集成至EvoMaster作为默认策略。",
+    "tags": [
+      "Test case naming",
+      "Deterministic naming heuristics",
+      "REST API semantics (endpoints, methods, params, status codes)",
+      "EvoMaster integration",
+      "Human readability evaluation",
+      "LLM-based naming comparison",
+      "Test-suite organization and sorting",
+      "Industrial case study / practitioner feedback"
+    ],
+    "summary": "本文提出三种确定性方法为自动生成的REST API测试用例生成描述性名称，并通过问卷用户研究与大众及工业案例将这些规则方法与多种基于LLM的方法对比，结果表明规则方法在可读性上优于GPT‑3.5、与更先进模型相当且已集成到EvoMaster中提升了测试套件的可读性。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01690v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-05 10:10:33"
+    "download_time": "2025-12-16 14:31:28"
   },
   {
     "id": "2512.01609",
@@ -70,13 +91,22 @@
     ],
     "field": "Software Testing",
     "task": "Testing automation",
-    "summary": "GPTrace提出一种利用大语言模型生成堆栈跟踪和ASan报告的嵌入向量并对其进行聚类的崩溃去重工作流，从而在多目标大规模模糊测试崩溃集上显著优于现有基于栈跟踪的去重方法。",
+    "tags": [
+      "Crash Deduplication",
+      "Fuzzing Crash Triage",
+      "Stack Trace Preprocessing",
+      "ASan Report Sanitization",
+      "Embedding-based Crash Similarity",
+      "Summed Normalized Embeddings",
+      "HDBSCAN-DBSCAN Hybrid Clustering"
+    ],
+    "summary": "GPTrace提出通过对栈跟踪和ASan报告计算并归一化求和的嵌入向量，结合密度聚类实现模糊测试崩溃去重，从而显著优于传统手工栈跟踪比对方法。",
     "quality": "High",
-    "conference": "ICSE 2026",
+    "conference": "IEEE/ACM International Conference on Software Engineering (ICSE 2026)",
     "pdf_url": "https://arxiv.org/pdf/2512.01609v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-05 10:11:28"
+    "download_time": "2025-12-16 14:32:38"
   },
   {
     "id": "2512.01396",
@@ -93,15 +123,25 @@
       "Benchmark",
       "Empirical"
     ],
-    "field": "Maintenance",
-    "task": "Patch Backporting",
-    "summary": "本文提出 BackportBench——一个包含来自 PyPI、Maven 和 npm 的 202 个多语言可执行补丁回移任务的基准，并用该基准评估现有补丁移植方法与多种 LLM 技术以分析其在不同语言与场景下的表现差异。",
+    "field": "Quality Management",
+    "task": "Vulnerability Repair",
+    "tags": [
+      "Patch Backporting",
+      "Multilingual (Python/Java/JavaScript)",
+      "Repository-level Patch Adaptation",
+      "Executable Docker Environments",
+      "Test-suite Validation",
+      "Agentic LLM Workflows",
+      "Cross-file Incompatibility Handling",
+      "Evaluation Metrics for Backporting"
+    ],
+    "summary": "本文提出BackportBench——一个包含来自PyPI、Maven和npm的202个多语言可执行补丁回移任务的基准，并用测试用例评估传统补丁迁移方法与多种（包括agentic）LLM驱动方法的效果与差异。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01396v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-05 10:11:49"
+    "download_time": "2025-12-16 14:33:18"
   },
   {
     "id": "2512.01356",
@@ -122,13 +162,25 @@
     ],
     "field": "Maintenance",
     "task": "Code Review",
-    "summary": "本文提出LAURA框架，通过上下文增强、相似评审示例检索与系统化引导对LLM进行检索增强生成代码评审，并构建了包含301,256条高质量diff‑comment序列的数据集，从而显著提升了ChatGPT-4o和DeepSeek v3的评审质量。",
+    "tags": [
+      "Context-extended diffs",
+      "PR metadata augmentation",
+      "Review exemplar retrieval",
+      "Retrieval-augmented generation (RAG) for reviews",
+      "Transformer-based code embeddings",
+      "AST-based context expansion",
+      "Systematic review prompting",
+      "High-quality diff-comment dataset construction",
+      "Human + LLM dual evaluation (I-Score/IH-Score)",
+      "Ablation study of components"
+    ],
+    "summary": "本文提出LAURA框架，通过补充PR上下文、检索相似变更及其审查范例并结合系统化提示来增强LLM生成代码审查注释，并构建并公开了一个高质量的diff‑comment检索数据库以验证性能提升。",
     "quality": "High",
-    "conference": "ASE 2025",
+    "conference": "IEEE/ACM International Conference on Automated Software Engineering (ASE 2025)",
     "pdf_url": "https://arxiv.org/pdf/2512.01356v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-05 10:12:12"
+    "download_time": "2025-12-16 14:33:59"
   },
   {
     "id": "2512.01255",
@@ -152,13 +204,25 @@
     ],
     "field": "Quality Management",
     "task": "Vulnerability Detection",
-    "summary": "本文提出了面向JavaScript漏洞检测的自动基准生成框架FORGEJS，构建了系统性基准ARENAJS和自动评估框架JUDGEJS，并使用其对多款主流商用LLM进行系统评估，揭示了模型在推理能力、鲁棒性和可部署性方面的显著缺陷。",
+    "tags": [
+      "JavaScript vulnerability benchmark",
+      "Comprehensive CWE coverage",
+      "Project-level vs. function-level evaluation",
+      "Automatic benchmark generation",
+      "Automated evaluation pipeline",
+      "Semantic equivalence / fuzzy label alignment",
+      "Vulnerability localization (file/function/line)",
+      "Taint-flow and dependency reasoning assessment",
+      "Robustness testing via code augmentations",
+      "False positive rate and deployment-oriented metrics"
+    ],
+    "summary": "本文提出遵循全面性、避免低估和避免高估三项原则的自动化基准生成与评估体系，并基于该体系构建了系统性JavaScript漏洞检测基准与评估框架，实证评估多款主流商业大模型后发现其在推理能力、鲁棒性和可部署性方面表现不足且不可靠。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.01255v1",
     "published": "2025-12-01",
     "update_time": "2025-12-01",
-    "download_time": "2025-12-05 10:12:36"
+    "download_time": "2025-12-16 14:34:37"
   },
   {
     "id": "2512.02795",
@@ -175,13 +239,26 @@
     ],
     "field": "Software Testing",
     "task": "Testing automation",
-    "summary": "本文提出 Observation Lakehouse —— 一个基于 Parquet + Iceberg + DuckDB 的可持续、可交互的观测数据湖屋，用于以细粒度调用步骤记录运行时行为并按需重构 SRM/SRC，从而实现无需重执行即可进行 n 版评估、行为聚类与共识 Oracle 并开源了相应数据集与实现。",
+    "tags": [
+      "Observation Lakehouse",
+      "Stimulus-Response Matrix (SRM)",
+      "Stimulus-Response Cube (SRC)",
+      "Sequence Sheets / Invocation step records",
+      "Append-only observations table",
+      "Parquet + Iceberg + DuckDB stack",
+      "Schema evolution for continual observations",
+      "Partitioned SRM reconstruction",
+      "Behavioral clustering",
+      "Consensus oracle / n-version assessment",
+      "Interactive SQL-based analytics"
+    ],
+    "summary": "本文提出Observation Lakehouse，一种基于Parquet/Iceberg/DuckDB的数据湖仓架构，用细粒度调用步记录持续存储并按需重建SRM/SRC视图，从而在单机上高效完成行为聚类、n版评估与共识判定，推动运行时行为成为训练与评估的一等公民。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.02795v1",
     "published": "2025-12-02",
     "update_time": "2025-12-02",
-    "download_time": "2025-12-05 10:13:02"
+    "download_time": "2025-12-16 14:35:14"
   },
   {
     "id": "2512.02750",
@@ -202,13 +279,23 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Prompting",
-    "summary": "本文报道了一次在巴西公立大学举办的一日“vibe coding”教育黑客松，通过观察、问卷与访谈分析31名本科生在以自然语言提示驱动的软件开发中的协作、工具使用与学习成果，发现其有利于快速原型和跨学科合作但存在早期思路收敛、代码质量不均与对工程实践参与有限等问题，建议通过引导发散思维与批判性评估来提升教学效果。",
+    "tags": [
+      "Vibe Coding",
+      "Hackathon Design",
+      "Prompt Engineering",
+      "Novice Programmer Engagement",
+      "Cross-disciplinary Collaboration",
+      "Toolchain Orchestration",
+      "Premature Ideation Convergence",
+      "Human-in-the-loop Validation"
+    ],
+    "summary": "本文通过对一次为期一天、面向新手的vibe coding黑客松的观察、问卷和访谈，探讨参与者如何用自然语言提示与多种AI工具协作快速原型、学到的提示工程技能、协作动态与学习成效，发现活动能提高信心与跨学科合作但也带来早熟收敛、代码质量参差及对软件工程实践的有限参与。",
     "quality": "Middle",
-    "conference": null,
+    "conference": "International Conference on Software Engineering, Education Track (SEET) 2026",
     "pdf_url": "https://arxiv.org/pdf/2512.02750v1",
     "published": "2025-12-02",
     "update_time": "2025-12-02",
-    "download_time": "2025-12-05 10:13:27"
+    "download_time": "2025-12-16 14:35:58"
   },
   {
     "id": "2512.03421",
@@ -230,13 +317,23 @@
     ],
     "field": "Quality Management",
     "task": "Bug Localization",
-    "summary": "本文构建了新的BugT数据集并在Codeflaws、Condefects与BugT上系统评估多种开源与闭源LLM，实证分析了它们在新手程序故障定位中的性能、难度影响、推理过度与计算成本，并通过用户研究验证了LLM解释对新手的教学价值。",
+    "tags": [
+      "Novice-program fault dataset construction",
+      "LLM vs SBFL/MBFL comparison",
+      "Prompt engineering sensitivity",
+      "Difficulty-level performance analysis",
+      "Over-reasoning in model explanations",
+      "User study on explanation usefulness",
+      "Model size versus performance analysis",
+      "Computational cost and real-time feasibility"
+    ],
+    "summary": "本文通过构建防止数据泄露的新数据集并在多套公开与自建数据上系统评估多款闭源/开源大模型，分析其在新手程序错误定位中的性能、提示工程敏感性、问题难度影响、过度推理与计算成本等局限，并通过用户研究验证解释性输出对初学者的教学价值。",
     "quality": "High",
-    "conference": "The Journal of Systems & Software",
+    "conference": "Journal of Systems and Software",
     "pdf_url": "https://arxiv.org/pdf/2512.03421v1",
     "published": "2025-12-03",
     "update_time": "2025-12-03",
-    "download_time": "2025-12-05 17:25:17"
+    "download_time": "2025-12-16 14:37:42"
   },
   {
     "id": "2512.03420",
@@ -247,9 +344,9 @@
       "Kang Yang",
       "Yunhang Zhang",
       "Zichuan Li",
-      "GuanHong Tao",
+      "Guanhong Tao",
       "Jun Xu",
-      "XiaoJing Liao"
+      "Xiaojing Liao"
     ],
     "first_author": "Kang Yang",
     "category": [
@@ -258,13 +355,23 @@
     ],
     "field": "Software Testing",
     "task": "Test Generation",
-    "summary": "本文提出HarnessAgent，一种工具增强的agent框架，通过编译错误分流、混合检索工具池与强化验证流水线，实现对大型C/C++代码库中内部函数的自动化模糊测试驱动（harness）构建，并在243个OSS-Fuzz目标上显著提高生成成功率与模糊覆盖率。",
+    "tags": [
+      "Fuzzing harness generation",
+      "Compilation-error triage and routing",
+      "Hybrid symbol/source retrieval",
+      "LSP- and AST-based retrieval backend",
+      "Agentic tool-augmented pipeline",
+      "Detection of fake definitions during validation",
+      "Scalable internal-function targeting",
+      "Coverage-driven harness evaluation"
+    ],
+    "summary": "HarnessAgent 提出了一种工具增强的 agent 框架，通过编译错误分流、混合符号/源码检索与加强的验证管道，实现对大型 C/C++ 代码库中内部函数的可扩展自动化模糊测试 harness 生成，并在 243 个目标上显著提升生成成功率与 fuzz 覆盖率。",
     "quality": "High",
     "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2512.03420v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.03420v3",
     "published": "2025-12-03",
-    "update_time": "2025-12-03",
-    "download_time": "2025-12-05 17:25:58"
+    "update_time": "2025-12-11",
+    "download_time": "2025-12-16 14:38:19"
   },
   {
     "id": "2512.05073",
@@ -286,14 +393,24 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "task": "Code Prompting",
-    "summary": "本文提出并在NVIDIA CVDP基准上评估了一个为小型语言模型（SLM）定制的多智能体 agentic AI 框架，通过任务分解、SLM 优化提示、迭代验证与回滚机制，使低成本 SLM 在 Verilog 硬件设计与理解任务中接近或匹配大模型性能并显著降低能耗与成本。",
+    "task": "Code Completion",
+    "tags": [
+      "Agentic task decomposition",
+      "SLM-aware prompt engineering",
+      "Verilog RTL generation",
+      "I/O port usage checking",
+      "Iterative validation and rollback",
+      "Token-budgeted context management",
+      "CocoTB-based functional testing",
+      "Energy‑efficiency (intelligence-per-watt) tradeoffs"
+    ],
+    "summary": "该论文提出了一种面向小模型（SLM）的异构 agentic AI 框架，通过任务分解、结构化提示和迭代校验在 NVIDIA 的 CVDP Verilog 设计基准上实现了接近大型模型的硬件设计生成与理解性能，从而显著降低计算与能耗成本。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.05073v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-06 23:50:18"
+    "download_time": "2025-12-16 14:39:06"
   },
   {
     "id": "2512.04680",
@@ -312,15 +429,25 @@
     "category": [
       "Survey"
     ],
-    "field": "Self-Adaptive Systems",
-    "task": "GenAI for MAPE-K (Monitoring, Analysis, Planning, Execution) and Human-on-the-loop Interaction",
-    "summary": "本文综述了将生成式AI（尤其是大型语言模型）应用于自适应系统的最新进展，分析其在增强MAPE‑K各功能和改善人机协作中的潜力与挑战，并提出了面向研究与实践的路线图与缓解策略。",
+    "field": "Requirements & Design",
+    "task": "Analysis",
+    "tags": [
+      "MAPE-K enhancement",
+      "LLM-assisted analysis",
+      "LLM-assisted planning",
+      "LLM-assisted monitoring",
+      "Human-on-the-loop (HOTL)",
+      "Explainability and transparency",
+      "Adaptation plan synthesis",
+      "Safety and robustness mitigation"
+    ],
+    "summary": "本文综述了将大型语言模型等生成式AI应用于自适应系统（基于MAPE‑K）的研究现状，归纳其在监测、分析、规划、执行及人机协作方面的潜在增益与挑战，并提出了面向集成与实践的研究路线图与缓解策略。",
     "quality": "High",
-    "conference": null,
+    "conference": "ACM Transactions on Autonomous and Adaptive Systems 2024",
     "pdf_url": "https://arxiv.org/pdf/2512.04680v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-06 23:50:52"
+    "download_time": "2025-12-16 14:39:58"
   },
   {
     "id": "2512.04702",
@@ -338,14 +465,23 @@
       "Technical"
     ],
     "field": "Self-Adaptive Systems",
-    "task": "Multi-Agentic Runtime Adaptation (LLM-based reasoning & meta-learning)",
-    "summary": "提出POLARIS——一个三层多智能体自适应框架，结合低延迟适配器、可解释的推理代理和元学习来实现预测性、可验证且能随经验持续演化的自适应系统，并在SWIM和SWITCH示例上显示出优于现有基线的性能提升。",
+    "task": "Multi-Agentic Reasoning & Meta-Learning for Runtime Adaptation",
+    "tags": [
+      "Multi-agent orchestration for adaptation",
+      "Tool-aware explainable reasoning agents",
+      "Meta-learning of adaptation policies",
+      "World-model based what-if simulation",
+      "Verifier agent for plan validation",
+      "Low-latency reactive controller (stabilization)",
+      "Episodic knowledge base for experience replay"
+    ],
+    "summary": "本文提出POLARIS——一个三层多代理自适应框架，通过低延迟执行器、可解释的推理代理与记录并元学习的元层，结合世界模型与验证器实现主动、可演化的运行时自适应，并在SWIM与SWITCH示例上优于现有基线。",
     "quality": "High",
     "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2512.04702v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.04702v2",
     "published": "2025-12-04",
-    "update_time": "2025-12-04",
-    "download_time": "2025-12-07 01:57:21"
+    "update_time": "2025-12-07",
+    "download_time": "2025-12-16 14:40:38"
   },
   {
     "id": "2512.04673",
@@ -363,13 +499,21 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Summarization",
-    "summary": "本文对多款通用与代码专用大型语言模型在六个自然语言与推理基准及CoNaLa代码解释任务上进行了系统的横向评估与对比，发现代码优化模型在推理能力和语法精确性上具有显著优势。",
+    "tags": [
+      "Cross-domain benchmarking",
+      "Code vs general-purpose model comparison",
+      "Code explanation / intent generation",
+      "Trustworthiness evaluation",
+      "Commonsense and mathematical reasoning assessment",
+      "Consolidation of lexical and embedding-based metrics"
+    ],
+    "summary": "本文系统比较评估了多款通用与代码专用大型语言模型在多项自然语言与代码解释基准上的表现，发现代码专用模型在推理能力与语法精确性上具有显著优势并在某些非代码任务上也能带来提升。",
     "quality": "Middle",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.04673v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-07 01:57:56"
+    "download_time": "2025-12-16 14:41:13"
   },
   {
     "id": "2512.05100",
@@ -390,14 +534,24 @@
       "Technical"
     ],
     "field": "Structured Document Translation",
-    "task": "XML/HTML Structured Document Translation",
-    "summary": "本文提出FORMATRL，一种基于Group Relative Policy Optimization的强化学习方法，通过TreeSim和Node-chrF等结构感知奖励以及StrucAUC评估，将结构信息直接纳入模型优化以提升带XML/HTML标记的软件文档翻译的结构保真度与翻译质量。",
+    "task": "Structured Document Translation",
+    "tags": [
+      "Format-aware Reinforcement Learning",
+      "Group Relative Policy Optimization",
+      "Tree edit-distance reward (TreeSim)",
+      "Node-level chrF reward",
+      "Structure-Aware AUC (StrucAUC)",
+      "XML/HTML structure preservation",
+      "Synthetic markup injection for data augmentation",
+      "Document-level localization"
+    ],
+    "summary": "本文提出FORMATRL，一种在监督微调基础上使用GRPO并通过TreeSim和Node-chrF等结构感知奖励直接优化XML/HTML文档结构保真度与节点级翻译质量的强化学习方法，并在软件文档数据集上显著提升了结构与翻译评估指标。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.05100v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-07 01:59:06"
+    "download_time": "2025-12-16 14:41:56"
   },
   {
     "id": "2512.04785",
@@ -424,13 +578,23 @@
     ],
     "field": "Requirements & Design",
     "task": "Analysis",
-    "summary": "本文提出ASTRIDE——一个面向智能体式AI应用的自动化威胁建模平台，扩展STRIDE引入AI特有威胁类别并结合微调的视觉-语言模型与推理LLM从架构图端到端自动生成可解释的威胁模型。",
+    "tags": [
+      "Automated diagram-driven threat modeling",
+      "STRIDE extension for AI agents",
+      "AI agent-specific threats",
+      "Vision-language ensemble for diagram parsing",
+      "Prompt injection and instruction-manipulation detection",
+      "Reasoning-based threat synthesis",
+      "Quantized low-latency fine-tuning for edge inference",
+      "Explainable security assessments"
+    ],
+    "summary": "本文提出ASTRIDE，一种将STRIDE扩展以包含AI代理特有攻击并结合微调视觉—语言模型集群与推理LLM，从架构图（如数据流图）自动生成可解释威胁模型的平台。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.04785v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-07 02:04:42"
+    "download_time": "2025-12-16 14:42:40"
   },
   {
     "id": "2512.04611",
@@ -449,13 +613,23 @@
     ],
     "field": "Software Testing",
     "task": "Test Generation",
-    "summary": "本文提出PBFuzz——一种基于LLM代理的定向模糊测试框架，通过自主演绎代码约束、工具编排、持久化记忆与基于属性的测试生成PoV输入，并在Magma基准上显著优于现有方法。",
+    "tags": [
+      "Agentic reasoning",
+      "Directed fuzzing",
+      "Proof-of-vulnerability generation",
+      "Property-based test generation",
+      "Semantic reachability and triggering constraint extraction",
+      "Persistent agent memory",
+      "On-demand program analysis tooling",
+      "Fine-grained execution feedback"
+    ],
+    "summary": "本文提出PBFuzz，一种将自治式代码推理、按需程序分析与基于属性的测试相结合的定向模糊测试框架，用于高效自动生成Proof‑of‑Vulnerability输入并在Magma基准上显著超越现有方法。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.04611v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-08 01:51:09"
+    "download_time": "2025-12-16 14:43:21"
   },
   {
     "id": "2512.04538",
@@ -479,42 +653,22 @@
     ],
     "field": "Coding Assistant",
     "task": "Code Completion",
-    "summary": "本文提出CoCo框架，通过静态代码分析提取函数、文件和仓库三级结构化上下文，使用图式多粒度上下文选择与结构感知重排序将关键信息转为自然语言提示，从而指导检索增强的模型进行仓库级代码补全并在基准上显著优于现有方法。",
+    "tags": [
+      "Static code analysis for multi-granularity context",
+      "Function-file-repository context modeling",
+      "Graph-based context selection",
+      "Structure-aware code re-ranking",
+      "Natural-language prompt synthesis from structural context",
+      "Repository-level dependency and control-flow modeling",
+      "Retrieval-augmented generation integration"
+    ],
+    "summary": "本文提出CoCo，通过静态分析提取函数/文件/仓库三级结构化上下文、用图筛选相关信息并将其转化为自然语言提示，结合结构感知的代码重排序，显著改进检索增强的仓库级代码补全性能。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.04538v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-08 01:51:40"
-  },
-  {
-    "id": "2512.04738",
-    "title": "OsmT: Bridging OpenStreetMap Queries and Natural Language with Open-source Tag-aware Language Models",
-    "abstract": "Bridging natural language and structured query languages is a long-standing challenge in the database community. While recent advances in language models have shown promise in this direction, existing solutions often rely on large-scale closed-source models that suffer from high inference costs, limited transparency, and lack of adaptability for lightweight deployment. In this paper, we present OsmT, an open-source tag-aware language model specifically designed to bridge natural language and Overpass Query Language (OverpassQL), a structured query language for accessing large-scale OpenStreetMap (OSM) data. To enhance the accuracy and structural validity of generated queries, we introduce a Tag Retrieval Augmentation (TRA) mechanism that incorporates contextually relevant tag knowledge into the generation process. This mechanism is designed to capture the hierarchical and relational dependencies present in the OSM database, addressing the topological complexity inherent in geospatial query formulation. In addition, we define a reverse task, OverpassQL-to-Text, which translates structured queries into natural language explanations to support query interpretation and improve user accessibility. We evaluate OsmT on a public benchmark against strong baselines and observe consistent improvements in both query generation and interpretation. Despite using significantly fewer parameters, our model achieves competitive accuracy, demonstrating the effectiveness of open-source pre-trained language models in bridging natural language and structured query languages within schema-rich geospatial environments.",
-    "arxiv_url": "https://arxiv.org/abs/2512.04738",
-    "authors": [
-      "Zhuoyue Wan",
-      "Wentao Hu",
-      "Chen Jason Zhang",
-      "Yuanfeng Song",
-      "Shuaimin Li",
-      "Ruiqiang Xiao",
-      "Xiao-Yong Wei",
-      "Raymond Chi-Wing Wong"
-    ],
-    "first_author": "Zhuoyue Wan",
-    "category": [
-      "Technical"
-    ],
-    "field": "Natural Language Interfaces for Structured Geospatial Data",
-    "task": "Text-to-OverpassQL and OverpassQL-to-Text (bidirectional NL ↔ OverpassQL translation)",
-    "summary": "本文提出OSMT，一种开源的标签感知预训练语言模型，并通过Tag Retrieval Augmentation和混合预训练策略实现对自然语言与OverpassQL的双向翻译，在参数量较小的情况下仍能在Text-to-OverpassQL和OverpassQL-to-Text任务上取得有竞争力的性能与更好的结构化生成质量。",
-    "quality": "High",
-    "conference": "42nd IEEE International Conference on Data Engineering (ICDE 2026)",
-    "pdf_url": "https://arxiv.org/pdf/2512.04738v1",
-    "published": "2025-12-04",
-    "update_time": "2025-12-04",
-    "download_time": "2025-12-08 02:00:39"
+    "download_time": "2025-12-16 14:44:03"
   },
   {
     "id": "2512.04419",
@@ -532,14 +686,24 @@
       "Empirical"
     ],
     "field": "Coding Assistant",
-    "task": "Code Prompting",
-    "summary": "本文结合生产环境中的一手经验、理论分析与大规模实验，提出并验证了三类可行的解决方案（启用early_stopping的Beam Search、presence_penalty参数调整和基于DPO的微调）以在批量代码解析任务中根治或缓解LLM的重复生成问题。",
+    "task": "Code Understanding",
+    "tags": [
+      "Generation repetition (repeater)",
+      "Greedy decoding loop",
+      "Beam search with early_stopping",
+      "Presence_penalty tuning",
+      "Direct Preference Optimization (DPO) fine‑tuning",
+      "Markov-chain theoretical analysis",
+      "Production batch code interpretation",
+      "Framework parameter integration (FastChat↔vLLM)"
+    ],
+    "summary": "本文基于批量代码解释的生产实践，利用马尔可夫模型分析LLM重复生成的根因，并通过大规模实验验证三种可行解决方案（启用early_stopping的束搜索、presence_penalty调优与DPO微调），给出任务适配与生产部署建议。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.04419v1",
     "published": "2025-12-04",
     "update_time": "2025-12-04",
-    "download_time": "2025-12-08 02:07:41"
+    "download_time": "2025-12-16 14:44:59"
   },
   {
     "id": "2512.05908",
@@ -559,13 +723,23 @@
     ],
     "field": "Quality Management",
     "task": "Bug Localization",
-    "summary": "本文提出将多仓库微服务代码库转化为分层的自然语言摘要，并采用先将错误报告路由到相关仓库、再自上而下进行目录与文件级搜索的两阶段 LLM 推理流程，实现对大规模工业系统的可解释缺陷定位，显著优于检索与 RAG 基线。",
+    "tags": [
+      "Context-aware code summarization",
+      "Hierarchical NL knowledge base",
+      "Repository routing",
+      "Top-down directory→file localization",
+      "NL-to-NL retrieval",
+      "Explainable repository→directory→file search",
+      "Chain-of-Thought prompting",
+      "Multi-repository microservice bug localization"
+    ],
+    "summary": "本文提出将多仓库微服务代码库转换为层次化、上下文感知的自然语言摘要，并通过先路由到候选仓库再自顶向下目录与文件检索的双阶段搜索，将错误定位转化为NL-to-NL推理，从而在工业规模数据上显著优于基于原始代码的检索与RAG方法。",
     "quality": "High",
     "conference": "LLM4Code Workshop, ICSE 2026",
     "pdf_url": "https://arxiv.org/pdf/2512.05908v1",
     "published": "2025-12-05",
     "update_time": "2025-12-05",
-    "download_time": "2025-12-09 01:48:46"
+    "download_time": "2025-12-16 14:45:35"
   },
   {
     "id": "2512.05887",
@@ -579,70 +753,27 @@
     ],
     "first_author": "Sairam Vaidya",
     "category": [
-      "Technical",
-      "Empirical"
+      "Technical"
     ],
     "field": "Software Testing",
     "task": "Test Generation",
-    "summary": "本文提出 Germinator：一种从 MLIR 方言的 TableGen 自动提取语法并结合语法约束的大型语言模型生成多样化种子以引导覆盖驱动的模糊测试，从而在 91 个方言上显著提升覆盖率并发现大量未知缺陷。",
+    "tags": [
+      "TableGen grammar extraction",
+      "Grammar-constrained decoding",
+      "Seed program generation",
+      "Coverage-guided fuzzing integration",
+      "Dialect-agnostic fuzzing",
+      "Low-resource MLIR dialects",
+      "Compiler fuzzing",
+      "Bug discovery"
+    ],
+    "summary": "本文提出 Germinator，通过从 MLIR 的 TableGen 自动提取语法并对预训练语言模型进行语法约束采样生成多样化种子，以引导覆盖驱动的模糊测试，从而在 91 个方言上显著提升覆盖率并发现大量新缺陷。",
     "quality": "High",
     "conference": null,
     "pdf_url": "https://arxiv.org/pdf/2512.05887v1",
     "published": "2025-12-05",
     "update_time": "2025-12-05",
-    "download_time": "2025-12-09 01:49:12"
-  },
-  {
-    "id": "2512.05962",
-    "title": "Whatever Remains Must Be True: Filtering Drives Reasoning in LLMs, Shaping Diversity",
-    "abstract": "Reinforcement Learning (RL) has become the de facto standard for tuning LLMs to solve tasks involving reasoning. However, growing evidence shows that models trained in such way often suffer from a significant loss in diversity. We argue that this arises because RL implicitly optimizes the \"mode-seeking\" or \"zero-forcing\" Reverse KL to a target distribution causing the model to concentrate mass on certain high-probability regions of the target while neglecting others. In this work, we instead begin from an explicit target distribution, obtained by filtering out incorrect answers while preserving the relative probabilities of correct ones. Starting from a pre-trained LLM, we approximate this target distribution using the $α$-divergence family, which unifies prior approaches and enables direct control of the precision-diversity trade-off by interpolating between mode-seeking and mass-covering divergences. On a Lean theorem-proving benchmark, our method achieves state-of-the-art performance along the coverage-precision Pareto frontier, outperforming all prior methods on the coverage axis.",
-    "arxiv_url": "https://arxiv.org/abs/2512.05962",
-    "authors": [
-      "Germán Kruszewski",
-      "Pierre Erbacher",
-      "Jos Rozen",
-      "Marc Dymetman"
-    ],
-    "first_author": "Germán Kruszewski",
-    "category": [
-      "Technical",
-      "Empirical"
-    ],
-    "field": "Reasoning & Verification",
-    "task": "Theorem Proving / Proof Search",
-    "summary": "本文提出了DMVR框架与α-DPG方法，通过以验证器过滤构造显式目标分布并利用α-散度在mode-seeking与mass-covering之间插值，从而可控地在精确性与多样性之间权衡，并在Lean定理证明基准上取得覆盖率-精度前沿上的最优表现，显著缓解了RLVR类方法导致的多样性下降。 ",
-    "quality": "High",
-    "conference": null,
-    "pdf_url": "https://arxiv.org/pdf/2512.05962v1",
-    "published": "2025-12-05",
-    "update_time": "2025-12-05",
-    "download_time": "2025-12-09 01:50:02"
-  },
-  {
-    "id": "2512.05908",
-    "title": "Natural Language Summarization Enables Multi-Repository Bug Localization by LLMs in Microservice Architectures",
-    "abstract": "Bug localization in multi-repository microservice architectures is challenging due to the semantic gap between natural language bug reports and code, LLM context limitations, and the need to first identify the correct repository. We propose reframing this as a natural language reasoning task by transforming codebases into hierarchical NL summaries and performing NL-to-NL search instead of cross-modal retrieval. Our approach builds context-aware summaries at file, directory, and repository levels, then uses a two-phase search: first routing bug reports to relevant repositories, then performing top-down localization within those repositories. Evaluated on DNext, an industrial system with 46 repositories and 1.1M lines of code, our method achieves Pass@10 of 0.82 and MRR of 0.50, significantly outperforming retrieval baselines and agentic RAG systems like GitHub Copilot and Cursor. This work demonstrates that engineered natural language representations can be more effective than raw source code for scalable bug localization, providing an interpretable repository -> directory -> file search path, which is vital for building trust in enterprise AI tools by providing essential transparency.",
-    "arxiv_url": "https://arxiv.org/abs/2512.05908",
-    "authors": [
-      "Amirkia Rafiei Oskooei",
-      "S. Selcan Yukcu",
-      "Mehmet Cevheri Bozoglan",
-      "Mehmet S. Aktas"
-    ],
-    "first_author": "Amirkia Rafiei Oskooei",
-    "category": [
-      "Technical",
-      "Empirical"
-    ],
-    "field": "Quality Management",
-    "task": "Bug Localization",
-    "summary": "本文将多仓库微服务代码转换为层次化的自然语言摘要，并通过仓库路由与目录/文件自上而下的两阶段NL‑to‑NL搜索，利用LLM实现可解释且可扩展的多仓库缺陷定位，在工业级DNext系统上显著优于RAG与检索基线。",
-    "quality": "High",
-    "conference": "LLM4Code Workshop, ICSE 2026",
-    "pdf_url": "https://arxiv.org/pdf/2512.05908v1",
-    "published": "2025-12-05",
-    "update_time": "2025-12-05",
-    "download_time": "2025-12-09 01:52:21"
+    "download_time": "2025-12-16 14:46:15"
   },
   {
     "id": "2512.07814",
@@ -1818,5 +1949,170 @@
     "published": "2025-12-12",
     "update_time": "2025-12-12",
     "download_time": "2025-12-16 02:49:40"
+  },
+  {
+    "id": "2512.13515",
+    "title": "Fine-tuned LLM-based Code Migration Framework",
+    "abstract": "The study presents the outcomes of research and experimental validation in the domain of automated codebase migration, with a focus on addressing challenges in transitioning SQL-based systems. The proposed method for migration essentially appears as a framework that leverages the best aspects of traditional software engineering techniques and provides an iterative, scalable, precise and efficient solution for modern database transformations. The central piece of the approach is the integration of a fine-tuned Large Language Model to address critical issues in SQL code conversion, such as syntax mapping, resolving discrepancies between Oracle PL/SQL and PostgreSQL, and optimising database elements such as stored procedures, triggers, views, and overall database logic. Thus, the method involves a trade-off between fine-tuning and prompt engineering. Special attention is given to a fine-tuning approach, which enhances the adaptability and compatibility with migration requirements across the entire database. According to the achieved results, fine-tuning plays a very important role. The study employs targeted evaluation methodologies along with computational metrics to measure the success of iterative conversion cycles. Core innovations include automated SQL feature detection, semi-supervised error analysis and integration of Subject Matter Experts feedback within a systematic migration workflow. The methodology achieves significant reductions in Syntax Error Rates, enhances feature alignment throughout migration iterations, and leverages dataset sampling to ensure continual improvement. By embedding GAI into the migration process, the framework facilitates precise feature mapping, semi-automated error resolution, and data-driven optimisation loops, improving workflow efficiency.",
+    "arxiv_url": "https://arxiv.org/abs/2512.13515",
+    "authors": [
+      "Oleg Grynets",
+      "Vasyl Lyashkevych",
+      "Dmytro Baran",
+      "Maksym Orliansky",
+      "Taras Zelenyy",
+      "Markiian Leshchyshyn"
+    ],
+    "first_author": "Oleg Grynets",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Two-stage fine-tuning",
+      "Hybrid Code Feature Profiling Engine (HCFPE)",
+      "Retrieval-Augmented Generation for migration",
+      "Closed-loop human-in-the-loop error correction",
+      "SQL feature detection and annotation",
+      "Multi-repository vs unified FAISS knowledge base",
+      "Syntactic-description and direct transformation dataset configurator",
+      "Semi-supervised error analysis and failure taxonomy"
+    ],
+    "summary": "本文提出了一个面向Oracle到PostgreSQL的自动化代码迁移框架，结合两阶段微调、特征分析引擎、RAG知识库与人机闭环错误分析以提升迁移的语法与语义准确性。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.13515v1",
+    "published": "2025-12-15",
+    "update_time": "2025-12-15",
+    "download_time": "2025-12-17 01:48:11"
+  },
+  {
+    "id": "2512.13438",
+    "title": "From User Interface to Agent Interface: Efficiency Optimization of UI Representations for LLM Agents",
+    "abstract": "While Large Language Model (LLM) agents show great potential for automated UI navigation such as automated UI testing and AI assistants, their efficiency has been largely overlooked. Our motivating study reveals that inefficient UI representation creates a critical performance bottleneck. However, UI representation optimization, formulated as the task of automatically generating programs that transform UI representations, faces two unique challenges. First, the lack of Boolean oracles, which traditional program synthesis uses to decisively validate semantic correctness, poses a fundamental challenge to co-optimization of token efficiency and completeness. Second, the need to process large, complex UI trees as input while generating long, compositional transformation programs, making the search space vast and error-prone. Toward addressing the preceding limitations, we present UIFormer, the first automated optimization framework that synthesizes UI transformation programs by conducting constraint-based optimization with structured decomposition of the complex synthesis task. First, UIFormer restricts the program space using a domain-specific language (DSL) that captures UI-specific operations. Second, UIFormer conducts LLM-based iterative refinement with correctness and efficiency rewards, providing guidance for achieving the efficiency-completeness co-optimization. UIFormer operates as a lightweight plugin that applies transformation programs for seamless integration with existing LLM agents, requiring minimal modifications to their core logic. Evaluations across three UI navigation benchmarks spanning Android and Web platforms with five LLMs demonstrate that UIFormer achieves 48.7% to 55.8% token reduction with minimal runtime overhead while maintaining or improving agent performance. Real-world industry deployment at WeChat further validates the practical impact of UIFormer.",
+    "arxiv_url": "https://arxiv.org/abs/2512.13438",
+    "authors": [
+      "Dezhi Ran",
+      "Zhi Gong",
+      "Yuzhe Guo",
+      "Mengzhou Wu",
+      "Yuan Cao",
+      "Haochuan Lu",
+      "Hengyu Zhang",
+      "Xia Zeng",
+      "Gang Cao",
+      "Liangchao Yao",
+      "Yuetang Deng",
+      "Wei Yang",
+      "Tao Xie"
+    ],
+    "first_author": "Dezhi Ran",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "UI representation optimization",
+      "DSL for UI transformations",
+      "Program synthesis for UI trees",
+      "Iterative LLM-based refinement",
+      "Efficiency–completeness co-optimization",
+      "Local decomposition and tree merging",
+      "Lightweight plugin integration for agents",
+      "Constraint-based evaluation rewards"
+    ],
+    "summary": "本文提出UIFORMER，通过设计面向UI的DSL并结合基于LLM的迭代约束优化与结构化分解，自动合成将复杂UI树转换为低令牌开销且保持语义完备的表示的转换程序，从而显著降低LLM代理的token成本并在多平台基准与实际微信部署中保持或提升代理性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.13438v1",
+    "published": "2025-12-15",
+    "update_time": "2025-12-15",
+    "download_time": "2025-12-17 01:49:07"
+  },
+  {
+    "id": "2512.13607",
+    "title": "Nemotron-Cascade: Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models",
+    "abstract": "Building general-purpose reasoning models with reinforcement learning (RL) entails substantial cross-domain heterogeneity, including large variation in inference-time response lengths and verification latency. Such variability complicates the RL infrastructure, slows training, and makes training curriculum (e.g., response length extension) and hyperparameter selection challenging. In this work, we propose cascaded domain-wise reinforcement learning (Cascade RL) to develop general-purpose reasoning models, Nemotron-Cascade, capable of operating in both instruct and deep thinking modes. Departing from conventional approaches that blend heterogeneous prompts from different domains, Cascade RL orchestrates sequential, domain-wise RL, reducing engineering complexity and delivering state-of-the-art performance across a wide range of benchmarks. Notably, RLHF for alignment, when used as a pre-step, boosts the model's reasoning ability far beyond mere preference optimization, and subsequent domain-wise RLVR stages rarely degrade the benchmark performance attained in earlier domains and may even improve it (see an illustration in Figure 1). Our 14B model, after RL, outperforms its SFT teacher, DeepSeek-R1-0528, on LiveCodeBench v5/v6/Pro and achieves silver-medal performance in the 2025 International Olympiad in Informatics (IOI). We transparently share our training and data recipes.",
+    "arxiv_url": "https://arxiv.org/abs/2512.13607",
+    "authors": [
+      "Boxin Wang",
+      "Chankyu Lee",
+      "Nayeon Lee",
+      "Sheng-Chieh Lin",
+      "Wenliang Dai",
+      "Yang Chen",
+      "Yangyi Chen",
+      "Zhuolin Yang",
+      "Zihan Liu",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro",
+      "Wei Ping"
+    ],
+    "first_author": "Boxin Wang",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Cascaded domain-wise reinforcement learning",
+      "RLHF as a pre-step to boost reasoning",
+      "Instruction-following RL (IF-RL)",
+      "Math-specific RL curriculum",
+      "Code RL for competitive programming",
+      "Software-engineering RL (SWE RL)",
+      "Execution-free reward modeling for SWE",
+      "Generation–retrieval for code localization",
+      "Test-time scaling / thinking modes",
+      "Sequential-domain curriculum to mitigate forgetting"
+    ],
+    "summary": "本文提出级联领域强化学习（Cascade RL）来训练通用推理模型Nemotron‑Cascade，通过序贯的领域级RL（包含RLHF、IF‑RL、Math RL、Code RL、SWE RL）与工程化技巧提升代码推理与竞赛编程等任务的表现，并公开训练与数据配方。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.13607v1",
+    "published": "2025-12-15",
+    "update_time": "2025-12-15",
+    "download_time": "2025-12-17 01:50:27"
+  },
+  {
+    "id": "2512.13102",
+    "title": "Socratic Students: Teaching Language Models to Learn by Asking Questions",
+    "abstract": "Large Language Models (LLMs) excel at static interactions, where they answer user queries by retrieving knowledge encoded in their parameters. However, in many real-world settings, such as educational tutoring or medical assistance, relevant information is not directly available and must be actively acquired through dynamic interactions. An interactive agent would recognize its own uncertainty, ask targeted questions, and retain new knowledge efficiently. Prior work has primarily explored effective ways for a teacher to instruct the student, where the teacher identifies student gaps and provides guidance. In this work, we shift the focus to the student and investigate effective strategies to actively query the teacher in seeking useful information. Across math and coding benchmarks, where baseline student models begin with near-zero performance, we show that student-led approaches consistently yield absolute Pass@k improvements of at least 0.5 over static baselines. To improve question quality, we train students using Direct Preference Optimization (DPO) with guidance from either self or stronger students. We find that this guided training enables smaller models to learn how to ask better questions, further enhancing learning efficiency.",
+    "arxiv_url": "https://arxiv.org/abs/2512.13102",
+    "authors": [
+      "Rajeev Bhatt Ambati",
+      "Tianyi Niu",
+      "Aashu Singh",
+      "Shlok Mishra",
+      "Shashank Srivastava",
+      "Snigdha Chaturvedi"
+    ],
+    "first_author": "Rajeev Bhatt Ambati",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Student-led interaction",
+      "Active question generation",
+      "Direct Preference Optimization for question selection",
+      "Self- and peer-guidance",
+      "Chain-of-Thought guided questioning",
+      "Pre- and mid-assessment grounding",
+      "Teacher-student dialogue protocol",
+      "Pass@k-based preference collection"
+    ],
+    "summary": "本文提出一种学生主导的交互学习框架，训练小型模型通过主动提问（包含CoT指导、评估插入和基于DPO的自我/同辈指导）与强教师交互，在数学与编程任务上显著提升了Pass@k表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.13102v1",
+    "published": "2025-12-15",
+    "update_time": "2025-12-15",
+    "download_time": "2025-12-17 01:57:25"
   }
 ]
