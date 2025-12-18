@@ -218,5 +218,51 @@
     "published": "2025-07-07",
     "update_time": "2025-09-29",
     "download_time": "2025-12-12 23:22:36"
+  },
+  {
+    "id": "2507.22462",
+    "title": "IFEvalCode: Controlled Code Generation",
+    "abstract": "Code large language models (Code LLMs) have made significant progress in code generation by translating natural language descriptions into functional code; however, real-world applications often demand stricter adherence to detailed requirements such as coding style, line count, and structural constraints, beyond mere correctness. To address this, the paper introduces forward and backward constraints generation to improve the instruction-following capabilities of Code LLMs in controlled code generation, ensuring outputs align more closely with human-defined guidelines. The authors further present IFEvalCode, a multilingual benchmark comprising 1.6K test samples across seven programming languages (Python, Java, JavaScript, TypeScript, Shell, C++, and C#), with each sample featuring both Chinese and English queries. Unlike existing benchmarks, IFEvalCode decouples evaluation into two metrics: correctness (Corr.) and instruction-following (Instr.), enabling a more nuanced assessment. Experiments on over 40 LLMs reveal that closed-source models outperform open-source ones in controllable code generation and highlight a significant gap between the models' ability to generate correct code versus code that precisely follows instructions.",
+    "arxiv_url": "https://arxiv.org/abs/2507.22462",
+    "authors": [
+      "Jian Yang",
+      "Wei Zhang",
+      "Shukai Liu",
+      "Linzheng Chai",
+      "Yingshui Tan",
+      "Jiaheng Liu",
+      "Ge Zhang",
+      "Wangchunshu Zhou",
+      "Guanglin Niu",
+      "Zhoujun Li",
+      "Binyuan Hui",
+      "Junyang Lin"
+    ],
+    "first_author": "Jian Yang",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Instruction-Tuning",
+    "tags": [
+      "Controlled Code Generation",
+      "Forward/Backward Constraint Generation",
+      "Instruction Corpus Generation",
+      "Runtime Instruction Verification",
+      "Execution-based Controllability Checks",
+      "Multilingual (Chinese-English) Code Benchmark",
+      "Function Signature and Format Constraints",
+      "Constraint-aware Prompting",
+      "Closed-source vs Open-source Model Gap"
+    ],
+    "summary": "本文提出了前向/后向约束生成以增强模型的指令遵循能力，构建了多语言可控代码生成基准 IFEvalCode（1.6K 样本，中英双语）用于分别评估代码正确性与指令遵循性，并在40+模型上进行详尽对比分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2507.22462v2",
+    "published": "2025-07-30",
+    "update_time": "2025-08-01",
+    "download_time": "2025-12-17 18:39:29"
   }
 ]

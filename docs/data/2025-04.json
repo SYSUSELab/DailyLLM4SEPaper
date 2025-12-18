@@ -173,5 +173,40 @@
     "published": "2025-04-21",
     "update_time": "2025-10-01",
     "download_time": "2025-12-11 16:55:25"
+  },
+  {
+    "id": "2504.15564",
+    "title": "A Large-scale Class-level Benchmark Dataset for Code Generation with LLMs",
+    "abstract": "Recent advancements in large language models (LLMs) have demonstrated promising capabilities in code generation tasks. However, most existing benchmarks focus on isolated functions and fail to capture the complexity of real-world, class-level software structures. To address this gap, we introduce a large-scale, Python class-level dataset curated from $13{,}174$ real-world open-source projects. The dataset contains over 842,000 class skeletons, each including class and method signatures, along with associated docstrings when available. We preserve structural and contextual dependencies critical to realistic software development scenarios and enrich the dataset with static code metrics to support downstream analysis. To evaluate the usefulness of this dataset, we use extracted class skeletons as prompts for GPT-4 to generate full class implementations. Results show that the LLM-generated classes exhibit strong lexical and structural similarity to human-written counterparts, with average ROUGE@L, BLEU, and TSED scores of 0.80, 0.59, and 0.73, respectively. These findings confirm that well-structured prompts derived from real-world class skeletons significantly enhance LLM performance in class-level code generation. This dataset offers a valuable resource for benchmarking, training, and improving LLMs in realistic software engineering contexts.",
+    "arxiv_url": "https://arxiv.org/abs/2504.15564",
+    "authors": [
+      "Musfiqur Rahman",
+      "SayedHassan Khatoonabadi",
+      "Emad Shihab"
+    ],
+    "first_author": "Musfiqur Rahman",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Class-level Benchmark",
+      "Class Skeletons",
+      "AST Extraction",
+      "Repository Context",
+      "Static Code Metrics",
+      "Prompt-driven Generation",
+      "Docstring-aware Sampling",
+      "Real-world Scalability"
+    ],
+    "summary": "本文构建并公开了一个来自真实开源项目的大规模 Python 类级别基准数据集（约 842,656 个类骨架），保留类结构与上下文并附带静态代码度量，并通过将类骨架作为提示评估 LLM 的类级代码生成能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2504.15564v1",
+    "published": "2025-04-22",
+    "update_time": "2025-04-22",
+    "download_time": "2025-12-17 19:02:18"
   }
 ]
