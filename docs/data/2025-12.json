@@ -2592,5 +2592,164 @@
     "published": "2025-12-18",
     "update_time": "2025-12-18",
     "download_time": "2025-12-20 01:49:12"
+  },
+  {
+    "id": "2512.16272",
+    "title": "Beyond Blind Spots: Analytic Hints for Mitigating LLM-Based Evaluation Pitfalls",
+    "abstract": "Large Language Models are increasingly deployed as judges (LaaJ) in code generation pipelines. While attractive for scalability, LaaJs tend to overlook domain specific issues raising concerns about their reliability in critical evaluation tasks. To better understand these limitations in practice, we examine LaaJ behavior in a concrete industrial use case: legacy code modernization via COBOL code generation. In this setting, we find that even production deployed LaaJs can miss domain critical errors, revealing consistent blind spots in their evaluation capabilities.   To better understand these blind spots, we analyze generated COBOL programs and associated LaaJs judgments, drawing on expert knowledge to construct a preliminary taxonomy. Based on this taxonomy, we develop a lightweight analytic checker tool that flags over 30 domain specific issues observed in practice. We use its outputs as analytic hints, dynamically injecting them into the judges prompt to encourage LaaJ to revisit aspects it may have overlooked.   Experiments on a test set of 100 programs using four production level LaaJs show that LaaJ alone detects only about 45% of the errors present in the code (in all judges we tested), while the analytic checker alone lacks explanatory depth. When combined, the LaaJ+Hints configuration achieves up to 94% coverage (for the best performing judge and injection prompt) and produces qualitatively richer, more accurate explanations, demonstrating that analytic-LLM hybrids can substantially enhance evaluation reliability in deployed pipelines. We release the dataset and all used prompts.",
+    "arxiv_url": "https://arxiv.org/abs/2512.16272",
+    "authors": [
+      "Ora Nova Fandina",
+      "Eitan Farchi",
+      "Shmulik Froimovich",
+      "Raviv Gal",
+      "Wesam Ibraheem",
+      "Rami Katan",
+      "Alice Podolsky"
+    ],
+    "first_author": "Ora Nova Fandina",
+    "category": [
+      "Technical",
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Analytic Hints",
+      "LaaJ Blind Spots",
+      "Rule-based Checker",
+      "Hint Injection",
+      "Evaluation Taxonomy",
+      "COBOL Modernization",
+      "Prompt Engineering",
+      "Hybrid Evaluation",
+      "Non-local Reasoning"
+    ],
+    "summary": "本文在COBOL代码现代化评估中发现并分类了LLM作为评判器（LaaJ）的领域盲点，构建了含30+问题类型的基于规则的分析检查器，并通过将解析性提示注入评判模型的提示中显著提升了错误检测覆盖率，且发布了数据集与提示。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.16272v1",
+    "published": "2025-12-18",
+    "update_time": "2025-12-18",
+    "download_time": "2025-12-21 01:58:24"
+  },
+  {
+    "id": "2512.16070",
+    "title": "LLM4Perf: Large Language Models Are Effective Samplers for Multi-Objective Performance Modeling (Copy)",
+    "abstract": "The performance of modern software systems is critically dependent on their complex configuration options. Building accurate performance models to navigate this vast space requires effective sampling strategies, yet existing methods often struggle with multi-objective optimization and cannot leverage semantic information from documentation. The recent success of Large Language Models (LLMs) motivates the central question of this work: Can LLMs serve as effective samplers for multi-objective performance modeling? To explore this, we present a comprehensive empirical study investigating the capabilities and characteristics of LLM-driven sampling. We design and implement LLM4Perf, a feedback-based framework, and use it to systematically evaluate the LLM-guided sampling process across four highly configurable, real-world systems. Our study reveals that the LLM-guided approach outperforms traditional baselines in most cases. Quantitatively, LLM4Perf achieves the best performance in nearly 68.8% (77 out of 112) of all evaluation scenarios, demonstrating its superior effectiveness. We find this effectiveness stems from the LLM's dual capabilities of configuration space pruning and feedback-driven strategy refinement. The effectiveness of this pruning is further validated by the fact that it also improves the performance of the baseline methods in nearly 91.5% (410 out of 448) of cases. Furthermore, we show how the LLM choices for each component and hyperparameters within LLM4Perf affect its effectiveness. Overall, this paper provides strong evidence for the effectiveness of LLMs in performance engineering and offers concrete insights into the mechanisms that drive their success.",
+    "arxiv_url": "https://arxiv.org/abs/2512.16070",
+    "authors": [
+      "Xin Wang",
+      "Zhenhao Li",
+      "Zishuo Ding"
+    ],
+    "first_author": "Xin Wang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Performance Engineering",
+    "task": "Multi-Objective Configuration Sampling & Performance Modeling",
+    "tags": [
+      "Configuration Pruning",
+      "Feedback-Driven Sampling",
+      "Multi-Objective Optimization",
+      "Sampling Strategy Design",
+      "Configuration Generation",
+      "Configuration Voting",
+      "Performance Trend Analysis",
+      "Hyperparameter Sensitivity"
+    ],
+    "summary": "本文提出LLM4Perf，一个利用大语言模型通过文档驱动的配置空间剪枝与迭代反馈引导多目标性能建模采样的框架，并构建了一个新的多目标性能数据集；实验证明LLM引导的采样在多数情景下优于传统基线，能提升性能模型的准确性与稳定性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.16070v1",
+    "published": "2025-12-18",
+    "update_time": "2025-12-18",
+    "download_time": "2025-12-21 01:58:47"
+  },
+  {
+    "id": "2512.16465",
+    "title": "cuPilot: A Strategy-Coordinated Multi-agent Framework for CUDA Kernel Evolution",
+    "abstract": "Optimizing CUDA kernels is a challenging and labor-intensive task, given the need for hardware-software co-design expertise and the proprietary nature of high-performance kernel libraries. While recent large language models (LLMs) combined with evolutionary algorithms show promise in automatic kernel optimization, existing approaches often fall short in performance due to their suboptimal agent designs and mismatched evolution representations. This work identifies these mismatches and proposes cuPilot, a strategy-coordinated multi-agent framework that introduces strategy as an intermediate semantic representation for kernel evolution. Key contributions include a strategy-coordinated evolution algorithm, roofline-guided prompting, and strategy-level population initialization. Experimental results show that the generated kernels by cuPilot achieve an average speed up of 3.09$\\times$ over PyTorch on a benchmark of 100 kernels. On the GEMM tasks, cuPilot showcases sophisticated optimizations and achieves high utilization of critical hardware units. The generated kernels are open-sourced at https://github.com/champloo2878/cuPilot-Kernels.git.",
+    "arxiv_url": "https://arxiv.org/abs/2512.16465",
+    "authors": [
+      "Jinwu Chen",
+      "Qidie Wu",
+      "Bin Li",
+      "Lin Ma",
+      "Xin Si",
+      "Yang Hu",
+      "Shouyi Yin",
+      "Jun Yang"
+    ],
+    "first_author": "Jinwu Chen",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Strategy-Level Crossover",
+      "Multi-Agent Framework",
+      "Code Agents",
+      "Roofline-Guided Prompting",
+      "Strategy-Level Initialization",
+      "Evolutionary Optimization",
+      "CUDA Kernel Optimization",
+      "Hardware-Aware Optimization",
+      "Code RAG"
+    ],
+    "summary": "本文提出 cuPilot——一种以“策略”作为中间表示的多智能体进化框架，通过策略级交叉与翻译、roofline 引导的提示和策略级种群初始化，有效提升 CUDA 内核性能，在 100 个 KernelBench 基准上对比 PyTorch 平均提速 3.09×。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.16465v1",
+    "published": "2025-12-18",
+    "update_time": "2025-12-18",
+    "download_time": "2025-12-21 02:04:47"
+  },
+  {
+    "id": "2512.16262",
+    "title": "Learning to Wait: Synchronizing Agents with the Physical World",
+    "abstract": "Real-world agentic tasks, unlike synchronous Markov Decision Processes (MDPs), often involve non-blocking actions with variable latencies, creating a fundamental \\textit{Temporal Gap} between action initiation and completion. Existing environment-side solutions, such as blocking wrappers or frequent polling, either limit scalability or dilute the agent's context window with redundant observations. In this work, we propose an \\textbf{Agent-side Approach} that empowers Large Language Models (LLMs) to actively align their \\textit{Cognitive Timeline} with the physical world. By extending the Code-as-Action paradigm to the temporal domain, agents utilize semantic priors and In-Context Learning (ICL) to predict precise waiting durations (\\texttt{time.sleep(t)}), effectively synchronizing with asynchronous environment without exhaustive checking. Experiments in a simulated Kubernetes cluster demonstrate that agents can precisely calibrate their internal clocks to minimize both query overhead and execution latency, validating that temporal awareness is a learnable capability essential for autonomous evolution in open-ended environments.",
+    "arxiv_url": "https://arxiv.org/abs/2512.16262",
+    "authors": [
+      "Yifei She",
+      "Ping Zhang",
+      "He Liu",
+      "Yanmin Jia",
+      "Yang Jing",
+      "Zijun Liu",
+      "Peng Sun",
+      "Xiangbin Li",
+      "Xiaohe Hu"
+    ],
+    "first_author": "Yifei She",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Agent Interaction",
+    "task": "Temporal Synchronization",
+    "tags": [
+      "Code-as-Action",
+      "Temporal Synchronization",
+      "Active Wait",
+      "In-Context Learning",
+      "Asynchronous Environment",
+      "Latency Modeling",
+      "Regret Score",
+      "Semantic Latency Estimation",
+      "Context Efficiency"
+    ],
+    "summary": "本文提出一种Agent端方法，通过将Code-as-Action扩展到时间域，让LLM代理利用语义先验与In-Context Learning预测time.sleep(t)以同步其认知时间线与物理世界的异步延迟，并在模拟Kubernetes集群中实验证明可在减少查询开销的同时降低执行延迟。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.16262v1",
+    "published": "2025-12-18",
+    "update_time": "2025-12-18",
+    "download_time": "2025-12-21 02:08:10"
   }
 ]
