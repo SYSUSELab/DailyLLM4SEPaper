@@ -2751,5 +2751,148 @@
     "published": "2025-12-18",
     "update_time": "2025-12-18",
     "download_time": "2025-12-21 02:08:10"
+  },
+  {
+    "id": "2512.15980",
+    "title": "Embedding Software Intent: Lightweight Java Module Recovery",
+    "abstract": "As an increasing number of software systems reach unprecedented scale, relying solely on code-level abstractions is becoming impractical. While architectural abstractions offer a means to manage these systems, maintaining their consistency with the actual code has been problematic. The Java Platform Module System (JPMS), introduced in Java 9, addresses this limitation by enabling explicit module specification at the language level. JPMS enhances architectural implementation through improved encapsulation and direct specification of ground-truth architectures within Java projects. Although many projects are written in Java, modularizing existing monolithic projects to JPMS modules is an open challenge due to ineffective module recovery by existing architecture recovery techniques. To address this challenge, this paper presents ClassLAR (Class-and Language model-based Architectural Recovery), a novel, lightweight, and efficient approach that recovers Java modules from monolithic Java systems using fully-qualified class names. ClassLAR leverages language models to extract semantic information from package and class names, capturing both structural and functional intent. In evaluations across 20 popular Java projects, ClassLAR outperformed all state-of-the-art techniques in architectural-level similarity metrics while achieving execution times that were 3.99 to 10.50 times faster.",
+    "arxiv_url": "https://arxiv.org/abs/2512.15980",
+    "authors": [
+      "Yirui He",
+      "Yuqi Huai",
+      "Xingyu Chen",
+      "Joshua Garcia"
+    ],
+    "first_author": "Yirui He",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Architecture Recovery",
+    "task": "Module Recovery",
+    "tags": [
+      "Module Recovery",
+      "Class-name Semantics",
+      "LM Topic Modeling",
+      "JPMS Ground Truth",
+      "Encapsulation",
+      "Architecture Matching",
+      "Lightweight",
+      "Efficiency"
+    ],
+    "summary": "本文提出ClassLAR，一种仅基于类的全限定名并利用语言模型的轻量级Java模块（JPMS）恢复方法，在20个开源项目上相比现有方法在架构相似性和封装性上表现更好且运行更快。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.15980v1",
+    "published": "2025-12-17",
+    "update_time": "2025-12-17",
+    "download_time": "2025-12-22 01:57:54"
+  },
+  {
+    "id": "2512.15979",
+    "title": "OLAF: Towards Robust LLM-Based Annotation Framework in Empirical Software Engineering",
+    "abstract": "Large Language Models (LLMs) are increasingly used in empirical software engineering (ESE) to automate or assist annotation tasks such as labeling commits, issues, and qualitative artifacts. Yet the reliability and reproducibility of such annotations remain underexplored. Existing studies often lack standardized measures for reliability, calibration, and drift, and frequently omit essential configuration details. We argue that LLM-based annotation should be treated as a measurement process rather than a purely automated activity. In this position paper, we outline the \\textbf{Operationalization for LLM-based Annotation Framework (OLAF)}, a conceptual framework that organizes key constructs: \\textit{reliability, calibration, drift, consensus, aggregation}, and \\textit{transparency}. The paper aims to motivate methodological discussion and future empirical work toward more transparent and reproducible LLM-based annotation in software engineering research.",
+    "arxiv_url": "https://arxiv.org/abs/2512.15979",
+    "authors": [
+      "Mia Mohammad Imran",
+      "Tarannum Shaila Zaman"
+    ],
+    "first_author": "Mia Mohammad Imran",
+    "category": [
+      "Survey",
+      "Technical"
+    ],
+    "field": "Empirical Methods",
+    "task": "LLM-based Annotation & Measurement",
+    "tags": [
+      "Operationalization",
+      "Annotator Reliability",
+      "Consensus Measurement",
+      "Calibration",
+      "Drift Analysis",
+      "Probabilistic Aggregation",
+      "Prompt Sensitivity",
+      "Human-in-the-Loop",
+      "Transparency",
+      "Annotation Workflows"
+    ],
+    "summary": "本文提出了OLAF（一套面向软件工程中基于大模型的标注的操作化框架），将标注视为测量过程并定义了可靠性、共识、校准、漂移、聚合与透明性六个维度及相应的配置与报告指南，以提升LLM标注的可重复性与可审计性。",
+    "quality": "Middle",
+    "conference": "3rd International Workshop on Methodological Issues with Empirical Studies in Software Engineering (WSESE) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.15979v1",
+    "published": "2025-12-17",
+    "update_time": "2025-12-17",
+    "download_time": "2025-12-22 01:58:12"
+  },
+  {
+    "id": "2512.16855",
+    "title": "TOGGLE: Temporal Logic-Guided Large Language Model Compression for Edge",
+    "abstract": "Large Language Models (LLMs) deliver exceptional performance across natural language tasks but demand substantial computational resources, limiting their deployment on resource-constrained edge devices. Existing compression techniques, such as quantization and pruning, often degrade critical linguistic properties and lack formal guarantees for preserving model behavior. We propose Temporal Logic-Guided Large Language Model Compression (TOGGLE), a novel framework that leverages Signal Temporal Logic (STL) to formally specify and enforce linguistic properties during compression. TOGGLE employs an STL robustness-guided Bayesian optimization to systematically explore layer-wise quantization and pruning configurations, generating compressed models that formally satisfy specified linguistic constraints without retraining or fine-tuning. Evaluating TOGGLE on four LLM architectures (GPT-2, DeepSeek-V2 7B, LLaMA 3 8B, and Mistral 7B), we achieve up to 3.3x reduction in computational costs (FLOPs) and up to a 68.8% reduction in model size while satisfying all linguistic properties. TOGGLE represents the first integration of formal methods into LLM compression, enabling efficient, verifiable deployment of LLMs on edge hardware.",
+    "arxiv_url": "https://arxiv.org/abs/2512.16855",
+    "authors": [
+      "Khurram Khalil",
+      "Khaza Anuarul Hoque"
+    ],
+    "first_author": "Khurram Khalil",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Compression & Deployment",
+    "task": "LLM Compression with Formal Guarantees",
+    "tags": [
+      "Temporal Logic",
+      "STL Robustness",
+      "Robustness-Guided Optimization",
+      "Layer-wise Quantization",
+      "Layer-wise Pruning",
+      "Bayesian Optimization",
+      "Formal Guarantees",
+      "Edge Deployment",
+      "Runtime Adaptability",
+      "Coherence Preservation"
+    ],
+    "summary": "本文提出TOGGLE，一种利用信号时序逻辑（STL）作为形式化约束、通过稳健性驱动的贝叶斯优化在无需重训练的情况下联合搜索层级量化与剪枝配置，从而在保证连贯性、长程依赖、上下文一致性和事实准确性等语言属性的前提下将LLM压缩并部署到边缘设备的框架。",
+    "quality": "High",
+    "conference": "IEEE ICCAD 2025",
+    "pdf_url": "https://arxiv.org/pdf/2512.16855v1",
+    "published": "2025-12-18",
+    "update_time": "2025-12-18",
+    "download_time": "2025-12-22 01:59:54"
+  },
+  {
+    "id": "2512.16626",
+    "title": "Stackelberg Learning from Human Feedback: Preference Optimization as a Sequential Game",
+    "abstract": "We introduce Stackelberg Learning from Human Feedback (SLHF), a new framework for preference optimization. SLHF frames the alignment problem as a sequential-move game between two policies: a Leader, which commits to an action, and a Follower, which responds conditionally on the Leader's action. This approach decomposes preference optimization into a refinement problem for the Follower and an optimization problem against an adversary for the Leader. Unlike Reinforcement Learning from Human Feedback (RLHF), which assigns scalar rewards to actions, or Nash Learning from Human Feedback (NLHF), which seeks a simultaneous-move equilibrium, SLHF leverages the asymmetry of sequential play to capture richer preference structures. The sequential design of SLHF naturally enables inference-time refinement, as the Follower learns to improve the Leader's actions, and these refinements can be leveraged through iterative sampling. We compare the solution concepts of SLHF, RLHF, and NLHF, and lay out key advantages in consistency, data sensitivity, and robustness to intransitive preferences. Experiments on large language models demonstrate that SLHF achieves strong alignment across diverse preference datasets, scales from 0.5B to 8B parameters, and yields inference-time refinements that transfer across model families without further fine-tuning.",
+    "arxiv_url": "https://arxiv.org/abs/2512.16626",
+    "authors": [
+      "Barna Pásztor",
+      "Thomas Kleine Buening",
+      "Andreas Krause"
+    ],
+    "first_author": "Barna Pásztor",
+    "category": [
+      "Technical"
+    ],
+    "field": "LLM Alignment & Preference Learning",
+    "task": "Preference Optimization (Sequential Stackelberg Learning from Human Feedback)",
+    "tags": [
+      "Stackelberg Game",
+      "Preference Optimization",
+      "Inference-Time Refinement",
+      "Follower Refinement",
+      "Two-Timescale GDA",
+      "Pairwise Preference Modeling",
+      "Intransitive Preferences",
+      "Transferable Refinements",
+      "Human-LLM Interaction",
+      "Robustness"
+    ],
+    "summary": "本文提出了Stackelberg Learning from Human Feedback (SLHF)，将偏好优化建模为Leader-First、Follower-响应的序贯博弈，给出近似求解算法STACKELBERGGDA并展示其在推理时通过Follower迭代采样实现无微调的输出改进与跨模型迁移能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.16626v1",
+    "published": "2025-12-18",
+    "update_time": "2025-12-18",
+    "download_time": "2025-12-22 02:11:57"
   }
 ]
