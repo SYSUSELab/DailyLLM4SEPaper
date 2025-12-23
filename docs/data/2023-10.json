@@ -16,28 +16,27 @@
     "first_author": "Carlos E. Jimenez",
     "category": [
       "Benchmark",
+      "Technical",
       "Empirical"
     ],
     "field": "Coding Assistant",
     "task": "Code Editing",
     "tags": [
-      "Repository-scale code editing",
-      "GitHub issue-to-PR construction",
-      "Unit-test execution-based evaluation",
-      "Fail-to-pass test filtering",
-      "Long-context codebase understanding",
-      "Cross-file and multi-function coordination",
-      "Continually updatable benchmark pipeline",
-      "Training corpus for fine-tuning",
-      "Patch-based edit generation"
+      "Repository-Level Coding",
+      "Program Repair",
+      "Code RAG",
+      "Execution-based Evaluation",
+      "Long-Context Reasoning",
+      "Cross-File Edits",
+      "Continual Benchmarking"
     ],
-    "summary": "该论文提出SWE-bench，一个基于真实GitHub issue与合并PR构造的可持续、可执行的Python代码库级别修复基准，要求模型生成补丁并通过原项目测试，实验证明现有模型仅能解决极少数实际问题，同时发布了用于微调的训练集合并评估了微调模型性能。",
+    "summary": "SWE-bench 提出并公开了一个基于真实 GitHub issue 与已合并 PR 的 Python 仓库级别基准（2,294 个实例）及训练集，并通过补丁应用与运行仓库测试评估模型在跨文件、长上下文场景下修复问题的能力，结果显示现有模型只能解决极少数问题。",
     "quality": "High",
     "conference": "ICLR 2024",
     "pdf_url": "https://arxiv.org/pdf/2310.06770v3",
     "published": "2023-10-10",
     "update_time": "2024-11-11",
-    "download_time": "2025-12-16 13:54:49"
+    "download_time": "2025-12-17 19:14:26"
   },
   {
     "id": "2310.17903",

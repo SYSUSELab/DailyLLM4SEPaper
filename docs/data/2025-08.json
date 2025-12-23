@@ -143,5 +143,42 @@
     "published": "2025-08-22",
     "update_time": "2025-08-22",
     "download_time": "2025-12-12 23:46:31"
+  },
+  {
+    "id": "2508.03622",
+    "title": "Refining Critical Thinking in LLM Code Generation: A Faulty Premise-based Evaluation Framework",
+    "abstract": "With the advancement of code generation capabilities in large language models (LLMs), their reliance on input premises has intensified. When users provide inputs containing faulty premises, the probability of code generation hallucinations rises significantly, exposing deficiencies in their self-scrutiny capabilities. This paper proposes Faulty Premises Bench (FPBench), the first code generation evaluation framework targeting faulty premises. By systematically constructing three categories of faulty premises and integrating multi-dimensional evaluation metrics, it conducts in-depth assessments of 15 representative LLMs. The key findings are as follows: (1) Most models exhibit poor reasoning abilities and suboptimal code generation performance under faulty premises, heavily relying on explicit prompts for error detection, with limited self-scrutiny capabilities; (2) Faulty premises trigger a point of diminishing returns in resource investment, leading to blindly increasing length fails to enhance quality; (3) The three types of faulty premises respectively activate distinct defect patterns in models, revealing a triple dissociation in the cognitive mechanisms of code generation models. This study not only highlights the urgent need for LLMs to proactively verify premises in code generation but also, through the proposed FPBench framework and multi-dimensional evaluation system, provides a theoretical foundation and practical pathway for developing reliable, human-centric code generation models.",
+    "arxiv_url": "https://arxiv.org/abs/2508.03622",
+    "authors": [
+      "Jialin Li",
+      "Jinzhe Li",
+      "Gengxu Li",
+      "Yi Chang",
+      "Yuan Wu"
+    ],
+    "first_author": "Jialin Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Faulty-premise robustness",
+      "Premise verification and critique",
+      "Proactive vs. passive error detection",
+      "Self-scrutiny overhead metrics",
+      "Prompt perturbation / error injection",
+      "Code-generation hallucination analysis",
+      "Defect-pattern (triple dissociation) analysis",
+      "Benchmark construction for adversarial prompts"
+    ],
+    "summary": "本文提出了FPBench——一个专门评估LLM在含有错误前提的代码生成任务中自我审查能力的基准框架，构造三类错误前提与多维评价指标并在15个模型上实证揭示模型在识别错误、资源开销与缺陷模式方面的系统性不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2508.03622v1",
+    "published": "2025-08-05",
+    "update_time": "2025-08-05",
+    "download_time": "2025-12-17 18:40:02"
   }
 ]

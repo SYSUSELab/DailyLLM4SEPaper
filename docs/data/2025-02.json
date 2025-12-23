@@ -119,5 +119,251 @@
     "published": "2025-02-17",
     "update_time": "2025-02-17",
     "download_time": "2025-12-13 00:13:02"
+  },
+  {
+    "id": "2502.13897",
+    "title": "DataSciBench: An LLM Agent Benchmark for Data Science",
+    "abstract": "This paper presents DataSciBench, a comprehensive benchmark for evaluating Large Language Model (LLM) capabilities in data science. Recent related benchmarks have primarily focused on single tasks, easily obtainable ground truth, and straightforward evaluation metrics, which limits the scope of tasks that can be evaluated. In contrast, DataSciBench is constructed based on a more comprehensive and curated collection of natural and challenging prompts for uncertain ground truth and evaluation metrics. We develop a semi-automated pipeline for generating ground truth (GT) and validating evaluation metrics. This pipeline utilizes and implements an LLM-based self-consistency and human verification strategy to produce accurate GT by leveraging collected prompts, predefined task types, and aggregate functions (metrics). Furthermore, we propose an innovative Task - Function - Code (TFC) framework to assess each code execution outcome based on precisely defined metrics and programmatic rules. Our experimental framework involves testing 6 API-based models, 8 open-source general models, and 9 open-source code generation models using the diverse set of prompts we have gathered. This approach aims to provide a more comprehensive and rigorous evaluation of LLMs in data science, revealing their strengths and weaknesses. Experimental results demonstrate that API-based models outperform open-sourced models on all metrics and Deepseek-Coder-33B-Instruct achieves the highest score among open-sourced models. We release all code and data at https://github.com/THUDM/DataSciBench.",
+    "arxiv_url": "https://arxiv.org/abs/2502.13897",
+    "authors": [
+      "Dan Zhang",
+      "Sining Zhoubian",
+      "Min Cai",
+      "Fengzu Li",
+      "Lekang Yang",
+      "Wei Wang",
+      "Tianjiao Dong",
+      "Ziniu Hu",
+      "Jie Tang",
+      "Yisong Yue"
+    ],
+    "first_author": "Dan Zhang",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Data Science",
+    "task": "Data Science Benchmarking",
+    "tags": [
+      "TFC evaluation",
+      "Ground-truth synthesis",
+      "Semi-automated GT validation",
+      "Programmatic metrics",
+      "Aggregate evaluation functions",
+      "Prompt collection and curation",
+      "Data visualization evaluation",
+      "Predictive modeling evaluation",
+      "Code execution verification",
+      "Human-in-the-loop review"
+    ],
+    "summary": "本文提出DataSciBench，一个面向数据科学任务的综合基准，包含222条挑战性提示、519个半自动生成并人工验证的GT以及Task‑Function‑Code（TFC）评估框架，用以通过程序化指标评估LLM在数据清洗、统计、可视化、预测建模等方面的能力并提供详尽比较分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.13897v1",
+    "published": "2025-02-19",
+    "update_time": "2025-02-19",
+    "download_time": "2025-12-17 18:46:06"
+  },
+  {
+    "id": "2502.14752",
+    "title": "TritonBench: Benchmarking Large Language Model Capabilities for Generating Triton Operators",
+    "abstract": "Triton, a high-level Python-like language designed for building efficient GPU kernels, is widely adopted in deep learning frameworks due to its portability, flexibility, and accessibility. However, programming and parallel optimization still require considerable trial and error from Triton developers. Despite advances in large language models (LLMs) for conventional code generation, these models struggle to generate accurate, performance-optimized Triton code, as they lack awareness of its specifications and the complexities of GPU programming. More critically, there is an urgent need for systematic evaluations tailored to Triton. In this work, we introduce TritonBench, the first comprehensive benchmark for Triton operator generation. TritonBench features two evaluation channels: a curated set of 184 real-world operators from GitHub and a collection of operators aligned with PyTorch interfaces. Unlike conventional code benchmarks prioritizing functional correctness, TritonBench also profiles efficiency performance on widely deployed GPUs aligned with industry applications. Our study reveals that current state-of-the-art code LLMs struggle to generate efficient Triton operators, highlighting a significant gap in high-performance code generation. TritonBench will be available at https://github.com/thunlp/TritonBench.",
+    "arxiv_url": "https://arxiv.org/abs/2502.14752",
+    "authors": [
+      "Jianling Li",
+      "Shangzhan Li",
+      "Zhenye Gao",
+      "Qi Shi",
+      "Yuxuan Li",
+      "Zefan Wang",
+      "Jiacheng Huang",
+      "Haojie Wang",
+      "Jianrong Wang",
+      "Xu Han",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ],
+    "first_author": "Jianling Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Triton Operators",
+      "GPU Kernel Generation",
+      "DSL Code Generation",
+      "Performance-aware Benchmarking",
+      "GPU Efficiency Profiling",
+      "Execution Accuracy",
+      "Speedup Evaluation",
+      "Operator Corpus Curation",
+      "Testcase Synthesis",
+      "HPC Optimization"
+    ],
+    "summary": "本文提出TRITONBENCH——首个面向Triton算子生成的性能感知基准，收集真实GitHub算子与PyTorch对齐任务，并在功能正确性和GPU运行效率上评估多种LLM以揭示其在高性能Triton代码生成方面的不足。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.14752v1",
+    "published": "2025-02-20",
+    "update_time": "2025-02-20",
+    "download_time": "2025-12-17 18:46:36"
+  },
+  {
+    "id": "2502.18726",
+    "title": "Deep-Bench: Deep Learning Benchmark Dataset for Code Generation",
+    "abstract": "Deep learning (DL) has revolutionized areas such as computer vision, natural language processing, and more. However, developing DL systems is challenging due to the complexity of DL workflows. Large Language Models (LLMs), such as GPT, Claude, Llama, Mistral, etc., have emerged as promising tools to assist in DL code generation, offering potential solutions to these challenges. Despite this, existing benchmarks such as DS-1000 are limited, as they primarily focus on small DL code snippets related to pre/post-processing tasks and lack a comprehensive coverage of the full DL pipeline, including different DL phases and input data types.   To address this, we introduce DeepBench, a novel benchmark dataset designed for function-level DL code generation. DeepBench categorizes DL problems based on three key aspects: phases such as pre-processing, model construction, and training; tasks, including classification, regression, and recommendation; and input data types such as tabular, image, and text.   GPT-4o -- the state-of-the-art LLM -- achieved 31% accuracy on DeepBench, significantly lower than its 60% on DS-1000. We observed similar difficulty for other LLMs (e.g., 28% vs. 54% for Claude, 21% vs. 41% for LLaMA, and 15% vs. 20% for Mistral). This result underscores DeepBench's greater complexity. We also construct a taxonomy of issues and bugs found in LLM-generated DL code, which highlights the distinct challenges that LLMs face when generating DL code compared to general code.   Furthermore, our analysis also reveals substantial performance variations across categories, with differences of up to 7% among phases and 37% among tasks. These disparities suggest that DeepBench offers valuable insights into the LLMs' performance and areas for potential improvement in the DL domain.",
+    "arxiv_url": "https://arxiv.org/abs/2502.18726",
+    "authors": [
+      "Alireza Daghighfarsoodeh",
+      "Chung-Yu Wang",
+      "Hamed Taherkhani",
+      "Melika Sepidband",
+      "Mohammad Abdollahi",
+      "Hadi Hemmati",
+      "Hung Viet Pham"
+    ],
+    "first_author": "Alireza Daghighfarsoodeh",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Function-level DL code",
+      "Unit-test evaluation",
+      "DL pipeline taxonomy",
+      "ML task categorization",
+      "Input data type diversity",
+      "GitHub curation",
+      "Prompt synthesis",
+      "Bug taxonomy",
+      "Arithmetic and logical errors",
+      "Phase-specific difficulty"
+    ],
+    "summary": "本文提出Deep-Bench，一个从高质量GitHub仓库构建的、包含520个函数级深度学习代码生成样例并配套单元测试与按DL阶段/任务/输入类型三维标注的基准数据集，同时评估多款LLM性能并构建了LLM生成DL代码的缺陷分类法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.18726v1",
+    "published": "2025-02-26",
+    "update_time": "2025-02-26",
+    "download_time": "2025-12-17 18:47:09"
+  },
+  {
+    "id": "2502.19067",
+    "title": "IndicEval-XL: Bridging Linguistic Diversity in Code Generation Across Indic Languages",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in code generation from natural language prompts, revolutionizing software development workflows. As we advance towards agent-based development paradigms, these models form the cornerstone of next-generation software development lifecycles. However, current benchmarks for evaluating multilingual code generation capabilities are predominantly English-centric, limiting their applicability across the global developer community. To address this limitation, we present IndicEval-XL, a comprehensive benchmark for code generation that incorporates 6 major Indic languages, collectively spoken by approximately 14\\% of the world's population. Our benchmark bridges these languages with 12 programming languages, creating a robust evaluation framework. This work is particularly significant given India's representation of one-eighth of the global population and the crucial role Indic languages play in Indian society. IndicEval-XL represents a significant step toward expanding the linguistic diversity in code generation systems and evaluation frameworks. By developing resources that support multiple languages, we aim to make AI-powered development tools more inclusive and accessible to developers of various linguistic backgrounds. To facilitate further research and development in this direction, we make our dataset and evaluation benchmark publicly available at https://github.com/telekom/IndicEval-XL",
+    "arxiv_url": "https://arxiv.org/abs/2502.19067",
+    "authors": [
+      "Ujjwal Singh",
+      "Aditi Sharma",
+      "Nikhil Gupta",
+      "Deepakshi",
+      "Vivek Kumar Jha"
+    ],
+    "first_author": "Ujjwal Singh",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Multilingual Benchmark",
+      "Indic Languages",
+      "NL-to-PL Parallelization",
+      "Back-Translation Validation",
+      "BERTScore Filtering",
+      "CodeBERTScore Evaluation",
+      "Translation Pipeline",
+      "Low-Resource Language Support",
+      "Pass@k Analysis"
+    ],
+    "summary": "本文提出IndicEval-XL——一个覆盖6种印度语与英语、涉及12种编程语言、共6720道并行题目的多语言代码生成基准，并描述了翻译、回译与严格相似度与人工质检流程以保证数据质量与可访问性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.19067v1",
+    "published": "2025-02-26",
+    "update_time": "2025-02-26",
+    "download_time": "2025-12-17 18:58:56"
+  },
+  {
+    "id": "2502.19149",
+    "title": "Isolating Language-Coding from Problem-Solving: Benchmarking LLMs with PseudoEval",
+    "abstract": "Existing code generation benchmarks for Large Language Models (LLMs) such as HumanEval and MBPP are designed to study LLMs' end-to-end performance, where the benchmarks feed a problem description in natural language as input and examine the generated code in specific programming languages. However, the evaluation scores revealed in this way provide a little hint as to the bottleneck of the code generation -- whether LLMs are struggling with their problem-solving capability or language-coding capability. To answer this question, we construct PseudoEval, a multilingual code generation benchmark that provides a solution written in pseudocode as input. By doing so, the bottleneck of code generation in various programming languages could be isolated and identified. Our study yields several interesting findings. For example, we identify that the bottleneck of LLMs in Python programming is problem-solving, while Rust is struggling relatively more in language-coding. Also, our study indicates that problem-solving capability may transfer across programming languages, while language-coding needs more language-specific effort, especially for undertrained programming languages. Finally, we release the pipeline of constructing PseudoEval to facilitate the extension to existing benchmarks. PseudoEval is available at: https://anonymous.4open.science/r/PseudocodeACL25-7B74.",
+    "arxiv_url": "https://arxiv.org/abs/2502.19149",
+    "authors": [
+      "Jiarong Wu",
+      "Songqiang Chen",
+      "Jialun Cao",
+      "Hau Ching Lo",
+      "Shing-Chi Cheung"
+    ],
+    "first_author": "Jiarong Wu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Pseudocode-driven evaluation",
+      "Problem vs Implementation",
+      "Multilingual assessment",
+      "Pseudocode extraction pipeline",
+      "Cross-language transferability",
+      "Language-specific coding errors",
+      "Human-vs-auto pseudocode study",
+      "Benchmark construction",
+      "Inference strategy analysis",
+      "Coding bottleneck diagnosis"
+    ],
+    "summary": "本文提出一个多语言伪代码驱动的代码生成基准，通过将问题求解与语言实现分离并提供自动化伪代码提取流水线，以识别并分析不同编程语言中LLM在问题解决与语言编码方面的瓶颈。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.19149v1",
+    "published": "2025-02-26",
+    "update_time": "2025-02-26",
+    "download_time": "2025-12-17 18:59:37"
+  },
+  {
+    "id": "2502.20868",
+    "title": "ProBench: Benchmarking Large Language Models in Competitive Programming",
+    "abstract": "With reasoning language models such as OpenAI-o3 and DeepSeek-R1 emerging, large language models (LLMs) have entered a new phase of development. However, existing benchmarks for coding evaluation are gradually inadequate to assess the capability of advanced LLMs in code reasoning. To bridge the gap for high-level code reasoning assessment, we propose ProBench to benchmark LLMs in competitive programming, drawing inspiration from the International Collegiate Programming Contest. ProBench collects a comprehensive set of competitive programming problems from Codeforces, Luogu, and Nowcoder platforms during the period from July to December 2024, obtaining real test results through online submissions to ensure the fairness and accuracy of the evaluation. We establish a unified problem attribute system, including difficulty grading and algorithm tagging. With carefully collected and annotated data in ProBench, we systematically assess 9 latest LLMs in competitive programming across multiple dimensions, including thought chain analysis, error type diagnosis, and reasoning depth evaluation. Experimental results show that QwQ-32B-Preview achieves the best score of 20.93 followed by DeepSeek-V3 with a score of 16.38, suggesting that models trained with specialized reasoning tasks significantly outperform general-purpose models (even larger than reasoning-oriented models) in programming. Further analysis also reveals key areas for programming capability enhancement, e.g., algorithm adaptability and reasoning sufficiency, providing important insights for the future development of reasoning models.",
+    "arxiv_url": "https://arxiv.org/abs/2502.20868",
+    "authors": [
+      "Lei Yang",
+      "Renren Jin",
+      "Ling Shi",
+      "Jianxiang Peng",
+      "Yue Chen",
+      "Deyi Xiong"
+    ],
+    "first_author": "Lei Yang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Competitive Programming",
+      "Online Submission Evaluation",
+      "Algorithm Tagging",
+      "Difficulty Grading",
+      "Chain-of-Thought Analysis",
+      "Error Type Diagnosis",
+      "Reasoning Depth Evaluation",
+      "Robustness Testing",
+      "Cross-Lingual Problems"
+    ],
+    "summary": "本文提出ProBench——一个针对竞赛编程的在线提交评测基准，通过难度分级与算法标签并结合链式思维与错误诊断，对多款大型语言模型的代码推理能力进行全面而公平的评估与分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2502.20868v1",
+    "published": "2025-02-28",
+    "update_time": "2025-02-28",
+    "download_time": "2025-12-17 19:00:03"
   }
 ]

@@ -311,5 +311,118 @@
     "published": "2025-03-06",
     "update_time": "2025-03-06",
     "download_time": "2025-12-12 21:33:30"
+  },
+  {
+    "id": "2503.04149",
+    "title": "Dynamic Benchmarking of Reasoning Capabilities in Code Large Language Models Under Data Contamination",
+    "abstract": "The rapid evolution of code largelanguage models underscores the need for effective and transparent benchmarking of their reasoning capabilities. However, the current benchmarking approach heavily depends on publicly available, human-created datasets. The widespread use of these fixed benchmark datasets makes the benchmarking process to be static and thus particularly susceptible to data contamination, an unavoidable consequence of the extensive data collection processes used to train Code LLMs. Existing approaches that address data contamination often suffer from human effort limitations and imbalanced problem complexity. To tackle these challenges, we propose \\tool, a novel benchmarking suite for evaluating Code LLMs under potential data contamination. Given a seed programming problem, \\tool employs multiple agents to extract and modify the context without altering the core logic, generating semantically equivalent variations. We introduce a dynamic data generation methods and conduct empirical studies on two seed datasets across 21 Code LLMs. Results show that \\tool effectively benchmarks reasoning capabilities under contamination risks while generating diverse problem sets to ensure consistent and reliable evaluations.",
+    "arxiv_url": "https://arxiv.org/abs/2503.04149",
+    "authors": [
+      "Simin Chen",
+      "Pranav Pusarla",
+      "Baishakhi Ray"
+    ],
+    "first_author": "Simin Chen",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Metamorphic Testing",
+      "Dynamic Problem Generation",
+      "Complexity-Preserving Transformation",
+      "Validation Agent",
+      "Data Contamination",
+      "Semantic Diversification",
+      "Benchmark Robustness",
+      "LLM-as-Judge"
+    ],
+    "summary": "本文提出DyCodeEval：一种基于变形测试并使用多Agent LLM自动生成语义多样且保持复杂度不变的动态编程题基准，以在数据污染场景下可靠评估代码LLM的推理能力并通过验证Agent确保题目与测试用例的正确性。",
+    "quality": "High",
+    "conference": "ICML 2025",
+    "pdf_url": "https://arxiv.org/pdf/2503.04149v2",
+    "published": "2025-03-06",
+    "update_time": "2025-06-03",
+    "download_time": "2025-12-17 19:00:33"
+  },
+  {
+    "id": "2503.10452",
+    "title": "DynaCode: A Dynamic Complexity-Aware Code Benchmark for Evaluating Large Language Models in Code Generation",
+    "abstract": "The rapid advancement of large language models (LLMs) has significantly improved their performance in code generation tasks. However, existing code benchmarks remain static, consisting of fixed datasets with predefined problems. This makes them vulnerable to memorization during training, where LLMs recall specific test cases instead of generalizing to new problems, leading to data contamination and unreliable evaluation results. To address these issues, we introduce DynaCode, a dynamic, complexity-aware benchmark that overcomes the limitations of static datasets. DynaCode evaluates LLMs systematically using a complexity-aware metric, incorporating both code complexity and call-graph structures. DynaCode achieves large-scale diversity, generating up to 189 million unique nested code problems across four distinct levels of code complexity, referred to as units, and 16 types of call graphs. Results on 12 latest LLMs show an average performance drop of 16.8% to 45.7% compared to MBPP+, a static code generation benchmark, with performance progressively decreasing as complexity increases. This demonstrates DynaCode's ability to effectively differentiate LLMs. Additionally, by leveraging call graphs, we gain insights into LLM behavior, particularly their preference for handling subfunction interactions within nested code. Our benchmark and evaluation code are available at https://github.com/HWH-2000/DynaCode.",
+    "arxiv_url": "https://arxiv.org/abs/2503.10452",
+    "authors": [
+      "Wenhao Hu",
+      "Jinhao Duan",
+      "Chunchen Wei",
+      "Li Zhang",
+      "Yue Zhang",
+      "Kaidi Xu"
+    ],
+    "first_author": "Wenhao Hu",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Generation Benchmarking",
+    "tags": [
+      "Dynamic Benchmark",
+      "Complexity-aware Metric",
+      "Call-Graph Construction",
+      "Cyclomatic Complexity",
+      "Data Contamination",
+      "Nested Code Generation",
+      "Execution-based Evaluation",
+      "Error Analysis"
+    ],
+    "summary": "DynaCode 提出一个基于调用图与复杂度感知的动态代码生成基准，通过自动构造多层嵌套问题生成大规模任务集合，结合静态与动态复杂度度量来更公平地评估并揭示 LLM 在不同代码与调用图复杂度下的弱点，同时缓解数据污染问题。",
+    "quality": "High",
+    "conference": "ACL",
+    "pdf_url": "https://arxiv.org/pdf/2503.10452v2",
+    "published": "2025-03-13",
+    "update_time": "2025-05-29",
+    "download_time": "2025-12-17 19:01:15"
+  },
+  {
+    "id": "2503.15242",
+    "title": "BigO(Bench) -- Can LLMs Generate Code with Controlled Time and Space Complexity?",
+    "abstract": "We introduce BigO(Bench), a novel coding benchmark designed to evaluate the capabilities of generative language models in understanding and generating code with specified time and space complexities. This benchmark addresses the gap in current evaluations that often overlook the ability of models to comprehend and produce code constrained by computational complexity. BigO(Bench) includes tooling to infer the algorithmic complexity of any Python function from profiling measurements, including human- or LLM-generated solutions. BigO(Bench) also includes of set of 3,105 coding problems and 1,190,250 solutions from Code Contests annotated with inferred (synthetic) time and space complexity labels from the complexity framework, as well as corresponding runtime and memory footprint values for a large set of input sizes. We present results from evaluating multiple state-of-the-art language models on this benchmark, highlighting their strengths and weaknesses in handling complexity requirements. In particular, token-space reasoning models are unrivaled in code generation but not in complexity understanding, hinting that they may not generalize well to tasks for which no reward was given at training time.",
+    "arxiv_url": "https://arxiv.org/abs/2503.15242",
+    "authors": [
+      "Pierre Chambon",
+      "Baptiste Roziere",
+      "Benoit Sagot",
+      "Gabriel Synnaeve"
+    ],
+    "first_author": "Pierre Chambon",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Dynamic Complexity Inference",
+      "Complexity-conditioned Generation",
+      "Complexity Prediction",
+      "Runtime Profiling",
+      "Memory Footprint Estimation",
+      "Curve Fitting",
+      "Fuzzing-based Input Scaling",
+      "Benchmarking Code Complexity",
+      "Sandboxed Execution",
+      "LLM Complexity Evaluation"
+    ],
+    "summary": "本文提出BigO(Bench)，一个包含3,105道题与约1.19M解法并附带动态时间/空间复杂度推断工具的基准，用以评估并比较LLM在满足指定复杂度约束下生成与理解代码的能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2503.15242v2",
+    "published": "2025-03-19",
+    "update_time": "2025-03-20",
+    "download_time": "2025-12-17 19:01:47"
   }
 ]
