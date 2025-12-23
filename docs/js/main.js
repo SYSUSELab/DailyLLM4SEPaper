@@ -485,7 +485,8 @@ document.addEventListener('DOMContentLoaded', function() {
         DatePapers = allPapersData.filter(paper => {
             const pDate = paper.published;
             return (!startVal || pDate >= startVal) && (!endVal || pDate <= endVal);
-        }
+        });
+        
         // 筛选
         filteredPapers = DatePapers.filter(paper => {
             const status = paper.conference ? 'published' : 'preprint';
