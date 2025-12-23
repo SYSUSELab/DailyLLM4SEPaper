@@ -132,10 +132,12 @@ class HTMLGenerator:
     <nav class="container">
         <div class="filter-section">
             <div class="filter-group">
-                <label class="filter-label">📅 月份：</label>
-                <div class="filters month-filters">
-                    <button class="filter-btn month-btn active" data-month="all">全部 ({len(self.papers)})</button>
-                    {self.generate_month_buttons()}
+                <label class="filter-label">📅 时间范围：</label>
+                <div class="date-range-filter">
+                    <input type="date" id="startDate" class="date-input">
+                    <span class="date-separator">至</span>
+                    <input type="date" id="endDate" class="date-input">
+                    <button id="resetDateBtn" class="filter-btn" style="margin-left: 10px; padding: 0.4rem 0.8rem;">重置</button>
                 </div>
             </div>
             <div class="filter-group">
@@ -473,6 +475,31 @@ nav {
 .filter-btn.active {
     background: #667eea;
     color: white;
+}
+
+.date-range-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-input {
+    padding: 6px 12px;
+    border: 2px solid #667eea;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+}
+
+.date-input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.date-separator {
+    font-weight: bold;
+    color: #666;
 }
 
 .search-box {
@@ -842,13 +869,17 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('JavaScript loaded');
 
     // 获取DOM元素
-    const monthBtns = document.querySelectorAll('.month-btn');
+    const startDateInput = document.getElementById('startDate');
+    const endDateInput = document.getElementById('endDate');
+    const resetDateBtn = document.getElementById('resetDateBtn');
+    
     const statusBtns = document.querySelectorAll('.status-btn');
     const categoryBtns = document.querySelectorAll('.category-btn');
     const fieldBtns = document.querySelectorAll('.field-btn');
     let taskBtns = document.querySelectorAll('.task-btn');
     const sortBtns = document.querySelectorAll('.sort-btn');
     const searchInput = document.getElementById('searchInput');
+    
     const exportBtn = document.getElementById('exportBtn');
     const selectAllBtn = document.getElementById('selectAllBtn');
     const clearAllBtn = document.getElementById('clearAllBtn');
@@ -873,20 +904,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 状态变量
     let allPapersData = [];  // 所有论文数据
-    let currentMonth = 'all';  // 当前选中的月份
+    let monthsIndex = [];        // 从 index.json 获取的所有月份列表
+    let monthsCache = {};  // 缓存已加载的月份数据
+    
     let currentStatus = 'all';
     let currentCategory = 'all';
     let currentField = 'all';
     let currentTask = 'all';
     let currentSort = 'date-desc';
     let searchTerm = '';
+    
     let filteredPapers = [];
     let loadedCount = 0;
     const initialBatchSize = 20;  // 第一次加载20个
     const subsequentBatchSize = 10;  // 后续每次加载10个
     let isLoading = false;
     let observer = null;
-    let monthsCache = {};  // 缓存已加载的月份数据
+    
 
     const field2task = {'Requirements & Design': ['Elicitation', 'Analysis', 'Specification &Validation', 'Management'],
         'Coding Assistant': ['Code Pre-Training', 'Code Instruction-Tuning', 'Code Alignment', 'Code Prompting', 'Code Completion', 'Code Summarization', 'Code Editing', 'Code Translation', 'Code Reasoning', 'Code Retrieval', 'Code Understanding', 'Code Performance Optimization', 'Code Representation Learning'],
@@ -896,63 +930,65 @@ document.addEventListener('DOMContentLoaded', function() {
         'Quality Management': ['Defect Prediction', 'Bug Localization', 'Bug Repair', 'Vulnerability Detection', 'Vulnerability Repair'],
         'Version Control & Collaboration': ['Git VCS']}
 
-    // 加载月份索引
-    async function loadMonthsIndex() {
+    // 初始化加载
+    async function init() {
         try {
+            // 首先加载月份索引
             const response = await fetch('data/index.json');
-            const monthsIndex = await response.json();
-            console.log('Months index loaded:', monthsIndex);
-
-            // 默认加载最新月份的数据
+            monthsIndex = await response.json(); // 格式: [{month: "2025-10", count: 10}, ...]
+            
             if (monthsIndex.length > 0) {
-                await loadMonthData('all');
+                // 设置日期选择器的可选范围
+                const sortedMonths = monthsIndex.map(m => m.month).sort();
+                const minMonth = sortedMonths[0];
+                const maxMonth = sortedMonths[sortedMonths.length - 1];
+                startDateInput.min = `${minMonth}-01`;
+                endDateInput.max = `${maxMonth}-31`;
+
+                // 默认策略：只加载最新一个月的数据
+                const latestMonth = monthsIndex[0].month;
+                console.log("初始化：加载最新月数据 " + latestMonth);
+                await loadMonthData(latestMonth);
             }
         } catch (e) {
-            console.error('Failed to load months index:', e);
+            console.error('初始化失败:', e);
+            resultsCount.textContent = "数据加载失败，请检查网络";
         }
     }
 
-    // 加载指定月份的数据
-    async function loadMonthData(month) {
-        if (month === 'all') {
-            // 加载所有月份
+    // 加载单个或多个月份的数据
+    async function loadMonthData(monthStr) {
+        if (!monthsCache[monthStr]) {
             try {
-                const response = await fetch('data/index.json');
-                const monthsIndex = await response.json();
-
-                // 加载所有月份数据
-                allPapersData = [];
-                for (const monthInfo of monthsIndex) {
-                    if (!monthsCache[monthInfo.month]) {
-                        const monthResponse = await fetch(`data/${monthInfo.month}.json`);
-                        monthsCache[monthInfo.month] = await monthResponse.json();
-                    }
-                    allPapersData.push(...monthsCache[monthInfo.month]);
-                }
-                console.log(`Loaded all months, total ${allPapersData.length} papers`);
+                const response = await fetch(`data/${monthStr}.json`);
+                const data = await response.json();
+                monthsCache[monthStr] = data;
+                // 合并到总池子
+                allPapersData = allPapersData.concat(data);
             } catch (e) {
-                console.error('Failed to load all months data:', e);
+                console.error(`加载月份 ${monthStr} 失败:`, e);
             }
-        } else {
-            // 加载单个月份
-            if (!monthsCache[month]) {
-                try {
-                    const response = await fetch(`data/${month}.json`);
-                    monthsCache[month] = await response.json();
-                    console.log(`Loaded month ${month}, ${monthsCache[month].length} papers`);
-                } catch (e) {
-                    console.error(`Failed to load month ${month}:`, e);
-                    return;
-                }
-            }
-            allPapersData = monthsCache[month];
-            console.log(`Using cached data for ${month}, ${allPapersData.length} papers`);
         }
-        
-        // 渲染task按钮
         renderTaskButtons(currentField);
+        filterAndSortPapers();
+    }
 
-        // 数据加载完成后，触发筛选
+    // 根据日期范围动态补全加载
+    async function ensureDataRange(startStr, endStr) {
+        if (!startStr || !endStr) return;
+        
+        const startMonth = startStr.substring(0, 7);
+        const endMonth = endStr.substring(0, 7);
+
+        // 找出索引中在该范围内但尚未缓存的月份
+        const neededMonths = monthsIndex
+            .map(m => m.month)
+            .filter(m => m >= startMonth && m <= endMonth && !monthsCache[m]);
+
+        if (neededMonths.length > 0) {
+            resultsCount.textContent = `正在获取 ${neededMonths.length} 个月的数据...`;
+            await Promise.all(neededMonths.map(m => loadMonthData(m)));
+        }
         filterAndSortPapers();
     }
 
@@ -1204,9 +1240,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 更新研究领域按钮的数量
-    function updateFieldButtonCounts() {
+    function updateFieldButtonCounts(DatePapers) {
         // 先筛选出符合当前状态的论文
-        const statusFilteredPapers = allPapersData.filter(paper => {
+        const statusFilteredPapers = DatePapers.filter(paper => {
             const status = paper.conference ? 'published' : 'preprint';
             const category = paper.category || [];
 
@@ -1244,9 +1280,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 更新论文类型按钮的数量
-    function updateCategoryButtonCounts() {
+    function updateCategoryButtonCounts(DatePapers) {
         // 先筛选出符合当前状态的论文
-        const statusFilteredPapers = allPapersData.filter(paper => {
+        const statusFilteredPapers = DatePapers.filter(paper => {
             const status = paper.conference ? 'published' : 'preprint';
             return  currentStatus === 'all' || status === currentStatus;
         });
@@ -1279,7 +1315,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 更新发表状态按钮的数量
-    function updateStatusButtonCounts() {
+    function updateStatusButtonCounts(DatePapers) {
 
         // 计算各个领域的数量
         const statusCounts = {
@@ -1288,7 +1324,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'preprint': 0
         };
 
-        allPapersData.forEach(paper => {
+        DatePapers.forEach(paper => {
             if (paper.conference) {
                 statusCounts['published']++;
             }
@@ -1310,9 +1346,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // 筛选和排序论文
     function filterAndSortPapers() {
         console.log('Filtering papers:', { currentStatus, currentCategory, currentField, currentTask, searchTerm, currentSort });
-
+        
+        const startVal = startDateInput.value;
+        const endVal = endDateInput.value;
+        DatePapers = allPapersData.filter(paper => {
+            const pDate = paper.published;
+            return (!startVal || pDate >= startVal) && (!endVal || pDate <= endVal);
+        }
         // 筛选
-        filteredPapers = allPapersData.filter(paper => {
+        filteredPapers = DatePapers.filter(paper => {
             const status = paper.conference ? 'published' : 'preprint';
             const category = paper.category || [];
             const field = paper.field;
@@ -1343,16 +1385,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // 更新task按钮的数量
-        updateTaskButtonCounts();
+        updateTaskButtonCounts(DatePapers);
 
         // 更新研究领域按钮的数量
-        updateFieldButtonCounts();
+        updateFieldButtonCounts(DatePapers);
 
         // 更新论文类型按钮的数量
-        updateCategoryButtonCounts();
+        updateCategoryButtonCounts(DatePapers);
 
         // 更新发表状态按钮的数量
-        updateStatusButtonCounts();
+        updateStatusButtonCounts(DatePapers);
 
         // 更新显示
         if (resultsCount) {
@@ -1376,40 +1418,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 加载更多论文
     function loadMorePapers() {
-        if (isLoading || loadedCount >= filteredPapers.length) {
-            console.log('Skip loading:', { isLoading, loadedCount, total: filteredPapers.length });
-            return;
-        }
-
+        if (isLoading || loadedCount >= filteredPapers.length) return;
         isLoading = true;
 
-        // 第一次加载50个，后续每次10个
         const batchSize = loadedCount === 0 ? initialBatchSize : subsequentBatchSize;
-        console.log(`Loading papers ${loadedCount} to ${loadedCount + batchSize} (batch size: ${batchSize})`);
-
         const endIndex = Math.min(loadedCount + batchSize, filteredPapers.length);
-        const fragment = document.createDocumentFragment();
-
+        
         for (let i = loadedCount; i < endIndex; i++) {
-            const paperHTML = createPaperHTML(filteredPapers[i]);
-            const temp = document.createElement('div');
-            temp.innerHTML = paperHTML;
-            fragment.appendChild(temp.firstElementChild);
+            const paper = filteredPapers[i];
+            const div = document.createElement('div');
+            div.innerHTML = createPaperHTML(paper);
+            papersContainer.appendChild(div.firstElementChild);
         }
 
-        // 移除旧的加载指示器
-        const oldIndicator = document.getElementById('loading-indicator');
-        if (oldIndicator) {
-            oldIndicator.remove();
-        }
-
-        papersContainer.appendChild(fragment);
         loadedCount = endIndex;
         isLoading = false;
 
-        console.log(`Loaded ${endIndex} papers total`);
-
-        // 如果还有更多，设置加载触发器
         if (loadedCount < filteredPapers.length) {
             setupLoadTrigger();
         }
@@ -1449,7 +1473,16 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(indicator);
     }
 
-    // 月份筛选
+    // 时间筛选
+    startDateInput.onchange = () => ensureDataRange(startDateInput.value, endDateInput.value || startDateInput.value);
+    endDateInput.onchange = () => ensureDataRange(startDateInput.value || endDateInput.value, endDateInput.value);
+    
+    resetDateBtn.onclick = () => {
+        startDateInput.value = '';
+        endDateInput.value = '';
+        filterAndSortPapers();
+    };
+    
     monthBtns.forEach(btn => {
         btn.addEventListener('click', async function() {
             console.log('Month button clicked:', this.dataset.month);
@@ -1647,7 +1680,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始化 - 加载数据
     console.log('Initializing...');
-    loadMonthsIndex();
+    init();
 });
 """
 
