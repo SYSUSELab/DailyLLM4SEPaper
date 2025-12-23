@@ -1473,13 +1473,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 时间筛选
-    startDateInput.onchange = () => ensureDataRange(startDateInput.value, endDateInput.value || startDateInput.value);
-    endDateInput.onchange = () => ensureDataRange(startDateInput.value || endDateInput.value, endDateInput.value);
+    startDateInput.onchange = () => {
+        // 如果存在结束时间，且开始时间晚于结束时间
+        if (endDateInput.value && startDateInput.value > endDateInput.value) {
+            // 自动将结束时间设为和开始时间一样
+            endDateInput.value = startDateInput.value;
+        }
+        ensureDataRange(startDateInput.value, endDateInput.value || startDateInput.value);
+    };
+
+    endDateInput.onchange = () => {
+        // 如果存在开始时间，且结束时间早于开始时间
+        if (startDateInput.value && endDateInput.value < startDateInput.value) {
+            // 自动将开始时间设为和结束时间一样
+            startDateInput.value = endDateInput.value;
+        }
+        ensureDataRange(startDateInput.value || endDateInput.value, endDateInput.value);
+    };
     
     resetDateBtn.onclick = () => {
-        startDateInput.value = '';
-        endDateInput.value = '';
-        filterAndSortPapers();
+        // 获取当前本地日期
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份从0开始，需要+1
+        const day = String(now.getDate()).padStart(2, '0');
+        const todayStr = `${year}-${month}-${day}`;
+
+        // 设置开始和结束时间都为今天
+        startDateInput.value = todayStr;
+        endDateInput.value = todayStr;
+
+        // 触发数据加载和筛选
+        ensureDataRange(todayStr, todayStr);
     };
 
     // 发表状态筛选
