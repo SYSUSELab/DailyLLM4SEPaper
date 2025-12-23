@@ -1471,6 +1471,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 设置加载触发器
     function setupLoadTrigger() {
+    
+        // 首先清除所有现有的指示器
+        const existingIndicators = papersContainer.querySelectorAll('.loading-indicator, #loading-indicator');
+        existingIndicators.forEach(indicator => indicator.remove());
+        
+        // 检查是否还有更多论文需要显示
+        const displayedCount = papersContainer.querySelectorAll('.paper-card').length;
+        
+        // 比较已显示数量与筛选后的论文总数
+        if (displayedCount >= filteredPapers.length) {
+            console.log('没有更多论文需要加载了，隐藏指示器');
+            return; // 没有更多论文了
+        }
+        
         let indicator = document.getElementById('loading-indicator');
         if (!indicator) {
             indicator = document.createElement('div');
@@ -1483,15 +1497,15 @@ document.addEventListener('DOMContentLoaded', function() {
             indicator.textContent = '加载更多...';
             papersContainer.appendChild(indicator);
         }
-
+    
         // 创建新的 observer
         if (observer) {
             observer.disconnect();
         }
-
+    
         observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !isLoading) {
                     console.log('Loading more papers (intersection detected)');
                     loadMorePapers();
                 }
@@ -1499,7 +1513,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, {
             rootMargin: '200px'
         });
-
+    
         observer.observe(indicator);
     }
 
