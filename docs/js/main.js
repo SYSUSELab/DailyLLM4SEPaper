@@ -574,43 +574,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 加载更多论文
     function loadMorePapers() {
-        if (isLoading || loadedCount >= filteredPapers.length) return;
+        if (isLoading || loadedCount >= filteredPapers.length) {
+            console.log('Skip loading:', { isLoading, loadedCount, total: filteredPapers.length });
+            return;
+        }
+        
         isLoading = true;
-
+        
+        // 第一次加载50个，后续每次10个
         const batchSize = loadedCount === 0 ? initialBatchSize : subsequentBatchSize;
+        console.log(`Loading papers ${loadedCount} to ${loadedCount + batchSize} (batch size: ${batchSize})`);
+        
         const endIndex = Math.min(loadedCount + batchSize, filteredPapers.length);
+        const fragment = document.createDocumentFragment();
         
         for (let i = loadedCount; i < endIndex; i++) {
-            const paper = filteredPapers[i];
-            const div = document.createElement('div');
-            div.innerHTML = createPaperHTML(paper);
-            papersContainer.appendChild(div.firstElementChild);
+            const paperHTML = createPaperHTML(filteredPapers[i]);
+            const temp = document.createElement('div');
+            temp.innerHTML = paperHTML;
+            fragment.appendChild(temp.firstElementChild);
         }
-
+        
+        // 移除旧的加载指示器
+        const oldIndicator = document.getElementById('loading-indicator');
+        if (oldIndicator) {
+            oldIndicator.remove();
+        }
+        
+        papersContainer.appendChild(fragment);
         loadedCount = endIndex;
         isLoading = false;
-
+        
+        console.log(`Loaded ${endIndex} papers total`);
+        
+        // 如果还有更多，设置加载触发器
         if (loadedCount < filteredPapers.length) {
             setupLoadTrigger();
         }
     }
-
+    
     // 设置加载触发器
     function setupLoadTrigger() {
-    
-        // 首先清除所有现有的指示器
-        const existingIndicators = papersContainer.querySelectorAll('.loading-indicator, #loading-indicator');
-        existingIndicators.forEach(indicator => indicator.remove());
-        
-        // 检查是否还有更多论文需要显示
-        const displayedCount = papersContainer.querySelectorAll('.paper-card').length;
-        
-        // 比较已显示数量与筛选后的论文总数
-        if (displayedCount >= filteredPapers.length) {
-            console.log('没有更多论文需要加载了，隐藏指示器');
-            return; // 没有更多论文了
-        }
-        
         let indicator = document.getElementById('loading-indicator');
         if (!indicator) {
             indicator = document.createElement('div');
@@ -623,15 +627,15 @@ document.addEventListener('DOMContentLoaded', function() {
             indicator.textContent = '加载更多...';
             papersContainer.appendChild(indicator);
         }
-    
+        
         // 创建新的 observer
         if (observer) {
             observer.disconnect();
         }
-    
+        
         observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && !isLoading) {
+                if (entry.isIntersecting) {
                     console.log('Loading more papers (intersection detected)');
                     loadMorePapers();
                 }
@@ -639,7 +643,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, {
             rootMargin: '200px'
         });
-    
+        
         observer.observe(indicator);
     }
 
