@@ -329,7 +329,10 @@ class HTMLGenerator:
 
             # task_html = ''.join([f'<span class="task">{task}</span>' for task in task_list])
             # data_task_attr = ','.join(task_list)  # 用于 data-task 属性
-            tags_html = ''.join([f'<span class="tag">{tag}</span>' for tag in paper.get('tags', [])])
+
+            tags = paper.category + paper.tags
+
+            tags_html = ''.join([f'<span class="tag">{tag}</span>' for tag in tags])
 
             authors = paper.get('authors', [])
             authors_html = ', '.join(authors[:5])
@@ -356,7 +359,7 @@ class HTMLGenerator:
                 code_links_html += f'<a href="{code_links["project"]}" target="_blank" class="btn-link btn-project">🌐 Project</a>'
 
             paper_html = f"""
-            <article class="paper-card" data-tags="{','.join(paper.get('tags', []))}" data-status="{is_published}" data-date="{paper.get('published', '')}">
+            <article class="paper-card" data-tags="{','.join(tags)}" data-status="{is_published}" data-date="{paper.get('published', '')}">
                 <div class="venue-badge {venue_class}">{venue_display}</div>
                 <h2 class="paper-title">
                     <a href="{paper.get('arxiv_url', '')}" target="_blank">{paper.get('title', '')}</a>
@@ -1024,7 +1027,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 生成论文HTML
     function createPaperHTML(paper) {
         // const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
-        const tags = paper.tags ? paper.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+        let tags = paper.category.concat(paper.tags);
+        tags = tags ? tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
 
         // 提取代码链接
         let codeLink = '';
@@ -1045,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const firstCategory = paper.primary_category;
 
         return `
-            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-tags="${paper.tags ? paper.tags.join(',') : ''}" data-paper-id="${paper.id}">
+            <article class="paper-card" data-date="${paper.published}" data-status="${status}" data-tags="${tags ? tags.join(',') : ''}" data-paper-id="${paper.id}">
                 <div class="paper-select">
                     <input type="checkbox" class="paper-checkbox" id="check-${paper.id}" data-paper-id="${paper.id}">
                     <label for="check-${paper.id}"></label>
