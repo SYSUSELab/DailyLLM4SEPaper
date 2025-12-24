@@ -1027,8 +1027,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 生成论文HTML
     function createPaperHTML(paper) {
         // const task = paper.task ? `<span class="task">${paper.task}</span>` : '';
-        let tags = paper.category.concat(paper.tags);
-        tags = tags ? tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+        const tags = paper.category.concat(paper.tags);
+        const tags_html = tags ? tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
 
         // 提取代码链接
         let codeLink = '';
@@ -1070,7 +1070,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         🤖 ${paper.summary}
                     </div>
                     <div class="paper-tags">
-                        ${tags}
+                        ${tags_html}
                     </div>
                     <div class="paper-abstract">
                         <details>
