@@ -3192,5 +3192,162 @@
     "published": "2025-12-22",
     "update_time": "2025-12-22",
     "download_time": "2025-12-24 01:53:43"
+  },
+  {
+    "id": "2512.20482",
+    "title": "SweRank+: Multilingual, Multi-Turn Code Ranking for Software Issue Localization",
+    "abstract": "Maintaining large-scale, multilingual codebases hinges on accurately localizing issues, which requires mapping natural-language error descriptions to the relevant functions that need to be modified. However, existing ranking approaches are often Python-centric and perform a single-pass search over the codebase. This work introduces SweRank+, a framework that couples SweRankMulti, a cross-lingual code ranking tool, with SweRankAgent, an agentic search setup, for iterative, multi-turn reasoning over the code repository. SweRankMulti comprises a code embedding retriever and a listwise LLM reranker, and is trained using a carefully curated large-scale issue localization dataset spanning multiple popular programming languages. SweRankAgent adopts an agentic search loop that moves beyond single-shot localization with a memory buffer to reason and accumulate relevant localization candidates over multiple turns. Our experiments on issue localization benchmarks spanning various languages demonstrate new state-of-the-art performance with SweRankMulti, while SweRankAgent further improves localization over single-pass ranking.",
+    "arxiv_url": "https://arxiv.org/abs/2512.20482",
+    "authors": [
+      "Revanth Gangi Reddy",
+      "Ye Liu",
+      "Wenting Zhao",
+      "JaeHyeok Doo",
+      "Tarun Suresh",
+      "Daniel Lee",
+      "Caiming Xiong",
+      "Yingbo Zhou",
+      "Semih Yavuz",
+      "Shafiq Joty"
+    ],
+    "first_author": "Revanth Gangi Reddy",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "tags": [
+      "Multilingual Code",
+      "Code Ranking",
+      "Retriever-Reranker",
+      "Listwise Reranking",
+      "Agentic Search",
+      "Multi-Turn Reasoning",
+      "Memory Buffer",
+      "Hard-Negative Mining",
+      "Repository-Level Localization"
+    ],
+    "summary": "本文提出SWERANK+，通过构建多语言数据集SWELOCMULTI并结合基于检索-重排序的SWERANKMULTI与具备记忆缓冲的多轮迭代搜索代理SWERANKAGENT，实现跨多种编程语言的高精度问题定位并刷新多项基线性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.20482v1",
+    "published": "2025-12-23",
+    "update_time": "2025-12-23",
+    "download_time": "2025-12-25 01:52:43"
+  },
+  {
+    "id": "2512.20334",
+    "title": "Comment Traps: How Defective Commented-out Code Augment Defects in AI-Assisted Code Generation",
+    "abstract": "With the rapid development of large language models in code generation, AI-powered editors such as GitHub Copilot and Cursor are revolutionizing software development practices. At the same time, studies have identified potential defects in the generated code. Previous research has predominantly examined how code context influences the generation of defective code, often overlooking the impact of defects within commented-out code (CO code). AI coding assistants' interpretation of CO code in prompts affects the code they generate.   This study evaluates how AI coding assistants, GitHub Copilot and Cursor, are influenced by defective CO code. The experimental results show that defective CO code in the context causes AI coding assistants to generate more defective code, reaching up to 58.17 percent. Our findings further demonstrate that the tools do not simply copy the defective code from the context. Instead, they actively reason to complete incomplete defect patterns and continue to produce defective code despite distractions such as incorrect indentation or tags. Even with explicit instructions to ignore the defective CO code, the reduction in defects does not exceed 21.84 percent. These findings underscore the need for improved robustness and security measures in AI coding assistants.",
+    "arxiv_url": "https://arxiv.org/abs/2512.20334",
+    "authors": [
+      "Yuan Huang",
+      "Yukang Zhou",
+      "Xiangping Chen",
+      "Zibin Zheng"
+    ],
+    "first_author": "Yuan Huang",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Commented-out Code",
+      "Defect Amplification",
+      "Prompt Contamination",
+      "Prompt Engineering",
+      "Context Sparsity",
+      "Robustness",
+      "Security and Vulnerabilities",
+      "Human-LLM Interaction"
+    ],
+    "summary": "本研究在大规模真实Python代码库中注入带缺陷的注释掉代码并在GitHub Copilot与Cursor上测试，发现这些注释掉的缺陷代码会显著增加AI生成代码中的缺陷率，且通过提示工程难以完全缓解该问题。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.20334v1",
+    "published": "2025-12-23",
+    "update_time": "2025-12-23",
+    "download_time": "2025-12-25 01:53:26"
+  },
+  {
+    "id": "2512.20387",
+    "title": "Generative Digital Twins: Vision-Language Simulation Models for Executable Industrial Systems",
+    "abstract": "We propose a Vision-Language Simulation Model (VLSM) that unifies visual and textual understanding to synthesize executable FlexScript from layout sketches and natural-language prompts, enabling cross-modal reasoning for industrial simulation systems. To support this new paradigm, the study constructs the first large-scale dataset for generative digital twins, comprising over 120,000 prompt-sketch-code triplets that enable multimodal learning between textual descriptions, spatial structures, and simulation logic. In parallel, three novel evaluation metrics, Structural Validity Rate (SVR), Parameter Match Rate (PMR), and Execution Success Rate (ESR), are proposed specifically for this task to comprehensively evaluate structural integrity, parameter fidelity, and simulator executability. Through systematic ablation across vision encoders, connectors, and code-pretrained language backbones, the proposed models achieve near-perfect structural accuracy and high execution robustness. This work establishes a foundation for generative digital twins that integrate visual reasoning and language understanding into executable industrial simulation systems.",
+    "arxiv_url": "https://arxiv.org/abs/2512.20387",
+    "authors": [
+      "YuChe Hsu",
+      "AnJui Wang",
+      "TsaiChing Ni",
+      "YuanFu Yang"
+    ],
+    "first_author": "YuChe Hsu",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Multimodal code generation",
+      "Layout-to-code",
+      "Simulation DSL synthesis",
+      "Sketch-conditioned synthesis",
+      "Vision-Language Fusion",
+      "Structural Validity",
+      "Execution Robustness",
+      "Parameter Fidelity",
+      "Industrial Digital Twins",
+      "Human-AI Prompting"
+    ],
+    "summary": "本文提出视觉-语言仿真模型（VLSM）并构建首个大规模多模态数据集与专用评测指标，将布局草图和自然语言提示自动生成可执行的仿真脚本以实现工业数字孪生的自动化建模。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.20387v1",
+    "published": "2025-12-23",
+    "update_time": "2025-12-23",
+    "download_time": "2025-12-25 01:55:57"
+  },
+  {
+    "id": "2512.20328",
+    "title": "Toward Explaining Large Language Models in Software Engineering Tasks",
+    "abstract": "Recent progress in Large Language Models (LLMs) has substantially advanced the automation of software engineering (SE) tasks, enabling complex activities such as code generation and code summarization. However, the black-box nature of LLMs remains a major barrier to their adoption in high-stakes and safety-critical domains, where explainability and transparency are vital for trust, accountability, and effective human supervision. Despite increasing interest in explainable AI for software engineering, existing methods lack domain-specific explanations aligned with how practitioners reason about SE artifacts. To address this gap, we introduce FeatureSHAP, the first fully automated, model-agnostic explainability framework tailored to software engineering tasks. Based on Shapley values, FeatureSHAP attributes model outputs to high-level input features through systematic input perturbation and task-specific similarity comparisons, while remaining compatible with both open-source and proprietary LLMs. We evaluate FeatureSHAP on two bi-modal SE tasks: code generation and code summarization. The results show that FeatureSHAP assigns less importance to irrelevant input features and produces explanations with higher fidelity than baseline methods. A practitioner survey involving 37 participants shows that FeatureSHAP helps practitioners better interpret model outputs and make more informed decisions. Collectively, FeatureSHAP represents a meaningful step toward practical explainable AI in software engineering. FeatureSHAP is available at https://github.com/deviserlab/FeatureSHAP.",
+    "arxiv_url": "https://arxiv.org/abs/2512.20328",
+    "authors": [
+      "Antonio Vitale",
+      "Khai-Nguyen Nguyen",
+      "Denys Poshyvanyk",
+      "Rocco Oliveto",
+      "Simone Scalabrino",
+      "Antonio Mastropaolo"
+    ],
+    "first_author": "Antonio Vitale",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Explainability & Interpretability",
+    "task": "Feature-level Attribution",
+    "tags": [
+      "Feature-level Attribution",
+      "Shapley Values",
+      "Model-Agnostic Explanation",
+      "Perturbation-based Attribution",
+      "Prompt Feature Decomposition",
+      "Actionable Explanations",
+      "Faithfulness",
+      "Human-LLM Interaction",
+      "Code Generation",
+      "Code Summarization",
+      "User Study"
+    ],
+    "summary": "本文提出FeatureSHAP，一种基于Shapley值的模型不可知的特征级可解释性框架，通过对语义层面输入特征进行系统性扰动与相似性比较，为代码生成和代码摘要任务提供更具可操作性与高保真性的解释，并通过定量实验与37位从业者调研验证其实用性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.20328v1",
+    "published": "2025-12-23",
+    "update_time": "2025-12-23",
+    "download_time": "2025-12-25 01:56:42"
   }
 ]
