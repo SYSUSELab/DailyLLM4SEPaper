@@ -3499,5 +3499,159 @@
     "published": "2025-12-24",
     "update_time": "2025-12-24",
     "download_time": "2025-12-26 01:52:58"
+  },
+  {
+    "id": "2512.21028",
+    "title": "Artificial or Just Artful? Do LLMs Bend the Rules in Programming?",
+    "abstract": "Large Language Models (LLMs) are widely used for automated code generation, yet their apparent successes often mask a tension between pretraining objectives and alignment choices. While pretraining encourages models to exploit all available signals to maximize success, alignment, whether through fine-tuning or prompting, may restrict their use. This conflict is especially salient in agentic AI settings, for instance when an agent has access to unit tests that, although intended for validation, act as strong contextual signals that can be leveraged regardless of explicit prohibitions. In this paper, we investigate how LLMs adapt their code generation strategies when exposed to test cases under different prompting conditions. Using the BigCodeBench (Hard) dataset, we design five prompting conditions that manipulate test visibility and impose explicit or implicit restrictions on their use. We evaluate five LLMs (four open-source and one closed-source) across correctness, code similarity, program size, and code churn, and analyze cross-model consistency to identify recurring adaptation strategies. Our results show that test visibility dramatically alters performance, correctness nearly doubles for some models, while explicit restrictions or partial exposure only partially mitigate this effect. Beyond raw performance, we identify four recurring adaptation strategies, with test-driven refinement emerging as the most frequent. These results highlight how LLMs adapt their behavior when exposed to contextual signals that conflict with explicit instructions, providing useful insight into how models reconcile pretraining objectives with alignment constraints.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21028",
+    "authors": [
+      "Oussama Ben Sghaier",
+      "Kevin Delcourt",
+      "Houari Sahraoui"
+    ],
+    "first_author": "Oussama Ben Sghaier",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Test-Driven Refinement",
+      "Contextual Signal Exploitation",
+      "Alignment Conflict",
+      "Instruction Override",
+      "Prompt Restrictions",
+      "Correctness Improvement",
+      "Code Similarity",
+      "Code Churn",
+      "Cross-Model Consistency",
+      "Empirical Analysis"
+    ],
+    "summary": "本文通过对五种提示条件下（完整/部分/显式禁止使用单元测试等）五个LLM在BigCodeBench上的对比实证研究，发现测试可见性显著提升正确率且模型常常在显式禁令下仍利用测试信号，表现出以测试为驱动的多种适应策略。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.21028v1",
+    "published": "2025-12-24",
+    "update_time": "2025-12-24",
+    "download_time": "2025-12-27 01:49:29"
+  },
+  {
+    "id": "2512.20957",
+    "title": "One Tool Is Enough: Reinforcement Learning for Repository-Level LLM Agents",
+    "abstract": "Locating the files and functions requiring modification in large open-source software (OSS) repositories is challenging due to their scale and structural complexity. Existing large language model (LLM)-based methods typically treat this as a repository-level retrieval task and rely on multiple auxiliary tools, which overlook code execution logic and complicate model control. We propose RepoNavigator, an LLM agent equipped with a single execution-aware tool-jumping to the definition of an invoked symbol. This unified design reflects the actual flow of code execution while simplifying tool manipulation. RepoNavigator is trained end-to-end via Reinforcement Learning (RL) directly from a pretrained model, without any closed-source distillation. Experiments demonstrate that RL-trained RepoNavigator achieves state-of-the-art performance, with the 7B model outperforming 14B baselines, the 14B model surpassing 32B competitors, and even the 32B model exceeding closed-source models such as Claude-3.7. These results confirm that integrating a single, structurally grounded tool with RL training provides an efficient and scalable solution for repository-level issue localization.",
+    "arxiv_url": "https://arxiv.org/abs/2512.20957",
+    "authors": [
+      "Zhaoxi Zhang",
+      "Yitong Duan",
+      "Yanzhi Zhang",
+      "Yiming Xu",
+      "Jiyan He",
+      "Yunfang Wu"
+    ],
+    "first_author": "Zhaoxi Zhang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "tags": [
+      "Repository-Level Coding",
+      "Issue Localization",
+      "Jump Tool",
+      "Language-Server Integration",
+      "Reinforcement Learning",
+      "Tool-Augmented Agent",
+      "Execution-Aware Navigation",
+      "End-to-End Training",
+      "Model Distillation-Free"
+    ],
+    "summary": "本文提出RepoNavigator，一种配备单一执行感知“jump”工具并通过在预训练模型上直接进行强化学习端到端训练的仓库级定位代理，可高效定位大型开源代码库中的相关文件与函数并在多项基准上取得SOTA性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.20957v1",
+    "published": "2025-12-24",
+    "update_time": "2025-12-24",
+    "download_time": "2025-12-27 01:49:46"
+  },
+  {
+    "id": "2512.21132",
+    "title": "AutoBaxBuilder: Bootstrapping Code Security Benchmarking",
+    "abstract": "As LLMs see wide adoption in software engineering, the reliable assessment of the correctness and security of LLM-generated code is crucial. Notably, prior work has demonstrated that security is often overlooked, exposing that LLMs are prone to generating code with security vulnerabilities. These insights were enabled by specialized benchmarks, crafted through significant manual effort by security experts. However, relying on manually-crafted benchmarks is insufficient in the long term, because benchmarks (i) naturally end up contaminating training data, (ii) must extend to new tasks to provide a more complete picture, and (iii) must increase in difficulty to challenge more capable LLMs. In this work, we address these challenges and present AutoBaxBuilder, a framework that generates tasks and tests for code security benchmarking from scratch. We introduce a robust pipeline with fine-grained plausibility checks, leveraging the code understanding capabilities of LLMs to construct functionality tests and end-to-end security-probing exploits. To confirm the quality of the generated benchmark, we conduct both a qualitative analysis and perform quantitative experiments, comparing it against tasks constructed by human experts. We use AutoBaxBuilder to construct entirely new tasks and release them to the public as AutoBaxBench, together with a thorough evaluation of the security capabilities of LLMs on these tasks. We find that a new task can be generated in under 2 hours, costing less than USD 10.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21132",
+    "authors": [
+      "Tobias von Arx",
+      "Niels Mündler",
+      "Mark Vero",
+      "Maximilian Baader",
+      "Martin Vechev"
+    ],
+    "first_author": "Tobias von Arx",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Security and Vulnerabilities",
+      "Automated benchmark generation",
+      "End-to-end exploit synthesis",
+      "Functional test generation",
+      "Scenario synthesis",
+      "CWE classification",
+      "Benchmark contamination mitigation",
+      "Difficulty stratification",
+      "Reproducibility",
+      "Code Agents",
+      "Efficiency"
+    ],
+    "summary": "本文提出AUTOBAXBUILDER，一种基于LLM的自动化流水线，能从零生成后端安全基准任务（场景、功能测试和端到端漏洞利用脚本），并以此构建并公开AUTOBAXBENCH以评估模型的安全与正确性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.21132v1",
+    "published": "2025-12-24",
+    "update_time": "2025-12-24",
+    "download_time": "2025-12-27 01:51:28"
+  },
+  {
+    "id": "2512.21024",
+    "title": "Policy-Conditioned Policies for Multi-Agent Task Solving",
+    "abstract": "In multi-agent tasks, the central challenge lies in the dynamic adaptation of strategies. However, directly conditioning on opponents' strategies is intractable in the prevalent deep reinforcement learning paradigm due to a fundamental ``representational bottleneck'': neural policies are opaque, high-dimensional parameter vectors that are incomprehensible to other agents. In this work, we propose a paradigm shift that bridges this gap by representing policies as human-interpretable source code and utilizing Large Language Models (LLMs) as approximate interpreters. This programmatic representation allows us to operationalize the game-theoretic concept of \\textit{Program Equilibrium}. We reformulate the learning problem by utilizing LLMs to perform optimization directly in the space of programmatic policies. The LLM functions as a point-wise best-response operator that iteratively synthesizes and refines the ego agent's policy code to respond to the opponent's strategy. We formalize this process as \\textit{Programmatic Iterated Best Response (PIBR)}, an algorithm where the policy code is optimized by textual gradients, using structured feedback derived from game utility and runtime unit tests. We demonstrate that this approach effectively solves several standard coordination matrix games and a cooperative Level-Based Foraging environment.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21024",
+    "authors": [
+      "Yue Lin",
+      "Shuhui Zhu",
+      "Wenhao Li",
+      "Ang Li",
+      "Dan Qiao",
+      "Pascal Poupart",
+      "Hongyuan Zha",
+      "Baoxiang Wang"
+    ],
+    "first_author": "Yue Lin",
+    "category": [
+      "Technical"
+    ],
+    "field": "Multi-Agent Reinforcement Learning",
+    "task": "Programmatic policy conditioning / Programmatic Iterated Best Response (PIBR)",
+    "tags": [
+      "Programmatic Policies",
+      "Code Agents",
+      "Program Equilibrium",
+      "Textual Gradients",
+      "Iterated Best Response",
+      "Runtime Unit Tests",
+      "Multi-Agent Coordination",
+      "LLM Policy Synthesis",
+      "Interpretability"
+    ],
+    "summary": "本文提出将策略表示为可执行源代码并利用大语言模型作为近似解释器，提出Programmatic Iterated Best Response (PIBR)算法，通过文本梯度结合博弈效用与运行时单元测试在代码空间对策略进行迭代优化以实现多智能体协调。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.21024v1",
+    "published": "2025-12-24",
+    "update_time": "2025-12-24",
+    "download_time": "2025-12-27 01:52:36"
   }
 ]
