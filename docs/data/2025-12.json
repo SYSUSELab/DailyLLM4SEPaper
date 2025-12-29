@@ -3802,5 +3802,156 @@
     "published": "2025-12-23",
     "update_time": "2025-12-23",
     "download_time": "2025-12-28 02:09:42"
+  },
+  {
+    "id": "2512.22113",
+    "title": "Agentic Structured Graph Traversal for Root Cause Analysis of Code-related Incidents in Cloud Applications",
+    "abstract": "Cloud incidents pose major operational challenges in production, with unresolved production cloud incidents cost on average over $2M per hour. Prior research identifies code- and configuration-related issues as the predominant category of root causes in cloud incidents. This paper introduces PRAXIS, an orchestrator that manages and deploys an agentic workflow for diagnosing code- and configuration-caused cloud incidents. PRAXIS employs an LLM-driven structured traversal over two types of graph: (1) a service dependency graph (SDG) that captures microservice-level dependencies; and (2) a hammock-block program dependence graph (PDG) that captures code-level dependencies for each microservice. Together, these graphs encode microservice- and code-level dependencies and the LLM acts as a traversal policy over these graphs, moving between services and code dependencies to localize and explain failures. Compared to state-of-the-art ReAct baselines, PRAXIS improves RCA accuracy by up to 3.1x while reducing token consumption by 3.8x. PRAXIS is demonstrated on a set of 30 comprehensive real-world incidents that is being compiled into an RCA benchmark.",
+    "arxiv_url": "https://arxiv.org/abs/2512.22113",
+    "authors": [
+      "Shengkun Cui",
+      "Rahul Krishna",
+      "Saurabh Jha",
+      "Ravishankar K. Iyer"
+    ],
+    "first_author": "Shengkun Cui",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "SRE & Incident Diagnosis",
+    "task": "Root Cause Analysis",
+    "tags": [
+      "Agentic Orchestration",
+      "Cross-SDG-PDG Traversal",
+      "Service Dependency Graph",
+      "Hammock-block PDG",
+      "Structure-aware Reasoning",
+      "Observability Integration",
+      "Root-Cause Identification",
+      "Token Efficiency"
+    ],
+    "summary": "本文提出PRAXIS，一种基于LLM驱动的结构化图遍历代理化编排器，通过联合利用微服务依赖图和hammock块程序依赖图对云应用中代码与配置引起的故障进行跨层根因分析，在30个真实场景基准上显著提高诊断准确率并降低token消耗。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.22113v1",
+    "published": "2025-12-26",
+    "update_time": "2025-12-26",
+    "download_time": "2025-12-29 02:01:25"
+  },
+  {
+    "id": "2512.21818",
+    "title": "Analyzing Code Injection Attacks on LLM-based Multi-Agent Systems in Software Development",
+    "abstract": "Agentic AI and Multi-Agent Systems are poised to dominate industry and society imminently. Powered by goal-driven autonomy, they represent a powerful form of generative AI, marking a transition from reactive content generation into proactive multitasking capabilities. As an exemplar, we propose an architecture of a multi-agent system for the implementation phase of the software engineering process. We also present a comprehensive threat model for the proposed system. We demonstrate that while such systems can generate code quite accurately, they are vulnerable to attacks, including code injection. Due to their autonomous design and lack of humans in the loop, these systems cannot identify and respond to attacks by themselves. This paper analyzes the vulnerability of multi-agent systems and concludes that the coder-reviewer-tester architecture is more resilient than both the coder and coder-tester architectures, but is less efficient at writing code. We find that by adding a security analysis agent, we mitigate the loss in efficiency while achieving even better resiliency. We conclude by demonstrating that the security analysis agent is vulnerable to advanced code injection attacks, showing that embedding poisonous few-shot examples in the injected code can increase the attack success rate from 0% to 71.95%.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21818",
+    "authors": [
+      "Brian Bowers",
+      "Smita Khapre",
+      "Jugal Kalita"
+    ],
+    "first_author": "Brian Bowers",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Maintenance",
+    "task": "Code Review",
+    "tags": [
+      "Code Agents",
+      "Code Injection",
+      "Few-shot Poisoning",
+      "Security Analysis Agent",
+      "Threat Modeling",
+      "Architectural Resilience",
+      "Adversarial Robustness",
+      "Data Exfiltration"
+    ],
+    "summary": "本文提出并评估了用于软件实现阶段的多代理系统架构和相应的威胁模型，展示在代码注入攻击下不同架构（coder、coder-tester、coder-reviewer-tester）在安全性与效率间的权衡，并提出加入安全分析代理作为缓解措施但同时揭示该代理可被嵌入有害少样本示例的高级注入攻击显著绕过（成功率从0%提升到71.95%）。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.21818v1",
+    "published": "2025-12-26",
+    "update_time": "2025-12-26",
+    "download_time": "2025-12-29 02:01:53"
+  },
+  {
+    "id": "2512.20861",
+    "title": "Memory-Efficient Acceleration of Block Low-Rank Foundation Models on Resource Constrained GPUs",
+    "abstract": "Recent advances in transformer-based foundation models have made them the default choice for many tasks, but their rapidly growing size makes fitting a full model on a single GPU increasingly difficult and their computational cost prohibitive. Block low-rank (BLR) compression techniques address this challenge by learning compact representations of weight matrices. While traditional low-rank (LR) methods often incur sharp accuracy drops, BLR approaches such as Monarch and BLAST can better capture the underlying structure, thus preserving accuracy while reducing computations and memory footprints. In this work, we use roofline analysis to show that, although BLR methods achieve theoretical savings and practical speedups for single-token inference, multi-token inference often becomes memory-bound in practice, increasing latency despite compiler-level optimizations in PyTorch. To address this, we introduce custom Triton kernels with partial fusion and memory layout optimizations for both Monarch and BLAST. On memory-constrained NVIDIA GPUs such as Jetson Orin Nano and A40, our kernels deliver up to $3.76\\times$ speedups and $3\\times$ model size compression over PyTorch dense baselines using CUDA backend and compiler-level optimizations, while supporting various models including Llama-7/1B, GPT2-S, DiT-XL/2, and ViT-B. Our code is available at https://github.com/pabillam/mem-efficient-blr .",
+    "arxiv_url": "https://arxiv.org/abs/2512.20861",
+    "authors": [
+      "Pierre Abillama",
+      "Changwoo Lee",
+      "Juechu Dong",
+      "David Blaauw",
+      "Dennis Sylvester",
+      "Hun-Seok Kim"
+    ],
+    "first_author": "Pierre Abillama",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Deployment & Systems",
+    "task": "Inference Acceleration & Memory Optimization",
+    "tags": [
+      "Block Low-Rank",
+      "Triton Kernels",
+      "Roofline Analysis",
+      "Memory Layout Optimization",
+      "Partial Fusion",
+      "Inference Acceleration",
+      "Edge GPUs",
+      "Model Compression",
+      "Intermediate Data Movement",
+      "Hardware-aware Optimization"
+    ],
+    "summary": "本文通过屋顶线分析揭示了块低秩（BLR）分解在多令牌推理中因中间数据移动而变为内存瓶颈，并提出基于Triton的部分融合与内存布局优化内核，在受限GPU上显著加速并压缩模型。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.20861v1",
+    "published": "2025-12-24",
+    "update_time": "2025-12-24",
+    "download_time": "2025-12-29 02:07:00"
+  },
+  {
+    "id": "2512.20823",
+    "title": "NotSoTiny: A Large, Living Benchmark for RTL Code Generation",
+    "abstract": "LLMs have shown early promise in generating RTL code, yet evaluating their capabilities in realistic setups remains a challenge. So far, RTL benchmarks have been limited in scale, skewed toward trivial designs, offering minimal verification rigor, and remaining vulnerable to data contamination. To overcome these limitations and to push the field forward, this paper introduces NotSoTiny, a benchmark that assesses LLM on the generation of structurally rich and context-aware RTL. Built from hundreds of actual hardware designs produced by the Tiny Tapeout community, our automated pipeline removes duplicates, verifies correctness and periodically incorporates new designs to mitigate contamination, matching Tiny Tapeout release schedule. Evaluation results show that NotSoTiny tasks are more challenging than prior benchmarks, emphasizing its effectiveness in overcoming current limitations of LLMs applied to hardware design, and in guiding the improvement of such promising technology.",
+    "arxiv_url": "https://arxiv.org/abs/2512.20823",
+    "authors": [
+      "Razine Moundir Ghorab",
+      "Emanuele Parisi",
+      "Cristian Gutierrez",
+      "Miquel Alberti-Binimelis",
+      "Miquel Moreto",
+      "Dario Garcia-Gasulla",
+      "Gokcen Kestor"
+    ],
+    "first_author": "Razine Moundir Ghorab",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "RTL Code Generation",
+      "Contextual Module Completion",
+      "Formal Equivalence Checking",
+      "Simulation-based Evaluation",
+      "Temporal Deduplication",
+      "Near-duplicate Detection",
+      "MinHash-LSH",
+      "Contamination Mitigation",
+      "Structural Complexity",
+      "Living Benchmark"
+    ],
+    "summary": "本文提出NotSoTiny——一个基于Tiny Tapeout真实硬件设计、经过去重与周期性刷新以降低数据污染的规模化RTL模块补全基准，并结合仿真与形式等价检查提供严格可扩展的评测流程以衡量LLM在复杂结构化硬件代码生成中的表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.20823v1",
+    "published": "2025-12-23",
+    "update_time": "2025-12-23",
+    "download_time": "2025-12-29 02:07:41"
   }
 ]
