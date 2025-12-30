@@ -3953,5 +3953,156 @@
     "published": "2025-12-23",
     "update_time": "2025-12-23",
     "download_time": "2025-12-29 02:07:41"
+  },
+  {
+    "id": "2512.21757",
+    "title": "How Do Agents Perform Code Optimization? An Empirical Study",
+    "abstract": "Performance optimization is a critical yet challenging aspect of software development, often requiring a deep understanding of system behavior, algorithmic tradeoffs, and careful code modifications. Although recent advances in AI coding agents have accelerated code generation and bug fixing, little is known about how these agents perform on real-world performance optimization tasks. We present the first empirical study comparing agent- and human-authored performance optimization commits, analyzing 324 agent-generated and 83 human-authored PRs from the AIDev dataset across adoption, maintainability, optimization patterns, and validation practices. We find that AI-authored performance PRs are less likely to include explicit performance validation than human-authored PRs (45.7\\% vs. 63.6\\%, $p=0.007$). In addition, AI-authored PRs largely use the same optimization patterns as humans. We further discuss limitations and opportunities for advancing agentic code optimization.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21757",
+    "authors": [
+      "Huiyun Peng",
+      "Antonio Zhong",
+      "Ricardo Andrés Calvo Méndez",
+      "Kelechi G. Kalu",
+      "James C. Davis"
+    ],
+    "first_author": "Huiyun Peng",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Performance validation",
+      "Optimization patterns",
+      "LLM-assisted annotation",
+      "Catalog refinement",
+      "Agent-human comparison",
+      "Merge/adoption metrics",
+      "Static reasoning",
+      "Profiling-based validation"
+    ],
+    "summary": "本文基于 AIDev 数据集实证分析了 407 个性能相关 PR（含 324 个 AI 代理生成的 PR），比较了 AI 与人类在性能优化模式、验证实践、合并率与可维护性上的差异，发现 AI 提交虽然采用与人类相似的优化模式，但较少提供性能验证且更依赖静态推理，并据此扩展并修订了性能优化模式目录。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.21757v1",
+    "published": "2025-12-25",
+    "update_time": "2025-12-25",
+    "download_time": "2025-12-30 01:53:39"
+  },
+  {
+    "id": "2512.21681",
+    "title": "Exploring the Security Threats of Retriever Backdoors in Retrieval-Augmented Code Generation",
+    "abstract": "Retrieval-Augmented Code Generation (RACG) is increasingly adopted to enhance Large Language Models for software development, yet its security implications remain dangerously underexplored. This paper conducts the first systematic exploration of a critical and stealthy threat: backdoor attacks targeting the retriever component, which represents a significant supply-chain vulnerability. It is infeasible to assess this threat realistically, as existing attack methods are either too ineffective to pose a real danger or are easily detected by state-of-the-art defense mechanisms spanning both latent-space analysis and token-level inspection, which achieve consistently high detection rates. To overcome this barrier and enable a realistic analysis, we first developed VenomRACG, a new class of potent and stealthy attack that serves as a vehicle for our investigation. Its design makes poisoned samples statistically indistinguishable from benign code, allowing the attack to consistently maintain low detectability across all evaluated defense mechanisms. Armed with this capability, our exploration reveals a severe vulnerability: by injecting vulnerable code equivalent to only 0.05% of the entire knowledge base size, an attacker can successfully manipulate the backdoored retriever to rank the vulnerable code in its top-5 results in 51.29% of cases. This translates to severe downstream harm, causing models like GPT-4o to generate vulnerable code in over 40% of targeted scenarios, while leaving the system's general performance intact. Our findings establish that retriever backdooring is not a theoretical concern but a practical threat to the software development ecosystem that current defenses are blind to, highlighting the urgent need for robust security measures.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21681",
+    "authors": [
+      "Tian Li",
+      "Bo Lin",
+      "Shangwen Wang",
+      "Yusong Tan"
+    ],
+    "first_author": "Tian Li",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Retriever Backdoor",
+      "Supply-Chain Attack",
+      "Semantic Disruption Injection",
+      "Vulnerability-Aware Trigger",
+      "Syntax-Semantic Injection",
+      "Stealthy Poisoning",
+      "Defense Evasion",
+      "Transferability",
+      "Downstream Vulnerability Induction",
+      "ASR Evaluation"
+    ],
+    "summary": "本文提出VenomRACG，一种针对检索器的高效且难以检测的后门攻击，通过语义扰动注入与脆弱性感知触发器在极少量投毒样本下使检索器优先返回易受攻击代码并诱导下游生成器输出脆弱代码，且能规避现有检测方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.21681v1",
+    "published": "2025-12-25",
+    "update_time": "2025-12-25",
+    "download_time": "2025-12-30 01:53:55"
+  },
+  {
+    "id": "2512.21613",
+    "title": "AMS-IO-Bench and AMS-IO-Agent: Benchmarking and Structured Reasoning for Analog and Mixed-Signal Integrated Circuit Input/Output Design",
+    "abstract": "In this paper, we propose AMS-IO-Agent, a domain-specialized LLM-based agent for structure-aware input/output (I/O) subsystem generation in analog and mixed-signal (AMS) integrated circuits (ICs). The central contribution of this work is a framework that connects natural language design intent with industrial-level AMS IC design deliverables. AMS-IO-Agent integrates two key capabilities: (1) a structured domain knowledge base that captures reusable constraints and design conventions; (2) design intent structuring, which converts ambiguous user intent into verifiable logic steps using JSON and Python as intermediate formats. We further introduce AMS-IO-Bench, a benchmark for wirebond-packaged AMS I/O ring automation. On this benchmark, AMS-IO-Agent achieves over 70\\% DRC+LVS pass rate and reduces design turnaround time from hours to minutes, outperforming the baseline LLM. Furthermore, an agent-generated I/O ring was fabricated and validated in a 28 nm CMOS tape-out, demonstrating the practical effectiveness of the approach in real AMS IC design flows. To our knowledge, this is the first reported human-agent collaborative AMS IC design in which an LLM-based agent completes a nontrivial subtask with outputs directly used in silicon.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21613",
+    "authors": [
+      "Zhishuai Zhang",
+      "Xintian Li",
+      "Shilong Liu",
+      "Aodong Zhang",
+      "Lu Jie",
+      "Nan Sun"
+    ],
+    "first_author": "Zhishuai Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Code Agents",
+      "Intent Graph",
+      "EDA Script Generation",
+      "I/O Ring Automation",
+      "Domain-Specific Knowledge Base",
+      "Design Intent Structuring",
+      "Constraint Resolution",
+      "DRC+LVS Validation",
+      "Tape-out Validation",
+      "Human-Agent Collaboration"
+    ],
+    "summary": "本文提出AMS-IO-Agent，一种结合领域知识库与结构化设计意图推理的LLM智能体，并构建AMS-IO-Bench基准，实现自动生成可用于工业流程的AMS I/O环的可执行EDA脚本与版图，在28nm芯片流片中验证并取得70%+ DRC/LVS通过率与显著缩短设计周期。",
+    "quality": "High",
+    "conference": "AAAI 2026",
+    "pdf_url": "https://arxiv.org/pdf/2512.21613v1",
+    "published": "2025-12-25",
+    "update_time": "2025-12-25",
+    "download_time": "2025-12-30 01:58:59"
+  },
+  {
+    "id": "2512.21540",
+    "title": "Leash: Adaptive Length Penalty and Reward Shaping for Efficient Large Reasoning Model",
+    "abstract": "Existing approaches typically rely on fixed length penalties, but such penalties are hard to tune and fail to adapt to the evolving reasoning abilities of LLMs, leading to suboptimal trade-offs between accuracy and conciseness. To address this challenge, we propose Leash (adaptive LEngth penAlty and reward SHaping), a reinforcement learning framework for efficient reasoning in LLMs. We formulate length control as a constrained optimization problem and employ a Lagrangian primal-dual method to dynamically adjust the penalty coefficient. When generations exceed the target length, the penalty is intensified; when they are shorter, it is relaxed. This adaptive mechanism guides models toward producing concise reasoning without sacrificing task performance. Experiments on Deepseek-R1-Distill-Qwen-1.5B and Qwen3-4B-Thinking-2507 show that Leash reduces the average reasoning length by 60% across diverse tasks - including in-distribution mathematical reasoning and out-of-distribution domains such as coding and instruction following - while maintaining competitive performance. Our work thus presents a practical and effective paradigm for developing controllable and efficient LLMs that balance reasoning capabilities with computational budgets.",
+    "arxiv_url": "https://arxiv.org/abs/2512.21540",
+    "authors": [
+      "Yanhao Li",
+      "Lu Ma",
+      "Jiaran Zhang",
+      "Lexiang Tang",
+      "Wentao Zhang",
+      "Guibo Luo"
+    ],
+    "first_author": "Yanhao Li",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Efficiency & Control",
+    "task": "Reasoning Length Control",
+    "tags": [
+      "Length Control",
+      "Primal-Dual Optimization",
+      "One-Sided Penalty",
+      "Reward Shaping",
+      "Chain-of-Thought Compression",
+      "Constraint RL",
+      "Efficiency",
+      "Training Stability"
+    ],
+    "summary": "本文提出LEASH，一种基于拉格朗日对偶的自适应长度惩罚与奖励塑形的强化学习方法，通过动态调整罚项并采用单向惩罚在训练中控制推理链长度，从而在不牺牲任务性能的前提下显著减少生成长度并提升推理效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.21540v1",
+    "published": "2025-12-25",
+    "update_time": "2025-12-25",
+    "download_time": "2025-12-30 02:00:03"
   }
 ]
