@@ -4104,5 +4104,155 @@
     "published": "2025-12-25",
     "update_time": "2025-12-25",
     "download_time": "2025-12-30 02:00:03"
+  },
+  {
+    "id": "2512.23385",
+    "title": "Securing the AI Supply Chain: What Can We Learn From Developer-Reported Security Issues and Solutions of AI Projects?",
+    "abstract": "The rapid growth of Artificial Intelligence (AI) models and applications has led to an increasingly complex security landscape. Developers of AI projects must contend not only with traditional software supply chain issues but also with novel, AI-specific security threats. However, little is known about what security issues are commonly encountered and how they are resolved in practice. This gap hinders the development of effective security measures for each component of the AI supply chain. We bridge this gap by conducting an empirical investigation of developer-reported issues and solutions, based on discussions from Hugging Face and GitHub. To identify security-related discussions, we develop a pipeline that combines keyword matching with an optimal fine-tuned distilBERT classifier, which achieved the best performance in our extensive comparison of various deep learning and large language models. This pipeline produces a dataset of 312,868 security discussions, providing insights into the security reporting practices of AI applications and projects. We conduct a thematic analysis of 753 posts sampled from our dataset and uncover a fine-grained taxonomy of 32 security issues and 24 solutions across four themes: (1) System and Software, (2) External Tools and Ecosystem, (3) Model, and (4) Data. We reveal that many security issues arise from the complex dependencies and black-box nature of AI components. Notably, challenges related to Models and Data often lack concrete solutions. Our insights can offer evidence-based guidance for developers and researchers to address real-world security threats across the AI supply chain.",
+    "arxiv_url": "https://arxiv.org/abs/2512.23385",
+    "authors": [
+      "The Anh Nguyen",
+      "Triet Huynh Minh Le",
+      "M. Ali Babar"
+    ],
+    "first_author": "The Anh Nguyen",
+    "category": [
+      "Empirical",
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Security and Vulnerabilities",
+      "AI Supply Chain",
+      "Developer Discussions",
+      "Learning-based Classification",
+      "Security Taxonomy",
+      "Dependency Vulnerabilities",
+      "Data Leakage",
+      "Community-driven Detection"
+    ],
+    "summary": "本文构建关键词+学习型分类器的检测管道，从 Hugging Face 与 GitHub 抽取并标注了约312,868条安全相关讨论，基于753条抽样帖进行主题分析，提出覆盖系统/工具/模型/数据四大类的32类安全问题与24类解决方案并开放复现包，为AI供应链安全提供实证证据与实践建议。",
+    "quality": "High",
+    "conference": "IEEE/ACM International Conference on Software Engineering (ICSE 2026)",
+    "pdf_url": "https://arxiv.org/pdf/2512.23385v1",
+    "published": "2025-12-29",
+    "update_time": "2025-12-29",
+    "download_time": "2026-01-01 02:04:42"
+  },
+  {
+    "id": "2512.23327",
+    "title": "An Empirical Study of Generative AI Adoption in Software Engineering",
+    "abstract": "Context. GenAI tools are being increasingly adopted by practitioners in SE, promising support for several SE activities. Despite increasing adoption, we still lack empirical evidence on how GenAI is used in practice, the benefits it provides, the challenges it introduces, and its broader organizational and societal implications. Objective. This study aims to provide an overview of the status of GenAI adoption in SE. It investigates the status of GenAI adoption, associated benefits and challenges, institutionalization of tools and techniques, and anticipated long term impacts on SE professionals and the community. Results. The results indicate a wide adoption of GenAI tools and how they are deeply integrated into daily SE work, particularly for implementation, verification and validation, personal assistance, and maintenance-related tasks. Practitioners report substantial benefits, most notably reduction in cycle time, quality improvements, enhanced support in knowledge work, and productivity gains. However, objective measurement of productivity and quality remains limited in practice. Significant challenges persist, including incorrect or unreliable outputs, prompt engineering difficulties, validation overhead, security and privacy concerns, and risks of overreliance. Institutionalization of tools and techniques seems to be common, but it varies considerably, with a strong focus on tool access and less emphasis on training and governance. Practitioners expect GenAI to redefine rather than replace their roles, while expressing moderate concern about job market contraction and skill shifts.",
+    "arxiv_url": "https://arxiv.org/abs/2512.23327",
+    "authors": [
+      "Görkem Giray",
+      "Onur Demirörs",
+      "Marcos Kalinowski",
+      "Daniel Mendez"
+    ],
+    "first_author": "Görkem Giray",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Adoption & Socio-technical",
+    "task": "GenAI adoption and organizational impact",
+    "tags": [
+      "Human-LLM Interaction",
+      "Productivity Gains",
+      "Cycle Time Reduction",
+      "Quality Improvement",
+      "Validation Overhead",
+      "Prompt Engineering",
+      "Security and Privacy",
+      "Tool Institutionalization",
+      "Governance",
+      "Overreliance",
+      "Job Market Impact",
+      "Empirical Survey"
+    ],
+    "summary": "本文基于对来自37个国家的204名软件工程从业者的问卷调查，实证分析了生成式AI在软件工程中的采用现状、带来的效益与挑战、工具制度化程度及对职业与社区的长期影响。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.23327v1",
+    "published": "2025-12-29",
+    "update_time": "2025-12-29",
+    "download_time": "2026-01-01 02:05:01"
+  },
+  {
+    "id": "2512.23631",
+    "title": "BOAD: Discovering Hierarchical Software Engineering Agents via Bandit Optimization",
+    "abstract": "Large language models (LLMs) have shown strong reasoning and coding capabilities, yet they struggle to generalize to real-world software engineering (SWE) problems that are long-horizon and out of distribution. Existing systems often rely on a single agent to handle the entire workflow-interpreting issues, navigating large codebases, and implementing fixes-within one reasoning chain. Such monolithic designs force the model to retain irrelevant context, leading to spurious correlations and poor generalization. Motivated by how human engineers decompose complex problems, we propose structuring SWE agents as orchestrators coordinating specialized sub-agents for sub-tasks such as localization, editing, and validation. The challenge lies in discovering effective hierarchies automatically: as the number of sub-agents grows, the search space becomes combinatorial, and it is difficult to attribute credit to individual sub-agents within a team. We address these challenges by formulating hierarchy discovery as a multi-armed bandit (MAB) problem, where each arm represents a candidate sub-agent and the reward measures its helpfulness when collaborating with others. This framework, termed Bandit Optimization for Agent Design (BOAD), enables efficient exploration of sub-agent designs under limited evaluation budgets. On SWE-bench-Verified, BOAD outperforms single-agent and manually designed multi-agent systems. On SWE-bench-Live, featuring more recent and out-of-distribution issues, our 36B system ranks second on the leaderboard at the time of evaluation, surpassing larger models such as GPT-4 and Claude. These results demonstrate that automatically discovered hierarchical multi-agent systems significantly improve generalization on challenging long-horizon SWE tasks. Code is available at https://github.com/iamxjy/BOAD-SWE-Agent.",
+    "arxiv_url": "https://arxiv.org/abs/2512.23631",
+    "authors": [
+      "Iris Xu",
+      "Guangtao Zeng",
+      "Zexue He",
+      "Charles Jin",
+      "Aldo Pareja",
+      "Dan Gutfreund",
+      "Chuang Gan",
+      "Zhang-Wei Hong"
+    ],
+    "first_author": "Iris Xu",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Hierarchical Multi-Agent Orchestration",
+    "tags": [
+      "Code Agents",
+      "Hierarchical Agents",
+      "Bandit Optimization",
+      "Helpfulness Estimation",
+      "LLM-as-Judge",
+      "Multi-Agent Coordination",
+      "Orchestrator",
+      "Sub-agent Specialization",
+      "Sample Efficiency",
+      "Long-Horizon Generalization"
+    ],
+    "summary": "本文提出BOAD，一种将多臂赌博机用于自动发现分层软件工程多智能体体系结构的方法，通过评估子智能体的“有用性”并高效组合以提升在长时程、分布外的软件工程问题上的泛化能力，且在实际基准上取得优异成绩。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.23631v1",
+    "published": "2025-12-29",
+    "update_time": "2025-12-29",
+    "download_time": "2026-01-01 02:05:32"
+  },
+  {
+    "id": "2512.23557",
+    "title": "Toward Trustworthy Agentic AI: A Multimodal Framework for Preventing Prompt Injection Attacks",
+    "abstract": "Powerful autonomous systems, which reason, plan, and converse using and between numerous tools and agents, are made possible by Large Language Models (LLMs), Vision-Language Models (VLMs), and new agentic AI systems, like LangChain and GraphChain. Nevertheless, this agentic environment increases the probability of the occurrence of multimodal prompt injection (PI) attacks, in which concealed or malicious instructions carried in text, pictures, metadata, or agent-to-agent messages may spread throughout the graph and lead to unintended behavior, a breach of policy, or corruption of state. In order to mitigate these risks, this paper suggests a Cross-Agent Multimodal Provenanc- Aware Defense Framework whereby all the prompts, either user-generated or produced by upstream agents, are sanitized and all the outputs generated by an LLM are verified independently before being sent to downstream nodes. This framework contains a Text sanitizer agent, visual sanitizer agent, and output validator agent all coordinated by a provenance ledger, which keeps metadata of modality, source, and trust level throughout the entire agent network. This architecture makes sure that agent-to-agent communication abides by clear trust frames such such that injected instructions are not propagated down LangChain or GraphChain-style-workflows. The experimental assessments show that multimodal injection detection accuracy is significantly enhanced, and the cross-agent trust leakage is minimized, as well as, agentic execution pathways become stable. The framework, which expands the concept of provenance tracking and validation to the multi-agent orchestration, enhances the establishment of secure, understandable and reliable agentic AI systems.",
+    "arxiv_url": "https://arxiv.org/abs/2512.23557",
+    "authors": [
+      "Toqeer Ali Syed",
+      "Mishal Ateeq Almutairi",
+      "Mahmoud Abdel Moaty"
+    ],
+    "first_author": "Toqeer Ali Syed",
+    "category": [
+      "Technical"
+    ],
+    "field": "LLM Security & Safety",
+    "task": "Prompt Injection Defense",
+    "tags": [
+      "Multimodal Sanitization",
+      "Provenance Tracking",
+      "Cross-Agent Validation",
+      "Output Validation",
+      "Trust Scoring",
+      "Zero-Trust Agent Network",
+      "Visual Prompt Injection Detection",
+      "Agentic AI Security"
+    ],
+    "summary": "本文提出了一个跨代理的多模态可溯源防御框架，通过文本与图像清洗器、信任评分与可溯源账本以及输出验证器，防止提示注入在LangChain/GraphChain式多代理管道中传播并提升系统安全性与执行稳定性。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.23557v1",
+    "published": "2025-12-29",
+    "update_time": "2025-12-29",
+    "download_time": "2026-01-01 02:06:13"
   }
 ]
