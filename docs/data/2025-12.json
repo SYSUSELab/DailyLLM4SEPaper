@@ -4811,5 +4811,75 @@
     "published": "2025-12-31",
     "update_time": "2025-12-31",
     "download_time": "2026-01-04 02:10:30"
+  },
+  {
+    "id": "2512.24545",
+    "title": "More Than Bits: Multi-Envelope Double Binary Factorization for Extreme Quantization",
+    "abstract": "For extreme low-bit quantization of large language models (LLMs), Double Binary Factorization (DBF) is attractive as it enables efficient inference without sacrificing accuracy. However, the scaling parameters of DBF are too restrictive; after factoring out signs, all rank components share the same magnitude profile, resulting in performance saturation. We propose Multi-envelope DBF (MDBF), which retains a shared pair of 1-bit sign bases but replaces the single envelope with a rank-$l$ envelope. By sharing sign matrices among envelope components, MDBF effectively maintains a binary carrier and utilizes the limited memory budget for magnitude expressiveness. We also introduce a closed-form initialization and an alternating refinement method to optimize MDBF. Across the LLaMA and Qwen families, MDBF enhances perplexity and zero-shot accuracy over previous binary formats at matched bits per weight while preserving the same deployment-friendly inference primitive.",
+    "arxiv_url": "https://arxiv.org/abs/2512.24545",
+    "authors": [
+      "Yuma Ichikawa",
+      "Yoshihiko Fujisawa",
+      "Yudai Fujimoto",
+      "Akira Sakai",
+      "Katsuki Fujisawa"
+    ],
+    "first_author": "Yuma Ichikawa",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Compression & Quantization",
+    "task": "Extreme Low-bit Weight Quantization",
+    "tags": [
+      "Double Binary Factorization",
+      "Multi-Envelope",
+      "Envelope Rank",
+      "ADMM Refinement",
+      "Closed-form Initialization",
+      "Per-layer PTQ",
+      "Binary Inference Primitive",
+      "Reconstruction Error Reduction"
+    ],
+    "summary": "本文提出 Multi-Envelope DBF（MDBF），在保持共享二值符号基和部署友好二值推理路径的同时引入多重幅度包络，并通过闭式初始化与交替 ADMM 优化显著提升极低比特量化下的重建精度、困惑度和零射准确率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.24545v1",
+    "published": "2025-12-31",
+    "update_time": "2025-12-31",
+    "download_time": "2026-01-05 02:16:25"
+  },
+  {
+    "id": "2512.24159",
+    "title": "Developing controlled natural language for formal specification patterns using AI assistants",
+    "abstract": "Using an AI assistant, we developed a method for systematically constructing controlled natural language for requirements based on formal specification patterns containing logical attributes. The method involves three stages: 1) compiling a generalized natural language requirement pattern that utilizes all attributes of the formal specification template; 2) generating, using the AI assistant, a corpus of natural language requirement patterns, reduced by partially evaluating attributes (the developed prompt utilizes the generalized template, attribute definitions, and specific formal semantics of the requirement patterns); and 3) formalizing the syntax of the controlled natural language based on an analysis of the grammatical structure of the resulting patterns. The method has been tested for event-driven temporal requirements.",
+    "arxiv_url": "https://arxiv.org/abs/2512.24159",
+    "authors": [
+      "Natalia Garanina",
+      "Vladimir Zyubin",
+      "Igor Anureev"
+    ],
+    "first_author": "Natalia Garanina",
+    "category": [
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Controlled Natural Language",
+      "Specification Patterns",
+      "Formal Semantics",
+      "AI-Assisted Generation",
+      "Prompt Engineering",
+      "Grammar Induction",
+      "Attribute Partial Evaluation",
+      "Event-Temporal Requirements"
+    ],
+    "summary": "本文提出一种三阶段方法：以形式规范模式为基础构建通用自然语言模板，利用AI助手生成通过部分求值属性简化的模式语料，并基于语法分析将其形式化为具备内建语义的受控自然语言，已在事件-时序需求（EDTL/SUP）上验证。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2512.24159v1",
+    "published": "2025-12-30",
+    "update_time": "2025-12-30",
+    "download_time": "2026-01-05 02:27:00"
   }
 ]

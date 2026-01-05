@@ -1,0 +1,72 @@
+[
+  {
+    "id": "2601.00635",
+    "title": "SEMODS: A Validated Dataset of Open-Source Software Engineering Models",
+    "abstract": "Integrating Artificial Intelligence into Software Engineering (SE) requires having a curated collection of models suited to SE tasks. With millions of models hosted on Hugging Face (HF) and new ones continuously being created, it is infeasible to identify SE models without a dedicated catalogue. To address this gap, we present SEMODS: an SE-focused dataset of 3,427 models extracted from HF, combining automated collection with rigorous validation through manual annotation and large language model assistance. Our dataset links models to SE tasks and activities from the software development lifecycle, offering a standardized representation of their evaluation results, and supporting multiple applications such as data analysis, model discovery, benchmarking, and model adaptation.",
+    "arxiv_url": "https://arxiv.org/abs/2601.00635",
+    "authors": [
+      "Alexandra González",
+      "Xavier Franch",
+      "Silverio Martínez-Fernández"
+    ],
+    "first_author": "Alexandra González",
+    "category": [
+      "Benchmark"
+    ],
+    "field": "Model Repositories & Catalogues",
+    "task": "SE Model Cataloguing",
+    "tags": [
+      "Model Catalog",
+      "SE Task Taxonomy",
+      "Benchmark Harmonization",
+      "LLM-assisted Annotation",
+      "Model Card Normalization",
+      "Automated Dataset Maintenance",
+      "Repository Metadata Schema",
+      "Model Discovery"
+    ],
+    "summary": "本文提出SEMODS，一个从Hugging Face系统化收集并通过人工和大模型辅助验证的面向软件工程的模型数据集（3,427个模型），提供SE任务映射、标准化评测表示和自动化更新管道以支持模型发现与基准测试。",
+    "quality": "High",
+    "conference": "FORGE (ACM International Conference on AI Foundation Models and Software Engineering) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.00635v1",
+    "published": "2026-01-02",
+    "update_time": "2026-01-02",
+    "download_time": "2026-01-05 02:05:13"
+  },
+  {
+    "id": "2601.00497",
+    "title": "STELLAR: A Search-Based Testing Framework for Large Language Model Applications",
+    "abstract": "Large Language Model (LLM)-based applications are increasingly deployed across various domains, including customer service, education, and mobility. However, these systems are prone to inaccurate, fictitious, or harmful responses, and their vast, high-dimensional input space makes systematic testing particularly challenging. To address this, we present STELLAR, an automated search-based testing framework for LLM-based applications that systematically uncovers text inputs leading to inappropriate system responses. Our framework models test generation as an optimization problem and discretizes the input space into stylistic, content-related, and perturbation features. Unlike prior work that focuses on prompt optimization or coverage heuristics, our work employs evolutionary optimization to dynamically explore feature combinations that are more likely to expose failures. We evaluate STELLAR on three LLM-based conversational question-answering systems. The first focuses on safety, benchmarking both public and proprietary LLMs against malicious or unsafe prompts. The second and third target navigation, using an open-source and an industrial retrieval-augmented system for in-vehicle venue recommendations. Overall, STELLAR exposes up to 4.3 times (average 2.5 times) more failures than the existing baseline approaches.",
+    "arxiv_url": "https://arxiv.org/abs/2601.00497",
+    "authors": [
+      "Lev Sorokin",
+      "Ivan Vasilev",
+      "Ken E. Friedl",
+      "Andrea Stocco"
+    ],
+    "first_author": "Lev Sorokin",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Search-based Testing",
+      "Evolutionary Optimization",
+      "Feature Discretization",
+      "Retrieval-Augmented Generation",
+      "Robustness Testing",
+      "Safety Testing",
+      "Conversational QA",
+      "Perturbation Testing"
+    ],
+    "summary": "本文提出STELLAR，一种将自然语言输入离散为风格、内容和扰动特征并通过进化搜索生成失败诱发测试用例的自动化搜索式测试框架，用以发现LLM应用（如车载对话系统）中的不当或错误响应并在多项用例中显著优于基线方法。",
+    "quality": "High",
+    "conference": "International Conference on Software Analysis, Evolution and Reengineering (SANER) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.00497v1",
+    "published": "2026-01-01",
+    "update_time": "2026-01-01",
+    "download_time": "2026-01-05 02:06:23"
+  }
+]
