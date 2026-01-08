@@ -228,5 +228,148 @@
     "published": "2026-01-02",
     "update_time": "2026-01-02",
     "download_time": "2026-01-06 01:57:35"
+  },
+  {
+    "id": "2601.02971",
+    "title": "Few-shot learning for security bug report identification",
+    "abstract": "Security bug reports require prompt identification to minimize the window of vulnerability in software systems. Traditional machine learning (ML) techniques for classifying bug reports to identify security bug reports rely heavily on large amounts of labeled data. However, datasets for security bug reports are often scarce in practice, leading to poor model performance and limited applicability in real-world settings. In this study, we propose a few-shot learning-based technique to effectively identify security bug reports using limited labeled data. We employ SetFit, a state-of-the-art few-shot learning framework that combines sentence transformers with contrastive learning and parameter-efficient fine-tuning. The model is trained on a small labeled dataset of bug reports and is evaluated on its ability to classify these reports as either security-related or non-security-related. Our approach achieves an AUC of 0.865, at best, outperforming traditional ML techniques (baselines) for all of the evaluated datasets. This highlights the potential of SetFit to effectively identify security bug reports. SetFit-based few-shot learning offers a promising alternative to traditional ML techniques to identify security bug reports. The approach enables efficient model development with minimal annotation effort, making it highly suitable for scenarios where labeled data is scarce.",
+    "arxiv_url": "https://arxiv.org/abs/2601.02971",
+    "authors": [
+      "Muhammad Laiq"
+    ],
+    "first_author": "Muhammad Laiq",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Issue Classification",
+      "Few-shot Learning",
+      "Contrastive Learning",
+      "Parameter-efficient Fine-tuning",
+      "Class Imbalance",
+      "Security Bug Identification",
+      "Empirical Comparison"
+    ],
+    "summary": "本文在四个开源项目的数据集上实证评估了基于少样本学习的SetFit方法用于安全缺陷报告识别，实验表明在有限标注下可达到最高AUC 0.865并优于传统机器学习基线。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.02971v1",
+    "published": "2026-01-06",
+    "update_time": "2026-01-06",
+    "download_time": "2026-01-08 01:55:02"
+  },
+  {
+    "id": "2601.02868",
+    "title": "CodeMEM: AST-Guided Adaptive Memory for Repository-Level Iterative Code Generation",
+    "abstract": "Large language models (LLMs) substantially enhance developer productivity in repository-level code generation through interactive collaboration. However, as interactions progress, repository context must be continuously preserved and updated to integrate newly validated information. Meanwhile, the expanding session history increases cognitive burden, often leading to forgetting and the reintroduction of previously resolved errors. Existing memory management approaches show promise but remain limited by natural language-centric representations. To overcome these limitations, we propose CodeMEM, an AST-guided dynamic memory management system tailored for repository-level iterative code generation. Specifically, CodeMEM introduces the Code Context Memory component that dynamically maintains and updates repository context through AST-guided LLM operations, along with the Code Session Memory that constructs a code-centric representation of interaction history and explicitly detects and mitigates forgetting through AST-based analysis. Experimental results on the instruction-following benchmark CodeIF-Bench and the code generation benchmark CoderEval demonstrate that CodeMEM achieves state-of-the-art performance, improving instruction following by 12.2% for the current turn and 11.5% for the session level, and reducing interaction rounds by 2-3, while maintaining competitive inference latency and token efficiency.",
+    "arxiv_url": "https://arxiv.org/abs/2601.02868",
+    "authors": [
+      "Peiding Wang",
+      "Li Zhang",
+      "Fang Liu",
+      "Chongyang Tao",
+      "Yinghao Zhu"
+    ],
+    "first_author": "Peiding Wang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Repository-Level Coding",
+      "AST-guided memory",
+      "Code Context Memory",
+      "Code Session Memory",
+      "Forgetting Detection",
+      "Code-change Analysis",
+      "Interaction Efficiency"
+    ],
+    "summary": "本文提出CODEMEM，一种基于AST引导的动态代码记忆管理系统，通过维护代码上下文记忆与会话记忆并基于AST分析检测与缓解遗忘，从而在仓库级多轮代码生成中显著提升指令遵循率并减少交互轮次。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.02868v1",
+    "published": "2026-01-06",
+    "update_time": "2026-01-06",
+    "download_time": "2026-01-08 01:55:19"
+  },
+  {
+    "id": "2601.02941",
+    "title": "SastBench: A Benchmark for Testing Agentic SAST Triage",
+    "abstract": "SAST (Static Application Security Testing) tools are among the most widely used techniques in defensive cybersecurity, employed by commercial and non-commercial organizations to identify potential vulnerabilities in software. Despite their great utility, they generate numerous false positives, requiring costly manual filtering (aka triage). While LLM-powered agents show promise for automating cybersecurity tasks, existing benchmarks fail to emulate real-world SAST finding distributions. We introduce SastBench, a benchmark for evaluating SAST triage agents that combines real CVEs as true positives with filtered SAST tool findings as approximate false positives. SastBench features an agent-agnostic design. We evaluate different agents on the benchmark and present a comparative analysis of their performance, provide a detailed analysis of the dataset, and discuss the implications for future development.",
+    "arxiv_url": "https://arxiv.org/abs/2601.02941",
+    "authors": [
+      "Jake Feiglin",
+      "Guy Dar"
+    ],
+    "first_author": "Jake Feiglin",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "SAST Triage",
+      "Agentic Benchmark",
+      "Realistic False Positives",
+      "CVE-based Ground Truth",
+      "Agent Evaluation",
+      "Security-Oriented Prompting",
+      "Language Diversity",
+      "Agent-Agnostic Evaluation"
+    ],
+    "summary": "该论文提出并开源了SASTBENCH，一个以真实CVE作为真阳性并以过滤后的SAST工具报警作为近似假阳性构建的面向自动化SAST告警三分类（triage）的基准，并基于该基准对多种LLM驱动代理进行了比较评估与数据分析。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.02941v1",
+    "published": "2026-01-06",
+    "update_time": "2026-01-06",
+    "download_time": "2026-01-08 01:59:25"
+  },
+  {
+    "id": "2601.02736",
+    "title": "Hypothesize-Then-Verify: Speculative Root Cause Analysis for Microservices with Pathwise Parallelism",
+    "abstract": "Microservice systems have become the backbone of cloud-native enterprise applications due to their resource elasticity, loosely coupled architecture, and lightweight deployment. Yet, the intrinsic complexity and dynamic runtime interactions of such systems inevitably give rise to anomalies. Ensuring system reliability therefore hinges on effective root cause analysis (RCA), which entails not only localizing the source of anomalies but also characterizing the underlying failures in a timely and interpretable manner. Recent advances in intelligent RCA techniques, particularly those powered by large language models (LLMs), have demonstrated promising capabilities, as LLMs reduce reliance on handcrafted features while offering cross-platform adaptability, task generalization, and flexibility. However, existing LLM-based methods still suffer from two critical limitations: (a) limited exploration diversity, which undermines accuracy, and (b) heavy dependence on large-scale LLMs, which results in slow inference. To overcome these challenges, we propose SpecRCA, a speculative root cause analysis framework for microservices that adopts a \\textit{hypothesize-then-verify} paradigm. SpecRCA first leverages a hypothesis drafting module to rapidly generate candidate root causes, and then employs a parallel root cause verifier to efficiently validate them. Preliminary experiments on the AIOps 2022 dataset demonstrate that SpecRCA achieves superior accuracy and efficiency compared to existing approaches, highlighting its potential as a practical solution for scalable and interpretable RCA in complex microservice environments.",
+    "arxiv_url": "https://arxiv.org/abs/2601.02736",
+    "authors": [
+      "Lingzhe Zhang",
+      "Tong Jia",
+      "Yunpeng Zhai",
+      "Leyi Pan",
+      "Chiming Duan",
+      "Minghua He",
+      "Pei Xiao",
+      "Ying Li"
+    ],
+    "first_author": "Lingzhe Zhang",
+    "category": [
+      "Technical"
+    ],
+    "field": "AIOps",
+    "task": "Root Cause Analysis",
+    "tags": [
+      "Speculative Verification",
+      "Hypothesize-then-Verify",
+      "Pathwise Parallelism",
+      "Modality Fusion",
+      "Service Topology",
+      "Trace Analysis",
+      "Granger Causality",
+      "Anomalous Metric Detection",
+      "Parallel Verification",
+      "Diagnosis Synthesis",
+      "Efficiency",
+      "Interpretability"
+    ],
+    "summary": "本文提出 SpecRCA——一种面向微服务的假设-验证根因分析框架，通过轻量草拟模型生成多样化候选假设并并行用小型微调 LLM 验证，结合指标/链路/日志的拓扑融合与综合生成诊断报告，在 AIOps 2022 数据集上显著提升定位准确性并降低推理延迟。",
+    "quality": "High",
+    "conference": "ICSE",
+    "pdf_url": "https://arxiv.org/pdf/2601.02736v1",
+    "published": "2026-01-06",
+    "update_time": "2026-01-06",
+    "download_time": "2026-01-08 02:01:34"
   }
 ]
