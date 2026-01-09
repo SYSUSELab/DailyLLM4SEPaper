@@ -371,5 +371,157 @@
     "published": "2026-01-06",
     "update_time": "2026-01-06",
     "download_time": "2026-01-08 02:01:34"
+  },
+  {
+    "id": "2601.03988",
+    "title": "Using Small Language Models to Reverse-Engineer Machine Learning Pipelines Structures",
+    "abstract": "Background: Extracting the stages that structure Machine Learning (ML) pipelines from source code is key for gaining a deeper understanding of data science practices. However, the diversity caused by the constant evolution of the ML ecosystem (e.g., algorithms, libraries, datasets) makes this task challenging. Existing approaches either depend on non-scalable, manual labeling, or on ML classifiers that do not properly support the diversity of the domain. These limitations highlight the need for more flexible and reliable solutions.   Objective: We evaluate whether Small Language Models (SLMs) can leverage their code understanding and classification abilities to address these limitations, and subsequently how they can advance our understanding of data science practices.   Method: We conduct a confirmatory study based on two reference works selected for their relevance regarding current state-of-the-art's limitations. First, we compare several SLMs using Cochran's Q test. The best-performing model is then evaluated against the reference studies using two distinct McNemar's tests. We further analyze how variations in taxonomy definitions affect performance through an additional Cochran's Q test. Finally, a goodness-of-fit analysis is conducted using Pearson's chi-squared tests to compare our insights on data science practices with those from prior studies.",
+    "arxiv_url": "https://arxiv.org/abs/2601.03988",
+    "authors": [
+      "Nicolas Lacroix",
+      "Mireille Blay-Fornarino",
+      "Sébastien Mosser",
+      "Frederic Precioso"
+    ],
+    "first_author": "Nicolas Lacroix",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Pipeline Extraction",
+      "Reverse Engineering",
+      "Jupyter Notebook Analysis",
+      "Small Language Models",
+      "Instruction-level Classification",
+      "Taxonomy Sensitivity",
+      "Model Comparison",
+      "Goodness-of-fit Analysis"
+    ],
+    "summary": "本文通过对比多款开源小型语言模型，评估其在从 Jupyter 笔记本代码中反向工程提取机器学习流水线结构（阶段）上的准确性，分析分类法措辞对结果的影响并检验这些结果是否改变对数据科学家实践的既有理解。",
+    "quality": "High",
+    "conference": "SANER (IEEE International Conference on Software Analysis, Evolution and Reengineering) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.03988v1",
+    "published": "2026-01-07",
+    "update_time": "2026-01-07",
+    "download_time": "2026-01-09 01:56:28"
+  },
+  {
+    "id": "2601.03878",
+    "title": "Understanding Specification-Driven Code Generation with LLMs: An Empirical Study Design",
+    "abstract": "Large Language Models (LLMs) are increasingly integrated into software development workflows, yet their behavior in structured, specification-driven processes remains poorly understood. This paper presents an empirical study design using CURRANTE, a Visual Studio Code extension that enables a human-in-the-loop workflow for LLM-assisted code generation. The tool guides developers through three sequential stages--Specification, Tests, and Function--allowing them to define requirements, generate and refine test suites, and produce functions that satisfy those tests. Participants will solve medium-difficulty problems from the LiveCodeBench dataset, while the tool records fine-grained interaction logs, effectiveness metrics (e.g., pass rate, all-pass completion), efficiency indicators (e.g., time-to-pass), and iteration behaviors. The study aims to analyze how human intervention in specification and test refinement influences the quality and dynamics of LLM-generated code. The results will provide empirical insights into the design of next-generation development environments that align human reasoning with model-driven code generation.",
+    "arxiv_url": "https://arxiv.org/abs/2601.03878",
+    "authors": [
+      "Giovanni Rosa",
+      "David Moreno-Lumbreras",
+      "Gregorio Robles",
+      "Jesús M. González-Barahona"
+    ],
+    "first_author": "Giovanni Rosa",
+    "category": [
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Specification-Driven Development",
+      "Test-Driven Development",
+      "Human-LLM Interaction",
+      "IDE Plugin",
+      "Test Suite Generation",
+      "Test Refinement",
+      "Interaction Logging",
+      "Effectiveness Metrics",
+      "Time-to-Pass",
+      "Registered Study Protocol"
+    ],
+    "summary": "本文提出并描述了一项基于 CURRANTE VSCode 插件的注册报告型实证研究设计，以评估在人类参与的规范（通过测试用例）驱动 TDD 工作流下，LLM 辅助代码生成的有效性、效率与迭代行为。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.03878v1",
+    "published": "2026-01-07",
+    "update_time": "2026-01-07",
+    "download_time": "2026-01-09 01:56:58"
+  },
+  {
+    "id": "2601.04126",
+    "title": "InfiniteWeb: Scalable Web Environment Synthesis for GUI Agent Training",
+    "abstract": "GUI agents that interact with graphical interfaces on behalf of users represent a promising direction for practical AI assistants. However, training such agents is hindered by the scarcity of suitable environments. We present InfiniteWeb, a system that automatically generates functional web environments at scale for GUI agent training. While LLMs perform well on generating a single webpage, building a realistic and functional website with many interconnected pages faces challenges. We address these challenges through unified specification, task-centric test-driven development, and a combination of website seed with reference design image to ensure diversity. Our system also generates verifiable task evaluators enabling dense reward signals for reinforcement learning. Experiments show that InfiniteWeb surpasses commercial coding agents at realistic website construction, and GUI agents trained on our generated environments achieve significant performance improvements on OSWorld and Online-Mind2Web, demonstrating the effectiveness of proposed system.",
+    "arxiv_url": "https://arxiv.org/abs/2601.04126",
+    "authors": [
+      "Ziyun Zhang",
+      "Zezhou Wang",
+      "Xiaoyi Zhang",
+      "Zongyu Guo",
+      "Jiahao Li",
+      "Bin Li",
+      "Yan Lu"
+    ],
+    "first_author": "Ziyun Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Environment Synthesis",
+      "Unified Specification",
+      "Task-Centric TDD",
+      "Evaluator Generation",
+      "Design-Guided Frontend",
+      "Visual-Functional Diversity",
+      "Dense Reward Signals",
+      "GUI Agent Training"
+    ],
+    "summary": "本文提出INFINITEWEB，一个通过从任务导出统一数据与接口、采用面向任务的测试驱动开发以及设计图引导的前端生成，自动大规模合成功能性网页环境并生成可验证评估器以支持基于强化学习的GUI代理训练的系统。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.04126v1",
+    "published": "2026-01-07",
+    "update_time": "2026-01-07",
+    "download_time": "2026-01-09 01:58:15"
+  },
+  {
+    "id": "2601.03731",
+    "title": "From Laboratory to Real-World Applications: Benchmarking Agentic Code Reasoning at the Repository Level",
+    "abstract": "As large language models (LLMs) evolve into autonomous agents, evaluating repository-level reasoning, the ability to maintain logical consistency across massive, real-world, interdependent file systems, has become critical. Current benchmarks typically fluctuate between isolated code snippets and black-box evaluations. We present RepoReason, a white-box diagnostic benchmark centered on abductive assertion verification. To eliminate memorization while preserving authentic logical depth, we implement an execution-driven mutation framework that utilizes the environment as a semantic oracle to regenerate ground-truth states. Furthermore, we establish a fine-grained diagnostic system using dynamic program slicing, quantifying reasoning via three orthogonal metrics: $ESV$ (reading load), $MCL$ (simulation depth), and $DFI$ (integration width). Comprehensive evaluations of frontier models (e.g., Claude-4.5-Sonnet, DeepSeek-v3.1-Terminus) reveal a prevalent aggregation deficit, where integration width serves as the primary cognitive bottleneck. Our findings provide granular white-box insights for optimizing the next generation of agentic software engineering.",
+    "arxiv_url": "https://arxiv.org/abs/2601.03731",
+    "authors": [
+      "Jia Li",
+      "Yuxin Su",
+      "Michael R. Lyu"
+    ],
+    "first_author": "Jia Li",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Repository-Level Reasoning",
+      "Abductive Verification",
+      "Execution-Driven Mutation",
+      "Deterministic Value Protocol",
+      "Dynamic Program Slicing",
+      "Reading Load (ESV)",
+      "Simulation Depth (MCL)",
+      "Integration Width (DFI)",
+      "White-box Diagnostic",
+      "Aggregation Deficit",
+      "Long-chain State Tracking",
+      "Cross-file Integration"
+    ],
+    "summary": "本文提出了REPOREASON——一个以掩码断言验证为核心、结合执行驱动变异和动态程序切片的仓库级白盒基准，用于客观评估并细粒度诊断LLM代理在跨文件信息整合与长链状态追踪方面的推理能力，揭示了模型在整合宽度上的严重瓶颈（Aggregation Deficit）。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.03731v1",
+    "published": "2026-01-07",
+    "update_time": "2026-01-07",
+    "download_time": "2026-01-09 02:08:24"
   }
 ]
