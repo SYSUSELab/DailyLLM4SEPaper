@@ -675,5 +675,156 @@
     "published": "2026-01-08",
     "update_time": "2026-01-08",
     "download_time": "2026-01-10 01:53:36"
+  },
+  {
+    "id": "2601.04540",
+    "title": "AdaptEval: A Benchmark for Evaluating Large Language Models on Code Snippet Adaptation",
+    "abstract": "Recent advancements in large language models (LLMs) have automated various software engineering tasks, with benchmarks emerging to evaluate their capabilities. However, for adaptation, a critical activity during code reuse, there is no benchmark to assess LLMs' performance, leaving their practical utility in this area unclear. To fill this gap, we propose AdaptEval, a benchmark designed to evaluate LLMs on code snippet adaptation. Unlike existing benchmarks, AdaptEval incorporates the following three distinctive features: First, Practical Context. Tasks in AdaptEval are derived from developers' practices, preserving rich contextual information from Stack Overflow and GitHub communities. Second, Multi-granularity Annotation. Each task is annotated with requirements at both task and adaptation levels, supporting the evaluation of LLMs across diverse adaptation scenarios. Third, Fine-grained Evaluation. AdaptEval includes a two-tier testing framework combining adaptation-level and function-level tests, which enables evaluating LLMs' performance across various individual adaptations. Based on AdaptEval, we conduct the first empirical study to evaluate six instruction-tuned LLMs and especially three reasoning LLMs on code snippet adaptation. Experimental results demonstrate that AdaptEval enables the assessment of LLMs' adaptation capabilities from various perspectives. It also provides critical insights into their current limitations, particularly their struggle to follow explicit instructions. We hope AdaptEval can facilitate further investigation and enhancement of LLMs' capabilities in code snippet adaptation, supporting their real-world applications.",
+    "arxiv_url": "https://arxiv.org/abs/2601.04540",
+    "authors": [
+      "Tanghaoran Zhang",
+      "Xinjun Mao",
+      "Shangwen Wang",
+      "Yuxin Zhao",
+      "Yao Lu",
+      "Jin Zhang",
+      "Zhang Zhang",
+      "Kang Yang",
+      "Yue Yu"
+    ],
+    "first_author": "Tanghaoran Zhang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Code Snippet Adaptation",
+      "Context-aware Adaptation",
+      "Multi-Granularity Annotation",
+      "Two-tier Evaluation",
+      "Function-level Testing",
+      "Adaptation-level Testing",
+      "Instruction-following",
+      "Reasoning LLMs"
+    ],
+    "summary": "本文提出AdaptEval基准，收集自真实的Stack Overflow与GitHub适配实例，提供多粒度注释与两层（适配级与函数级）测试框架，并基于此评测多款指令调优与推理型LLM以揭示其在代码片段适配任务中的能力与局限。",
+    "quality": "High",
+    "conference": "ASE (IEEE/ACM International Conference on Automated Software Engineering) 2025",
+    "pdf_url": "https://arxiv.org/pdf/2601.04540v1",
+    "published": "2026-01-08",
+    "update_time": "2026-01-08",
+    "download_time": "2026-01-11 02:04:27"
+  },
+  {
+    "id": "2601.04526",
+    "title": "Advancing Language Models for Code-related Tasks",
+    "abstract": "Recent advances in language models (LMs) have driven significant progress in various software engineering tasks. However, existing LMs still struggle with complex programming scenarios due to limitations in data quality, model architecture, and reasoning capability. This research systematically addresses these challenges through three complementary directions: (1) improving code data quality with a code difference-guided adversarial augmentation technique (CODA) and a code denoising technique (CodeDenoise); (2) enhancing model architecture via syntax-guided code LMs (LEAM and LEAM++); and (3) advancing model reasoning with a prompting technique (muFiX) and an agent-based technique (Specine). These techniques aim to promote the practical adoption of LMs in software development and further advance intelligent software engineering.",
+    "arxiv_url": "https://arxiv.org/abs/2601.04526",
+    "authors": [
+      "Zhao Tian"
+    ],
+    "first_author": "Zhao Tian",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Adversarial Augmentation",
+      "Input Denoising",
+      "Syntax-Guided Generation",
+      "AST Representation",
+      "Specification Alignment",
+      "Test-Guided Prompting",
+      "Agent-Based Alignment",
+      "Robustness",
+      "Mutation Testing"
+    ],
+    "summary": "本文提出一套系统性方法（CODA、CodeDenoise、LEAM/LEAM++、μFiX 与 Specine），通过改进代码数据质量、模型语法感知架构与推理/对齐机制，提升代码语言模型在生成与鲁棒性上的性能。",
+    "quality": "High",
+    "conference": "ICSE 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.04526v1",
+    "published": "2026-01-08",
+    "update_time": "2026-01-08",
+    "download_time": "2026-01-11 02:04:42"
+  },
+  {
+    "id": "2601.05187",
+    "title": "SimuAgent: An LLM-Based Simulink Modeling Assistant Enhanced with Reinforcement Learning",
+    "abstract": "Large language models (LLMs) have revolutionized text-based code automation, but their potential in graph-oriented engineering workflows remains under-explored. We introduce SimuAgent, an LLM-powered modeling and simulation agent tailored for Simulink. SimuAgent replaces verbose XML with a concise, dictionary-style Python representation, dramatically cutting token counts, improving interpretability, and enabling fast, in-process simulation. A lightweight plan-execute architecture, trained in two stages, equips the agent with both low-level tool skills and high-level design reasoning. To tackle sparse rewards in long-horizon tasks, we propose Reflection-GRPO (ReGRPO), which augments Group Relative Policy Optimization (GRPO) with self-reflection traces that supply rich intermediate feedback, accelerating convergence and boosting robustness. Experiments on SimuBench, our newly released benchmark comprising 5300 multi-domain modeling tasks, show that a Qwen2.5-7B model fine-tuned with SimuAgent converges faster and achieves higher modeling accuracy than standard RL baselines, and even surpasses GPT-4o when evaluated with few-shot prompting on the same benchmark. Ablations confirm that the two-stage curriculum and abstract-reconstruct data augmentation further enhance generalization. SimuAgent trains and runs entirely on-premise with modest hardware, delivering a privacy-preserving, cost-effective solution for industrial model-driven engineering. SimuAgent bridges the gap between LLMs and graphical modeling environments, offering a practical solution for AI-assisted engineering design in industrial settings.",
+    "arxiv_url": "https://arxiv.org/abs/2601.05187",
+    "authors": [
+      "Yanchang Liang",
+      "Xiaowei Zhao"
+    ],
+    "first_author": "Yanchang Liang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Graphical Modeling",
+      "Simulink Integration",
+      "Plan-Execute Agent",
+      "Compact Model Representation",
+      "Reflection-Guided RL",
+      "Sparse-Reward Optimization",
+      "Abstract-Reconstruct Augmentation",
+      "In-Process Simulation",
+      "On-Premise Training",
+      "Benchmarking"
+    ],
+    "summary": "本文提出SimuAgent——一个面向Simulink的基于LLM的建模与仿真助手，采用紧凑的Python字典表示、两阶段计划-执行框架、引入Reflection-GRPO强化学习与Abstract–Reconstruct自监督增强，并发布包含5300任务的SimuBench基准，在低成本本地硬件上实现高效且隐私保护的工业级建模自动化。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.05187v1",
+    "published": "2026-01-08",
+    "update_time": "2026-01-08",
+    "download_time": "2026-01-11 02:05:38"
+  },
+  {
+    "id": "2601.05106",
+    "title": "Token-Level LLM Collaboration via FusionRoute",
+    "abstract": "Large language models (LLMs) exhibit strengths across diverse domains. However, achieving strong performance across these domains with a single general-purpose model typically requires scaling to sizes that are prohibitively expensive to train and deploy. On the other hand, while smaller domain-specialized models are much more efficient, they struggle to generalize beyond their training distributions. To address this dilemma, we propose FusionRoute, a robust and effective token-level multi-LLM collaboration framework in which a lightweight router simultaneously (i) selects the most suitable expert at each decoding step and (ii) contributes a complementary logit that refines or corrects the selected expert's next-token distribution via logit addition. Unlike existing token-level collaboration methods that rely solely on fixed expert outputs, we provide a theoretical analysis showing that pure expert-only routing is fundamentally limited: unless strong global coverage assumptions hold, it cannot in general realize the optimal decoding policy. By augmenting expert selection with a trainable complementary generator, FusionRoute expands the effective policy class and enables recovery of optimal value functions under mild conditions. Empirically, across both Llama-3 and Gemma-2 families and diverse benchmarks spanning mathematical reasoning, code generation, and instruction following, FusionRoute outperforms both sequence- and token-level collaboration, model merging, and direct fine-tuning, while remaining competitive with domain experts on their respective tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2601.05106",
+    "authors": [
+      "Nuoya Xiong",
+      "Yuhang Zhou",
+      "Hanqing Zeng",
+      "Zhaorun Chen",
+      "Furong Huang",
+      "Shuchao Bi",
+      "Lizhu Zhang",
+      "Zhuokai Zhao"
+    ],
+    "first_author": "Nuoya Xiong",
+    "category": [
+      "Technical"
+    ],
+    "field": "Multi-LLM Collaboration",
+    "task": "Token-level Routing & Logit Fusion",
+    "tags": [
+      "Token-level Routing",
+      "Logit Fusion",
+      "Complementary Generator",
+      "Lightweight Router",
+      "Mixture-of-Experts",
+      "Router Post-training",
+      "Theoretical Guarantees",
+      "Robustness",
+      "Efficiency",
+      "Multi-Domain Coordination"
+    ],
+    "summary": "本文提出FusionRoute，一种在每步解码时由轻量级路由器进行专家选择并通过对数几率相加提供补充生成信号的逐标记多LLM协作框架，理论上拓展了策略类并在数学推理、代码生成和指令跟随等多领域上实验证明了其鲁棒性与效率优势。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.05106v1",
+    "published": "2026-01-08",
+    "update_time": "2026-01-08",
+    "download_time": "2026-01-11 02:06:46"
   }
 ]
