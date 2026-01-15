@@ -1286,5 +1286,151 @@
     "published": "2026-01-12",
     "update_time": "2026-01-12",
     "download_time": "2026-01-14 02:01:01"
+  },
+  {
+    "id": "2601.08806",
+    "title": "APEX-SWE",
+    "abstract": "We introduce the AI Productivity Index for Software Engineering (APEX-SWE), a benchmark for assessing whether frontier AI models can execute economically valuable software engineering work. Unlike existing evaluations that focus on narrow, well-defined tasks, APEX-SWE assesses two novel task types that reflect real-world software engineering work: (1) Integration tasks (n=100), which require constructing end-to-end systems across heterogeneous cloud primitives, business applications, and infrastructure-as-code services, and (2) Observability tasks (n=100), which require debugging production failures using telemetry signals such as logs and dashboards, as well as unstructured context. We evaluated eight frontier models on APEX-SWE. Gemini 3 Pro (Thinking = High) performs best, with a Pass@1 score of 25\\%. Our analysis shows that strong performance is primarily driven by epistemic reasoning, defined as the ability to distinguish between assumptions and verified facts, combined with agency to resolve uncertainty prior to acting. We open-source the APEX-SWE evaluation harness and a dev set (n=50).",
+    "arxiv_url": "https://arxiv.org/abs/2601.08806",
+    "authors": [
+      "Abhi Kottamasu",
+      "Akul Datta",
+      "Aakash Barthwal",
+      "Chirag Mahapatra",
+      "Ajay Arun",
+      "Adarsh Hiremath",
+      "Brendan Foody",
+      "Bertie Vidgen"
+    ],
+    "first_author": "Abhi Kottamasu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Repository-Level Coding",
+    "tags": [
+      "Repository-Level Coding",
+      "Code Agents",
+      "Production Debugging",
+      "Observability",
+      "End-to-End Integration",
+      "Infrastructure-as-Code",
+      "Telemetry Analysis",
+      "Epistemic Reasoning"
+    ],
+    "summary": "APEX–SWE提出了一个包含100个集成任务和100个可观测性任务的基准，用于评估前沿AI模型在真实生产级软件工程（跨云原语、业务应用、基础设施即代码与生产故障排查）中的实际执行能力，并开源了开发集与评估工具，发现顶级模型Pass@1约为25%，成功往往依赖于区分假设与已验证事实的认识型推理及在行动前化解不确定性的能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.08806v1",
+    "published": "2026-01-13",
+    "update_time": "2026-01-13",
+    "download_time": "2026-01-15 01:56:27"
+  },
+  {
+    "id": "2601.08773",
+    "title": "Reliable Graph-RAG for Codebases: AST-Derived Graphs vs LLM-Extracted Knowledge Graphs",
+    "abstract": "Retrieval-Augmented Generation for software engineering often relies on vector similarity search, which captures topical similarity but can fail on multi-hop architectural reasoning such as controller to service to repository chains, interface-driven wiring, and inheritance. This paper benchmarks three retrieval pipelines on Java codebases (Shopizer, with additional runs on ThingsBoard and OpenMRS Core): (A) vector-only No-Graph RAG, (B) an LLM-generated knowledge graph RAG (LLM-KB), and (C) a deterministic AST-derived knowledge graph RAG (DKB) built with Tree-sitter and bidirectional traversal.   Using 15 architecture and code-tracing queries per repository, we measure indexing time, query latency, corpus coverage, cost, and answer correctness. DKB builds its graph in seconds, while LLM-KB requires much longer graph generation. LLM-KB also shows indexing incompleteness: on Shopizer, 377 files are skipped or missed, reducing embedded chunk coverage and graph size compared to DKB. End-to-end cost is modest for DKB relative to the vector-only baseline but much higher for LLM-KB, especially as repository scale increases. Query latency is similar for No-Graph and DKB, while LLM-KB is slower and more variable. On the Shopizer question suite, DKB achieves the highest correctness, LLM-KB is close behind, and the vector-only baseline performs worst on upstream architectural queries and has the highest hallucination risk. Overall, deterministic AST-derived graphs provide more reliable coverage and multi-hop grounding than LLM-extracted graphs at substantially lower indexing cost.",
+    "arxiv_url": "https://arxiv.org/abs/2601.08773",
+    "authors": [
+      "Manideep Reddy Chinthareddy"
+    ],
+    "first_author": "Manideep Reddy Chinthareddy",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "AST-derived Graph",
+      "LLM-extracted Graph",
+      "Graph-RAG",
+      "Multi-hop Reasoning",
+      "Repository-Level Retrieval",
+      "Indexing Coverage",
+      "Cost Analysis",
+      "Deterministic Indexing",
+      "Tree-sitter Parsing",
+      "Hallucination"
+    ],
+    "summary": "本文在多个 Java 代码库上对比了向量检索、LLM 生成知识图谱和基于 AST 的确定性知识图谱三种 RAG 管线，结果表明基于 AST 的 DKB 在索引覆盖率、答案正确性与成本-延迟权衡上更优且更可复现，而 LLM 生成的图谱存在提取不完整、随机性高和成本显著更大的问题。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.08773v1",
+    "published": "2026-01-13",
+    "update_time": "2026-01-13",
+    "download_time": "2026-01-15 01:56:54"
+  },
+  {
+    "id": "2601.08778",
+    "title": "Pervasive Annotation Errors Break Text-to-SQL Benchmarks and Leaderboards",
+    "abstract": "Researchers have proposed numerous text-to-SQL techniques to streamline data analytics and accelerate the development of database-driven applications. To compare these techniques and select the best one for deployment, the community depends on public benchmarks and their leaderboards. Since these benchmarks heavily rely on human annotations during question construction and answer evaluation, the validity of the annotations is crucial.   In this paper, we conduct an empirical study that (i) benchmarks annotation error rates for two widely used text-to-SQL benchmarks, BIRD and Spider 2.0-Snow, and (ii) corrects a subset of the BIRD development (Dev) set to measure the impact of annotation errors on text-to-SQL agent performance and leaderboard rankings. Through expert analysis, we show that BIRD Mini-Dev and Spider 2.0-Snow have error rates of 52.8% and 62.8%, respectively. We re-evaluate all 16 open-source agents from the BIRD leaderboard on both the original and the corrected BIRD Dev subsets. We show that performance changes range from -7% to 31% (in relative terms) and rank changes range from $-9$ to $+9$ positions. We further assess whether these impacts generalize to the full BIRD Dev set. We find that the rankings of agents on the uncorrected subset correlate strongly with those on the full Dev set (Spearman's $r_s$=0.85, $p$=3.26e-5), whereas they correlate weakly with those on the corrected subset (Spearman's $r_s$=0.32, $p$=0.23). These findings show that annotation errors can significantly distort reported performance and rankings, potentially misguiding research directions or deployment choices. Our code and data are available at https://github.com/uiuc-kang-lab/text_to_sql_benchmarks.",
+    "arxiv_url": "https://arxiv.org/abs/2601.08778",
+    "authors": [
+      "Tengjun Jin",
+      "Yoojin Choi",
+      "Yuxuan Zhu",
+      "Daniel Kang"
+    ],
+    "first_author": "Tengjun Jin",
+    "category": [
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Annotation Errors",
+      "SQL Verification",
+      "Agent-based Review",
+      "Annotation Pipeline",
+      "Diagnostic Reporting",
+      "Human-in-the-loop",
+      "Leaderboard Reliability",
+      "Ranking Sensitivity",
+      "Schema-aware Validation",
+      "Execution-based Verification"
+    ],
+    "summary": "本文通过开发基于代理的审查工具并对 BIRD 与 Spider 2.0-Snow 进行人工验证，发现两大 text-to-SQL 基准分别存在 52.8% 和 62.8% 的标注错误，进而显著扭曲模型性能与排行榜，并提出 SAR-Agent 与 SAPAR 来检测与修正这些注释错误。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.08778v1",
+    "published": "2026-01-13",
+    "update_time": "2026-01-13",
+    "download_time": "2026-01-15 02:06:24"
+  },
+  {
+    "id": "2601.08777",
+    "title": "Asymptotic Universal Alignment: A New Alignment Framework via Test-Time Scaling",
+    "abstract": "Aligning large language models (LLMs) to serve users with heterogeneous and potentially conflicting preferences is a central challenge for personalized and trustworthy AI. We formalize an ideal notion of universal alignment through test-time scaling: for each prompt, the model produces $k\\ge 1$ candidate responses and a user selects their preferred one. We introduce $(k,f(k))$-robust alignment, which requires the $k$-output model to have win rate $f(k)$ against any other single-output model, and asymptotic universal alignment (U-alignment), which requires $f(k)\\to 1$ as $k\\to\\infty$. Our main result characterizes the optimal convergence rate: there exists a family of single-output policies whose $k$-sample product policies achieve U-alignment at rate $f(k)=\\frac{k}{k+1}$, and no method can achieve a faster rate in general.   We show that popular post-training methods, including Nash learning from human feedback (NLHF), can fundamentally underutilize the benefits of test-time scaling. Even though NLHF is optimal for $k=1$, sampling from the resulting (often deterministic) policy cannot guarantee win rates above $\\tfrac{1}{2}$ except for an arbitrarily small slack. This stems from a lack of output diversity: existing alignment methods can collapse to a single majority-preferred response, making additional samples redundant. In contrast, our approach preserves output diversity and achieves the optimal test-time scaling rate. In particular, we propose a family of symmetric multi-player alignment games and prove that any symmetric Nash equilibrium policy of the $(k+1)$-player alignment game achieves the optimal $(k,\\frac{k}{k+1})$-robust alignment. Finally, we provide theoretical convergence guarantees for self-play learning dynamics in these games and extend the framework to opponents that also generate multiple responses.",
+    "arxiv_url": "https://arxiv.org/abs/2601.08777",
+    "authors": [
+      "Yang Cai",
+      "Weiqiang Zheng"
+    ],
+    "first_author": "Yang Cai",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Alignment & Personalization",
+    "task": "Asymptotic Universal Alignment (Test-Time Scaling)",
+    "tags": [
+      "Test-time Scaling",
+      "Asymptotic Universal Alignment",
+      "Robust Alignment",
+      "Output Diversity",
+      "Alignment Games",
+      "Nash Equilibrium",
+      "Self-Play Convergence",
+      "Condorcet Analysis"
+    ],
+    "summary": "本文通过在测试时生成多候选回复的框架形式化了渐近普适对齐（U‑alignment），证明存在单输出策略家族通过测试时扩展以最优速率k/(k+1)趋近普适对齐，提出对称多玩家对齐博弈以保持输出多样性并给出自我博弈的收敛性保证，同时指出现有方法在测试时扩展下会因输出塌缩而丧失潜在优势。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.08777v1",
+    "published": "2026-01-13",
+    "update_time": "2026-01-13",
+    "download_time": "2026-01-15 02:09:17"
   }
 ]
