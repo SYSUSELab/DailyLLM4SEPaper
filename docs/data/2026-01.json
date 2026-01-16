@@ -1432,5 +1432,153 @@
     "published": "2026-01-13",
     "update_time": "2026-01-13",
     "download_time": "2026-01-15 02:09:17"
+  },
+  {
+    "id": "2601.09703",
+    "title": "ShortCoder: Knowledge-Augmented Syntax Optimization for Token-Efficient Code Generation",
+    "abstract": "Code generation tasks aim to automate the conversion of user requirements into executable code, significantly reducing manual development efforts and enhancing software productivity. The emergence of large language models (LLMs) has significantly advanced code generation, though their efficiency is still impacted by certain inherent architectural constraints. Each token generation necessitates a complete inference pass, requiring persistent retention of contextual information in memory and escalating resource consumption. While existing research prioritizes inference-phase optimizations such as prompt compression and model quantization, the generation phase remains underexplored. To tackle these challenges, we propose a knowledge-infused framework named ShortCoder, which optimizes code generation efficiency while preserving semantic equivalence and readability. In particular, we introduce: (1) ten syntax-level simplification rules for Python, derived from AST-preserving transformations, achieving 18.1% token reduction without functional compromise; (2) a hybrid data synthesis pipeline integrating rule-based rewriting with LLM-guided refinement, producing ShorterCodeBench, a corpus of validated tuples of original code and simplified code with semantic consistency; (3) a fine-tuning strategy that injects conciseness awareness into the base LLMs. Extensive experimental results demonstrate that ShortCoder consistently outperforms state-of-the-art methods on HumanEval, achieving an improvement of 18.1%-37.8% in generation efficiency over previous methods while ensuring the performance of code generation.",
+    "arxiv_url": "https://arxiv.org/abs/2601.09703",
+    "authors": [
+      "Sicong Liu",
+      "Yanxian Huang",
+      "Mingwei Liu",
+      "Jiachi Chen",
+      "Ensheng Shi",
+      "Yuchi Ma",
+      "Hongyu Zhang",
+      "Yin Zhang",
+      "Yanlin Wang"
+    ],
+    "first_author": "Sicong Liu",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Token Efficiency",
+      "Syntax Simplification",
+      "AST-preserving Transformation",
+      "Rule-based Rewriting",
+      "LLM-guided Refinement",
+      "Conciseness-aware Fine-tuning",
+      "Data Synthesis",
+      "Generation Latency Reduction",
+      "Readability Preservation"
+    ],
+    "summary": "ShortCoder提出一种知识增强的Python语法简化与微调框架，基于10条AST保持的简化规则和混合数据合成（规则重写+LLM精化）生成简洁代码对并注入简洁性意识至模型，从而在保持语义正确性的前提下显著减少生成token数并提升代码生成效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.09703v1",
+    "published": "2026-01-14",
+    "update_time": "2026-01-14",
+    "download_time": "2026-01-16 01:56:29"
+  },
+  {
+    "id": "2601.09695",
+    "title": "How well LLM-based test generation techniques perform with newer LLM versions?",
+    "abstract": "The rapid evolution of Large Language Models (LLMs) has strongly impacted software engineering, leading to a growing number of studies on automated unit test generation. However, the standalone use of LLMs without post-processing has proven insufficient, often producing tests that fail to compile or achieve high coverage. Several techniques have been proposed to address these issues, reporting improvements in test compilation and coverage. While important, LLM-based test generation techniques have been evaluated against relatively weak baselines (for todays' standards), i.e., old LLM versions and relatively weak prompts, which may exacerbate the performance contribution of the approaches. In other words, stronger (newer) LLMs may obviate any advantage these techniques bring. We investigate this issue by replicating four state-of-the-art LLM-based test generation tools, HITS, SymPrompt, TestSpark, and CoverUp that include engineering components aimed at guiding the test generation process through compilation and execution feedback, and evaluate their relative effectiveness and efficiency over a plain LLM test generation method. We integrate current LLM versions in all approaches and run an experiment on 393 classes and 3,657 methods. Our results show that the plain LLM approach can outperform previous state-of-the-art approaches in all test effectiveness metrics we used: line coverage (by 17.72%), branch coverage (by 19.80%) and mutation score (by 20.92%), and it does so at a comparable cost (LLM queries). We also observe that the granularity at which the plain LLM is applied has a significant impact on the cost. We therefore propose targeting first the program classes, where test generation is more efficient, and then the uncovered methods to reduce the number of LLM requests. This strategy achieves comparable (slightly higher) effectiveness while requiring about 20% fewer LLM requests.",
+    "arxiv_url": "https://arxiv.org/abs/2601.09695",
+    "authors": [
+      "Michael Konstantinou",
+      "Renzo Degiovanni",
+      "Mike Papadakis"
+    ],
+    "first_author": "Michael Konstantinou",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Mutation Testing",
+      "Class-level Generation",
+      "Method-level Generation",
+      "Hybrid Granularity",
+      "LLM Cost Analysis",
+      "Compilation Failures",
+      "Coverage Evaluation",
+      "Replication Study",
+      "LLM Version Comparison"
+    ],
+    "summary": "本文复现并比较了四种基于LLM的单元测试生成工具与简单的零样本LLM提示在新一代LLM（如gpt-4o-mini、Llama 3.3、DeepSeek V3）上的效果与成本，结果表明Plain-LLM在覆盖率和变异得分上超越了这些方法，并提出先按类再针对未覆盖方法的混合粒度策略可在保持效果的同时节省约20%请求成本。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.09695v1",
+    "published": "2026-01-14",
+    "update_time": "2026-01-14",
+    "download_time": "2026-01-16 01:56:52"
+  },
+  {
+    "id": "2601.09282",
+    "title": "Cluster Workload Allocation: Semantic Soft Affinity Using Natural Language Processing",
+    "abstract": "Cluster workload allocation often requires complex configurations, creating a usability gap. This paper introduces a semantic, intent-driven scheduling paradigm for cluster systems using Natural Language Processing. The system employs a Large Language Model (LLM) integrated via a Kubernetes scheduler extender to interpret natural language allocation hint annotations for soft affinity preferences. A prototype featuring a cluster state cache and an intent analyzer (using AWS Bedrock) was developed. Empirical evaluation demonstrated high LLM parsing accuracy (>95% Subset Accuracy on an evaluation ground-truth dataset) for top-tier models like Amazon Nova Pro/Premier and Mistral Pixtral Large, significantly outperforming a baseline engine. Scheduling quality tests across six scenarios showed the prototype achieved superior or equivalent placement compared to standard Kubernetes configurations, particularly excelling in complex and quantitative scenarios and handling conflicting soft preferences. The results validate using LLMs for accessible scheduling but highlight limitations like synchronous LLM latency, suggesting asynchronous processing for production readiness. This work confirms the viability of semantic soft affinity for simplifying workload orchestration.",
+    "arxiv_url": "https://arxiv.org/abs/2601.09282",
+    "authors": [
+      "Leszek Sliwko",
+      "Jolanta Mizeria-Pietraszko"
+    ],
+    "first_author": "Leszek Sliwko",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Cluster Management & Scheduling",
+    "task": "Semantic Soft-Affinity Scheduling",
+    "tags": [
+      "Semantic Soft-Affinity",
+      "Natural-Language Intent Parsing",
+      "Kubernetes Scheduler Extender",
+      "Cluster State Cache",
+      "Score Scalarization",
+      "Placement Quality Evaluation",
+      "Synchronous LLM Latency"
+    ],
+    "summary": "本文提出并实现了一个基于大语言模型的语义意图驱动Kubernetes调度原型，将自然语言的分配提示解析为软亲和性偏好以优化节点放置，并在评估中表现出高解析准确率和优越或相当的调度质量，同时指出同步LLM延迟为部署限制。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.09282v1",
+    "published": "2026-01-14",
+    "update_time": "2026-01-14",
+    "download_time": "2026-01-16 02:02:14"
+  },
+  {
+    "id": "2601.09097",
+    "title": "Programming over Thinking: Efficient and Robust Multi-Constraint Planning",
+    "abstract": "Multi-constraint planning involves identifying, evaluating, and refining candidate plans while satisfying multiple, potentially conflicting constraints. Existing large language model (LLM) approaches face fundamental limitations in this domain. Pure reasoning paradigms, which rely on long natural language chains, are prone to inconsistency, error accumulation, and prohibitive cost as constraints compound. Conversely, LLMs combined with coding- or solver-based strategies lack flexibility: they often generate problem-specific code from scratch or depend on fixed solvers, failing to capture generalizable logic across diverse problems. To address these challenges, we introduce the Scalable COde Planning Engine (SCOPE), a framework that disentangles query-specific reasoning from generic code execution. By separating reasoning from execution, SCOPE produces solver functions that are consistent, deterministic, and reusable across queries while requiring only minimal changes to input parameters. SCOPE achieves state-of-the-art performance while lowering cost and latency. For example, with GPT-4o, it reaches 93.1% success on TravelPlanner, a 61.6% gain over the best baseline (CoT) while cutting inference cost by 1.4x and time by ~4.67x. Code is available at https://github.com/DerrickGXD/SCOPE.",
+    "arxiv_url": "https://arxiv.org/abs/2601.09097",
+    "authors": [
+      "Derrick Goh Xin Deik",
+      "Quanyu Long",
+      "Zhengyuan Liu",
+      "Nancy F. Chen",
+      "Wenya Wang"
+    ],
+    "first_author": "Derrick Goh Xin Deik",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Code Agents",
+      "Reusable Solver",
+      "Problem Formalization",
+      "Parameter Extraction",
+      "Structured Representation",
+      "Combination Enumeration",
+      "Output Reflection",
+      "Deterministic Execution",
+      "Efficiency",
+      "Robustness"
+    ],
+    "summary": "本文提出SCOPE，一种将查询特定的结构化问题形式化与通用可重用求解器生成分离的多代理框架，能从单个示例自动抽取参数化表示并生成确定性、可复用的求解函数，从而在多约束规划任务上实现更高的鲁棒性与更低的成本与延迟。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.09097v1",
+    "published": "2026-01-14",
+    "update_time": "2026-01-14",
+    "download_time": "2026-01-16 02:05:26"
   }
 ]
