@@ -1893,5 +1893,163 @@
     "published": "2026-01-15",
     "update_time": "2026-01-15",
     "download_time": "2026-01-18 02:05:45"
+  },
+  {
+    "id": "2601.11362",
+    "title": "RITA: A Tool for Automated Requirements Classification and Specification from Online User Feedback",
+    "abstract": "Context and motivation. Online user feedback is a valuable resource for requirements engineering, but its volume and noise make analysis difficult. Existing tools support individual feedback analysis tasks, but their capabilities are rarely integrated into end-to-end support. Problem. The lack of end-to-end integration limits the practical adoption of existing RE tools and makes it difficult to assess their real-world usefulness. Solution. To address this challenge, we present RITA, a tool that integrates lightweight open-source large language models into a unified workflow for feedback-driven RE. RITA supports automated request classification, non-functional requirement identification, and natural-language requirements specification generation from online feedback via a user-friendly interface, and integrates with Jira for seamless transfer of requirements specifications to development tools. Results and conclusions. RITA exploits previously evaluated LLM-based RE techniques to efficiently transform raw user feedback into requirements artefacts, helping bridge the gap between research and practice. A demonstration is available at: https://youtu.be/8meCLpwQWV8.",
+    "arxiv_url": "https://arxiv.org/abs/2601.11362",
+    "authors": [
+      "Manjeshwar Aniruddh Mallya",
+      "Alessio Ferrari",
+      "Mohammad Amin Zadenoori",
+      "Jacek Dąbrowski"
+    ],
+    "first_author": "Manjeshwar Aniruddh Mallya",
+    "category": [
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Requirements Classification",
+      "Non-Functional Requirements",
+      "User Feedback Mining",
+      "Requirements Specification",
+      "User Stories",
+      "Jira Integration",
+      "Prompt Engineering",
+      "Lightweight LLMs",
+      "End-to-End Tool"
+    ],
+    "summary": "本文介绍了RITA工具，将轻量开源LLM整合到端到端流程中，从在线用户反馈自动进行请求分类、非功能需求识别与需求规格/用户故事生成，并支持一键同步至Jira。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.11362v1",
+    "published": "2026-01-16",
+    "update_time": "2026-01-16",
+    "download_time": "2026-01-19 02:01:11"
+  },
+  {
+    "id": "2601.11077",
+    "title": "ABC-Bench: Benchmarking Agentic Backend Coding in Real-World Development",
+    "abstract": "The evolution of Large Language Models (LLMs) into autonomous agents has expanded the scope of AI coding from localized code generation to complex, repository-level, and execution-driven problem solving. However, current benchmarks predominantly evaluate code logic in static contexts, neglecting the dynamic, full-process requirements of real-world engineering, particularly in backend development which demands rigorous environment configuration and service deployment. To address this gap, we introduce ABC-Bench, a benchmark explicitly designed to evaluate agentic backend coding within a realistic, executable workflow. Using a scalable automated pipeline, we curated 224 practical tasks spanning 8 languages and 19 frameworks from open-source repositories. Distinct from previous evaluations, ABC-Bench require the agents to manage the entire development lifecycle from repository exploration to instantiating containerized services and pass the external end-to-end API tests. Our extensive evaluation reveals that even state-of-the-art models struggle to deliver reliable performance on these holistic tasks, highlighting a substantial disparity between current model capabilities and the demands of practical backend engineering. Our code is available at https://github.com/OpenMOSS/ABC-Bench.",
+    "arxiv_url": "https://arxiv.org/abs/2601.11077",
+    "authors": [
+      "Jie Yang",
+      "Honglin Guo",
+      "Li Ji",
+      "Jiazheng Zhou",
+      "Rui Zheng",
+      "Zhikai Lei",
+      "Shuo Zhang",
+      "Zhiheng Xi",
+      "Shichun Liu",
+      "Yuxin Wang",
+      "Bo Wang",
+      "Yining Zheng",
+      "Tao Gui",
+      "Xipeng Qiu"
+    ],
+    "first_author": "Jie Yang",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Repository-Level Coding",
+    "tags": [
+      "Repository-Level Coding",
+      "Code Agents",
+      "Containerization",
+      "Environment Configuration",
+      "End-to-End API Testing",
+      "Task Generation Pipeline",
+      "Deployment Robustness",
+      "Backend Framework Diversity"
+    ],
+    "summary": "本文提出ABC-Bench，一个由224个可执行后端全生命周期任务构成的基准与自动化构建流水线，要求代理完成仓库探索、代码修改、环境配置与容器化部署并通过端到端API测试，评估显示环境配置与部署为当前模型的主要瓶颈。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.11077v1",
+    "published": "2026-01-16",
+    "update_time": "2026-01-16",
+    "download_time": "2026-01-19 02:01:37"
+  },
+  {
+    "id": "2601.10398",
+    "title": "LatentRefusal: Latent-Signal Refusal for Unanswerable Text-to-SQL Queries",
+    "abstract": "In LLM-based text-to-SQL systems, unanswerable and underspecified user queries may generate not only incorrect text but also executable programs that yield misleading results or violate safety constraints, posing a major barrier to safe deployment. Existing refusal strategies for such queries either rely on output-level instruction following, which is brittle due to model hallucinations, or estimate output uncertainty, which adds complexity and overhead. To address this challenge, we formalize safe refusal in text-to-SQL systems as an answerability-gating problem and propose LatentRefusal, a latent-signal refusal mechanism that predicts query answerability from intermediate hidden activations of a large language model. We introduce the Tri-Residual Gated Encoder, a lightweight probing architecture, to suppress schema noise and amplify sparse, localized cues of question-schema mismatch that indicate unanswerability. Extensive empirical evaluations across diverse ambiguous and unanswerable settings, together with ablation studies and interpretability analyses, demonstrate the effectiveness of the proposed approach and show that LatentRefusal provides an attachable and efficient safety layer for text-to-SQL systems. Across four benchmarks, LatentRefusal improves average F1 to 88.5 percent on both backbones while adding approximately 2 milliseconds of probe overhead.",
+    "arxiv_url": "https://arxiv.org/abs/2601.10398",
+    "authors": [
+      "Xuancheng Ren",
+      "Shijing Hu",
+      "Zhihui Lu",
+      "Jiangqi Huang",
+      "Qiang Duan"
+    ],
+    "first_author": "Xuancheng Ren",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "Pre-generation refusal",
+      "Latent-signal probing",
+      "Gated encoder probe",
+      "Question-schema mismatch",
+      "Schema-noise suppression",
+      "Single-pass gating",
+      "Execution-free safety",
+      "Low-latency"
+    ],
+    "summary": "本文提出LatentRefusal，通过在冻结的大型模型中对中间隐藏态进行轻量探针检测并放大问题与数据库模式不匹配的稀疏信号，从而在生成或执行任何SQL之前以单次前向、低延迟且无执行的方式判断Text-to-SQL查询是否可回答并进行安全拒绝。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.10398v1",
+    "published": "2026-01-15",
+    "update_time": "2026-01-15",
+    "download_time": "2026-01-19 02:07:00"
+  },
+  {
+    "id": "2601.10011",
+    "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL",
+    "abstract": "Existing NL2SQL systems face two critical limitations: (1) they rely on in-context learning with only correct examples, overlooking the rich signal in historical error-fix pairs that could guide more robust self-correction; and (2) test-time scaling approaches often decompose questions arbitrarily, producing near-identical SQL candidates across runs and diminishing ensemble gains. Moreover, these methods suffer from a stark accuracy-efficiency trade-off: high performance demands excessive computation, while fast variants compromise quality. We present Memo-SQL, a training-free framework that addresses these issues through two simple ideas: structured decomposition and experience-aware self-correction. Instead of leaving decomposition to chance, we apply three clear strategies, entity-wise, hierarchical, and atomic sequential, to encourage diverse reasoning. For correction, we build a dynamic memory of both successful queries and historical error-fix pairs, and use retrieval-augmented prompting to bring relevant examples into context at inference time, no fine-tuning or external APIs required. On BIRD, Memo-SQL achieves 68.5% execution accuracy, setting a new state of the art among open, zero-fine-tuning methods, while using over 10 times fewer resources than prior TTS approaches.",
+    "arxiv_url": "https://arxiv.org/abs/2601.10011",
+    "authors": [
+      "Zerui Yang",
+      "Weichuan Wang",
+      "Yanwei Xu",
+      "Linqi Song",
+      "Yudai Matsuda",
+      "Wei Han",
+      "Bo Bai"
+    ],
+    "first_author": "Zerui Yang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Structured Decomposition",
+      "Error-Correction Memory",
+      "Retrieval-Augmented ICL",
+      "Experience-Guided Self-Correction",
+      "ReAct+Reflection",
+      "Test-Time Scaling",
+      "Ensemble Diversity",
+      "Execution-Guided Repair",
+      "NL2SQL"
+    ],
+    "summary": "本文提出Memo-SQL，一种无需训练的NL2SQL框架，通过实体/层次/原子三种结构化分解策略结合基于历史错误—修正对的检索增强即时自我纠正（ReAct+Reflection），在显著降低计算开销的同时提升执行准确率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.10011v1",
+    "published": "2026-01-15",
+    "update_time": "2026-01-15",
+    "download_time": "2026-01-19 02:15:31"
   }
 ]
