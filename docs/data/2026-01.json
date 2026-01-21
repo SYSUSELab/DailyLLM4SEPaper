@@ -2201,5 +2201,150 @@
     "published": "2026-01-16",
     "update_time": "2026-01-16",
     "download_time": "2026-01-20 02:06:09"
+  },
+  {
+    "id": "2601.10773",
+    "title": "LogicLens: Leveraging Semantic Code Graph to explore Multi Repository large systems",
+    "abstract": "Understanding large software systems is a challenging task, especially when code is distributed across multiple repositories and microservices. Developers often need to reason not only about the structure of the code, but also about its domain logic and runtime behaviors, which are typically implicit and scattered. We introduce LogicLens, a reactive conversational agent that assists developers in exploring complex software systems through a semantic multi-repository graph. This graph is built in a preprocessing step by combining syntactic code analysis, via AST parsing and repository traversal, with semantic enrichment using Large Language Models (LLMs). The resulting graph captures both structural elements, such as files, classes, and functions, as well as functional abstractions like domain entities, operations, and workflows. Once the graph is constructed, LogicLens enables developers to interact with it via natural language, dynamically retrieving relevant subgraphs and answering technical or functional queries. We present the architecture of the system, discuss emergent behaviors, and evaluate its effectiveness on real-world multi-repository scenarios. We demonstrate emergent capabilities including impact analysis and symptom-based debugging that arise naturally from the semantic graph structure.",
+    "arxiv_url": "https://arxiv.org/abs/2601.10773",
+    "authors": [
+      "Niko Usai",
+      "Dario Montagnini",
+      "Kristian Ilianov Iliev",
+      "Raffaele Camanzo"
+    ],
+    "first_author": "Niko Usai",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Understanding",
+    "tags": [
+      "Software Knowledge Graph",
+      "Cross-Repository Reasoning",
+      "Graph RAG",
+      "ReAct Agent",
+      "Semantic Enrichment",
+      "AST-based Extraction",
+      "Conversational Code Exploration",
+      "Impact Analysis",
+      "Symptom-based Debugging"
+    ],
+    "summary": "本文提出LogicLens，一种将AST解析构建结构图并用LLM进行语义增强以生成跨多仓库语义知识图的交互式对话代理，支持基于图的检索、影响分析与故障定位以帮助开发者理解大型分布式系统。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.10773v1",
+    "published": "2026-01-15",
+    "update_time": "2026-01-15",
+    "download_time": "2026-01-21 02:00:12"
+  },
+  {
+    "id": "2601.10220",
+    "title": "Agentic Pipelines in Embedded Software Engineering: Emerging Practices and Challenges",
+    "abstract": "A new transformation is underway in software engineering, driven by the rapid adoption of generative AI in development workflows. Similar to how version control systems once automated manual coordination, AI tools are now beginning to automate many aspects of programming. For embedded software engineering organizations, however, this marks their first experience integrating AI into safety-critical and resource-constrained environments. The strict demands for determinism, reliability, and traceability pose unique challenges for adopting generative technologies.   In this paper, we present findings from a qualitative study with ten senior experts from four companies who are evaluating generative AI-augmented development for embedded software. Through semi-structured focus group interviews and structured brainstorming sessions, we identified eleven emerging practices and fourteen challenges related to the orchestration, responsible governance, and sustainable adoption of generative AI tools. Our results show how embedded software engineering teams are rethinking workflows, roles, and toolchains to enable a sustainable transition toward agentic pipelines and generative AI-augmented development.",
+    "arxiv_url": "https://arxiv.org/abs/2601.10220",
+    "authors": [
+      "Simin Sun",
+      "Miroslaw Staron"
+    ],
+    "first_author": "Simin Sun",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Embedded SE & AI Governance",
+    "task": "Generative AI Integration & Governance",
+    "tags": [
+      "Agentic Pipelines",
+      "Human-LLM Interaction",
+      "Determinism",
+      "Traceability",
+      "Compiler-in-the-loop",
+      "AI Governance",
+      "Toolchain Integration",
+      "Certification"
+    ],
+    "summary": "本文通过对来自四家公司十位嵌入式软件专家的焦点小组访谈与结构化头脑风暴，识别了将生成式 AI 融入嵌入式软件工程以保持确定性、可靠性与可追溯性时出现的11项新兴实践与14项挑战，并讨论了相关治理与工作流重构的影响。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.10220v1",
+    "published": "2026-01-15",
+    "update_time": "2026-01-15",
+    "download_time": "2026-01-21 02:01:15"
+  },
+  {
+    "id": "2601.10820",
+    "title": "Towards Reliable ML Feature Engineering via Planning in Constrained-Topology of LLM Agents",
+    "abstract": "Recent advances in code generation models have unlocked unprecedented opportunities for automating feature engineering, yet their adoption in real-world ML teams remains constrained by critical challenges: (i) the scarcity of datasets capturing the iterative and complex coding processes of production-level feature engineering, (ii) limited integration and personalization of widely used coding agents, such as CoPilot and Devin, with a team's unique tools, codebases, workflows, and practices, and (iii) suboptimal human-AI collaboration due to poorly timed or insufficient feedback. We address these challenges with a planner-guided, constrained-topology multi-agent framework that generates code for repositories in a multi-step fashion. The LLM-powered planner leverages a team's environment, represented as a graph, to orchestrate calls to available agents, generate context-aware prompts, and use downstream failures to retroactively correct upstream artifacts. It can request human intervention at critical steps, ensuring generated code is reliable, maintainable, and aligned with team expectations. On a novel in-house dataset, our approach achieves 38% and 150% improvement in the evaluation metric over manually crafted and unplanned workflows respectively. In practice, when building features for recommendation models serving over 120 million users, our approach has delivered real-world impact by reducing feature engineering cycles from three weeks to a single day.",
+    "arxiv_url": "https://arxiv.org/abs/2601.10820",
+    "authors": [
+      "Himanshu Thakur",
+      "Anusha Kamath",
+      "Anurag Muthyala",
+      "Dhwani Sanmukhani",
+      "Smruthi Mukund",
+      "Jay Katukuri"
+    ],
+    "first_author": "Himanshu Thakur",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Repository-Level Coding",
+    "tags": [
+      "Repository-Level Coding",
+      "Code Agents",
+      "Planner-Guided Orchestration",
+      "Constrained Topology",
+      "Human-LLM Interaction",
+      "PySpark Feature Engineering",
+      "Failure-driven Repair",
+      "Robustness"
+    ],
+    "summary": "本文提出一种基于规划器的受约束拓扑多智能体框架，用于仓库级别的PySpark特征工程，通过动态协调现有代理、利用下游失败进行回溯修复并支持人机交互来提升代码生成的可靠性与可维护性，并发布了对应的基准数据集。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.10820v1",
+    "published": "2026-01-15",
+    "update_time": "2026-01-15",
+    "download_time": "2026-01-21 02:11:56"
+  },
+  {
+    "id": "2601.11960",
+    "title": "R$^2$PO: Decoupling Training Trajectories from Inference Responses for LLM Reasoning",
+    "abstract": "Reinforcement learning has become a central paradigm for improving LLM reasoning. However, existing methods use a single policy to produce both inference responses and training optimization trajectories. The objective conflict between generating stable inference responses and diverse training trajectories leads to insufficient exploration, which harms reasoning capability. In this paper, to address the problem, we propose R$^2$PO (Residual Rollout Policy Optimization), which introduces a lightweight Residual Rollout-Head atop the policy to decouple training trajectories from inference responses, enabling controlled trajectory diversification during training while keeping inference generation stable. Experiments across multiple benchmarks show that our method consistently outperforms baselines, achieving average accuracy gains of 3.1% on MATH-500 and 2.4% on APPS, while also reducing formatting errors and mitigating length bias for stable optimization. Our code is publicly available at https://github.com/RRPO-ARR/Code.",
+    "arxiv_url": "https://arxiv.org/abs/2601.11960",
+    "authors": [
+      "Jingchu Wang",
+      "Bingbing Xu",
+      "Yige Yuan",
+      "Bin Xie",
+      "Xiaoqian Sun",
+      "Huawei Shen"
+    ],
+    "first_author": "Jingchu Wang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Residual Rollout Head",
+      "Decoupled Exploration",
+      "Trajectory Diversification",
+      "Group Inverse-Frequency Reward",
+      "Training Stability",
+      "Length-Bias Mitigation",
+      "Formatting Error Reduction",
+      "Inference-Discardable Module",
+      "Low Overhead"
+    ],
+    "summary": "本文提出R2PO，通过在冻结主干上加入轻量级残差Rollout-Head将训练轨迹与推理响应解耦，实现可控的轨迹多样化以增强RL微调的探索性，从而在数学与代码推理任务上提升性能并改善训练稳定性与格式/长度偏差问题，推理时可丢弃该模块以保持生成稳定性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.11960v1",
+    "published": "2026-01-17",
+    "update_time": "2026-01-17",
+    "download_time": "2026-01-21 02:15:11"
   }
 ]
