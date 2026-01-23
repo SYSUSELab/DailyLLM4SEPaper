@@ -2516,5 +2516,164 @@
     "published": "2026-01-20",
     "update_time": "2026-01-20",
     "download_time": "2026-01-22 02:05:51"
+  },
+  {
+    "id": "2601.15232",
+    "title": "When Agents Fail: A Comprehensive Study of Bugs in LLM Agents with Automated Labeling",
+    "abstract": "Large Language Models (LLMs) have revolutionized intelligent application development. While standalone LLMs cannot perform any actions, LLM agents address the limitation by integrating tools. However, debugging LLM agents is difficult and costly as the field is still in it's early stage and the community is underdeveloped. To understand the bugs encountered during agent development, we present the first comprehensive study of bug types, root causes, and effects in LLM agent-based software. We collected and analyzed 1,187 bug-related posts and code snippets from Stack Overflow, GitHub, and Hugging Face forums, focused on LLM agents built with seven widely used LLM frameworks as well as custom implementations. For a deeper analysis, we have also studied the component where the bug occurred, along with the programming language and framework. This study also investigates the feasibility of automating bug identification. For that, we have built a ReAct agent named BugReAct, equipped with adequate external tools to determine whether it can detect and annotate the bugs in our dataset. According to our study, we found that BugReAct equipped with Gemini 2.5 Flash achieved a remarkable performance in annotating bug characteristics with an average cost of 0.01 USD per post/code snippet.",
+    "arxiv_url": "https://arxiv.org/abs/2601.15232",
+    "authors": [
+      "Niful Islam",
+      "Ragib Shahriar Ayon",
+      "Deepak George Thomas",
+      "Shibbir Ahmed",
+      "Mohammad Wardat"
+    ],
+    "first_author": "Niful Islam",
+    "category": [
+      "Empirical",
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Localization",
+    "tags": [
+      "Agent Bug Taxonomy",
+      "Automated Labeling",
+      "ReAct Agent",
+      "Forum Mining",
+      "Component-level Analysis",
+      "Cross-framework Analysis",
+      "Dataset Release",
+      "Cost-efficient Annotation"
+    ],
+    "summary": "本文收集并分析了来自 Stack Overflow、GitHub 与 Hugging Face 的 1,187 条 LLM 代理相关 bug 报告，构建代理 bug 分类法并提出 BugReAct（一种基于 ReAct 的自动标注代理）用于自动识别与注释这些 bug，并发布数据集以支持后续研究。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.15232v1",
+    "published": "2026-01-21",
+    "update_time": "2026-01-21",
+    "download_time": "2026-01-23 01:55:41"
+  },
+  {
+    "id": "2601.15195",
+    "title": "Where Do AI Coding Agents Fail? An Empirical Study of Failed Agentic Pull Requests in GitHub",
+    "abstract": "AI coding agents are now submitting pull requests (PRs) to software projects, acting not just as assistants but as autonomous contributors. As these agentic contributions are rapidly increasing across real repositories, little is known about how they behave in practice and why many of them fail to be merged. In this paper, we conduct a large-scale study of 33k agent-authored PRs made by five coding agents across GitHub. (RQ1) We first quantitatively characterize merged and not-merged PRs along four broad dimensions: 1) merge outcomes across task types, 2) code changes, 3) CI build results, and 4) review dynamics. We observe that tasks related to documentation, CI, and build update achieve the highest merge success, whereas performance and bug-fix tasks perform the worst. Not-merged PRs tend to involve larger code changes, touch more files, and often do not pass the project's CI/CD pipeline validation. (RQ2) To further investigate why some agentic PRs are not merged, we qualitatively analyze 600 PRs to derive a hierarchical taxonomy of rejection patterns. This analysis complements the quantitative findings in RQ1 by uncovering rejection reasons not captured by quantitative metrics, including lack of meaningful reviewer engagement, duplicate PRs, unwanted feature implementations, and agent misalignment. Together, our findings highlight key socio-technical and human-AI collaboration factors that are critical to improving the success of future agentic workflows.",
+    "arxiv_url": "https://arxiv.org/abs/2601.15195",
+    "authors": [
+      "Ramtin Ehsani",
+      "Sakshi Pathak",
+      "Shriya Rawal",
+      "Abdullah Al Mujahid",
+      "Mia Mohammad Imran",
+      "Preetha Chatterjee"
+    ],
+    "first_author": "Ramtin Ehsani",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Version Control & Collaboration",
+    "task": "Git VCS",
+    "tags": [
+      "Agentic PRs",
+      "Reviewer Abandonment",
+      "CI Failures",
+      "Duplicate PRs",
+      "Unwanted Feature Implementation",
+      "Agent Misalignment",
+      "Large PRs",
+      "Review Iteration",
+      "Merge-rate by Task",
+      "Human-LLM Interaction"
+    ],
+    "summary": "本文基于超过33k个由五种代码代理在GitHub提交的拉取请求，定量比较了被合并与未被合并PR在任务类型、代码变更、CI结果和评审互动上的差异，并通过对600个未合并PR的定性分析构建了包含评审放弃、重复提交、构建失败与代理错位等拒绝模式的分层分类法。",
+    "quality": "High",
+    "conference": "International Mining Software Repositories Conference (MSR) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.15195v1",
+    "published": "2026-01-21",
+    "update_time": "2026-01-21",
+    "download_time": "2026-01-23 01:55:58"
+  },
+  {
+    "id": "2601.15188",
+    "title": "Benchmarking Large Language Models for ABAP Code Generation: An Empirical Study on Iterative Improvement by Compiler Feedback",
+    "abstract": "This work investigates the performance of Large Language Models (LLMs) in generating ABAP code. Despite successful applications of generative AI in many programming languages, there are hardly any systematic analyses of ABAP code generation to date. The aim of the study is to empirically analyze to what extent various LLMs can generate syntactically correct and functional ABAP code, how effectively they use compiler feedback for iterative improvement, and which task types pose special challenges. For this purpose, a benchmark with 180 tasks is conducted, consisting of adapted HumanEval tasks and practical SAP scenarios. The results show significant performance differences between the models: more powerful LLMs achieve success rates of around 75% after several iterations and benefit greatly from compiler feedback, while smaller models perform significantly weaker. Overall, the study highlights the high potential of powerful LLMs for ABAP development processes, especially in iterative error correction.",
+    "arxiv_url": "https://arxiv.org/abs/2601.15188",
+    "authors": [
+      "Stephan Wallraven",
+      "Tim Köhne",
+      "Hartmut Westenberger",
+      "Andreas Moser"
+    ],
+    "first_author": "Stephan Wallraven",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "ABAP",
+      "Low-Resource Language",
+      "Compiler Feedback",
+      "Iterative Refinement",
+      "Algorithmic Task Adaptation",
+      "Automated Unit Tests",
+      "Error Analysis",
+      "Survival Analysis",
+      "SAP Scenarios",
+      "Functional Correctness",
+      "ABAP Benchmark"
+    ],
+    "summary": "本文构建了包含164个改编算法题与16个SAP场景共180题的ABAP基准，实证评估多种LLM在生成ABAP代码的语法与功能正确性，并研究了利用ABAP编译器错误反馈进行最多五轮迭代改进对成功率的提升（强模型迭代后成功率约75%）。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.15188v1",
+    "published": "2026-01-21",
+    "update_time": "2026-01-21",
+    "download_time": "2026-01-23 01:57:20"
+  },
+  {
+    "id": "2601.15165",
+    "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
+    "abstract": "Diffusion Large Language Models (dLLMs) break the rigid left-to-right constraint of traditional LLMs, enabling token generation in arbitrary orders. Intuitively, this flexibility implies a solution space that strictly supersets the fixed autoregressive trajectory, theoretically unlocking superior reasoning potential for general tasks like mathematics and coding. Consequently, numerous works have leveraged reinforcement learning (RL) to elicit the reasoning capability of dLLMs. In this paper, we reveal a counter-intuitive reality: arbitrary order generation, in its current form, narrows rather than expands the reasoning boundary of dLLMs. We find that dLLMs tend to exploit this order flexibility to bypass high-uncertainty tokens that are crucial for exploration, leading to a premature collapse of the solution space. This observation challenges the premise of existing RL approaches for dLLMs, where considerable complexities, such as handling combinatorial trajectories and intractable likelihoods, are often devoted to preserving this flexibility. We demonstrate that effective reasoning is better elicited by intentionally forgoing arbitrary order and applying standard Group Relative Policy Optimization (GRPO) instead. Our approach, JustGRPO, is minimalist yet surprisingly effective (e.g., 89.1% accuracy on GSM8K) while fully retaining the parallel decoding ability of dLLMs. Project page: https://nzl-thu.github.io/the-flexibility-trap",
+    "arxiv_url": "https://arxiv.org/abs/2601.15165",
+    "authors": [
+      "Zanlin Ni",
+      "Shenzhi Wang",
+      "Yang Yue",
+      "Tianyu Yu",
+      "Weilin Zhao",
+      "Yeguo Hua",
+      "Tianyi Chen",
+      "Jun Song",
+      "Cheng Yu",
+      "Bo Zheng",
+      "Gao Huang"
+    ],
+    "first_author": "Zanlin Ni",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Diffusion LLMs & Decoding",
+    "task": "Arbitrary-order decoding and RL for reasoning elicitation",
+    "tags": [
+      "Entropy Degradation",
+      "Arbitrary-Order Decoding",
+      "Decoding Order",
+      "Diffusion LLMs",
+      "Parallel Decoding",
+      "RL for Reasoning",
+      "Pass@k Evaluation",
+      "Exploration Suppression"
+    ],
+    "summary": "本文发现扩散式语言模型的任意生成顺序会通过绕过高不确定性标记压缩推理解空间（称为熵退化），并提出在训练阶段回归自回归顺序并使用标准GRPO（JustGRPO）来更有效地激发推理能力，同时保留并行解码优势，显著提升了GSM8K等基准的表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.15165v1",
+    "published": "2026-01-21",
+    "update_time": "2026-01-21",
+    "download_time": "2026-01-23 01:57:50"
   }
 ]
