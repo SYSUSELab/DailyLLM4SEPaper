@@ -2675,5 +2675,162 @@
     "published": "2026-01-21",
     "update_time": "2026-01-21",
     "download_time": "2026-01-23 01:57:50"
+  },
+  {
+    "id": "2601.15879",
+    "title": "Evaluating and Achieving Controllable Code Completion in Code LLM",
+    "abstract": "Code completion has become a central task, gaining significant attention with the rise of large language model (LLM)-based tools in software engineering. Although recent advances have greatly improved LLMs' code completion abilities, evaluation methods have not advanced equally. Most current benchmarks focus solely on functional correctness of code completions based on given context, overlooking models' ability to follow user instructions during completion-a common scenario in LLM-assisted programming. To address this limitation, we present the first instruction-guided code completion benchmark, Controllable Code Completion Benchmark (C3-Bench), comprising 2,195 carefully designed completion tasks. Through comprehensive evaluation of over 40 mainstream LLMs across C3-Bench and conventional benchmarks, we reveal substantial gaps in instruction-following capabilities between open-source and advanced proprietary models during code completion tasks. Moreover, we develop a straightforward data synthesis pipeline that leverages Qwen2.5-Coder to generate high-quality instruction-completion pairs for supervised fine-tuning (SFT). The resulting model, Qwen2.5-Coder-C3, achieves state-of-the-art performance on C3-Bench. Our findings provide valuable insights for enhancing LLMs' code completion and instruction-following capabilities, establishing new directions for future research in code LLMs. To facilitate reproducibility and foster further research in code LLMs, we open-source all code, datasets, and models.",
+    "arxiv_url": "https://arxiv.org/abs/2601.15879",
+    "authors": [
+      "Jiajun Zhang",
+      "Zeyu Cui",
+      "Lei Zhang",
+      "Jian Yang",
+      "Jiaxi Yang",
+      "Qiang Liu",
+      "Zilei Wang",
+      "Binyuan Hui",
+      "Liang Wang",
+      "Junyang Lin"
+    ],
+    "first_author": "Jiajun Zhang",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Controllable Code Completion",
+      "Instruction-Following",
+      "Implementation-Control",
+      "Scale-Control",
+      "Instruction Synthesis",
+      "Synthetic SFT",
+      "Automated Evaluation",
+      "Cross-Model Benchmarking"
+    ],
+    "summary": "本文提出了首个可控代码补全基准C3-Bench（含2195个指令引导的补全任务）并基于自动化评分评估40+模型，随后通过合成指令-补全数据对模型进行监督微调得到性能提升的Qwen2.5-Coder-C3。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.15879v1",
+    "published": "2026-01-22",
+    "update_time": "2026-01-22",
+    "download_time": "2026-01-24 01:53:23"
+  },
+  {
+    "id": "2601.15728",
+    "title": "Benchmarking Text-to-Python against Text-to-SQL: The Impact of Explicit Logic and Ambiguity",
+    "abstract": "While Text-to-SQL remains the dominant approach for database interaction, real-world analytics increasingly require the flexibility of general-purpose programming languages such as Python or Pandas to manage file-based data and complex analytical workflows. Despite this growing need, the reliability of Text-to-Python in core data retrieval remains underexplored relative to the mature SQL ecosystem. To address this gap, we introduce BIRD-Python, a benchmark designed for cross-paradigm evaluation. We systematically refined the original dataset to reduce annotation noise and align execution semantics, thereby establishing a consistent and standardized baseline for comparison. Our analysis reveals a fundamental paradigmatic divergence: whereas SQL leverages implicit DBMS behaviors through its declarative structure, Python requires explicit procedural logic, making it highly sensitive to underspecified user intent. To mitigate this challenge, we propose the Logic Completion Framework (LCF), which resolves ambiguity by incorporating latent domain knowledge into the generation process. Experimental results show that (1) performance differences primarily stem from missing domain context rather than inherent limitations in code generation, and (2) when these gaps are addressed, Text-to-Python achieves performance parity with Text-to-SQL. These findings establish Python as a viable foundation for analytical agents-provided that systems effectively ground ambiguous natural language inputs in executable logical specifications. Resources are available at https://anonymous.4open.science/r/Bird-Python-43B7/.",
+    "arxiv_url": "https://arxiv.org/abs/2601.15728",
+    "authors": [
+      "Hangle Hu",
+      "Chenyu Hou",
+      "Bin Cao",
+      "Ruizhe Li"
+    ],
+    "first_author": "Hangle Hu",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "File-based Data Processing",
+      "Explicit Procedural Logic",
+      "Ambiguity Resolution",
+      "Logic Completion",
+      "Context Grounding",
+      "Cross-paradigm Evaluation",
+      "Dataset Curation",
+      "Execution-based Evaluation"
+    ],
+    "summary": "本文提出BIRD-Python基准并引入逻辑补全框架LCF，通过修正数据集并在文件化环境下对比Text-to-Python与Text-to-SQL，发现性能差异主要源于缺失领域上下文，补全后Text-to-Python可达到与Text-to-SQL相当的性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.15728v1",
+    "published": "2026-01-22",
+    "update_time": "2026-01-22",
+    "download_time": "2026-01-24 01:53:56"
+  },
+  {
+    "id": "2601.16175",
+    "title": "Learning to Discover at Test Time",
+    "abstract": "How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test time, so the LLM can continue to train, but now with experience specific to the test problem. This form of continual learning is quite special, because its goal is to produce one great solution rather than many good ones on average, and to solve this very problem rather than generalize to other problems. Therefore, our learning objective and search subroutine are designed to prioritize the most promising solutions. We call this method Test-Time Training to Discover (TTT-Discover). Following prior work, we focus on problems with continuous rewards. We report results for every problem we attempted, across mathematics, GPU kernel engineering, algorithm design, and biology. TTT-Discover sets the new state of the art in almost all of them: (i) Erdős' minimum overlap problem and an autocorrelation inequality; (ii) a GPUMode kernel competition (up to $2\\times$ faster than prior art); (iii) past AtCoder algorithm competitions; and (iv) denoising problem in single-cell analysis. Our solutions are reviewed by experts or the organizers. All our results are achieved with an open model, OpenAI gpt-oss-120b, and can be reproduced with our publicly available code, in contrast to previous best results that required closed frontier models. Our test-time training runs are performed using Tinker, an API by Thinking Machines, with a cost of only a few hundred dollars per problem.",
+    "arxiv_url": "https://arxiv.org/abs/2601.16175",
+    "authors": [
+      "Mert Yuksekgonul",
+      "Daniel Koceja",
+      "Xinhao Li",
+      "Federico Bianchi",
+      "Jed McCaleb",
+      "Xiaolong Wang",
+      "Jan Kautz",
+      "Yejin Choi",
+      "James Zou",
+      "Carlos Guestrin",
+      "Yu Sun"
+    ],
+    "first_author": "Mert Yuksekgonul",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Test-Time RL",
+      "Single-Problem Optimization",
+      "Reward-Shaped Objective",
+      "Learning-to-Discover",
+      "Kernel Optimization",
+      "Algorithm Discovery",
+      "Mathematical Conjecture Search",
+      "Single-Cell Denoising",
+      "Thinking Tokens",
+      "Open-Model Reproducibility"
+    ],
+    "summary": "本文提出TTT-Discover，一种在测试时对LLM进行强化学习以持续针对单一科学问题训练并优先探索高回报解，从而在数学、GPU内核优化、算法竞赛和生物去噪等多项任务上实现可复现且低成本的新SOTA结果。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.16175v1",
+    "published": "2026-01-22",
+    "update_time": "2026-01-22",
+    "download_time": "2026-01-24 01:54:44"
+  },
+  {
+    "id": "2601.16172",
+    "title": "Structured Hints for Sample-Efficient Lean Theorem Proving",
+    "abstract": "State-of-the-art neural theorem provers like DeepSeek-Prover-V1.5 combine large language models with reinforcement learning, achieving impressive results through sophisticated training. We ask: do these highly-trained models still benefit from simple structural guidance at inference time? We evaluate a lightweight intervention -- a fixed prompt schedule over 15 common tactic skeletons -- on the miniF2F benchmark. This simple approach yields 21.7% pass@16 compared to 15.2% for standard sampling from the same model, a 43% relative improvement using the same number of samples (k=16) and same maximum generation length (1024 tokens). Our results suggest that even capable RL-trained provers underutilize structural priors available in the tactic language, and that simple inference-time guidance remains a cheap, complementary boost.",
+    "arxiv_url": "https://arxiv.org/abs/2601.16172",
+    "authors": [
+      "Zachary Burton"
+    ],
+    "first_author": "Zachary Burton",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Tactic Skeletons",
+      "Structured Intermediate Representation",
+      "Fixed Prompt Schedule",
+      "Inference-Time Guidance",
+      "Proof Assistant",
+      "Sample Efficiency",
+      "Structural Priors",
+      "Failure-Mode Analysis"
+    ],
+    "summary": "本文提出在推理时使用结构化中间表示与固定提示日程的轻量级方法，通过对15种战术骨架进行调度，在相同采样预算下于miniF2F上将通过率从15.2%提升到21.7%。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.16172v1",
+    "published": "2026-01-22",
+    "update_time": "2026-01-22",
+    "download_time": "2026-01-24 01:55:07"
   }
 ]
