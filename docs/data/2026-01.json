@@ -2971,5 +2971,159 @@
     "published": "2026-01-23",
     "update_time": "2026-01-23",
     "download_time": "2026-01-27 02:05:26"
+  },
+  {
+    "id": "2601.18749",
+    "title": "Let's Make Every Pull Request Meaningful: An Empirical Analysis of Developer and Agentic Pull Requests",
+    "abstract": "The automatic generation of pull requests (PRs) using AI agents has become increasingly common. Although AI-generated PRs are fast and easy to create, their merge rates have been reported to be lower than those created by humans. In this study, we conduct a large-scale empirical analysis of 40,214 PRs collected from the AIDev dataset. We extract 64 features across six families and fit statistical regression models to compare PR merge outcomes for human and agentic PRs, as well as across three AI agents. Our results show that submitter attributes dominate merge outcomes for both groups, while review-related features exhibit contrasting effects between human and agentic PRs. The findings of this study provide insights into improving PR quality through human-AI collaboration.",
+    "arxiv_url": "https://arxiv.org/abs/2601.18749",
+    "authors": [
+      "Haruhiko Yoshioka",
+      "Takahiro Monno",
+      "Haruka Tokumasu",
+      "Taiki Wakamatsu",
+      "Yuki Ota",
+      "Nimmi Weeraddana",
+      "Kenichi Matsumoto"
+    ],
+    "first_author": "Haruhiko Yoshioka",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Version Control & Collaboration",
+    "task": "Git VCS",
+    "tags": [
+      "PR Merge Prediction",
+      "Human-LLM Interaction",
+      "Review Dynamics",
+      "Submitter Reputation",
+      "Agent Behavior Comparison",
+      "Feature Importance",
+      "Logistic Regression"
+    ],
+    "summary": "本文基于AIDev数据集对40,214个由人类与AI代理提交的Pull Request进行大规模实证分析，提取64项特征并用可解释的回归模型比较影响合并率的因素，发现提交者属性主导合并结果且审查相关特征对人工与代理PR的影响相反。",
+    "quality": "High",
+    "conference": "International Conference on Mining Software Repositories (MSR) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.18749v1",
+    "published": "2026-01-26",
+    "update_time": "2026-01-26",
+    "download_time": "2026-01-28 01:58:12"
+  },
+  {
+    "id": "2601.18418",
+    "title": "daVinci-Dev: Agent-native Mid-training for Software Engineering",
+    "abstract": "Recently, the frontier of Large Language Model (LLM) capabilities has shifted from single-turn code generation to agentic software engineering-a paradigm where models autonomously navigate, edit, and test complex repositories. While post-training methods have become the de facto approach for code agents, **agentic mid-training**-mid-training (MT) on large-scale data that mirrors authentic agentic workflows-remains critically underexplored due to substantial resource requirements, despite offering a more scalable path to instilling foundational agentic behaviors than relying solely on expensive reinforcement learning. A central challenge in realizing effective agentic mid-training is the distribution mismatch between static training data and the dynamic, feedback-rich environment of real development. To address this, we present a systematic study of agentic mid-training, establishing both the data synthesis principles and training methodology for effective agent development at scale. Central to our approach is **agent-native data**-supervision comprising two complementary types of trajectories: **contextually-native trajectories** that preserve the complete information flow an agent experiences, offering broad coverage and diversity; and **environmentally-native trajectories** collected from executable repositories where observations stem from actual tool invocations and test executions, providing depth and interaction authenticity. We verify the model's agentic capabilities on `SWE-Bench Verified`. We demonstrate our superiority over the previous open software engineering mid-training recipe `Kimi-Dev` under two post-training settings with an aligned base model and agentic scaffold, while using less than half mid-training tokens (73.1B). Besides relative advantage, our best performing 32B and 72B models achieve **56.1%** and **58.5%** resolution rates, respectively, which are ...",
+    "arxiv_url": "https://arxiv.org/abs/2601.18418",
+    "authors": [
+      "Ji Zeng",
+      "Dayuan Fu",
+      "Tiantian Mi",
+      "Yumin Zhuang",
+      "Yaxing Huang",
+      "Xuefeng Li",
+      "Lyumanshan Ye",
+      "Muhang Xie",
+      "Qishuo Hua",
+      "Zhen Huang",
+      "Mohan Jiang",
+      "Hanning Wang",
+      "Jifan Lin",
+      "Yang Xiao",
+      "Jie Sun",
+      "Yunze Wu",
+      "Pengfei Liu"
+    ],
+    "first_author": "Ji Zeng",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Pre-Training",
+    "tags": [
+      "Agentic Mid-Training",
+      "Contextually-Native Trajectories",
+      "Environmentally-Native Trajectories",
+      "Repository-Level Coding",
+      "Test-Driven Iteration",
+      "Execution Feedback",
+      "Data Synthesis",
+      "Scalability"
+    ],
+    "summary": "本文提出一种面向软件工程的 agent-native 中期训练方法，通过构建大规模的上下文本地与环境本地轨迹数据并用于中期训练，从而显著提升代码代理在仓库级问题定位、编辑与测试驱动修复等任务的表现，并计划开源数据与模型工件。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.18418v1",
+    "published": "2026-01-26",
+    "update_time": "2026-01-26",
+    "download_time": "2026-01-28 01:58:43"
+  },
+  {
+    "id": "2601.18381",
+    "title": "AI Agent for Reverse-Engineering Legacy Finite-Difference Code and Translating to Devito",
+    "abstract": "To facilitate the transformation of legacy finite difference implementations into the Devito environment, this study develops an integrated AI agent framework. Retrieval-Augmented Generation (RAG) and open-source Large Language Models are combined through multi-stage iterative workflows in the system's hybrid LangGraph architecture. The agent constructs an extensive Devito knowledge graph through document parsing, structure-aware segmentation, extraction of entity relationships, and Leiden-based community detection. GraphRAG optimisation enhances query performance across semantic communities that include seismic wave simulation, computational fluid dynamics, and performance tuning libraries. A reverse engineering component derives three-level query strategies for RAG retrieval through static analysis of Fortran source code. To deliver precise contextual information for language model guidance, the multi-stage retrieval pipeline performs parallel searching, concept expansion, community-scale retrieval, and semantic similarity analysis. Code synthesis is governed by Pydantic-based constraints to guarantee structured outputs and reliability. A comprehensive validation framework integrates conventional static analysis with the G-Eval approach, covering execution correctness, structural soundness, mathematical consistency, and API compliance. The overall agent workflow is implemented on the LangGraph framework and adopts concurrent processing to support quality-based iterative refinement and state-aware dynamic routing. The principal contribution lies in the incorporation of feedback mechanisms motivated by reinforcement learning, enabling a transition from static code translation toward dynamic and adaptive analytical behavior.",
+    "arxiv_url": "https://arxiv.org/abs/2601.18381",
+    "authors": [
+      "Yinghan Hou",
+      "Zongyou Yang"
+    ],
+    "first_author": "Yinghan Hou",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "GraphRAG",
+      "Knowledge Graph Construction",
+      "Reverse Engineering",
+      "Fortran Static Analysis",
+      "Multi-stage Retrieval",
+      "Structured Output Constraints",
+      "Validation Framework",
+      "Multi-Agent Orchestration",
+      "Finite-Difference Translation"
+    ],
+    "summary": "本文提出一个基于GraphRAG与多阶段检索的AI代理框架，通过构建Devito知识图谱、对Fortran源代码进行静态分析并采用受约束的代码生成与验证流程，实现将遗留有限差分Fortran代码自动逆向并翻译为Devito实现，辅以多代理决策与质量驱动的迭代优化。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.18381v1",
+    "published": "2026-01-26",
+    "update_time": "2026-01-26",
+    "download_time": "2026-01-28 02:03:16"
+  },
+  {
+    "id": "2601.18282",
+    "title": "Think-Augmented Function Calling: Improving LLM Parameter Accuracy Through Embedded Reasoning",
+    "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in function calling for autonomous agents, yet current mechanisms lack explicit reasoning transparency during parameter generation, particularly for complex functions with interdependent parameters. While existing approaches like chain-of-thought prompting operate at the agent level, they fail to provide fine-grained reasoning guidance for individual function parameters. To address these limitations, we propose Think-Augmented Function Calling (TAFC), a novel framework that enhances function calling accuracy through explicit reasoning at both function and parameter levels. Our method introduces a universal \"think\" parameter augmentation that enables models to articulate their decision-making process, with dynamic optimization for parameter descriptions to improve reasoning quality. For complex parameters, TAFC automatically triggers granular reasoning based on complexity scoring, ensuring appropriate justification for critical decisions. Additionally, we propose reasoning-guided optimization to align generated reasoning with human expectations. TAFC requires no architectural modifications to existing LLMs while maintaining full API compatibility. Evaluation on ToolBench across proprietary and open-source models demonstrates significant improvements in parameter generation accuracy and reasoning coherence for multi-parameter functions, while providing enhanced interpretability for debugging AI agent behaviors.",
+    "arxiv_url": "https://arxiv.org/abs/2601.18282",
+    "authors": [
+      "Lei Wei",
+      "Jinpeng Ou",
+      "Xiao Peng",
+      "Bin Wang"
+    ],
+    "first_author": "Lei Wei",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Parameter-Level Reasoning",
+      "Function Calling Augmentation",
+      "Complexity Scoring",
+      "Dynamic Description Tuning",
+      "Tool Description Optimization",
+      "Code Agents",
+      "Interpretability"
+    ],
+    "summary": "本文提出TAFC（Think‑Augmented Function Calling），通过在函数签名中加入“think”推理字段、基于复杂度触发的参数级细粒度推理及动态描述优化，在无需改动模型架构的前提下显著提升多参数函数调用的参数生成准确性与可解释性，并在ToolBench上验证了性能提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.18282v1",
+    "published": "2026-01-26",
+    "update_time": "2026-01-26",
+    "download_time": "2026-01-28 02:04:17"
   }
 ]
