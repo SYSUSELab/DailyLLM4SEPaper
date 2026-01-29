@@ -3125,5 +3125,165 @@
     "published": "2026-01-26",
     "update_time": "2026-01-26",
     "download_time": "2026-01-28 02:04:17"
+  },
+  {
+    "id": "2601.20755",
+    "title": "ProfInfer: An eBPF-based Fine-Grained LLM Inference Profiler",
+    "abstract": "As large language models (LLMs) move from research to production, understanding how inference engines behave in real time has become both essential and elusive. Unlike general-purpose engines such as ONNX Runtime, today's LLM inference systems offer little operator-level visibility, leaving developers blind to where time and resources go. Even basic questions -- is this workload memory-bound or compute-bound? -- often remain unanswered. To close this gap, we develop a fine-grained, non-intrusive profiling framework for modern LLM inference engines, exemplified by llama.cpp but applicable to similar runtime architectures. Built on extended Berkeley Packet Filter (eBPF) technology, our system dynamically attaches probes to runtime functions across multiple layers -- without modifying or recompiling the source. It transforms collected traces into rich visualizations of operators, graphs, timelines, and hardware counter trends, exposing how dense inference, Mixture-of-Experts routing, and operator offloading behave in practice. With less than 4% runtime overhead and high profiling fidelity, our framework makes LLM inference both transparent and diagnosable, turning performance profiling into a practical tool for optimization, scheduling, and resource-aware deployment.",
+    "arxiv_url": "https://arxiv.org/abs/2601.20755",
+    "authors": [
+      "Bohua Zou",
+      "Debayan Roy",
+      "Dhimankumar Yogesh Airao",
+      "Weihao Xu",
+      "Binqi Sun",
+      "Yutao Liu",
+      "Haibo Chen"
+    ],
+    "first_author": "Bohua Zou",
+    "category": [
+      "Technical"
+    ],
+    "field": "Inference Systems & Profiling",
+    "task": "LLM Inference Profiling",
+    "tags": [
+      "eBPF Tracing",
+      "Operator-level Profiling",
+      "On-device LLMs",
+      "Hardware Performance Counters",
+      "Dynamic DAG Reconstruction",
+      "KV-cache Analysis",
+      "Mixture-of-Experts Monitoring",
+      "Low-overhead Profiling",
+      "Timeline & DAG Visualization"
+    ],
+    "summary": "本文提出ProfInfer，一种基于eBPF的轻量级、非侵入性且细粒度的LLM推理性能分析框架，能够在不修改源码的情况下采集算子级执行、硬件计数器和动态计算图信息，并通过时间线和DAG可视化帮助诊断移动与边缘设备上的推理瓶颈。",
+    "quality": "High",
+    "conference": "9th Annual Conference on Machine Learning and Systems (MLSys) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.20755v1",
+    "published": "2026-01-28",
+    "update_time": "2026-01-28",
+    "download_time": "2026-01-29 02:12:42"
+  },
+  {
+    "id": "2601.20615",
+    "title": "DRAINCODE: Stealthy Energy Consumption Attacks on Retrieval-Augmented Code Generation via Context Poisoning",
+    "abstract": "Large language models (LLMs) have demonstrated impressive capabilities in code generation by leveraging retrieval-augmented generation (RAG) methods. However, the computational costs associated with LLM inference, particularly in terms of latency and energy consumption, have received limited attention in the security context. This paper introduces DrainCode, the first adversarial attack targeting the computational efficiency of RAG-based code generation systems. By strategically poisoning retrieval contexts through a mutation-based approach, DrainCode forces LLMs to produce significantly longer outputs, thereby increasing GPU latency and energy consumption. We evaluate the effectiveness of DrainCode across multiple models. Our experiments show that DrainCode achieves up to an 85% increase in latency, a 49% increase in energy consumption, and more than a 3x increase in output length compared to the baseline. Furthermore, we demonstrate the generalizability of the attack across different prompting strategies and its effectiveness compared to different defenses. The results highlight DrainCode as a potential method for increasing the computational overhead of LLMs, making it useful for evaluating LLM security in resource-constrained environments. We provide code and data at https://github.com/DeepSoftwareAnalytics/DrainCode.",
+    "arxiv_url": "https://arxiv.org/abs/2601.20615",
+    "authors": [
+      "Yanlin Wang",
+      "Jiadong Wu",
+      "Tianyue Jiang",
+      "Mingwei Liu",
+      "Jiachi Chen",
+      "Chong Wang",
+      "Ensheng Shi",
+      "Xilin Liu",
+      "Yuchi Ma",
+      "Zibin Zheng"
+    ],
+    "first_author": "Yanlin Wang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Context Poisoning",
+      "Energy-Consumption Attack",
+      "Retrieval-Augmented Generation",
+      "Hypothetical Query Generation",
+      "Gradient-Guided Mutation",
+      "Multi-Position Mutation",
+      "Defense Evasion"
+    ],
+    "summary": "本文提出DRAINCODE，通过在RAG检索语料中注入经过梯度引导变异的隐蔽触发器，使代码生成模型在不破坏功能的前提下产生大幅冗长输出，从而显著增加推理延迟和能耗并能绕过多种防御。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.20615v1",
+    "published": "2026-01-28",
+    "update_time": "2026-01-28",
+    "download_time": "2026-01-29 02:13:18"
+  },
+  {
+    "id": "2601.19825",
+    "title": "Routing End User Queries to Enterprise Databases",
+    "abstract": "We address the task of routing natural language queries in multi-database enterprise environments. We construct realistic benchmarks by extending existing NL-to-SQL datasets. Our study shows that routing becomes increasingly challenging with larger, domain-overlapping DB repositories and ambiguous queries, motivating the need for more structured and robust reasoning-based solutions. By explicitly modelling schema coverage, structural connectivity, and fine-grained semantic alignment, the proposed modular, reasoning-driven reranking strategy consistently outperforms embedding-only and direct LLM-prompting baselines across all the metrics.",
+    "arxiv_url": "https://arxiv.org/abs/2601.19825",
+    "authors": [
+      "Saikrishna Sudarshan",
+      "Tanay Kulkarni",
+      "Manasi Patwardhan",
+      "Lovekesh Vig",
+      "Ashwin Srinivasan",
+      "Tanmay Tulsidas Verlekar"
+    ],
+    "first_author": "Saikrishna Sudarshan",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Natural Language Database Access",
+    "task": "Query Routing to Enterprise Databases",
+    "tags": [
+      "Query Routing",
+      "Schema Entity Recognition",
+      "Embedding Retrieval",
+      "LLM Re-ranking",
+      "Schema Coverage",
+      "Table Connectivity",
+      "Phrase-Schema Mapping",
+      "Training-free Method",
+      "Prompt Design",
+      "Cross-domain Robustness",
+      "Benchmark Construction"
+    ],
+    "summary": "该工作为企业多数据库场景构建了更现实的路由基准（将跨域NL-to-SQL数据集扩展为路由数据集），并提出一种无训练、模块化的推理驱动重排序方法——结合模式实体识别、嵌入检索、表连接结构和细粒度语义对齐——在路由任务上超越了基线。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.19825v1",
+    "published": "2026-01-27",
+    "update_time": "2026-01-27",
+    "download_time": "2026-01-29 02:16:54"
+  },
+  {
+    "id": "2601.19793",
+    "title": "CASTER: Breaking the Cost-Performance Barrier in Multi-Agent Orchestration via Context-Aware Strategy for Task Efficient Routing",
+    "abstract": "Graph-based Multi-Agent Systems (MAS) enable complex cyclic workflows but suffer from inefficient static model allocation, where deploying strong models uniformly wastes computation on trivial sub-tasks. We propose CASTER (Context-Aware Strategy for Task Efficient Routing), a lightweight router for dynamic model selection in graph-based MAS. CASTER employs a Dual-Signal Router that combines semantic embeddings with structural meta-features to estimate task difficulty. During training, the router self-optimizes through a Cold Start to Iterative Evolution paradigm, learning from its own routing failures via on-policy negative feedback. Experiments using LLM-as-a-Judge evaluation across Software Engineering, Data Analysis, Scientific Discovery, and Cybersecurity demonstrate that CASTER reduces inference cost by up to 72.4% compared to strong-model baselines while matching their success rates, and consistently outperforms both heuristic routing and FrugalGPT across all domains.",
+    "arxiv_url": "https://arxiv.org/abs/2601.19793",
+    "authors": [
+      "Shanyv Liu",
+      "Xuyang Yuan",
+      "Tao Chen",
+      "Zijun Zhan",
+      "Zhu Han",
+      "Danyang Zheng",
+      "Weishan Zhang",
+      "Shaohua Cao"
+    ],
+    "first_author": "Shanyv Liu",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Multi-Agent Orchestration",
+    "task": "Model Routing & Resource Allocation",
+    "tags": [
+      "Context-Aware Routing",
+      "Task Difficulty Estimation",
+      "Dual-Branch Feature Fusion",
+      "On-Policy Iterative Evolution",
+      "Cost-Efficient Inference",
+      "Multi-Agent Orchestration",
+      "Model Selection",
+      "Cross-Domain Benchmarking"
+    ],
+    "summary": "本文提出CASTER，一种用于图式多智能体系统的轻量级上下文感知路由器，通过结合语义嵌入与结构元特征并采用冷启动到迭代进化的在线训练策略，动态在强/弱模型之间分配子任务，从而在跨软件工程、数据分析、科学发现与网络安全的基准上在保持成功率的同时将推理成本最高降低72.4%。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.19793v1",
+    "published": "2026-01-27",
+    "update_time": "2026-01-27",
+    "download_time": "2026-01-29 02:17:30"
   }
 ]
