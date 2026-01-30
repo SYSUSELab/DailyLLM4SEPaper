@@ -3285,5 +3285,162 @@
     "published": "2026-01-27",
     "update_time": "2026-01-27",
     "download_time": "2026-01-29 02:17:30"
+  },
+  {
+    "id": "2601.20810",
+    "title": "Context-Augmented Code Generation Using Programming Knowledge Graphs",
+    "abstract": "Large Language Models (LLMs) excel at code generation but struggle with complex problems. Retrieval-Augmented Generation (RAG) mitigates this issue by integrating external knowledge, yet retrieval models often miss relevant context, and generation models hallucinate with irrelevant data. We propose Programming Knowledge Graph (PKG) for semantic representation and fine-grained retrieval of code and text. Our approach enhances retrieval precision through tree pruning and mitigates hallucinations via a re-ranking mechanism that integrates non-RAG solutions. Structuring external data into finer-grained nodes improves retrieval granularity. Evaluations on HumanEval and MBPP show up to 20% pass@1 accuracy gains and a 34% improvement over baselines on MBPP. Our findings demonstrate that our proposed PKG approach along with re-ranker effectively address complex problems while maintaining minimal negative impact on solutions that are already correct without RAG. The replication package is published at https://github.com/iamshahd/ProgrammingKnowledgeGraph",
+    "arxiv_url": "https://arxiv.org/abs/2601.20810",
+    "authors": [
+      "Shahd Seddik",
+      "Fahd Seddik",
+      "Iman Saberi",
+      "Fatemeh Fard",
+      "Minh Hieu Huynh",
+      "Patanamon Thongtanunam"
+    ],
+    "first_author": "Shahd Seddik",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Programming Knowledge Graph",
+      "AST segmentation",
+      "Block-level retrieval",
+      "Function-level retrieval",
+      "Text-centric DAG",
+      "Structure-aware pruning",
+      "Re-ranking",
+      "Hallucination mitigation",
+      "Granularity tradeoff"
+    ],
+    "summary": "本文提出编程知识图（PKG），将代码与文档结构化为细粒度检索单元并结合树裁剪与候选重排序以提升检索增强的代码生成，在HumanEval和MBPP上显著提高了通过率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.20810v1",
+    "published": "2026-01-28",
+    "update_time": "2026-01-28",
+    "download_time": "2026-01-30 02:12:53"
+  },
+  {
+    "id": "2601.20789",
+    "title": "SERA: Soft-Verified Efficient Repository Agents",
+    "abstract": "Open-weight coding agents should hold a fundamental advantage over closed-source systems: they can be specialized to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical. We show it is now practical. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using only supervised finetuning (SFT), SERA achieves state-of-the-art results among fully open-source (open data, method, code) models while matching the performance of frontier open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. Our method, Soft Verified Generation (SVG), generates thousands of trajectories from a single code repository. Combined with cost-efficiency, this enables specialization to private codebases. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating over 200,000 synthetic trajectories. We use this dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can specialize to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data, and Claude Code integration to support the research community.",
+    "arxiv_url": "https://arxiv.org/abs/2601.20789",
+    "authors": [
+      "Ethan Shen",
+      "Danny Tormoen",
+      "Saurabh Shah",
+      "Ali Farhadi",
+      "Tim Dettmers"
+    ],
+    "first_author": "Ethan Shen",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Instruction-Tuning",
+    "tags": [
+      "Soft Verification",
+      "Repository Specialization",
+      "Synthetic Pull Requests",
+      "Synthetic Trajectories",
+      "Supervised Finetuning",
+      "Vague Instructions",
+      "Cost Efficiency",
+      "Scaling Laws"
+    ],
+    "summary": "本文提出SERA与SVG方法，通过从代码库生成大量软验证的合成PR轨迹并以监督微调训练仓库专用编码代理，实现以极低成本高效地将开源模型专门化到私有代码库并达到或超过教师模型性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.20789v1",
+    "published": "2026-01-28",
+    "update_time": "2026-01-28",
+    "download_time": "2026-01-30 02:13:11"
+  },
+  {
+    "id": "2601.20802",
+    "title": "Reinforcement Learning via Self-Distillation",
+    "abstract": "Large language models are increasingly post-trained with reinforcement learning in verifiable domains such as code and math. Yet, current methods for reinforcement learning with verifiable rewards (RLVR) learn only from a scalar outcome reward per attempt, creating a severe credit-assignment bottleneck. Many verifiable environments actually provide rich textual feedback, such as runtime errors or judge evaluations, that explain why an attempt failed. We formalize this setting as reinforcement learning with rich feedback and introduce Self-Distillation Policy Optimization (SDPO), which converts tokenized feedback into a dense learning signal without any external teacher or explicit reward model. SDPO treats the current model conditioned on feedback as a self-teacher and distills its feedback-informed next-token predictions back into the policy. In this way, SDPO leverages the model's ability to retrospectively identify its own mistakes in-context. Across scientific reasoning, tool use, and competitive programming on LiveCodeBench v6, SDPO improves sample efficiency and final accuracy over strong RLVR baselines. Notably, SDPO also outperforms baselines in standard RLVR environments that only return scalar feedback by using successful rollouts as implicit feedback for failed attempts. Finally, applying SDPO to individual questions at test time accelerates discovery on difficult binary-reward tasks, achieving the same discovery probability as best-of-k sampling or multi-turn conversations with 3x fewer attempts.",
+    "arxiv_url": "https://arxiv.org/abs/2601.20802",
+    "authors": [
+      "Jonas Hübotter",
+      "Frederike Lübeck",
+      "Lejs Behric",
+      "Anton Baumann",
+      "Marco Bagatella",
+      "Daniel Marta",
+      "Ido Hakimi",
+      "Idan Shenfeld",
+      "Thomas Kleine Buening",
+      "Carlos Guestrin",
+      "Andreas Krause"
+    ],
+    "first_author": "Jonas Hübotter",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Self-Distillation",
+      "Rich Feedback",
+      "Credit Assignment",
+      "In-Context Learning",
+      "Policy Optimization",
+      "Test-Time Training",
+      "Sample Efficiency",
+      "Runtime-Error Feedback"
+    ],
+    "summary": "本文提出Self-Distillation Policy Optimization (SDPO)，在具有丰富文本反馈的可验证环境中将模型自身在反馈条件下的下一令牌分布作为“自教师”进行蒸馏，从而将反馈转化为密集的令牌级学习信号以显著提升代码和推理任务的样本效率与最终准确率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.20802v1",
+    "published": "2026-01-28",
+    "update_time": "2026-01-28",
+    "download_time": "2026-01-30 02:14:29"
+  },
+  {
+    "id": "2601.20745",
+    "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+    "abstract": "As large language models (LLMs) continue to scale, deployment is increasingly bottlenecked by the memory wall, motivating a shift toward extremely low-bit quantization. However, most quantization-aware training (QAT) methods apply hard rounding and the straight-through estimator (STE) from the beginning of the training, which prematurely discretizes the optimization landscape and induces persistent gradient mismatch between latent weights and quantized weights, hindering effective optimization of quantized models. To address this, we propose Hestia, a Hessian-guided differentiable QAT framework for extremely low-bit LLMs, which replaces the rigid step function with a temperature-controlled softmax relaxation to maintain gradient flow early in training while progressively hardening quantization. Furthermore, Hestia leverages a tensor-wise Hessian trace metric as a lightweight curvature signal to drive fine-grained temperature annealing, enabling sensitivity-aware discretization across the model. Evaluations on Llama-3.2 show that Hestia consistently outperforms existing ternary QAT baselines, yielding average zero-shot improvements of 5.39% and 4.34% for the 1B and 3B models. These results indicate that Hessian-guided relaxation effectively recovers representational capacity, establishing a more robust training path for 1.58-bit LLMs. The code is available at https://github.com/hestia2026/Hestia.",
+    "arxiv_url": "https://arxiv.org/abs/2601.20745",
+    "authors": [
+      "Guoan Wang",
+      "Feiyu Wang",
+      "Zongwei Lv",
+      "Yikun Zong",
+      "Tong Yang"
+    ],
+    "first_author": "Guoan Wang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Compression & Deployment",
+    "task": "Quantization-Aware Training",
+    "tags": [
+      "Differentiable Quantization",
+      "Hessian-guided Annealing",
+      "Softmax Relaxation",
+      "Ternary Quantization",
+      "Dead-Zone Mitigation",
+      "Temperature Scheduling",
+      "Curvature-Aware Sensitivity",
+      "Low-Bit LLM Optimization",
+      "Gradient Flow Preservation",
+      "Quantization-Aware Training"
+    ],
+    "summary": "本文提出 HESTIA，一种针对极低位（如 1.58-bit）大语言模型的 Hessian 指导可微量化训练框架，通过温度控制的 Softmax 松弛维持早期梯度流并利用张量级 Hessian 跟踪进行灵敏度感知的自适应退火，从而显著提升 ternary 量化下的模型性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.20745v1",
+    "published": "2026-01-28",
+    "update_time": "2026-01-28",
+    "download_time": "2026-01-30 02:15:07"
   }
 ]
