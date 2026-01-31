@@ -3442,5 +3442,162 @@
     "published": "2026-01-28",
     "update_time": "2026-01-28",
     "download_time": "2026-01-30 02:15:07"
+  },
+  {
+    "id": "2601.22136",
+    "title": "StepShield: When, Not Whether to Intervene on Rogue Agents",
+    "abstract": "Existing agent safety benchmarks report binary accuracy, conflating early intervention with post-mortem analysis. A detector that flags a violation at step 8 enables intervention; one that reports it at step 48 provides only forensic value. This distinction is critical, yet current benchmarks cannot measure it. We introduce StepShield, the first benchmark to evaluate when violations are detected, not just whether. StepShield contains 9,213 code agent trajectories, including 1,278 meticulously annotated training pairs and a 7,935-trajectory test set with a realistic 8.1% rogue rate. Rogue behaviors are grounded in real-world security incidents across six categories. We propose three novel temporal metrics: Early Intervention Rate (EIR), Intervention Gap, and Tokens Saved. Surprisingly, our evaluation reveals that an LLM-based judge achieves 59% EIR while a static analyzer achieves only 26%, a 2.3x performance gap that is entirely invisible to standard accuracy metrics. We further show that early detection has direct economic benefits: our cascaded HybridGuard detector reduces monitoring costs by 75% and projects to $108M in cumulative savings over five years at enterprise scale. By shifting the focus of evaluation from whether to when, StepShield provides a new foundation for building safer and more economically viable AI agents. The code and data are released under an Apache 2.0 license.",
+    "arxiv_url": "https://arxiv.org/abs/2601.22136",
+    "authors": [
+      "Gloria Felicia",
+      "Michael Eniolade",
+      "Jinfeng He",
+      "Zitha Sasindran",
+      "Hemant Kumar",
+      "Milan Hussain Angati",
+      "Sandeep Bandarupalli"
+    ],
+    "first_author": "Gloria Felicia",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Agent Safety & Monitoring",
+    "task": "Rogue Agent Detection (Temporal/Step-level)",
+    "tags": [
+      "Step-level Annotation",
+      "Early Intervention",
+      "Rogue Detection",
+      "Temporal Metrics",
+      "LLM-as-Judge",
+      "Hybrid Detection",
+      "Guardrails",
+      "Economic Cost Analysis"
+    ],
+    "summary": "StepShield 提出并发布了首个侧重“何时而非是否”检测代理违例的步级时间性基准与数据集、三项时间度量（EIR、Intervention Gap、Tokens Saved），并基于多种检测范式（包括混合检测器）展示早期检测在实用与经济上的显著价值。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.22136v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-01-31 02:08:53"
+  },
+  {
+    "id": "2601.22130",
+    "title": "World of Workflows: a Benchmark for Bringing World Models to Enterprise Systems",
+    "abstract": "Frontier large language models (LLMs) excel as autonomous agents in many domains, yet they remain untested in complex enterprise systems where hidden workflows create cascading effects across interconnected databases. Existing enterprise benchmarks evaluate surface-level agentic task completion similar to general consumer benchmarks, ignoring true challenges in enterprises, such as limited observability, large database state, and hidden workflows with cascading side effects. We introduce World of Workflows (WoW), a realistic ServiceNow-based environment incorporating 4,000+ business rules and 55 active workflows embedded in the system, alongside WoW-bench, a benchmark of 234 tasks evaluating constrained agentic task completion and enterprise dynamics modeling capabilities. We reveal two major takeaways: (1) Frontier LLMs suffer from dynamics blindness, consistently failing to predict the invisible, cascading side effects of their actions, which leads to silent constraint violations, and (2) reliability in opaque systems requires grounded world modeling, where agents must mentally simulate hidden state transitions to bridge the observability gap when high-fidelity feedback is unavailable. For reliable and useful enterprise agents, WoW motivates a new paradigm to explicitly learn system dynamics. We release our GitHub for setting up and evaluating WoW.",
+    "arxiv_url": "https://arxiv.org/abs/2601.22130",
+    "authors": [
+      "Lakshya Gupta",
+      "Litao Li",
+      "Yizhe Liu",
+      "Sriram Ganapathi Subramanian",
+      "Kaheer Suleman",
+      "Zichen Zhang",
+      "Haoye Lu",
+      "Sumit Pasupalak"
+    ],
+    "first_author": "Lakshya Gupta",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Enterprise Systems & Agents",
+    "task": "Workflow-driven World Modeling",
+    "tags": [
+      "World Modeling",
+      "Hidden Workflows",
+      "Partial Observability",
+      "Dynamics Prediction",
+      "Constraint Satisfaction",
+      "Audit-Log Observations",
+      "Enterprise Simulation",
+      "Agentic Task Completion",
+      "State Tracking",
+      "Dynamics Blindness"
+    ],
+    "summary": "本文提出WoW与WoW-bench——一个基于ServiceNow的高保真企业环境与234项评测任务，用以评估LLM在有限观测、隐藏工作流与数据库级联更新下的世界建模与代理执行能力，并揭示前沿LLM在预测隐蔽状态变化与满足约束方面存在严重“动力盲点”。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.22130v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-01-31 02:09:14"
+  },
+  {
+    "id": "2601.22139",
+    "title": "Reasoning While Asking: Transforming Reasoning Large Language Models from Passive Solvers to Proactive Inquirers",
+    "abstract": "Reasoning-oriented Large Language Models (LLMs) have achieved remarkable progress with Chain-of-Thought (CoT) prompting, yet they remain fundamentally limited by a \\emph{blind self-thinking} paradigm: performing extensive internal reasoning even when critical information is missing or ambiguous. We propose Proactive Interactive Reasoning (PIR), a new reasoning paradigm that transforms LLMs from passive solvers into proactive inquirers that interleave reasoning with clarification. Unlike existing search- or tool-based frameworks that primarily address knowledge uncertainty by querying external environments, PIR targets premise- and intent-level uncertainty through direct interaction with the user. PIR is implemented via two core components: (1) an uncertainty-aware supervised fine-tuning procedure that equips models with interactive reasoning capability, and (2) a user-simulator-based policy optimization framework driven by a composite reward that aligns model behavior with user intent. Extensive experiments on mathematical reasoning, code generation, and document editing demonstrate that PIR consistently outperforms strong baselines, achieving up to 32.70\\% higher accuracy, 22.90\\% higher pass rate, and 41.36 BLEU improvement, while reducing nearly half of the reasoning computation and unnecessary interaction turns. Further reliability evaluations on factual knowledge, question answering, and missing-premise scenarios confirm the strong generalization and robustness of PIR. Model and code are publicly available at: \\href{https://github.com/SUAT-AIRI/Proactive-Interactive-R1}",
+    "arxiv_url": "https://arxiv.org/abs/2601.22139",
+    "authors": [
+      "Xin Chen",
+      "Feng Jiang",
+      "Yiqian Zhang",
+      "Hardy Chen",
+      "Shuo Yan",
+      "Wenya Xie",
+      "Min Yang",
+      "Shujian Huang"
+    ],
+    "first_author": "Xin Chen",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Proactive Inquiry",
+      "Uncertainty Detection",
+      "Think-and-Ask",
+      "User Simulator",
+      "Group Relative Policy Optimization",
+      "Intent Alignment",
+      "Interaction Efficiency",
+      "Reasoning Trace Augmentation",
+      "Reinforcement Learning",
+      "Hallucination Reduction"
+    ],
+    "summary": "本文提出PIR（一种通过不确定性感知的数据构建与基于用户模拟器的策略优化，将推理与主动澄清交织，使推理型LLM在推理过程中主动询问以对齐用户意图、提高正确性并减少计算与交互开销）的新范式与实现方法，并在数学推理、代码生成和文档编辑上验证其有效性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.22139v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-01-31 02:10:01"
+  },
+  {
+    "id": "2601.22129",
+    "title": "SWE-Replay: Efficient Test-Time Scaling for Software Engineering Agents",
+    "abstract": "Test-time scaling has been widely adopted to enhance the capabilities of Large Language Model (LLM) agents in software engineering (SWE) tasks. However, the standard approach of repeatedly sampling trajectories from scratch is computationally expensive. While recent methods have attempted to mitigate costs using specialized value agents, they can suffer from model miscalibration and fail to generalize to modern agents that synthesize custom bash scripts as tools. In this paper, we introduce SWE-Replay, the first efficient and generalizable test-time scaling technique for modern agents without reliance on potentially noisy value estimates. SWE-Replay optimizes the scaling process by recycling trajectories from prior trials, dynamically choosing to either explore from scratch or exploit archived experience by branching at critical intermediate steps. This selection of intermediate steps is driven by the potential and reasoning significance of repository exploration, rather than external LLM-based quality estimates. Our evaluation shows that, on SWE-Bench Verified, SWE-Replay consistently outperforms naive scaling, reducing costs by up to 17.4% while maintaining or even improving performance by up to 3.8%. Further evaluation on SWE-Bench Pro and Multilingual validates the generalizability of SWE-Replay, establishing it as a robust foundation for efficient test-time scaling of software engineering agents.",
+    "arxiv_url": "https://arxiv.org/abs/2601.22129",
+    "authors": [
+      "Yifeng Ding",
+      "Lingming Zhang"
+    ],
+    "first_author": "Yifeng Ding",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Trajectory Replay",
+      "Replay-Based Exploration",
+      "Step Selection",
+      "Environment State Restoration",
+      "Exploration-Exploitation",
+      "Test-Time Scaling",
+      "Repository Long-Tail Exploration",
+      "Value-Estimator-Free",
+      "Cost-Efficient Inference"
+    ],
+    "summary": "SWE-Replay 提出通过维护轨迹归档并在选定的中间步骤恢复并分叉探索，从而在无需依赖 LLM 评分器的情况下显著降低软件工程代理测试时采样成本并保持或提升任务性能的方法，并在多套 SWE-Bench 上验证了其效果与泛化性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.22129v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-01-31 02:10:39"
   }
 ]
