@@ -3599,5 +3599,158 @@
     "published": "2026-01-29",
     "update_time": "2026-01-29",
     "download_time": "2026-01-31 02:10:39"
+  },
+  {
+    "id": "2601.22025",
+    "title": "When \"Better\" Prompts Hurt: Evaluation-Driven Iteration for LLM Applications",
+    "abstract": "Evaluating Large Language Model (LLM) applications differs from traditional software testing because outputs are stochastic, high-dimensional, and sensitive to prompt and model changes. We present an evaluation-driven workflow - Define, Test, Diagnose, Fix - that turns these challenges into a repeatable engineering loop.   We introduce the Minimum Viable Evaluation Suite (MVES), a tiered set of recommended evaluation components for (i) general LLM applications, (ii) retrieval-augmented generation (RAG), and (iii) agentic tool-use workflows. We also synthesize common evaluation methods (automated checks, human rubrics, and LLM-as-judge) and discuss known judge failure modes.   In reproducible local experiments (Ollama; Llama 3 8B Instruct and Qwen 2.5 7B Instruct), we observe that a generic \"improved\" prompt template can trade off behaviors: on our small structured suites, extraction pass rate decreased from 100% to 90% and RAG compliance from 93.3% to 80% for Llama 3 when replacing task-specific prompts with generic rules, while instruction-following improved. These findings motivate evaluation-driven prompt iteration and careful claim calibration rather than universal prompt recipes.   All test suites, harnesses, and results are included for reproducibility.",
+    "arxiv_url": "https://arxiv.org/abs/2601.22025",
+    "authors": [
+      "Daniel Commey"
+    ],
+    "first_author": "Daniel Commey",
+    "category": [
+      "Survey",
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Evaluation-Driven Iteration",
+      "Minimum Viable Evaluation Suite",
+      "RAG Evaluation",
+      "LLM-as-Judge",
+      "Judge Failure Modes",
+      "Prompt Trade-offs",
+      "Test Set Design",
+      "Reproducibility",
+      "Regression Testing",
+      "Evaluation Harnesses"
+    ],
+    "summary": "本文提出了基于“Define–Test–Diagnose–Fix”的评价驱动迭代流程与分层最小可行评估套件(MVES)，系统化LLM应用的测试方法并通过可复现的本地实验展示了通用“更好”提示可能导致行为权衡与回归，从而强调要以评估结果指导提示迭代而非盲目通用化。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.22025v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-02-01 02:38:43"
+  },
+  {
+    "id": "2601.21787",
+    "title": "Assessing the Business Process Modeling Competences of Large Language Models",
+    "abstract": "The creation of Business Process Model and Notation (BPMN) models is a complex and time-consuming task requiring both domain knowledge and proficiency in modeling conventions. Recent advances in large language models (LLMs) have significantly expanded the possibilities for generating BPMN models directly from natural language, building upon earlier text-to-process methods with enhanced capabilities in handling complex descriptions. However, there is a lack of systematic evaluations of LLM-generated process models. Current efforts either use LLM-as-a-judge approaches or do not consider established dimensions of model quality. To this end, we introduce BEF4LLM, a novel LLM evaluation framework comprising four perspectives: syntactic quality, pragmatic quality, semantic quality, and validity. Using BEF4LLM, we conduct a comprehensive analysis of open-source LLMs and benchmark their performance against human modeling experts. Results indicate that LLMs excel in syntactic and pragmatic quality, while humans outperform in semantic aspects; however, the differences in scores are relatively modest, highlighting LLMs' competitive potential despite challenges in validity and semantic quality. The insights highlight current strengths and limitations of using LLMs for BPMN modeling and guide future model development and fine-tuning. Addressing these areas is essential for advancing the practical deployment of LLMs in business process modeling.",
+    "arxiv_url": "https://arxiv.org/abs/2601.21787",
+    "authors": [
+      "Chantale Lauer",
+      "Peter Pfeiffer",
+      "Alexander Rombach",
+      "Nijat Mehdiyev"
+    ],
+    "first_author": "Chantale Lauer",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Business Process Modeling",
+      "BPMN Validation",
+      "Model Quality Metrics",
+      "Syntactic Evaluation",
+      "Semantic Evaluation",
+      "Pragmatic Evaluation",
+      "BPMN-XML Validity",
+      "LLM Evaluation Framework",
+      "Human-LLM Comparison",
+      "Conversational Process Modeling"
+    ],
+    "summary": "本文提出BEF4LLM评估框架（39项指标）用于系统评估LLM的文本到BPMN建模能力，并在大规模开源LLM基准上比较其与人类建模专家在句法、语用、语义和有效性维度的表现，发现LLM在句法与语用上表现良好但在语义一致性和生成有效BPMN-XML方面仍有明显挑战。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.21787v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-02-01 02:39:24"
+  },
+  {
+    "id": "2601.22159",
+    "title": "RedSage: A Cybersecurity Generalist LLM",
+    "abstract": "Cybersecurity operations demand assistant LLMs that support diverse workflows without exposing sensitive data. Existing solutions either rely on proprietary APIs with privacy risks or on open models lacking domain adaptation. To bridge this gap, we curate 11.8B tokens of cybersecurity-focused continual pretraining data via large-scale web filtering and manual collection of high-quality resources, spanning 28.6K documents across frameworks, offensive techniques, and security tools. Building on this, we design an agentic augmentation pipeline that simulates expert workflows to generate 266K multi-turn cybersecurity samples for supervised fine-tuning. Combined with general open-source LLM data, these resources enable the training of RedSage, an open-source, locally deployable cybersecurity assistant with domain-aware pretraining and post-training. To rigorously evaluate the models, we introduce RedSage-Bench, a benchmark with 30K multiple-choice and 240 open-ended Q&A items covering cybersecurity knowledge, skills, and tool expertise. RedSage is further evaluated on established cybersecurity benchmarks (e.g., CTI-Bench, CyberMetric, SECURE) and general LLM benchmarks to assess broader generalization. At the 8B scale, RedSage achieves consistently better results, surpassing the baseline models by up to +5.59 points on cybersecurity benchmarks and +5.05 points on Open LLM Leaderboard tasks. These findings demonstrate that domain-aware agentic augmentation and pre/post-training can not only enhance cybersecurity-specific expertise but also help to improve general reasoning and instruction-following. All models, datasets, and code are publicly available.",
+    "arxiv_url": "https://arxiv.org/abs/2601.22159",
+    "authors": [
+      "Naufal Suryanto",
+      "Muzammal Naseer",
+      "Pengfei Li",
+      "Syed Talal Wasim",
+      "Jinhui Yi",
+      "Juergen Gall",
+      "Paolo Ceravolo",
+      "Ernesto Damiani"
+    ],
+    "first_author": "Naufal Suryanto",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Cybersecurity",
+    "task": "Domain-specific LLM pretraining and benchmarking for cybersecurity assistants",
+    "tags": [
+      "Agentic Augmentation",
+      "Domain-Aware Pretraining",
+      "Continual Pretraining",
+      "Simulated Expert Workflows",
+      "Tool Proficiency Assessment",
+      "Multi-turn Security Dialogs",
+      "Instruction Preference Alignment",
+      "Open-data Open-model Release"
+    ],
+    "summary": "本文提出RedSage——一款面向网络安全的开源本地可部署大模型，通过11.8B令牌的领域持续预训练、266K条代理生成的多轮增强监督数据与后训练的偏好对齐，并构建30K+240项的RedSage-Bench基准，实现了对安全知识、实操技能和工具能力的全面评估并在多项基准上取得领先表现，同时公开数据与代码。",
+    "quality": "High",
+    "conference": "ICLR 2026",
+    "pdf_url": "https://arxiv.org/pdf/2601.22159v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-02-01 02:39:48"
+  },
+  {
+    "id": "2601.21972",
+    "title": "Learning Decentralized LLM Collaboration with Multi-Agent Actor Critic",
+    "abstract": "Recent work has explored optimizing LLM collaboration through Multi-Agent Reinforcement Learning (MARL). However, most MARL fine-tuning approaches rely on predefined execution protocols, which often require centralized execution. Decentralized LLM collaboration is more appealing in practice, as agents can run inference in parallel with flexible deployments. Also, current approaches use Monte Carlo methods for fine-tuning, which suffer from high variance and thus require more samples to train effectively. Actor-critic methods are prevalent in MARL for dealing with these issues, so we developed Multi-Agent Actor-Critic (MAAC) methods to optimize decentralized LLM collaboration. In this paper, we analyze when and why these MAAC methods are beneficial. We propose 2 MAAC approaches, \\textbf{CoLLM-CC} with a \\textbf{C}entralized \\textbf{C}ritic and \\textbf{CoLLM-DC} with \\textbf{D}ecentralized \\textbf{C}ritics. Our experiments across writing, coding, and game-playing domains show that Monte Carlo methods and CoLLM-DC can achieve performance comparable to CoLLM-CC in short-horizon and dense-reward settings. However, they both underperform CoLLM-CC on long-horizon or sparse-reward tasks, where Monte Carlo methods require substantially more samples and CoLLM-DC struggles to converge. Our code is available at https://github.com/OpenMLRL/CoMLRL/releases/tag/v1.3.2.",
+    "arxiv_url": "https://arxiv.org/abs/2601.21972",
+    "authors": [
+      "Shuo Liu",
+      "Tianle Chen",
+      "Ryan Amiri",
+      "Christopher Amato"
+    ],
+    "first_author": "Shuo Liu",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Multi-Agent LLM Collaboration",
+    "task": "Decentralized MARL Fine-Tuning (Actor-Critic)",
+    "tags": [
+      "Multi-Agent RL",
+      "Decentralized Collaboration",
+      "Centralized Critic",
+      "Decentralized Critic",
+      "Actor-Critic",
+      "RL Fine-Tuning",
+      "Sample Efficiency",
+      "Variance Reduction",
+      "Sparse Rewards",
+      "Long-Horizon Tasks",
+      "Dec-POMDP"
+    ],
+    "summary": "本文提出两种多智能体actor-critic方法（基于中心化评论家与去中心化评论家）用于优化去中心化的LLM协作，并在写作、编码与游戏等任务上实证表明中心化评论家在长时序或稀疏奖励场景下优于蒙特卡洛与去中心化评论家方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2601.21972v1",
+    "published": "2026-01-29",
+    "update_time": "2026-01-29",
+    "download_time": "2026-02-01 02:43:30"
   }
 ]
