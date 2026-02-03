@@ -3902,5 +3902,167 @@
     "published": "2026-01-29",
     "update_time": "2026-01-29",
     "download_time": "2026-02-02 02:34:27"
+  },
+  {
+    "id": "2602.00933",
+    "title": "MCP-Atlas: A Large-Scale Benchmark for Tool-Use Competency with Real MCP Servers",
+    "abstract": "The Model Context Protocol (MCP) is rapidly becoming the standard interface for Large Language Models (LLMs) to discover and invoke external tools. However, existing evaluations often fail to capture the complexity of real-world scenarios, relying on restricted toolsets, simplistic workflows, or subjective LLM-as-a-judge metrics. We introduce MCP-Atlas, a large-scale benchmark for evaluating tool-use competency, comprising 36 real MCP servers and 220 tools. It includes 1,000 tasks designed to assess tool-use competency in realistic, multi-step workflows. Tasks use natural language prompts that avoid naming specific tools or servers, requiring agents to identify and orchestrate 3-6 tool calls across multiple servers. We score tasks using a claims-based rubric that awards partial credit based on the factual claims satisfied in the model's final answer, complemented by internal diagnostics on tool discovery, parameterization, syntax, error recovery, and efficiency. Evaluation results on frontier models reveal that top models achieve pass rates exceeding 50%, with primary failures arising from inadequate tool usage and task understanding. We release the task schema, containerized harness, and a 500-task public subset of the benchmark dataset to facilitate reproducible comparisons and advance the development of robust, tool-augmented agents.",
+    "arxiv_url": "https://arxiv.org/abs/2602.00933",
+    "authors": [
+      "Chaithanya Bandi",
+      "Ben Hertzberg",
+      "Geobio Boo",
+      "Tejas Polakam",
+      "Jeff Da",
+      "Sami Hassaan",
+      "Manasi Sharma",
+      "Andrew Park",
+      "Ernesto Hernandez",
+      "Dan Rambado",
+      "Ivan Salazar",
+      "Rafael Cruz",
+      "Chetan Rane",
+      "Ben Levin",
+      "Brad Kenstler",
+      "Bing Liu"
+    ],
+    "first_author": "Chaithanya Bandi",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Tool Use & Agents",
+    "task": "Tool orchestration evaluation",
+    "tags": [
+      "Code Agents",
+      "Tool-Orchestration",
+      "Multi-Step Workflows",
+      "Claims-Based Scoring",
+      "Real MCP Servers",
+      "Tool Discovery",
+      "Distractor Tools",
+      "Partial Credit",
+      "Cross-Server Composition",
+      "Evaluation Harness"
+    ],
+    "summary": "MCP-Atlas 提出并开源了一个大规模、基于真实 MCP 服务器的工具使用能力基准（1,000 题，36 个服务器，220 个工具），并通过基于事实命题的评分与内部诊断评估多步跨服务器工具编排的性能与失败模式。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.00933v1",
+    "published": "2026-01-31",
+    "update_time": "2026-01-31",
+    "download_time": "2026-02-03 02:27:12"
+  },
+  {
+    "id": "2602.00840",
+    "title": "Code Quality Analysis of Translations from C to Rust",
+    "abstract": "C/C++ is a prevalent programming language. Yet, it suffers from significant memory and thread-safety issues. Recent studies have explored automated translation of C/C++ to safer languages, such as Rust. However, these studies focused mostly on the correctness and safety of the translated code, which are indeed critical, but they left other important quality concerns (e.g., performance, robustness, and maintainability) largely unexplored. This work investigates strengths and weaknesses of three C-to-Rust translators, namely C2Rust (a transpiler), C2SaferRust (an LLM-guided transpiler), and TranslationGym (an LLM-based direct translation). We perform an in-depth quantitative and qualitative analysis of several important quality attributes for the translated Rust code of the popular GNU coreutils, using human-based translation as a baseline. To assess the internal and external quality of the Rust code, we: (i) apply Clippy, a rule-based state-of-the-practice Rust static analysis tool; (ii) investigate the capability of an LLM (GPT-4o) to identify issues potentially overlooked by Clippy; and (iii) perform a manual analysis of the issues reported by Clippy and GPT-4o. Our results show that while newer techniques reduce some unsafe and non-idiomatic patterns, they frequently introduce new issues, revealing systematic trade-offs that are not visible under existing evaluation practices. Notably, none of the automated techniques consistently match or exceed human-written translations across all quality dimensions, yet even human-written Rust code exhibits persistent internal quality issues such as readability and non-idiomatic patterns. Together, these findings show that translation quality remains a multi-dimensional challenge, requiring systematic evaluation and targeted tool support beyond both naive automation and manual rewriting.",
+    "arxiv_url": "https://arxiv.org/abs/2602.00840",
+    "authors": [
+      "Biruk Tadesse",
+      "Vikram Nitin",
+      "Mazin Salah",
+      "Baishakhi Ray",
+      "Marcelo d'Amorim",
+      "Wesley Assunção"
+    ],
+    "first_author": "Biruk Tadesse",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "C-to-Rust Migration",
+      "Idiomaticity",
+      "Runtime Panics",
+      "Performance Regression",
+      "Thread-Safety",
+      "Static Analysis",
+      "Clippy Limitations",
+      "LLM Linter",
+      "Quality Taxonomy",
+      "Human Baseline"
+    ],
+    "summary": "本文对三种自动C→Rust翻译器（C2Rust、C2SaferRust、TranslationGym）与人工翻译在GNU coreutils上的翻译结果进行了定量与定性研究，基于Clippy与GPT-4o及人工分析提出了18类质量问题的分类，揭示了安全、性能、可维护性等多维质量间的系统性权衡并给出改进建议。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.00840v1",
+    "published": "2026-01-31",
+    "update_time": "2026-01-31",
+    "download_time": "2026-02-03 02:27:48"
+  },
+  {
+    "id": "2602.00929",
+    "title": "Learning Abstractions for Hierarchical Planning in Program-Synthesis Agents",
+    "abstract": "Humans learn abstractions and use them to plan efficiently to quickly generalize across tasks -- an ability that remains challenging for state-of-the-art large language model (LLM) agents and deep reinforcement learning (RL) systems. Inspired by the cognitive science of how people form abstractions and intuitive theories of their world knowledge, Theory-Based RL (TBRL) systems, such as TheoryCoder, exhibit strong generalization through effective use of abstractions. However, they heavily rely on human-provided abstractions and sidestep the abstraction-learning problem. We introduce TheoryCoder-2, a new TBRL agent that leverages LLMs' in-context learning ability to actively learn reusable abstractions rather than relying on hand-specified ones, by synthesizing abstractions from experience and integrating them into a hierarchical planning process. We conduct experiments on diverse environments, including BabyAI, Minihack and VGDL games like Sokoban. We find that TheoryCoder-2 is significantly more sample-efficient than baseline LLM agents augmented with classical planning domain construction, reasoning-based planning, and prior program-synthesis agents such as WorldCoder. TheoryCoder-2 is able to solve complex tasks that the baselines fail, while only requiring minimal human prompts, unlike prior TBRL systems.",
+    "arxiv_url": "https://arxiv.org/abs/2602.00929",
+    "authors": [
+      "Zergham Ahmed",
+      "Kazuki Irie",
+      "Joshua B. Tenenbaum",
+      "Christopher J. Bates",
+      "Samuel J. Gershman"
+    ],
+    "first_author": "Zergham Ahmed",
+    "category": [
+      "Technical"
+    ],
+    "field": "Program Synthesis & Hierarchical Planning",
+    "task": "Abstraction Learning for Hierarchical Planning",
+    "tags": [
+      "Code Agents",
+      "Abstraction Learning",
+      "PDDL Synthesis",
+      "Hierarchical Planning",
+      "Theory-Based RL",
+      "World-Model Synthesis",
+      "In-Context Learning",
+      "Symbolic Planning",
+      "Transfer Learning",
+      "Sample Efficiency"
+    ],
+    "summary": "本文提出TheoryCoder-2，利用大语言模型的in‑context学习自动合成PDDL抽象与低级世界模型并将其整合入双层规划，从而在BabyAI、MiniHack和VGDL等环境中显著提升样本效率与泛化能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.00929v1",
+    "published": "2026-01-31",
+    "update_time": "2026-01-31",
+    "download_time": "2026-02-03 02:29:58"
+  },
+  {
+    "id": "2602.00851",
+    "title": "Persuasion Propagation in LLM Agents",
+    "abstract": "Modern AI agents increasingly combine conversational interaction with autonomous task execution, such as coding and web research, raising a natural question: what happens when an agent engaged in long-horizon tasks is subjected to user persuasion? We study how belief-level intervention can influence downstream task behavior, a phenomenon we name \\emph{persuasion propagation}. We introduce a behavior-centered evaluation framework that distinguishes between persuasion applied during or prior to task execution. Across web research and coding tasks, we find that on-the-fly persuasion induces weak and inconsistent behavioral effects. In contrast, when the belief state is explicitly specified at task time, belief-prefilled agents conduct on average 26.9\\% fewer searches and visit 16.9\\% fewer unique sources than neutral-prefilled agents. These results suggest that persuasion, even in prior interaction, can affect the agent's behavior, motivating behavior-level evaluation in agentic systems.",
+    "arxiv_url": "https://arxiv.org/abs/2602.00851",
+    "authors": [
+      "Hyejun Jeong",
+      "Amir Houmansadr",
+      "Shlomo Zilberstein",
+      "Eugene Bagdasarian"
+    ],
+    "first_author": "Hyejun Jeong",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "Persuasion Propagation",
+      "Belief Conditioning",
+      "Behavioral Drift",
+      "Trace-based Evaluation",
+      "Agent Auditing",
+      "Long-Horizon Agents",
+      "On-the-fly Persuasion",
+      "Web Research"
+    ],
+    "summary": "本文提出并实证研究了“说服传播”现象，即在多步骤LLM代理中无关的说服如何形成持久信念并在后续编码与网络检索任务中改变执行轨迹（如搜索广度、修订频率），并提出基于执行轨迹的受控评估框架来度量该效应。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.00851v1",
+    "published": "2026-01-31",
+    "update_time": "2026-01-31",
+    "download_time": "2026-02-03 02:31:42"
   }
 ]
