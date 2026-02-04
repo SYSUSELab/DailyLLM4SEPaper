@@ -1,0 +1,162 @@
+[
+  {
+    "id": "2602.03462",
+    "title": "RAL-Bench: Benchmarking for Application-Level Functional Correctness and Non-Functional Quality Attributes",
+    "abstract": "Code generation has advanced rapidly with code-focused large language models (LLMs), especially on snippet-level tasks. However, application-level generation requires producing a runnable multi-file repository with correct structure, dependencies, and end-to-end executability, and real-world software must satisfy both functional correctness and non-functional quality (e.g., maintainability, security). Existing benchmarks provide a limited execution-based assessment of these requirements at the application level. We ask: Can current LLMs generate application-level repositories that meet both functional and non-functional criteria? We propose RAL-Bench, a benchmark and evaluation framework for application-level code generation. For each task, we distill a concise natural-language requirement from a high-quality reference project, build black-box system tests covering functional and non-functional attributes, and keep only tests that pass on the reference repository to ensure a sound oracle and an end-to-end executable suite. Functional correctness is measured by system-test pass rate. Non-functional quality is measured along five ISO/IEC 25010-inspired dimensions and aggregated with an Analytic Hierarchy Process (AHP)-derived weight vector, with per-dimension diagnostics and baseline-normalized scoring using reference measurements. Across 16 LLMs evaluated zero-shot with greedy decoding, functional correctness is the dominant bottleneck: no model exceeds a 45% functional pass rate under our requirement-driven, reference-validated tests. We release RAL-Bench at https://github.com/Wwstarry/RAL-Bench. .",
+    "arxiv_url": "https://arxiv.org/abs/2602.03462",
+    "authors": [
+      "Ruwei Pan",
+      "Yakun Zhang",
+      "Qingyuan Liang",
+      "Yueheng Zhu",
+      "Chao Liu",
+      "Lu Zhang",
+      "Hongyu Zhang"
+    ],
+    "first_author": "Ruwei Pan",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Application-Level Code Generation",
+    "tags": [
+      "Application-Level Generation",
+      "System Testing",
+      "Non-functional Quality",
+      "ISO25010",
+      "AHP Weighting",
+      "Requirement Distillation",
+      "Reference-validated Tests",
+      "Baseline-normalized Scoring",
+      "End-to-End Executability",
+      "Zero-shot Evaluation"
+    ],
+    "summary": "本文提出 RAL-Bench，一个用于评估 LLM 从自然语言需求生成可运行应用仓库的基准框架，通过对参考实现验证的黑盒系统测试同时度量功能正确性与基于 ISO/IEC 25010 的多维非功能质量（并用 AHP 加权聚合），并在零样本条件下评估了 16 款 LLM，发现功能正确性是主要瓶颈。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.03462v1",
+    "published": "2026-02-03",
+    "update_time": "2026-02-03",
+    "download_time": "2026-02-04 02:21:26"
+  },
+  {
+    "id": "2602.03419",
+    "title": "SWE-World: Building Software Engineering Agents in Docker-Free Environments",
+    "abstract": "Recent advances in large language models (LLMs) have enabled software engineering agents to tackle complex code modification tasks. Most existing approaches rely on execution feedback from containerized environments, which require dependency-complete setup and physical execution of programs and tests. While effective, this paradigm is resource-intensive and difficult to maintain, substantially complicating agent training and limiting scalability. We propose SWE-World, a Docker-free framework that replaces physical execution environments with a learned surrogate for training and evaluating software engineering agents. SWE-World leverages LLM-based models trained on real agent-environment interaction data to predict intermediate execution outcomes and final test feedback, enabling agents to learn without interacting with physical containerized environments. This design preserves the standard agent-environment interaction loop while eliminating the need for costly environment construction and maintenance during agent optimization and evaluation. Furthermore, because SWE-World can simulate the final evaluation outcomes of candidate trajectories without real submission, it enables selecting the best solution among multiple test-time attempts, thereby facilitating effective test-time scaling (TTS) in software engineering tasks. Experiments on SWE-bench Verified demonstrate that SWE-World raises Qwen2.5-Coder-32B from 6.2\\% to 52.0\\% via Docker-free SFT, 55.0\\% with Docker-free RL, and 68.2\\% with further TTS. The code is available at https://github.com/RUCAIBox/SWE-World",
+    "arxiv_url": "https://arxiv.org/abs/2602.03419",
+    "authors": [
+      "Shuang Sun",
+      "Huatong Song",
+      "Lisheng Huang",
+      "Jinhao Jiang",
+      "Ran Le",
+      "Zhihao Lv",
+      "Zongchao Chen",
+      "Yiwen Hu",
+      "Wenyang Luo",
+      "Wayne Xin Zhao",
+      "Yang Song",
+      "Hongteng Xu",
+      "Tao Zhang",
+      "Ji-Rong Wen"
+    ],
+    "first_author": "Shuang Sun",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Code Simulation",
+      "Code Agents",
+      "Surrogate Execution",
+      "World Modeling",
+      "Docker-Free Training",
+      "Test-Time Scaling",
+      "Transition Model",
+      "Reward Modeling",
+      "Repository-Level Coding",
+      "Agentic Interaction"
+    ],
+    "summary": "本文提出SWE-World：用训练得到的LLM作为环境的替代（步骤级转移模型与终端奖励模型），以在无Docker容器的条件下训练和评估软件工程代理，从而显著降低资源开销并在SFT、RL与测试时扩展中提升修复性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.03419v1",
+    "published": "2026-02-03",
+    "update_time": "2026-02-03",
+    "download_time": "2026-02-04 02:21:44"
+  },
+  {
+    "id": "2602.02475",
+    "title": "AgentRx: Diagnosing AI Agent Failures from Execution Trajectories",
+    "abstract": "AI agents often fail in ways that are difficult to localize because executions are probabilistic, long-horizon, multi-agent, and mediated by noisy tool outputs. We address this gap by manually annotating failed agent runs and release a novel benchmark of 115 failed trajectories spanning structured API workflows, incident management, and open-ended web/file tasks. Each trajectory is annotated with a critical failure step and a category from a grounded-theory derived, cross-domain failure taxonomy. To mitigate the human cost of failure attribution, we present AGENTRX, an automated domain-agnostic diagnostic framework that pinpoints the critical failure step in a failed agent trajectory. It synthesizes constraints, evaluates them step-by-step, and produces an auditable validation log of constraint violations with associated evidence; an LLM-based judge uses this log to localize the critical step and category. Our framework improves step localization and failure attribution over existing baselines across three domains.",
+    "arxiv_url": "https://arxiv.org/abs/2602.02475",
+    "authors": [
+      "Shraddha Barke",
+      "Arnav Goyal",
+      "Alind Khare",
+      "Avaljot Singh",
+      "Suman Nath",
+      "Chetan Bansal"
+    ],
+    "first_author": "Shraddha Barke",
+    "category": [
+      "Benchmark",
+      "Technical"
+    ],
+    "field": "AIOps",
+    "task": "Agent Failure Localization",
+    "tags": [
+      "Failure Taxonomy",
+      "Execution Trajectories",
+      "Constraint Synthesis",
+      "Validation Log",
+      "LLM Adjudication",
+      "Critical Failure Localization",
+      "Grounded Theory Annotation",
+      "Multi-Agent Diagnostics",
+      "Tool Invocation Validation"
+    ],
+    "summary": "该论文发布了包含115个失败代理执行轨迹的基准与跨域失败分类法，并提出AGENTRX框架通过从工具模式与策略合成约束、逐步验证并由基于LLM的裁判利用可审计的违约日志来定位和归因关键失败步骤。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.02475v1",
+    "published": "2026-02-02",
+    "update_time": "2026-02-02",
+    "download_time": "2026-02-04 02:22:32"
+  },
+  {
+    "id": "2602.02419",
+    "title": "SafeGround: Know When to Trust GUI Grounding Models via Uncertainty Calibration",
+    "abstract": "Graphical User Interface (GUI) grounding aims to translate natural language instructions into executable screen coordinates, enabling automated GUI interaction. Nevertheless, incorrect grounding can result in costly, hard-to-reverse actions (e.g., erroneous payment approvals), raising concerns about model reliability. In this paper, we introduce SafeGround, an uncertainty-aware framework for GUI grounding models that enables risk-aware predictions through calibrations before testing. SafeGround leverages a distribution-aware uncertainty quantification method to capture the spatial dispersion of stochastic samples from outputs of any given model. Then, through the calibration process, SafeGround derives a test-time decision threshold with statistically guaranteed false discovery rate (FDR) control. We apply SafeGround on multiple GUI grounding models for the challenging ScreenSpot-Pro benchmark. Experimental results show that our uncertainty measure consistently outperforms existing baselines in distinguishing correct from incorrect predictions, while the calibrated threshold reliably enables rigorous risk control and potentials of substantial system-level accuracy improvements. Across multiple GUI grounding models, SafeGround improves system-level accuracy by up to 5.38\\% percentage points over Gemini-only inference.",
+    "arxiv_url": "https://arxiv.org/abs/2602.02419",
+    "authors": [
+      "Qingni Wang",
+      "Yue Fan",
+      "Xin Eric Wang"
+    ],
+    "first_author": "Qingni Wang",
+    "category": [
+      "Technical"
+    ],
+    "field": "GUI Interaction",
+    "task": "GUI Grounding",
+    "tags": [
+      "Uncertainty Calibration",
+      "Selective Prediction",
+      "False Discovery Rate Control",
+      "Distribution-aware Uncertainty",
+      "Cascaded Inference",
+      "Spatial Uncertainty",
+      "Black-box Models"
+    ],
+    "summary": "SAFEGROUND 提出了一种无需访问模型内部、基于随机采样的空间分布不确定性量化与学习-然后-测试校准方法，以在 GUI 定位任务中实现可控错误率的选择性预测与级联推理，从而提升系统级准确性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.02419v1",
+    "published": "2026-02-02",
+    "update_time": "2026-02-02",
+    "download_time": "2026-02-04 02:23:45"
+  }
+]
