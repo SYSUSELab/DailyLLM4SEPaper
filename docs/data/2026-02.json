@@ -296,5 +296,157 @@
     "published": "2026-02-04",
     "update_time": "2026-02-04",
     "download_time": "2026-02-05 02:25:42"
+  },
+  {
+    "id": "2602.05762",
+    "title": "RocqSmith: Can Automatic Optimization Forge Better Proof Agents?",
+    "abstract": "This work studies the applicability of automatic AI agent optimization methods to real-world agents in formal verification settings, focusing on automated theorem proving in Rocq as a representative and challenging domain. We evaluate how different automatic agent optimizers perform when applied to the task of optimizing a Rocq proof-generation agent, and assess whether parts of the fine-grained tuning of agentic systems, such as prompt design, contextual knowledge, and control strategies, can be automated. Our results show that while several optimizers yield measurable improvements, simple few-shot bootstrapping is the most consistently effective; however, none of the studied methods matches the performance of a carefully engineered state-of-the-art proof agent.",
+    "arxiv_url": "https://arxiv.org/abs/2602.05762",
+    "authors": [
+      "Andrei Kozyrev",
+      "Nikita Khramov",
+      "Denis Lochmelis",
+      "Valerio Morelli",
+      "Gleb Solovev",
+      "Anton Podkopaev"
+    ],
+    "first_author": "Andrei Kozyrev",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Program Proof",
+      "Proof Agents",
+      "Agent Optimization",
+      "Prompt Optimization",
+      "Few-shot Bootstrapping",
+      "Contextual Knowledge Retrieval",
+      "Control Flow Optimization",
+      "Optimization Efficiency"
+    ],
+    "summary": "本文在Rocq自动定理证明场景中系统评估了多种自动化智能体优化方法，发现简单的few-shot自举最为稳定但仍未能超越精心设计的手工证明智能体。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.05762v1",
+    "published": "2026-02-05",
+    "update_time": "2026-02-05",
+    "download_time": "2026-02-06 02:22:52"
+  },
+  {
+    "id": "2602.05721",
+    "title": "A Dual-Loop Agent Framework for Automated Vulnerability Reproduction",
+    "abstract": "Automated vulnerability reproduction from CVE descriptions requires generating executable Proof-of-Concept (PoC) exploits and validating them in target environments. This process is critical in software security research and practice, yet remains time-consuming and demands specialized expertise when performed manually. While LLM agents show promise for automating this task, existing approaches often conflate exploring attack directions with fixing implementation details, which leads to unproductive debugging loops when reproduction fails. To address this, we propose Cve2PoC, an LLM-based dual-loop agent framework following a plan-execute-evaluate paradigm. The Strategic Planner analyzes vulnerability semantics and target code to produce structured attack plans. The Tactical Executor generates PoC code and validates it through progressive verification. The Adaptive Refiner evaluates execution results and routes failures to different loops: the \\textit{Tactical Loop} for code-level refinement, while the \\textit{Strategic Loop} for attack strategy replanning. This dual-loop design enables the framework to escape ineffective debugging by matching remediation to failure type. Evaluation on two benchmarks covering 617 real-world vulnerabilities demonstrates that Cve2PoC achieves 82.9\\% and 54.3\\% reproduction success rates on SecBench.js and PatchEval, respectively, outperforming the best baseline by 11.3\\% and 20.4\\%. Human evaluation confirms that generated PoCs achieve comparable code quality to human-written exploits in readability and reusability.",
+    "arxiv_url": "https://arxiv.org/abs/2602.05721",
+    "authors": [
+      "Bin Liu",
+      "Yanjie Zhao",
+      "Zhenpeng Chen",
+      "Guoai Xu",
+      "Haoyu Wang"
+    ],
+    "first_author": "Bin Liu",
+    "category": [
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Reproduction",
+    "tags": [
+      "Code Agents",
+      "Security and Vulnerabilities",
+      "PoC Generation",
+      "Dual-Loop Agents",
+      "Strategic Planning",
+      "Tactical Execution",
+      "Progressive Verification",
+      "Adaptive Refinement",
+      "Differential Testing",
+      "Experience Retrieval"
+    ],
+    "summary": "本文提出Cve2PoC——一种将战略规划与战术执行分离的基于LLM的双环代理框架，通过结构化攻击计划、渐进式多层验证与自适应精炼，实现从CVE描述自动生成并验证可执行PoC，显著提升漏洞复现成功率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.05721v1",
+    "published": "2026-02-05",
+    "update_time": "2026-02-05",
+    "download_time": "2026-02-06 02:23:26"
+  },
+  {
+    "id": "2602.04837",
+    "title": "Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing",
+    "abstract": "Open-ended self-improving agents can autonomously modify their own structural designs to advance their capabilities and overcome the limits of pre-defined architectures, thus reducing reliance on human intervention. We introduce Group-Evolving Agents (GEA), a new paradigm for open-ended self-improvements, which treats a group of agents as the fundamental evolutionary unit, enabling explicit experience sharing and reuse within the group throughout evolution. Unlike existing open-ended self-evolving paradigms that adopt tree-structured evolution, GEA overcomes the limitation of inefficient utilization of exploratory diversity caused by isolated evolutionary branches. We evaluate GEA on challenging coding benchmarks, where it significantly outperforms state-of-the-art self-evolving methods (71.0% vs. 56.7% on SWE-bench Verified, 88.3% vs. 68.3% on Polyglot) and matches or exceeds top human-designed agent frameworks (71.8% and 52.0% on two benchmarks, respectively). Analysis reveals that GEA more effectively converts early-stage exploratory diversity into sustained, long-term progress, achieving stronger performance under the same number of evolved agents. Furthermore, GEA exhibits consistent transferability across different coding models and greater robustness, fixing framework-level bugs in 1.4 iterations on average, versus 5 for self-evolving methods.",
+    "arxiv_url": "https://arxiv.org/abs/2602.04837",
+    "authors": [
+      "Zhaotian Weng",
+      "Antonis Antoniades",
+      "Deepak Nathani",
+      "Zhen Zhang",
+      "Xiao Pu",
+      "Xin Eric Wang"
+    ],
+    "first_author": "Zhaotian Weng",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Group Evolution",
+      "Experience Sharing",
+      "Open-Ended Self-Improvement",
+      "Meta-Learning",
+      "Performance-Novelty Selection",
+      "Diversity Consolidation",
+      "Agent Robustness",
+      "Transferability"
+    ],
+    "summary": "本文提出Group-Evolving Agents（GEA），通过将群体作为进化单元并在群体内显式共享与复用经验，实现开放式自我改进，在多个编码基准上显著优于现有自我进化方法并展现更强的鲁棒性与可迁移性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.04837v1",
+    "published": "2026-02-04",
+    "update_time": "2026-02-04",
+    "download_time": "2026-02-06 02:24:45"
+  },
+  {
+    "id": "2602.04811",
+    "title": "SE-Bench: Benchmarking Self-Evolution with Knowledge Internalization",
+    "abstract": "True self-evolution requires agents to act as lifelong learners that internalize novel experiences to solve future problems. However, rigorously measuring this foundational capability is hindered by two obstacles: the entanglement of prior knowledge, where ``new'' knowledge may appear in pre-training data, and the entanglement of reasoning complexity, where failures may stem from problem difficulty rather than an inability to recall learned knowledge. We introduce SE-Bench, a diagnostic environment that obfuscates the NumPy library and its API doc into a pseudo-novel package with randomized identifiers. Agents are trained to internalize this package and evaluated on simple coding tasks without access to documentation, yielding a clean setting where tasks are trivial with the new API doc but impossible for base models without it. Our investigation reveals three insights: (1) the Open-Book Paradox, where training with reference documentation inhibits retention, requiring \"Closed-Book Training\" to force knowledge compression into weights; (2) the RL Gap, where standard RL fails to internalize new knowledge completely due to PPO clipping and negative gradients; and (3) the viability of Self-Play for internalization, proving models can learn from self-generated, noisy tasks when coupled with SFT, but not RL. Overall, SE-Bench establishes a rigorous diagnostic platform for self-evolution with knowledge internalization. Our code and dataset can be found at https://github.com/thunlp/SE-Bench.",
+    "arxiv_url": "https://arxiv.org/abs/2602.04811",
+    "authors": [
+      "Jiarui Yuan",
+      "Tailin Jin",
+      "Weize Chen",
+      "Zeyuan Liu",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ],
+    "first_author": "Jiarui Yuan",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Instruction-Tuning",
+    "tags": [
+      "Knowledge Internalization",
+      "API Obfuscation",
+      "Closed-Book Training",
+      "Open-Book Paradox",
+      "Self-Play Learning",
+      "RL Gap",
+      "PPO Clipping",
+      "Compositional Generalization",
+      "Diagnostic Benchmark",
+      "Consensus Filtering"
+    ],
+    "summary": "该论文提出SE-BENCH，通过将NumPy函数和文档混淆为伪新库并构建可训练与测试题集，提供一个“必须内化才能解题”的诊断基准，用以评估和分析SFT、RL与自我博弈在将新API知识压缩入模型权重中的效果，并揭示了开卷悖论、RL内化缺陷与基于SFT的自我博弈可行性等重要发现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.04811v1",
+    "published": "2026-02-04",
+    "update_time": "2026-02-04",
+    "download_time": "2026-02-06 02:25:38"
   }
 ]
