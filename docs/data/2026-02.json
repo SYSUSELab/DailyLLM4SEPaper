@@ -448,5 +448,161 @@
     "published": "2026-02-04",
     "update_time": "2026-02-04",
     "download_time": "2026-02-06 02:25:38"
+  },
+  {
+    "id": "2602.05891",
+    "title": "When Elo Lies: Hidden Biases in Codeforces-Based Evaluation of Large Language Models",
+    "abstract": "As Large Language Models (LLMs) achieve breakthroughs in complex reasoning, Codeforces-based Elo ratings have emerged as a prominent metric for evaluating competitive programming capabilities. However, these ratings are often reported without critical experimental details, leading to significant discrepancies illustrated by recent reports where the score of the same model version fluctuated by nearly 500 points. This paper presents a systematic empirical study on the hidden factors biasing Elo evaluations: (1) the temporal ordering of submissions, (2) contest difficulty selection, and (3) run to run stochastic variability of LLMs. Utilizing a controlled benchmark of 37 recent Codeforces contests and 13,691 generated test cases, we demonstrate that Elo scores are highly sensitive to these parameters. Our findings reveal that varying submission orders can shift scores by 394 points, while contest selection can cause differences of up to 1,122 points for the same model. Run to run performance exhibits substantial instability, with a maximum difference of 349 points in mean scores observed when evaluating identical contests. We conclude that direct Elo comparisons are unreliable and potentially misleading without strict standardization and transparent reporting of experimental settings.",
+    "arxiv_url": "https://arxiv.org/abs/2602.05891",
+    "authors": [
+      "Shenyu Zheng",
+      "Ximing Dong",
+      "Xiaoshuang Liu",
+      "Gustavo Oliva",
+      "Chong Chun Yong",
+      "Dayi Lin",
+      "Boyuan Chen",
+      "Shaowei Wang",
+      "Ahmed E. Hassan"
+    ],
+    "first_author": "Shenyu Zheng",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Elo Bias",
+      "Reproducibility",
+      "Robustness",
+      "Run-to-Run Variability",
+      "Submission Order Sensitivity",
+      "Contest Selection Bias",
+      "Test Case Generation",
+      "Automated Verifier"
+    ],
+    "summary": "本文通过构建包含37场Codeforces竞赛与13,691个自动生成测试用例的本地评测基准，系统实证分析了提交时序、竞赛选择与模型运行随机性如何导致基于Codeforces的Elo评分产生数百至上千点的偏差，并强调需严格标准化与透明报告评测设置以避免误导性比较。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.05891v1",
+    "published": "2026-02-05",
+    "update_time": "2026-02-05",
+    "download_time": "2026-02-08 02:44:52"
+  },
+  {
+    "id": "2602.05780",
+    "title": "Automated Customization of LLMs for Enterprise Code Repositories Using Semantic Scopes",
+    "abstract": "Code completion (CC) is a task frequently used by developers when working in collaboration with LLM-based programming assistants. Despite the increased performance of LLMs on public benchmarks, out of the box LLMs still have a hard time generating code that aligns with a private code repository not previously seen by the model's training data. Customizing code LLMs to a private repository provides a way to improve the model performance. In this paper we present our approach for automated LLM customization based on semantic scopes in the code. We evaluate LLMs on real industry cases with two private enterprise code repositories with two customization strategies: Retrieval-Augmented Generation (RAG) and supervised Fine-Tuning (FT). Our mechanism for ingesting the repository's data and formulating the training data pairs with semantic scopes helps models to learn the underlying patterns specific to the repository, providing more precise code to developers and helping to boost their productivity. The code completions of moderately sized customized models can be significantly better than those of uncustomized models of much larger capacity. We also include an analysis of customization on two public benchmarks and present opportunities for future work.",
+    "arxiv_url": "https://arxiv.org/abs/2602.05780",
+    "authors": [
+      "Ulrich Finkler",
+      "Irene Manotas",
+      "Wei Zhang",
+      "Geert Janssen",
+      "Octavian Popescu",
+      "Shyam Ramji"
+    ],
+    "first_author": "Ulrich Finkler",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Completion",
+    "tags": [
+      "Semantic Scopes",
+      "Repository-Level Fine-Tuning",
+      "Code RAG",
+      "Repository-Level Coding",
+      "Automated Data Ingestion",
+      "Style Adaptation",
+      "Concise Completions",
+      "Small-Model Efficiency"
+    ],
+    "summary": "本文提出一种基于代码语义作用域的自动化仓库数据摄取与训练对构建方法，并在两个私有企业代码库上比较了基于检索增强生成（RAG）与监督微调（FT）的定制化效果，结果表明语义作用域驱动的微调能在小模型上显著提升代码补全的准确性、风格一致性和延迟表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.05780v1",
+    "published": "2026-02-05",
+    "update_time": "2026-02-05",
+    "download_time": "2026-02-08 02:45:10"
+  },
+  {
+    "id": "2602.06039",
+    "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching",
+    "abstract": "Multi-agent systems built from prompted large language models can improve multi-round reasoning, yet most existing pipelines rely on fixed, trajectory-wide communication patterns that are poorly matched to the stage-dependent needs of iterative problem solving. We introduce DyTopo, a manager-guided multi-agent framework that reconstructs a sparse directed communication graph at each round. Conditioned on the manager's round goal, each agent outputs lightweight natural-language query (need) and \\key (offer) descriptors; DyTopo embeds these descriptors and performs semantic matching, routing private messages only along the induced edges. Across code generation and mathematical reasoning benchmarks and four LLM backbones, DyTopo consistently outperforms over the strongest baseline (avg. +6.2). Beyond accuracy, DyTopo yields an interpretable coordination trace via the evolving graphs, enabling qualitative inspection of how communication pathways reconfigure across rounds.",
+    "arxiv_url": "https://arxiv.org/abs/2602.06039",
+    "authors": [
+      "Yuxing Lu",
+      "Yucheng Hu",
+      "Xukai Zhao",
+      "Jiuxin Cao"
+    ],
+    "first_author": "Yuxing Lu",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Dynamic Topology",
+      "Semantic Key-Query Matching",
+      "Manager-guided Routing",
+      "Multi-Agent Coordination",
+      "Private Message Routing",
+      "Single-Pass Inference",
+      "Interpretable Communication Graphs",
+      "Topology Evolution Analysis",
+      "Robustness",
+      "Efficiency"
+    ],
+    "summary": "本文提出DyTopo，一种由Manager引导的多智能体动态拓扑路由框架，代理在每轮生成自然语言的need/key描述并通过语义匹配构建稀疏有向通信图，从而按需路由私有消息，在代码生成与数学推理任务上显著提升性能并提供可解释的协同轨迹。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.06039v1",
+    "published": "2026-02-05",
+    "update_time": "2026-02-05",
+    "download_time": "2026-02-08 02:45:34"
+  },
+  {
+    "id": "2602.05885",
+    "title": "Dr. Kernel: Reinforcement Learning Done Right for Triton Kernel Generations",
+    "abstract": "High-quality kernel is critical for scalable AI systems, and enabling LLMs to generate such code would advance AI development. However, training LLMs for this task requires sufficient data, a robust environment, and the process is often vulnerable to reward hacking and lazy optimization. In these cases, models may hack training rewards and prioritize trivial correctness over meaningful speedup. In this paper, we systematically study reinforcement learning (RL) for kernel generation. We first design KernelGYM, a robust distributed GPU environment that supports reward hacking check, data collection from multi-turn interactions and long-term RL training. Building on KernelGYM, we investigate effective multi-turn RL methods and identify a biased policy gradient issue caused by self-inclusion in GRPO. To solve this, we propose Turn-level Reinforce-Leave-One-Out (TRLOO) to provide unbiased advantage estimation for multi-turn RL. To alleviate lazy optimization, we incorporate mismatch correction for training stability and introduce Profiling-based Rewards (PR) and Profiling-based Rejection Sampling (PRS) to overcome the issue. The trained model, Dr.Kernel-14B, reaches performance competitive with Claude-4.5-Sonnet in Kernelbench. Finally, we study sequential test-time scaling for Dr.Kernel-14B. On the KernelBench Level-2 subset, 31.6% of the generated kernels achieve at least a 1.2x speedup over the Torch reference, surpassing Claude-4.5-Sonnet (26.7%) and GPT-5 (28.6%). When selecting the best candidate across all turns, this 1.2x speedup rate further increases to 47.8%. All resources, including environment, training code, models, and dataset, are included in https://www.github.com/hkust-nlp/KernelGYM.",
+    "arxiv_url": "https://arxiv.org/abs/2602.05885",
+    "authors": [
+      "Wei Liu",
+      "Jiawei Xu",
+      "Yingru Li",
+      "Longtao Zheng",
+      "Tianjian Li",
+      "Qian Liu",
+      "Junxian He"
+    ],
+    "first_author": "Wei Liu",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Performance Optimization",
+    "tags": [
+      "Kernel Generation",
+      "Triton",
+      "Multi-turn Reinforcement Learning",
+      "Unbiased Advantage Estimation",
+      "Profiling-based Reward",
+      "Rejection Sampling",
+      "Reward Hacking Detection",
+      "Lazy Optimization",
+      "Distributed GPU Evaluation Environment",
+      "Test-time Scaling"
+    ],
+    "summary": "本文提出了面向 Triton 内核生成的分布式 RL 平台 KERNELGYM，提出无偏多回合策略梯度估计 TRLOO 及基于性能分析的奖励与拒绝采样方法，有效缓解奖励劫持与惰性优化并显著提升生成内核的速度与稳定性，且公开了环境、数据与模型。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.05885v1",
+    "published": "2026-02-05",
+    "update_time": "2026-02-05",
+    "download_time": "2026-02-08 02:47:33"
   }
 ]
