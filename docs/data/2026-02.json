@@ -604,5 +604,163 @@
     "published": "2026-02-05",
     "update_time": "2026-02-05",
     "download_time": "2026-02-08 02:47:33"
+  },
+  {
+    "id": "2602.06875",
+    "title": "TraceCoder: A Trace-Driven Multi-Agent Framework for Automated Debugging of LLM-Generated Code",
+    "abstract": "Large Language Models (LLMs) often generate code with subtle but critical bugs, especially for complex tasks. Existing automated repair methods typically rely on superficial pass/fail signals, offering limited visibility into program behavior and hindering precise error localization. In addition, without a way to learn from prior failures, repair processes often fall into repetitive and inefficient cycles. To overcome these challenges, we present TraceCoder, a collaborative multi-agent framework that emulates the observe-analyze-repair process of human experts. The framework first instruments the code with diagnostic probes to capture fine-grained runtime traces, enabling deep insight into its internal execution. It then conducts causal analysis on these traces to accurately identify the root cause of the failure. This process is further enhanced by a novel Historical Lesson Learning Mechanism (HLLM), which distills insights from prior failed repair attempts to inform subsequent correction strategies and prevent recurrence of similar mistakes. To ensure stable convergence, a Rollback Mechanism enforces that each repair iteration constitutes a strict improvement toward the correct solution. Comprehensive experiments across multiple benchmarks show that TraceCoder achieves up to a 34.43\\% relative improvement in Pass@1 accuracy over existing advanced baselines. Ablation studies verify the significance of each system component, with the iterative repair process alone contributing a 65.61\\% relative gain in accuracy. Furthermore, TraceCoder significantly outperforms leading iterative methods in terms of both accuracy and cost-efficiency.",
+    "arxiv_url": "https://arxiv.org/abs/2602.06875",
+    "authors": [
+      "Jiangping Huang",
+      "Wenguang Ye",
+      "Weisong Sun",
+      "Jian Zhang",
+      "Mingyue Zhang",
+      "Yang Liu"
+    ],
+    "first_author": "Jiangping Huang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Program Repair",
+      "Code Agents",
+      "Runtime Instrumentation",
+      "Causal Fault Localization",
+      "Historical Lesson Learning",
+      "Rollback Mechanism",
+      "Iterative Repair",
+      "Cost Efficiency"
+    ],
+    "summary": "本文提出TraceCoder——一个基于运行时跟踪的多智能体自动化调试框架，结合因果分析、历史经验学习与回滚机制对LLM生成代码进行迭代定位与修复，从而显著提升修复准确率与效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.06875v1",
+    "published": "2026-02-06",
+    "update_time": "2026-02-06",
+    "download_time": "2026-02-09 02:31:04"
+  },
+  {
+    "id": "2602.06751",
+    "title": "Beyond Function-Level Analysis: Context-Aware Reasoning for Inter-Procedural Vulnerability Detection",
+    "abstract": "Recent progress in ML and LLMs has improved vulnerability detection, and recent datasets have reduced label noise and unrelated code changes. However, most existing approaches still operate at the function level, where models are asked to predict whether a single function is vulnerable without inter-procedural context. In practice, vulnerability presence and root cause often depend on contextual information. Naively appending such context is not a reliable solution: real-world context is long, redundant, and noisy, and we find that unstructured context frequently degrades the performance of strong fine-tuned code models.   We present CPRVul, a context-aware vulnerability detection framework that couples Context Profiling and Selection with Structured Reasoning. CPRVul constructs a code property graph, and extracts candidate context. It then uses an LLM to generate security-focused profiles and assign relevance scores, selecting only high-impact contextual elements that fit within the model's context window. In the second phase, CPRVul integrates the target function, the selected context, and auxiliary vulnerability metadata to generate reasoning traces, which are used to fine-tune LLMs for reasoning-based vulnerability detection.   We evaluate CPRVul on three high-quality vulnerability datasets: PrimeVul, TitanVul, and CleanVul. Across all datasets, CPRVul consistently outperforms function-only baselines, achieving accuracies ranging from 64.94% to 73.76%, compared to 56.65% to 63.68% for UniXcoder. Specifically, on the challenging PrimeVul benchmark, CPRVul achieves 67.78% accuracy, outperforming prior state-of-the-art approaches, improving accuracy from 55.17% to 67.78% (22.9% improvement). Our ablations further show that neither raw context nor processed context alone benefits strong code models; gains emerge only when processed context is paired with structured reasoning.",
+    "arxiv_url": "https://arxiv.org/abs/2602.06751",
+    "authors": [
+      "Yikun Li",
+      "Ting Zhang",
+      "Jieke Shi",
+      "Chengran Yang",
+      "Junda He",
+      "Xin Zhou",
+      "Jinfeng Jiang",
+      "Huihui Huang",
+      "Wen Bin Leow",
+      "Yide Yin",
+      "Eng Lieh Ouh",
+      "Lwin Khin Shar",
+      "David Lo"
+    ],
+    "first_author": "Yikun Li",
+    "category": [
+      "Technical",
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Inter-procedural Reasoning",
+      "Context Profiling",
+      "Context Selection",
+      "Code Property Graph",
+      "Structured Reasoning Traces",
+      "Repository-Level Analysis",
+      "LLM-Guided Relevance Scoring",
+      "Context-Enriched Benchmark"
+    ],
+    "summary": "本文提出CPRVUL，通过构建代码属性图进行仓库级上下文抽取、用LLM生成安全导向的上下文剖析与相关性评分以选择关键信息，并以结构化推理轨迹监督微调模型，从而显著提升跨过程漏洞检测性能并发布了带上下文的基准数据集。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.06751v1",
+    "published": "2026-02-06",
+    "update_time": "2026-02-06",
+    "download_time": "2026-02-09 02:31:28"
+  },
+  {
+    "id": "2602.06795",
+    "title": "Generating Data-Driven Reasoning Rubrics for Domain-Adaptive Reward Modeling",
+    "abstract": "An impediment to using Large Language Models (LLMs) for reasoning output verification is that LLMs struggle to reliably identify errors in thinking traces, particularly in long outputs, domains requiring expert knowledge, and problems without verifiable rewards. We propose a data-driven approach to automatically construct highly granular reasoning error taxonomies to enhance LLM-driven error detection on unseen reasoning traces. Our findings indicate that classification approaches that leverage these error taxonomies, or \"rubrics\", demonstrate strong error identification compared to baseline methods in technical domains like coding, math, and chemical engineering. These rubrics can be used to build stronger LLM-as-judge reward functions for reasoning model training via reinforcement learning. Experimental results show that these rewards have the potential to improve models' task accuracy on difficult domains over models trained by general LLMs-as-judges by +45%, and approach performance of models trained by verifiable rewards while using as little as 20% as many gold labels. Through our approach, we extend the usage of reward rubrics from assessing qualitative model behavior to assessing quantitative model correctness on tasks typically learned via RLVR rewards. This extension opens the door for teaching models to solve complex technical problems without a full dataset of gold labels, which are often highly costly to procure.",
+    "arxiv_url": "https://arxiv.org/abs/2602.06795",
+    "authors": [
+      "Kate Sanders",
+      "Nathaniel Weir",
+      "Sapana Chaudhary",
+      "Kaj Bostrom",
+      "Huzefa Rangwala"
+    ],
+    "first_author": "Kate Sanders",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Model Training & Evaluation",
+    "task": "Reward Modeling & Reasoning Trace Verification",
+    "tags": [
+      "Rubric Generation",
+      "Error Taxonomy",
+      "LLM-as-Judge",
+      "Reward Modeling",
+      "Reasoning Trace Classification",
+      "Domain Adaptation",
+      "Data-Efficient RL",
+      "Process Supervision"
+    ],
+    "summary": "本文提出一种自动从模型失败实例中构建细粒度错误分类（rubrics）的方法，用以增强基于LLM的判别器作为训练时的奖励函数，从而在只用少量金标的情况下显著提高复杂技术性推理任务的错误识别与下游任务准确率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.06795v1",
+    "published": "2026-02-06",
+    "update_time": "2026-02-06",
+    "download_time": "2026-02-09 02:34:27"
+  },
+  {
+    "id": "2602.06777",
+    "title": "Next-generation cyberattack detection with large language models: anomaly analysis across heterogeneous logs",
+    "abstract": "This project explores large language models (LLMs) for anomaly detection across heterogeneous log sources. Traditional intrusion detection systems suffer from high false positive rates, semantic blindness, and data scarcity, as logs are inherently sensitive, making clean datasets rare. We address these challenges through three contributions: (1) LogAtlas-Foundation-Sessions and LogAtlas-Defense-Set, balanced and heterogeneous log datasets with explicit attack annotations and privacy preservation; (2) empirical benchmarking revealing why standard metrics such as F1 and accuracy are misleading for security applications; and (3) a two phase training framework combining log understanding (Base-AMAN, 3B parameters) with real time detection (AMAN, 0.5B parameters via knowledge distillation). Results demonstrate practical feasibility, with inference times of 0.3-0.5 seconds per session and operational costs below 50 USD per day.",
+    "arxiv_url": "https://arxiv.org/abs/2602.06777",
+    "authors": [
+      "Yassine Chagna",
+      "Antal Goldschmidt"
+    ],
+    "first_author": "Yassine Chagna",
+    "category": [
+      "Technical",
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "AIOps",
+    "task": "Log Anomaly Detection",
+    "tags": [
+      "Knowledge Distillation",
+      "Soft Mixture-of-Experts",
+      "Parameter-Efficient Fine-Tuning",
+      "Heterogeneous Logs",
+      "Privacy-Preserving Dataset",
+      "Session-Level Aggregation",
+      "Real-Time Detection",
+      "Root-Cause Analysis",
+      "Benchmarking Metrics",
+      "Cross-Domain Generalization",
+      "Inference Efficiency"
+    ],
+    "summary": "本文提出并公开了两个隐私保护的多源日志数据集，设计了基于LLM的两阶段训练（基础语义理解 + 蒸馏轻量检测器）与软专家混合等技术，实现对异构日志的高效实时异常检测并评估实际部署成本与评价指标缺陷。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.06777v1",
+    "published": "2026-02-06",
+    "update_time": "2026-02-06",
+    "download_time": "2026-02-09 02:34:46"
   }
 ]
