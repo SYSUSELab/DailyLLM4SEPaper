@@ -762,5 +762,160 @@
     "published": "2026-02-06",
     "update_time": "2026-02-06",
     "download_time": "2026-02-09 02:34:46"
+  },
+  {
+    "id": "2602.07871",
+    "title": "HerAgent: Rethinking the Automated Environment Deployment via Hierarchical Test Pyramid",
+    "abstract": "Automated software environment setup is a prerequisite for testing, debugging, and reproducing failures, yet remains challenging in practice due to complex dependencies, heterogeneous build systems, and incomplete documentation. Recent work leverages large language models to automate this process, but typically evaluates success using weak signals such as dependency installation or partial test execution, which do not ensure that a project can actually run. In this paper, we argue that environment setup success should be evaluated through executable evidence rather than a single binary signal. We introduce the Environment Maturity Hierarchy, which defines three success levels based on progressively stronger execution requirements, culminating in successful execution of a project's main entry point. Guided by this hierarchy, we propose HerAgent, an automated environment setup approach that incrementally constructs executable environments through execution-based validation and repair. We evaluate HerAgent on four public benchmarks, where it outperforms all related work, achieving up to 79.6\\% improvement due to its holistic understanding of project structure and dependencies. On complex C/C++ projects, HerAgent surpasses prior approaches by 66.7\\%. In addition, HerAgent uniquely resolves 11-30 environment instances across the benchmarks that no prior method can configure.",
+    "arxiv_url": "https://arxiv.org/abs/2602.07871",
+    "authors": [
+      "Xiang Li",
+      "Siyu Lu",
+      "Sarro Federica",
+      "Claire Le Goues",
+      "He Ye"
+    ],
+    "first_author": "Xiang Li",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Testing automation",
+    "tags": [
+      "Environment Maturity Hierarchy",
+      "Environment Deployment",
+      "Executable Validation",
+      "Execution-based Repair",
+      "Knowledge Graph",
+      "Project Structure Analysis",
+      "Repository-level Automation",
+      "Cross-language Support"
+    ],
+    "summary": "本文提出HerAgent，一种基于环境成熟度层级（Installability、Testability、Runnability）的自动化项目环境部署框架，利用项目知识图谱进行整体依赖与结构推理并通过执行驱动的验证与修复策略，在四个公开基准上显著优于现有方法并提高复杂C/C++项目的可运行性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.07871v1",
+    "published": "2026-02-08",
+    "update_time": "2026-02-08",
+    "download_time": "2026-02-10 02:37:59"
+  },
+  {
+    "id": "2602.07783",
+    "title": "Still Manual? Automated Linter Configuration via DSL-Based LLM Compilation of Coding Standards",
+    "abstract": "Coding standards are essential for maintaining consistent and high-quality code across teams and projects. Linters help developers enforce these standards by detecting code violations. However, manual linter configuration is complex and expertise-intensive, and the diversity and evolution of programming languages, coding standards, and linters lead to repetitive and maintenance-intensive configuration work. To reduce manual effort, we propose LintCFG, a domain-specific language (DSL)-driven, LLM-based compilation approach to automate linter configuration generation for coding standards, independent of programming languages, coding standards, and linters. Inspired by compiler design, we first design a DSL to express coding rules in a tool-agnostic, structured, readable, and precise manner. Then, we build linter configurations into DSL configuration instructions. For a given natural language coding standard, the compilation process parses it into DSL coding standards, matches them with the DSL configuration instructions to set configuration names, option names and values, verifies consistency between the standards and configurations, and finally generates linter-specific configurations. Experiments with Checkstyle for Java coding standard show that our approach achieves over 90% precision and recall in DSL representation, with accuracy, precision, recall, and F1-scores close to 70% (with some exceeding 70%) in fine-grained linter configuration generation. Notably, our approach outperforms baselines by over 100% in precision. A user study further shows that our approach improves developers' efficiency in configuring linters for coding standards. Finally, we demonstrate the generality of the approach by generating ESLint configurations for JavaScript coding standards, showcasing its broad applicability across other programming languages, coding standards, and linters.",
+    "arxiv_url": "https://arxiv.org/abs/2602.07783",
+    "authors": [
+      "Zejun Zhang",
+      "Yixin Gan",
+      "Zhenchang Xing",
+      "Tian Zhang",
+      "Yi Li",
+      "Xiwei Xu",
+      "Qinghua Lu",
+      "Liming Zhu"
+    ],
+    "first_author": "Zejun Zhang",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Linting & Coding Standards",
+    "task": "Linter Configuration Generation",
+    "tags": [
+      "Linter Configuration",
+      "DSL for Coding Rules",
+      "LLM Compilation",
+      "NL-to-DSL Parsing",
+      "Configuration Instruction Matching",
+      "Semantic Consistency Verification",
+      "Cross-Language Generality",
+      "User Study"
+    ],
+    "summary": "该文提出 LintCFG：一种受编译器启发的 DSL 驱动且基于大模型的流水线，将自然语言编码规范解析为中间 DSL 表示并自动生成多种 linter 的配置，实验证明在 Checkstyle 和 ESLint 上具备高精度与通用性。",
+    "quality": "High",
+    "conference": "FSE 2026",
+    "pdf_url": "https://arxiv.org/pdf/2602.07783v1",
+    "published": "2026-02-08",
+    "update_time": "2026-02-08",
+    "download_time": "2026-02-10 02:38:25"
+  },
+  {
+    "id": "2602.07832",
+    "title": "rePIRL: Learn PRM with Inverse RL for LLM Reasoning",
+    "abstract": "Process rewards have been widely used in deep reinforcement learning to improve training efficiency, reduce variance, and prevent reward hacking. In LLM reasoning, existing works also explore various solutions for learning effective process reward models (PRM) with or without the help of an expert policy. However, existing methods either rely on strong assumptions about the expert policies (e.g., requiring their reward functions) or suffer intrinsic limitations (e.g., entropy collapse), resulting in weak PRMs or limited generalizability. In this paper, we introduce rePIRL, an inverse RL-inspired framework that learns effective PRMs with minimal assumptions about expert policies. Specifically, we design a dual learning process that updates the policy and the PRM interchangeably. Our learning algorithm has customized techniques to address the challenges of scaling traditional inverse RL to LLMs. We theoretically show that our proposed learning framework can unify both online and offline PRM learning methods, justifying that rePIRL can learn PRMs with minimal assumptions. Empirical evaluations on standardized math and coding reasoning datasets demonstrate the effectiveness of rePIRL over existing methods. We further show the application of our trained PRM in test-time training, test-time scaling, and providing an early signal for training hard problems. Finally, we validate our training recipe and key design choices via a detailed ablation study.",
+    "arxiv_url": "https://arxiv.org/abs/2602.07832",
+    "authors": [
+      "Xian Wu",
+      "Kaijie Zhu",
+      "Ying Zhang",
+      "Lun Wang",
+      "Wenbo Guo"
+    ],
+    "first_author": "Xian Wu",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Process Reward Modeling",
+      "Inverse Reinforcement Learning",
+      "Token-level MDP",
+      "Maximum Entropy RL",
+      "Policy-Reward Dual Learning",
+      "Entropy Collapse Mitigation",
+      "Test-time Training",
+      "Test-time Scaling",
+      "Early Hard-problem Signal",
+      "Theoretical Unification"
+    ],
+    "summary": "本文提出 rePIRL，一种受逆向强化学习启发的可扩展框架，通过仅利用专家轨迹在 token 级别学习过程奖励模型（PRM）并交替训练策略与奖励，从理论上统一现有在线/离线方法，在数学与编码推理基准上展现出优于现有方法的性能并证明多种实际应用价值。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.07832v1",
+    "published": "2026-02-08",
+    "update_time": "2026-02-08",
+    "download_time": "2026-02-10 02:39:27"
+  },
+  {
+    "id": "2602.07787",
+    "title": "Do Multi-Agents Dream of Electric Screens? Achieving Perfect Accuracy on AndroidWorld Through Task Decomposition",
+    "abstract": "We present Minitap, a multi-agent system that achieves 100% success on the AndroidWorld benchmark, the first to fully solve all 116 tasks and surpassing human performance (80%). We first analyze why single-agent architectures fail: context pollution from mixed reasoning traces, silent text input failures undetected by the agent, and repetitive action loops without escape. Minitap addresses each failure through targeted mechanisms: cognitive separation across six specialized agents, deterministic post-validation of text input against device state, and meta-cognitive reasoning that detects cycles and triggers strategy changes. Ablations show multi-agent decomposition contributes +21 points over single-agent baselines; verified execution adds +7 points; meta-cognition adds +9 points. We release Minitap as open-source software. https://github.com/minitap-ai/mobile-use",
+    "arxiv_url": "https://arxiv.org/abs/2602.07787",
+    "authors": [
+      "Pierre-Louis Favreau",
+      "Jean-Pierre Lo",
+      "Clement Guiguet",
+      "Charles Simon-Meunier",
+      "Nicolas Dehandschoewercker",
+      "Allen G. Roush",
+      "Judah Goldfeder",
+      "Ravid Shwartz-Ziv"
+    ],
+    "first_author": "Pierre-Louis Favreau",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "GUI test",
+    "tags": [
+      "Multi-Agent Decomposition",
+      "Task Decomposition",
+      "Verified Execution",
+      "Meta-cognitive Reasoning",
+      "Context Separation",
+      "UI Automation",
+      "Failure Mode Analysis",
+      "Cycle Detection",
+      "Action Sequencing",
+      "Ablation Study"
+    ],
+    "summary": "本文提出Minitap的多代理移动UI自动化系统，通过六个专门代理、对文本输入的执行后验证和元认知循环检测，在AndroidWorld基准上实现100%成功率并超越人类表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.07787v1",
+    "published": "2026-02-08",
+    "update_time": "2026-02-08",
+    "download_time": "2026-02-10 02:40:36"
   }
 ]
