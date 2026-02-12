@@ -1075,5 +1075,170 @@
     "published": "2026-02-09",
     "update_time": "2026-02-09",
     "download_time": "2026-02-11 02:40:32"
+  },
+  {
+    "id": "2602.10975",
+    "title": "FeatureBench: Benchmarking Agentic Coding for Complex Feature Development",
+    "abstract": "Agents powered by large language models (LLMs) are increasingly adopted in the software industry, contributing code as collaborators or even autonomous developers. As their presence grows, it becomes important to assess the current boundaries of their coding abilities. Existing agentic coding benchmarks, however, cover a limited task scope, e.g., bug fixing within a single pull request (PR), and often rely on non-executable evaluations or lack an automated approach for continually updating the evaluation coverage. To address such issues, we propose FeatureBench, a benchmark designed to evaluate agentic coding performance in end-to-end, feature-oriented software development. FeatureBench incorporates an execution-based evaluation protocol and a scalable test-driven method that automatically derives tasks from code repositories with minimal human effort. By tracing from unit tests along a dependency graph, our approach can identify feature-level coding tasks spanning multiple commits and PRs scattered across the development timeline, while ensuring the proper functioning of other features after the separation. Using this framework, we curated 200 challenging evaluation tasks and 3825 executable environments from 24 open-source repositories in the first version of our benchmark. Empirical evaluation reveals that the state-of-the-art agentic model, such as Claude 4.5 Opus, which achieves a 74.4% resolved rate on SWE-bench, succeeds on only 11.0% of tasks, opening new opportunities for advancing agentic coding. Moreover, benefiting from our automated task collection toolkit, FeatureBench can be easily scaled and updated over time to mitigate data leakage. The inherent verifiability of constructed environments also makes our method potentially valuable for agent training.",
+    "arxiv_url": "https://arxiv.org/abs/2602.10975",
+    "authors": [
+      "Qixing Zhou",
+      "Jiacheng Zhang",
+      "Haiyang Wang",
+      "Rui Hao",
+      "Jiahe Wang",
+      "Minghao Han",
+      "Yuxue Yang",
+      "Shuzhe Wu",
+      "Feiyang Pan",
+      "Lue Fan",
+      "Dandan Tu",
+      "Zhaoxiang Zhang"
+    ],
+    "first_author": "Qixing Zhou",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Editing",
+    "tags": [
+      "Feature-level Development",
+      "Execution-based Evaluation",
+      "Test-Driven Collection",
+      "Dependency Graph Tracing",
+      "Verifiable Environments",
+      "Continual Updatable",
+      "Repository-Level Coding",
+      "Agentic Coding"
+    ],
+    "summary": "本文提出FeatureBench——一个面向特性级（feature）开发的可执行、可持续更新的agentic编码基准与自动化实例收集工具链，并基于24个开源仓库构建200个任务和3825个可运行环境来评估现有LLM代理的特性开发能力。",
+    "quality": "High",
+    "conference": "ICLR 2026",
+    "pdf_url": "https://arxiv.org/pdf/2602.10975v1",
+    "published": "2026-02-11",
+    "update_time": "2026-02-11",
+    "download_time": "2026-02-12 02:30:38"
+  },
+  {
+    "id": "2602.10808",
+    "title": "PELLI: Framework to effectively integrate LLMs for quality software generation",
+    "abstract": "Recent studies have revealed that when LLMs are appropriately prompted and configured, they demonstrate mixed results. Such results often meet or exceed the baseline performance. However, these comparisons have two primary issues. First, they mostly considered only reliability as a comparison metric and selected a few LLMs (such as Codex and ChatGPT) for comparision. This paper proposes a comprehensive code quality assessment framework called Programmatic Excellence via LLM Iteration (PELLI). PELLI is an iterative analysis-based process that upholds high-quality code changes. We extended the state-of-the-art by performing a comprehensive evaluation that generates quantitative metrics for analyzing three primary nonfunctional requirements (such as maintainability, performance, and reliability) while selecting five popular LLMs. For PELLI's applicability, we selected three application domains while following Python coding standards. Following this framework, practitioners can ensure harmonious integration between LLMs and human developers, ensuring that their potential is fully realized. PELLI can serve as a practical guide for developers aiming to leverage LLMs while adhering to recognized quality standards. This study's outcomes are crucial for advancing LLM technologies in real-world applications, providing stakeholders with a clear understanding of where these LLMs excel and where they require further refinement. Overall, based on three nonfunctional requirements, we have found that GPT-4T and Gemini performed slightly better. We also found that prompt design can influence the overall code quality. In addition, each application domain demonstrated high and low scores across various metrics, and even within the same metrics across different prompts.",
+    "arxiv_url": "https://arxiv.org/abs/2602.10808",
+    "authors": [
+      "Rasmus Krebs",
+      "Somnath Mazumdar"
+    ],
+    "first_author": "Rasmus Krebs",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Iterative Refinement",
+      "Prompt Stratification",
+      "Code Quality Assessment",
+      "Maintainability",
+      "Performance Evaluation",
+      "Reliability Analysis",
+      "Static Analysis",
+      "Human-LLM Interaction",
+      "Python-specific"
+    ],
+    "summary": "本文提出PELLI框架，通过分层提示、迭代生成与静态代码分析，比较五种主流大模型在Python三类应用上生成代码的可维护性、性能和可靠性，并讨论提示长度与模型特性对代码质量的影响，给出实用集成建议。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.10808v1",
+    "published": "2026-02-11",
+    "update_time": "2026-02-11",
+    "download_time": "2026-02-12 02:31:06"
+  },
+  {
+    "id": "2602.10063",
+    "title": "Chain of Mindset: Reasoning with Adaptive Cognitive Modes",
+    "abstract": "Human problem-solving is never the repetition of a single mindset, by which we mean a distinct mode of cognitive processing. When tackling a specific task, we do not rely on a single mindset; instead, we integrate multiple mindsets within the single solution process. However, existing LLM reasoning methods fall into a common trap: they apply the same fixed mindset across all steps, overlooking that different stages of solving the same problem require fundamentally different mindsets. This single-minded assumption prevents models from reaching the next level of intelligence. To address this limitation, we propose Chain of Mindset (CoM), a training-free agentic framework that enables step-level adaptive mindset orchestration. CoM decomposes reasoning into four functionally heterogeneous mindsets: Spatial, Convergent, Divergent, and Algorithmic. A Meta-Agent dynamically selects the optimal mindset based on the evolving reasoning state, while a bidirectional Context Gate filters cross-module information flow to maintain effectiveness and efficiency. Experiments across six challenging benchmarks spanning mathematics, code generation, scientific QA, and spatial reasoning demonstrate that CoM achieves state-of-the-art performance, outperforming the strongest baseline by 4.96\\% and 4.72\\% in overall accuracy on Qwen3-VL-32B-Instruct and Gemini-2.0-Flash, while balancing reasoning efficiency. Our code is publicly available at \\href{https://github.com/QuantaAlpha/chain-of-mindset}{https://github.com/QuantaAlpha/chain-of-mindset}.",
+    "arxiv_url": "https://arxiv.org/abs/2602.10063",
+    "authors": [
+      "Tianyi Jiang",
+      "Arctanx An",
+      "Hengyi Feng",
+      "Naixin Zhai",
+      "Haodong Li",
+      "Xiaomin Yu",
+      "Jiahui Liu",
+      "Hanwen Du",
+      "Shuo Zhang",
+      "Zhi Yang",
+      "Jie Huang",
+      "Yuhua Li",
+      "Yongxin Ni",
+      "Huacan Wang",
+      "Ronghao Chen"
+    ],
+    "first_author": "Tianyi Jiang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Reasoning & Cognitive Control",
+    "task": "Adaptive Mindset Orchestration",
+    "tags": [
+      "Adaptive Mindset",
+      "Meta-Agent",
+      "Context Gate",
+      "Mindset Switching",
+      "Algorithmic Thinking",
+      "Spatial Reasoning",
+      "Divergent Thinking",
+      "Convergent Thinking",
+      "Training-free Agent",
+      "Step-level Orchestration",
+      "Multi-domain Reasoning"
+    ],
+    "summary": "本文提出Chain of Mindset (CoM)，一种无需训练的智能体框架，通过在推理过程中按步自适应地在空间、聚合、发散与算法四种心智模式之间切换并引入双向Context Gate以过滤跨模块信息，从而在数学、代码生成、科学问答和空间推理等多领域基准上显著提升推理准确性与效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.10063v1",
+    "published": "2026-02-10",
+    "update_time": "2026-02-10",
+    "download_time": "2026-02-12 02:32:30"
+  },
+  {
+    "id": "2602.09937",
+    "title": "Why Do AI Agents Systematically Fail at Cloud Root Cause Analysis?",
+    "abstract": "Failures in large-scale cloud systems incur substantial financial losses, making automated Root Cause Analysis (RCA) essential for operational stability. Recent efforts leverage Large Language Model (LLM) agents to automate this task, yet existing systems exhibit low detection accuracy even with capable models, and current evaluation frameworks assess only final answer correctness without revealing why the agent's reasoning failed. This paper presents a process level failure analysis of LLM-based RCA agents. We execute the full OpenRCA benchmark across five LLM models, producing 1,675 agent runs, and classify observed failures into 12 pitfall types across intra-agent reasoning, inter-agent communication, and agent-environment interaction. Our analysis reveals that the most prevalent pitfalls, notably hallucinated data interpretation and incomplete exploration, persist across all models regardless of capability tier, indicating that these failures originate from the shared agent architecture rather than from individual model limitations. Controlled mitigation experiments further show that prompt engineering alone cannot resolve the dominant pitfalls, whereas enriching the inter-agent communication protocol reduces communication-related failures by up to 15 percentage points. The pitfall taxonomy and diagnostic methodology developed in this work provide a foundation for designing more reliable autonomous agents for cloud RCA.",
+    "arxiv_url": "https://arxiv.org/abs/2602.09937",
+    "authors": [
+      "Taeyoon Kim",
+      "Woohyeok Park",
+      "Hoyeong Yun",
+      "Kyungyong Lee"
+    ],
+    "first_author": "Taeyoon Kim",
+    "category": [
+      "Empirical"
+    ],
+    "field": "AIOps",
+    "task": "Root Cause Analysis",
+    "tags": [
+      "Hallucination",
+      "Incomplete Exploration",
+      "Inter-Agent Communication",
+      "Controller-Executor Architecture",
+      "Telemetry Correlation",
+      "Process-Level Analysis",
+      "Pitfall Taxonomy",
+      "Mitigation Experiments",
+      "Human-in-the-Loop"
+    ],
+    "summary": "本文对基于大型语言模型的云故障根因分析（RCA）代理进行了过程级故障诊断，基于1,675次代理运行归纳出12类架构性陷阱，发现主要失败模式跨模型一致且源自代理架构，并通过加强代理间通信等结构性改动验证了可缓解部分问题。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.09937v1",
+    "published": "2026-02-10",
+    "update_time": "2026-02-10",
+    "download_time": "2026-02-12 02:34:49"
   }
 ]
