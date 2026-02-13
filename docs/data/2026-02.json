@@ -1240,5 +1240,156 @@
     "published": "2026-02-10",
     "update_time": "2026-02-10",
     "download_time": "2026-02-12 02:34:49"
+  },
+  {
+    "id": "2602.12058",
+    "title": "ModelWisdom: An Integrated Toolkit for TLA+ Model Visualization, Digest and Repair",
+    "abstract": "Model checking in TLA+ provides strong correctness guarantees, yet practitioners continue to face significant challenges in interpreting counterexamples, understanding large state-transition graphs, and repairing faulty models. These difficulties stem from the limited explainability of raw model-checker output and the substantial manual effort required to trace violations back to source specifications. Although the TLA+ Toolbox includes a state diagram viewer, it offers only a static, fully expanded graph without folding, color highlighting, or semantic explanations, which limits its scalability and interpretability. We present ModelWisdom, an interactive environment that uses visualization and large language models to make TLA+ model checking more interpretable and actionable. ModelWisdom offers: (i) Model Visualization, with colorized violation highlighting, click-through links from transitions to TLA+ code, and mapping between violating states and broken properties; (ii) Graph Optimization, including tree-based structuring and node/edge folding to manage large models; (iii) Model Digest, which summarizes and explains subgraphs via large language models (LLMs) and performs preprocessing and partial explanations; and (iv) Model Repair, which extracts error information and supports iterative debugging. Together, these capabilities turn raw model-checker output into an interactive, explainable workflow, improving understanding and reducing debugging effort for nontrivial TLA+ specifications. The website to ModelWisdom is available: https://model-wisdom.pages.dev. A demonstrative video can be found at https://www.youtube.com/watch?v=plyZo30VShA.",
+    "arxiv_url": "https://arxiv.org/abs/2602.12058",
+    "authors": [
+      "Zhiyong Chen",
+      "Jialun Cao",
+      "Chang Xu",
+      "Shing-Chi Cheung"
+    ],
+    "first_author": "Zhiyong Chen",
+    "category": [
+      "Technical"
+    ],
+    "field": "Formal Verification & Specification",
+    "task": "Model Visualization and Repair",
+    "tags": [
+      "TLA+ Visualization",
+      "State Graph Folding",
+      "Violation Highlighting",
+      "Click-through Navigation",
+      "Graph Compaction",
+      "LLM-Guided Summarization",
+      "Model Repair Assistance",
+      "Interactive Debugging",
+      "Subgraph Explanation",
+      "Scalability"
+    ],
+    "summary": "ModelWisdom 是一个结合可视化与大语言模型的交互式工具，用于将 TLA+ 模型检查的状态转换图进行可视化、压缩与摘要，并提供基于 LLM 的子图解释与迭代修复支持，从而提升错误定位与调试效率。",
+    "quality": "High",
+    "conference": "FM (Formal Methods) Research Track (Tool) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2602.12058v1",
+    "published": "2026-02-12",
+    "update_time": "2026-02-12",
+    "download_time": "2026-02-13 02:32:04"
+  },
+  {
+    "id": "2602.11988",
+    "title": "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?",
+    "abstract": "A widespread practice in software development is to tailor coding agents to repositories using context files, such as AGENTS.md, by either manually or automatically generating them. Although this practice is strongly encouraged by agent developers, there is currently no rigorous investigation into whether such context files are actually effective for real-world tasks. In this work, we study this question and evaluate coding agents' task completion performance in two complementary settings: established SWE-bench tasks from popular repositories, with LLM-generated context files following agent-developer recommendations, and a novel collection of issues from repositories containing developer-committed context files.   Across multiple coding agents and LLMs, we find that context files tend to reduce task success rates compared to providing no repository context, while also increasing inference cost by over 20%. Behaviorally, both LLM-generated and developer-provided context files encourage broader exploration (e.g., more thorough testing and file traversal), and coding agents tend to respect their instructions. Ultimately, we conclude that unnecessary requirements from context files make tasks harder, and human-written context files should describe only minimal requirements.",
+    "arxiv_url": "https://arxiv.org/abs/2602.11988",
+    "authors": [
+      "Thibaud Gloaguen",
+      "Niels Mündler",
+      "Mark Müller",
+      "Veselin Raychev",
+      "Martin Vechev"
+    ],
+    "first_author": "Thibaud Gloaguen",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Repository-Level Coding",
+      "Context Files",
+      "Agent Instructioning",
+      "Issue Resolution",
+      "Agent Behavior Analysis",
+      "Inference Cost",
+      "LLM-Generated Instructions",
+      "Developer-Provided Instructions",
+      "Trace Analysis",
+      "Autonomous Task Solving"
+    ],
+    "summary": "本文构建了基于真实 GitHub 问题的新基准并在多种编码代理与设置下评估仓库级上下文文件的影响，结果表明自动生成的上下文文件通常降低成功率并提高推理成本，而开发者编写的上下文文件仅带来微小改进，建议仅保留最小必要说明。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.11988v1",
+    "published": "2026-02-12",
+    "update_time": "2026-02-12",
+    "download_time": "2026-02-13 02:32:33"
+  },
+  {
+    "id": "2602.12125",
+    "title": "Learning beyond Teacher: Generalized On-Policy Distillation with Reward Extrapolation",
+    "abstract": "On-policy distillation (OPD), which aligns the student with the teacher's logit distribution on student-generated trajectories, has demonstrated strong empirical gains in improving student performance and often outperforms off-policy distillation and reinforcement learning (RL) paradigms. In this work, we first theoretically show that OPD is a special case of dense KL-constrained RL where the reward function and the KL regularization are always weighted equally and the reference model can by any model. Then, we propose the Generalized On-Policy Distillation (G-OPD) framework, which extends the standard OPD objective by introducing a flexible reference model and a reward scaling factor that controls the relative weight of the reward term against the KL regularization. Through comprehensive experiments on math reasoning and code generation tasks, we derive two novel insights: (1) Setting the reward scaling factor to be greater than 1 (i.e., reward extrapolation), which we term ExOPD, consistently improves over standard OPD across a range of teacher-student size pairings. In particular, in the setting where we merge the knowledge from different domain experts, obtained by applying domain-specific RL to the same student model, back into the original student, ExOPD enables the student to even surpass the teacher's performance boundary and outperform the domain teachers. (2) Building on ExOPD, we further find that in the strong-to-weak distillation setting (i.e., distilling a smaller student from a larger teacher), performing reward correction by choosing the reference model as the teacher's base model before RL yields a more accurate reward signal and further improves distillation performance. However, this choice assumes access to the teacher's pre-RL variant and incurs more computational overhead. We hope our work offers new insights for future research on OPD.",
+    "arxiv_url": "https://arxiv.org/abs/2602.12125",
+    "authors": [
+      "Wenkai Yang",
+      "Weijie Liu",
+      "Ruobing Xie",
+      "Kai Yang",
+      "Saiyong Yang",
+      "Yankai Lin"
+    ],
+    "first_author": "Wenkai Yang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "On-Policy Distillation",
+      "Reward Extrapolation",
+      "Generalized OPD",
+      "Reward Correction",
+      "KL-Constrained RL",
+      "Multi-Teacher Merging",
+      "Strong-to-Weak Distillation",
+      "Token-level Advantage"
+    ],
+    "summary": "本文提出广义在策略蒸馏框架G-OPD，通过引入奖励缩放（ExOPD）及可选的参考模型奖励校正，在数学推理与代码生成任务中提升蒸馏效果并在多教师合并与强对弱蒸馏设置下实现超越教师的性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.12125v1",
+    "published": "2026-02-12",
+    "update_time": "2026-02-12",
+    "download_time": "2026-02-13 02:32:52"
+  },
+  {
+    "id": "2602.12038",
+    "title": "An Empirical Study of the Imbalance Issue in Software Vulnerability Detection",
+    "abstract": "Vulnerability detection is crucial to protect software security. Nowadays, deep learning (DL) is the most promising technique to automate this detection task, leveraging its superior ability to extract patterns and representations within extensive code volumes. Despite its promise, DL-based vulnerability detection remains in its early stages, with model performance exhibiting variability across datasets. Drawing insights from other well-explored application areas like computer vision, we conjecture that the imbalance issue (the number of vulnerable code is extremely small) is at the core of the phenomenon. To validate this, we conduct a comprehensive empirical study involving nine open-source datasets and two state-of-the-art DL models. The results confirm our conjecture. We also obtain insightful findings on how existing imbalance solutions perform in vulnerability detection. It turns out that these solutions perform differently as well across datasets and evaluation metrics. Specifically: 1) Focal loss is more suitable to improve the precision, 2) mean false error and class-balanced loss encourages the recall, and 3) random over-sampling facilitates the F1-measure. However, none of them excels across all metrics. To delve deeper, we explore external influences on these solutions and offer insights for developing new solutions.",
+    "arxiv_url": "https://arxiv.org/abs/2602.12038",
+    "authors": [
+      "Yuejun Guo",
+      "Qiang Hu",
+      "Qiang Tang",
+      "Yves Le Traon"
+    ],
+    "first_author": "Yuejun Guo",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Security and Vulnerabilities",
+      "Class Imbalance",
+      "Imbalanced Learning",
+      "Focal Loss",
+      "Class-Balanced Loss",
+      "Mean False Error",
+      "Random Over-Sampling",
+      "Precision-Recall Evaluation",
+      "False Negative Rate",
+      "External Factors",
+      "Reproducibility"
+    ],
+    "summary": "本文通过在九个开源数据集和两种深度学习模型上的系统实证研究，分析了软件漏洞检测中的类别不平衡问题、评估常见不平衡处理方法在不同数据和评价指标下的表现，并探讨了外部因素对这些方法有效性的影响。",
+    "quality": "High",
+    "conference": "European Symposium on Research in Computer Security (ESORICS) 2023",
+    "pdf_url": "https://arxiv.org/pdf/2602.12038v1",
+    "published": "2026-02-12",
+    "update_time": "2026-02-12",
+    "download_time": "2026-02-13 02:34:30"
   }
 ]
