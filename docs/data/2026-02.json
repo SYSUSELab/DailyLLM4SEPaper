@@ -1684,5 +1684,157 @@
     "published": "2026-02-12",
     "update_time": "2026-02-12",
     "download_time": "2026-02-15 02:34:59"
+  },
+  {
+    "id": "2602.12500",
+    "title": "Favia: Forensic Agent for Vulnerability-fix Identification and Analysis",
+    "abstract": "Identifying vulnerability-fixing commits corresponding to disclosed CVEs is essential for secure software maintenance but remains challenging at scale, as large repositories contain millions of commits of which only a small fraction address security issues. Existing automated approaches, including traditional machine learning techniques and recent large language model (LLM)-based methods, often suffer from poor precision-recall trade-offs. Frequently evaluated on randomly sampled commits, we uncover that they are substantially underestimating real-world difficulty, where candidate commits are already security-relevant and highly similar. We propose Favia, a forensic, agent-based framework for vulnerability-fix identification that combines scalable candidate ranking with deep and iterative semantic reasoning. Favia first employs an efficient ranking stage to narrow the search space of commits. Each commit is then rigorously evaluated using a ReAct-based LLM agent. By providing the agent with a pre-commit repository as environment, along with specialized tools, the agent tries to localize vulnerable components, navigates the codebase, and establishes causal alignment between code changes and vulnerability root causes. This evidence-driven process enables robust identification of indirect, multi-file, and non-trivial fixes that elude single-pass or similarity-based methods. We evaluate Favia on CVEVC, a large-scale dataset we made that comprises over 8 million commits from 3,708 real-world repositories, and show that it consistently outperforms state-of-the-art traditional and LLM-based baselines under realistic candidate selection, achieving the strongest precision-recall trade-offs and highest F1-scores.",
+    "arxiv_url": "https://arxiv.org/abs/2602.12500",
+    "authors": [
+      "André Storhaug",
+      "Jiamou Sun",
+      "Jingyue Li"
+    ],
+    "first_author": "André Storhaug",
+    "category": [
+      "Technical",
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Repair",
+    "tags": [
+      "Agent-based reasoning",
+      "ReAct agent",
+      "Candidate ranking",
+      "Evidence-grounded analysis",
+      "CVE-commit linking",
+      "Multi-file fix detection",
+      "Iterative code navigation",
+      "Forensic code analysis",
+      "Realistic benchmark",
+      "Precision-recall tradeoff"
+    ],
+    "summary": "本文提出Favia——一个结合高效候选排序与基于ReAct的循环智能体、以证据驱动定位并识别与公开CVE对应修复提交的框架，并基于包含800多万提交的CVEvC数据集在现实候选设置下验证其显著改善的精度-召回表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.12500v1",
+    "published": "2026-02-13",
+    "update_time": "2026-02-13",
+    "download_time": "2026-02-16 02:28:48"
+  },
+  {
+    "id": "2602.12443",
+    "title": "SHAPR: A Solo Human-Centred and AI-Assisted Practice Framework for Research Software Development",
+    "abstract": "Research software has become a central vehicle for inquiry and learning in many Higher Degree Research (HDR) contexts, where solo researchers increasingly develop software-based artefacts as part of their research methodology. At the same time, generative artificial intelligence is reshaping development practice, offering powerful forms of assistance while introducing new challenges for accountability, reflection, and methodological rigour. Although Action Design Research (ADR) provides a well-established foundation for studying and constructing socio-technical artefacts, it offers limited guidance on how its principles can be operationalised in the day-to-day practice of solo, AI-assisted research software development. This paper proposes the SHAPR framework (Solo, Human-centred, AI-assisted PRactice) as a practice-level operational framework that complements ADR by translating its high-level principles into actionable guidance for contemporary research contexts. SHAPR supports the enactment of ADR Building-Intervention-Evaluation cycles by making explicit the roles, artefacts, reflective practices, and lightweight governance mechanisms required to sustain human accountability and learning in AI-assisted development. The contribution of the paper is conceptual: SHAPR itself is treated as the primary design artefact and unit of analysis and is evaluated formatively through reflective analysis of its internal coherence, alignment with ADR principles, and applicability to solo research practice. By explicitly linking research software development, Human-AI collaboration, and reflective learning, this study contributes to broader discussions on how SHAPR can support both knowledge production and HDR researcher training.",
+    "arxiv_url": "https://arxiv.org/abs/2602.12443",
+    "authors": [
+      "Ka Ching Chan"
+    ],
+    "first_author": "Ka Ching Chan",
+    "category": [
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Management",
+    "tags": [
+      "Human-AI Collaboration",
+      "Human-LLM Interaction",
+      "Reflective Practice",
+      "Solo Researcher",
+      "Research Software Engineering",
+      "Lightweight Governance",
+      "Action Design Research",
+      "Accountability",
+      "Vibe Coding"
+    ],
+    "summary": "本文提出SHAPR框架——一种面向单人研究者、以人为中心并由AI辅助的软件开发实践框架，通过将行动设计研究（ADR）原则具象化为具体角色、工件、反思实践与轻量治理机制，以支持研究软件的建构-干预-评估循环并提升问责与学习能力。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.12443v1",
+    "published": "2026-02-12",
+    "update_time": "2026-02-12",
+    "download_time": "2026-02-16 02:29:03"
+  },
+  {
+    "id": "2602.11782",
+    "title": "FlowMind: Execute-Summarize for Structured Workflow Generation from LLM Reasoning",
+    "abstract": "LLMs can solve complex tasks through reasoning and tool use, but accurately translating these solutions into structured workflows remains challenging. We model workflows as sequences of tool use and reformulate the problem as designing a mechanism that can both solve tasks and reliably construct workflows. Prior approaches that build workflows during execution often suffer from inaccuracies due to interference between the two processes. We propose an Execute-Summarize(ES) framework that decouples task execution from workflow construction: the model first completes the task using available tools, then independently reconstructs a structured workflow from execution traces. This separation improves workflow accuracy and robustness. We introduce FlowBench and show through extensive experiments that our approach outperforms existing methods, providing a reliable paradigm for grounding free-form LLM reasoning into structured workflows.",
+    "arxiv_url": "https://arxiv.org/abs/2602.11782",
+    "authors": [
+      "Yihao Liu",
+      "Ziyun Zhang",
+      "Zile He",
+      "Huaqian Cai"
+    ],
+    "first_author": "Yihao Liu",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Tool-Augmented Agents",
+    "task": "Structured Workflow Generation",
+    "tags": [
+      "Workflow Reconstruction",
+      "Execution Trace Summarization",
+      "Tool-Augmented Agents",
+      "Decoupled Execution",
+      "Workflow Benchmarking",
+      "Interpretability",
+      "Reproducibility",
+      "Robustness"
+    ],
+    "summary": "本文提出Execute–Summarize框架：先使用工具执行任务生成执行轨迹，再独立从轨迹中摘要重建结构化工作流，并通过新建的FlowBench基准验证提升了工作流准确性且保持任务性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.11782v1",
+    "published": "2026-02-12",
+    "update_time": "2026-02-12",
+    "download_time": "2026-02-16 02:35:19"
+  },
+  {
+    "id": "2602.11745",
+    "title": "Text2GQL-Bench: A Text to Graph Query Language Benchmark [Experiment, Analysis & Benchmark]",
+    "abstract": "Graph models are fundamental to data analysis in domains rich with complex relationships. Text-to-Graph-Query-Language (Text-to-GQL) systems act as a translator, converting natural language into executable graph queries. This capability allows Large Language Models (LLMs) to directly analyze and manipulate graph data, posi-tioning them as powerful agent infrastructures for Graph Database Management System (GDBMS). Despite recent progress, existing datasets are often limited in domain coverage, supported graph query languages, or evaluation scope. The advancement of Text-to-GQL systems is hindered by the lack of high-quality benchmark datasets and evaluation methods to systematically compare model capabilities across different graph query languages and domains. In this work, we present Text2GQL-Bench, a unified Text-to-GQL benchmark designed to address these limitations. Text2GQL-Bench couples a multi-GQL dataset that has 178,184 (Question, Query) pairs spanning 13 domains, with a scalable construction framework that generates datasets in different domains, question abstraction levels, and GQLs with heterogeneous resources. To support compre-hensive assessment, we introduce an evaluation method that goes beyond a single end-to-end metric by jointly reporting grammatical validity, similarity, semantic alignment, and execution accuracy. Our evaluation uncovers a stark dialect gap in ISO-GQL generation: even strong LLMs achieve only at most 4% execution accuracy (EX) in zero-shot settings, though a fixed 3-shot prompt raises accuracy to around 50%, the grammatical validity remains lower than 70%. Moreover, a fine-tuned 8B open-weight model reaches 45.1% EX, and 90.8% grammatical validity, demonstrating that most of the performance jump is unlocked by exposure to sufficient ISO-GQL examples.",
+    "arxiv_url": "https://arxiv.org/abs/2602.11745",
+    "authors": [
+      "Songlin Lyu",
+      "Lujie Ban",
+      "Zihang Wu",
+      "Tianqi Luo",
+      "Jirong Liu",
+      "Chenhao Ma",
+      "Yuyu Luo",
+      "Nan Tang",
+      "Shipeng Qi",
+      "Heng Lin",
+      "Yongchao Liu",
+      "Chuntao Hong"
+    ],
+    "first_author": "Songlin Lyu",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Graph Databases & Querying",
+    "task": "Text-to-GQL Benchmarking",
+    "tags": [
+      "Multi-GQL Support",
+      "Graph-Native Queries",
+      "Variable-Length Path",
+      "Question Abstraction",
+      "Scalable Data Synthesis",
+      "Execution Accuracy",
+      "Grammar Validity",
+      "Cross-Domain Evaluation",
+      "Dialect Gap"
+    ],
+    "summary": "本文提出Text2GQL-Bench——一个涵盖13个领域、178,184对(问题,图查询)的多GQL多域基准，配套可扩展的数据构建流水线及多维评估（语法有效性、相似性、语义对齐与执行准确率）以评估LLM的Text-to-GQL能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.11745v1",
+    "published": "2026-02-12",
+    "update_time": "2026-02-12",
+    "download_time": "2026-02-16 02:36:04"
   }
 ]
