@@ -1999,5 +1999,158 @@
     "published": "2026-02-15",
     "update_time": "2026-02-15",
     "download_time": "2026-02-17 02:26:55"
+  },
+  {
+    "id": "2602.14922",
+    "title": "ReusStdFlow: A Standardized Reusability Framework for Dynamic Workflow Construction in Agentic AI",
+    "abstract": "To address the ``reusability dilemma'' and structural hallucinations in enterprise Agentic AI,this paper proposes ReusStdFlow, a framework centered on a novel ``Extraction-Storage-Construction'' paradigm. The framework deconstructs heterogeneous, platform-specific Domain Specific Languages (DSLs) into standardized, modular workflow segments. It employs a dual knowledge architecture-integrating graph and vector databases-to facilitate synergistic retrieval of both topological structures and functional semantics. Finally, workflows are intelligently assembled using a retrieval-augmented generation (RAG) strategy. Tested on 200 real-world n8n workflows, the system achieves over 90% accuracy in both extraction and construction. This framework provides a standardized solution for the automated reorganization and efficient reuse of enterprise digital assets.",
+    "arxiv_url": "https://arxiv.org/abs/2602.14922",
+    "authors": [
+      "Gaoyang Zhang",
+      "Shanghong Zou",
+      "Yafang Wang",
+      "He Zhang",
+      "Ruohua Xu",
+      "Feng Zhao"
+    ],
+    "first_author": "Gaoyang Zhang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Retrieval",
+    "tags": [
+      "Workflow Repository",
+      "DSL Decomposition",
+      "Segment Reuse",
+      "Graph-Vector Hybrid",
+      "Retrieval-Augmented Assembly",
+      "Platform Adaptation",
+      "Structural Hallucination",
+      "Topological Integrity"
+    ],
+    "summary": "本文提出ReusStdFlow框架，通过将平台特定的工作流DSL提取为标准化模块、在图数据库与向量数据库中混合存储，并基于检索增强生成策略智能重组工作流，从而提升企业级代理式AI中工作流重用率与拓扑正确性，在200个n8n真实工作流上提取与构建准确率均超过90%。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.14922v1",
+    "published": "2026-02-16",
+    "update_time": "2026-02-16",
+    "download_time": "2026-02-18 02:28:29"
+  },
+  {
+    "id": "2602.14878",
+    "title": "Model Context Protocol (MCP) Tool Descriptions Are Smelly! Towards Improving AI Agent Efficiency with Augmented MCP Tool Descriptions",
+    "abstract": "The Model Context Protocol (MCP) standardizes how Foundation Model (FM)-based agents interact with external systems by invoking tools. However, to understand a tool's purpose and features, FMs rely on natural-language tool descriptions, making these descriptions a critical component in guiding FMs to select the optimal tool for a given (sub)task and to pass the right arguments to the tool. While defects or smells in these descriptions can misguide FM-based agents, their prevalence and consequences in the MCP ecosystem remain unclear.   To address this, we conduct the first large-scale empirical study of 856 tools spread across 103 MCP servers, assessing their description quality and their impact on agent performance. We identify six components of tool descriptions from the literature, develop a scoring rubric utilizing these components, then formalize tool description smells based on this rubric. By operationalizing this rubric through an FM-based scanner, we find that 97.1% of the analyzed tool descriptions contain at least one smell, with 56% failing to state their purpose clearly. While augmenting these descriptions for all components improves task success rates by a median of 5.85 percentage points and improves partial goal completion by 15.12%, it also increases the number of execution steps by 67.46% and regresses performance in 16.67% of cases. These findings highlight a trade-off between agent performance and cost, as well as the context sensitivity of the performance gain. Furthermore, component ablations show that compact variants of different component combinations often preserve behavioral reliability while reducing unnecessary token overhead, enabling more efficient use of the FM context window and lower execution costs.",
+    "arxiv_url": "https://arxiv.org/abs/2602.14878",
+    "authors": [
+      "Mohammed Mehedi Hasan",
+      "Hao Li",
+      "Gopi Krishnan Rajbahadur",
+      "Bram Adams",
+      "Ahmed E. Hassan"
+    ],
+    "first_author": "Mohammed Mehedi Hasan",
+    "category": [
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Tool Descriptions",
+      "Description Smells",
+      "Smell Detection",
+      "Augmentation",
+      "Agent Efficiency",
+      "Token Overhead",
+      "Component Ablation",
+      "Tool Selection"
+    ],
+    "summary": "本文对103个MCP服务器的856个工具描述进行了大规模实证分析，提出并自动化检测“描述味道”，并通过增强描述评估其对基于大模型代理的成功率、部分目标完成率、执行步数和上下文代价的影响，发现增强能提升成功率但也显著增加代价且效果依情境和描述组件组合而异。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.14878v1",
+    "published": "2026-02-16",
+    "update_time": "2026-02-16",
+    "download_time": "2026-02-18 02:28:43"
+  },
+  {
+    "id": "2602.14849",
+    "title": "Atomix: Timely, Transactional Tool Use for Reliable Agentic Workflows",
+    "abstract": "LLM agents increasingly act on external systems, yet tool effects are immediate. Under failures, speculation, or contention, losing branches can leak unintended side effects with no safe rollback. We introduce Atomix, a runtime that provides progress-aware transactional semantics for agent tool calls. Atomix tags each call with an epoch, tracks per-resource frontiers, and commits only when progress predicates indicate safety; bufferable effects can be delayed, while externalized effects are tracked and compensated on abort. Across real workloads with fault injection, transactional retry improves task success, while frontier-gated commit strengthens isolation under speculation and contention.",
+    "arxiv_url": "https://arxiv.org/abs/2602.14849",
+    "authors": [
+      "Bardia Mohammadi",
+      "Nearchos Potamitis",
+      "Lars Klein",
+      "Akhil Arora",
+      "Laurent Bindschaedler"
+    ],
+    "first_author": "Bardia Mohammadi",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Agent Orchestration & Runtime",
+    "task": "Transactional Tool Effects",
+    "tags": [
+      "Transactional Runtime",
+      "Per-resource Frontier",
+      "Epoch-based Commit",
+      "Speculative Execution",
+      "Compensation Handlers",
+      "Irreversible-effect Gating",
+      "Progress-aware Commit",
+      "Multi-agent Coordination"
+    ],
+    "summary": "Atomix 提出了一种面向 LLM 代理的运行时，将工具调用视为带 epoch 的事务，基于每个资源的 frontier 来决定何时提交以支持投机并行、避免残留副作用并在中止时执行补偿，从而提升多代理与故障条件下的任务可靠性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.14849v1",
+    "published": "2026-02-16",
+    "update_time": "2026-02-16",
+    "download_time": "2026-02-18 02:30:36"
+  },
+  {
+    "id": "2602.14721",
+    "title": "WebWorld: A Large-Scale World Model for Web Agent Training",
+    "abstract": "Web agents require massive trajectories to generalize, yet real-world training is constrained by network latency, rate limits, and safety risks. We introduce \\textbf{WebWorld} series, the first open-web simulator trained at scale. While existing simulators are restricted to closed environments with thousands of trajectories, WebWorld leverages a scalable data pipeline to train on 1M+ open-web interactions, supporting reasoning, multi-format data, and long-horizon simulations of 30+ steps. For intrinsic evaluation, we introduce WebWorld-Bench with dual metrics spanning nine dimensions, where WebWorld achieves simulation performance comparable to Gemini-3-Pro. For extrinsic evaluation, Qwen3-14B trained on WebWorld-synthesized trajectories improves by +9.2\\% on WebArena, reaching performance comparable to GPT-4o. WebWorld enables effective inference-time search, outperforming GPT-5 as a world model. Beyond web simulation, WebWorld exhibits cross-domain generalization to code, GUI, and game environments, providing a replicable recipe for world model construction.",
+    "arxiv_url": "https://arxiv.org/abs/2602.14721",
+    "authors": [
+      "Zikai Xiao",
+      "Jianhong Tu",
+      "Chuhang Zou",
+      "Yuxin Zuo",
+      "Zhi Li",
+      "Peng Wang",
+      "Bowen Yu",
+      "Fei Huang",
+      "Junyang Lin",
+      "Zuozhu Liu"
+    ],
+    "first_author": "Zikai Xiao",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "World Modeling & Simulation",
+    "task": "Web World Modeling",
+    "tags": [
+      "Open-Web Simulation",
+      "Large-Scale Trajectory Dataset",
+      "Hierarchical Data Pipeline",
+      "Long-Horizon Simulation",
+      "Chain-of-Thought Injection",
+      "Abstract-and-Instantiate Synthesis",
+      "Inference-Time Lookahead",
+      "Cross-Domain Generalization"
+    ],
+    "summary": "本文提出WebWorld，一种在超过百万真实网页交互轨迹上训练的大规模开放网页世界模型，通过可扩展分层数据流水线、长时序仿真与思路注入提升网页代理训练，并发布了综合评估基准与下游验证取得显著提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.14721v1",
+    "published": "2026-02-16",
+    "update_time": "2026-02-16",
+    "download_time": "2026-02-18 02:31:43"
   }
 ]
