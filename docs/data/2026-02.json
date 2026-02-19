@@ -2152,5 +2152,150 @@
     "published": "2026-02-16",
     "update_time": "2026-02-16",
     "download_time": "2026-02-18 02:31:43"
+  },
+  {
+    "id": "2602.16671",
+    "title": "SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation",
+    "abstract": "Automated unit test generation for C remains a formidable challenge due to the semantic gap between high-level program intent and the rigid syntactic constraints of pointer arithmetic and manual memory management. While Large Language Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis frequently suffers from the leap-to-code failure mode, where models prematurely emit code without grounding in program structure, constraints, and semantics. This will result in non-compilable tests, hallucinated function signatures, low branch coverage, and semantically irrelevant assertions that cannot properly capture bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted test synthesis, and (4) an iterative, self-correction validation loop using compiler and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects, where it outperforms the vanilla prompt generation baseline by 31.36% in line coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains 94.3% of tests through iterative repair and produces code with significantly higher developer-rated readability and maintainability. By aligning LLM reasoning with program structure, SPARC provides a scalable path for industrial-grade testing of legacy C codebases.",
+    "arxiv_url": "https://arxiv.org/abs/2602.16671",
+    "authors": [
+      "Jaid Monwar Chowdhury",
+      "Chi-An Fu",
+      "Reyhaneh Jabbarvand"
+    ],
+    "first_author": "Jaid Monwar Chowdhury",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Path-Targeted Testing",
+      "Control Flow Analysis",
+      "Code RAG",
+      "Operation Map",
+      "Iterative Repair",
+      "Mutation Testing",
+      "Hallucination",
+      "C Unit Testing",
+      "Helper Retrieval"
+    ],
+    "summary": "SPARC 提出一种基于场景的神经符号流水线，结合CFG分析、检索增强的操作映射、路径定向测试合成与编译/运行时的迭代修复，以生成可编译且语义丰富的C单元测试并在59个基准上显著提升覆盖率与突变检测能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.16671v1",
+    "published": "2026-02-18",
+    "update_time": "2026-02-18",
+    "download_time": "2026-02-19 02:27:41"
+  },
+  {
+    "id": "2602.16304",
+    "title": "Mind the Gap: Evaluating LLMs for High-Level Malicious Package Detection vs. Fine-Grained Indicator Identification",
+    "abstract": "The prevalence of malicious packages in open-source repositories, such as PyPI, poses a critical threat to the software supply chain. While Large Language Models (LLMs) have emerged as a promising tool for automated security tasks, their effectiveness in detecting malicious packages and indicators remains underexplored. This paper presents a systematic evaluation of 13 LLMs for detecting malicious software packages. Using a curated dataset of 4,070 packages (3,700 benign and 370 malicious), we evaluate model performance across two tasks: binary classification (package detection) and multi-label classification (identification of specific malicious indicators). We further investigate the impact of prompting strategies, temperature settings, and model specifications on detection accuracy. We find a significant \"granularity gap\" in LLMs' capabilities. While GPT-4.1 achieves near-perfect performance in binary detection (F1 $\\approx$ 0.99), performance degrades by approximately 41\\% when the task shifts to identifying specific malicious indicators. We observe that general models are best for filtering out the majority of threats, while specialized coder models are better at detecting attacks that follow a strict, predictable code structure. Our correlation analysis indicates that parameter size and context width have negligible explanatory power regarding detection accuracy. We conclude that while LLMs are powerful detectors at the package level, they lack the semantic depth required for precise identification at the granular indicator level.",
+    "arxiv_url": "https://arxiv.org/abs/2602.16304",
+    "authors": [
+      "Ahmed Ryan",
+      "Ibrahim Khalil",
+      "Abdullah Al Jahid",
+      "Md Erfan",
+      "Akond Ashfaque Ur Rahman",
+      "Md Rayhanur Rahman"
+    ],
+    "first_author": "Ahmed Ryan",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Software Supply Chain Security",
+    "task": "Malicious Package Detection and Indicator Identification",
+    "tags": [
+      "Malicious Code Detection",
+      "Indicator Identification",
+      "Granularity Gap",
+      "Prompt Engineering",
+      "Temperature Sensitivity",
+      "Coder-vs-General Comparison",
+      "Context Window Analysis",
+      "Supply Chain Security"
+    ],
+    "summary": "本文系统评估了13种大型语言模型在PyPI恶意软件包的二分类检测与多标签细粒度恶意指标识别上的能力，发现模型在包级别检测表现优异但在指标级识别上显著退化，并分析了提示策略、温度、模型类型与上下文窗口等因素的影响。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.16304v1",
+    "published": "2026-02-18",
+    "update_time": "2026-02-18",
+    "download_time": "2026-02-19 02:28:01"
+  },
+  {
+    "id": "2602.16699",
+    "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+    "abstract": "LLMs are increasingly being used for complex problems which are not necessarily resolved in a single response, but require interacting with an environment to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty tradeoffs in when to stop exploring and commit to an answer. For instance, on a programming task, an LLM should test a generated code snippet if it is uncertain about the correctness of that code; the cost of writing a test is nonzero, but typically lower than the cost of making a mistake. In this work, we show that we can induce LLMs to explicitly reason about balancing these cost-uncertainty tradeoffs, then perform more optimal environment exploration. We formalize multiple tasks, including information retrieval and coding, as sequential decision-making problems under uncertainty. Each problem has latent environment state that can be reasoned about via a prior which is passed to the LLM agent. We introduce a framework called Calibrate-Then-Act (CTA), where we feed the LLM this additional context to enable it to act more optimally. This improvement is preserved even under RL training of both the baseline and CTA. Our results on information-seeking QA and on a simplified coding task show that making cost-benefit tradeoffs explicit with CTA can help agents discover more optimal decision-making strategies.",
+    "arxiv_url": "https://arxiv.org/abs/2602.16699",
+    "authors": [
+      "Wenxuan Ding",
+      "Nicholas Tomlin",
+      "Greg Durrett"
+    ],
+    "first_author": "Wenxuan Ding",
+    "category": [
+      "Technical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Cost-Aware Exploration",
+      "Calibration-Based Decision Making",
+      "Prior Estimation",
+      "Sequential Decision-Making",
+      "Adaptive Testing",
+      "Decision-Theoretic Agents",
+      "Information-Seeking QA",
+      "Prompt Conditioning"
+    ],
+    "summary": "本文提出Calibrate-Then-Act (CTA) 框架，通过在提示中显式提供先验/置信度估计，诱导LLM在有成本-不确定性权衡的环境中进行更优的探索决策，并在信息检索与简化编码任务上展示优于基线（含RL训练）的性能提升。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.16699v1",
+    "published": "2026-02-18",
+    "update_time": "2026-02-18",
+    "download_time": "2026-02-19 02:28:24"
+  },
+  {
+    "id": "2602.16603",
+    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+    "abstract": "The growing demand for large language models (LLMs) requires serving systems to handle many concurrent requests with diverse service level objectives (SLOs). This exacerbates head-of-line (HoL) blocking during the compute-intensive prefill phase, where long-running requests monopolize resources and delay higher-priority ones, leading to widespread time-to-first-token (TTFT) SLO violations. While chunked prefill enables interruptibility, it introduces an inherent trade-off between responsiveness and throughput: reducing chunk size improves response latency but degrades computational efficiency, whereas increasing chunk size maximizes throughput but exacerbates blocking. This necessitates an adaptive preemption mechanism. However, dynamically balancing execution granularity against scheduling overheads remains a key challenge.   In this paper, we propose FlowPrefill, a TTFT-goodput-optimized serving system that resolves this conflict by decoupling preemption granularity from scheduling frequency. To achieve adaptive prefill scheduling, FlowPrefill introduces two key innovations: 1) Operator-Level Preemption, which leverages operator boundaries to enable fine-grained execution interruption without the efficiency loss associated with fixed small chunking; and 2) Event-Driven Scheduling, which triggers scheduling decisions only upon request arrival or completion events, thereby supporting efficient preemption responsiveness while minimizing control-plane overhead. Evaluation on real-world production traces shows that FlowPrefill improves maximum goodput by up to 5.6$\\times$ compared to state-of-the-art systems while satisfying heterogeneous SLOs.",
+    "arxiv_url": "https://arxiv.org/abs/2602.16603",
+    "authors": [
+      "Chia-chi Hsieh",
+      "Zan Zong",
+      "Xinyang Chen",
+      "Jianjiang Li",
+      "Jidong Zhai",
+      "Lijie Wen"
+    ],
+    "first_author": "Chia-chi Hsieh",
+    "category": [
+      "Technical"
+    ],
+    "field": "Serving Systems",
+    "task": "Prefill preemption and SLO-aware scheduling",
+    "tags": [
+      "Operator-Level Preemption",
+      "Event-Driven Scheduling",
+      "SLO-aware Scheduling",
+      "Prefill-Decode Disaggregation",
+      "Head-of-Line Blocking",
+      "Goodput Optimization",
+      "SLO-aware Batching",
+      "Control-Plane Overhead Reduction",
+      "Slack-aware EDF"
+    ],
+    "summary": "本文提出FlowPrefill，通过在算子边界实现细粒度可抢占并采用事件驱动调度（结合Slack-aware EDF与SLO感知批处理）来解耦预填执行粒度与调度频率，从而在满足异构TTFT SLO的同时大幅提高在线LLM服务的goodput。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.16603v1",
+    "published": "2026-02-18",
+    "update_time": "2026-02-18",
+    "download_time": "2026-02-19 02:29:24"
   }
 ]
