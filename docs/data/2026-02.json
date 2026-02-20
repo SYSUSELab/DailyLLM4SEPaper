@@ -2297,5 +2297,149 @@
     "published": "2026-02-18",
     "update_time": "2026-02-18",
     "download_time": "2026-02-19 02:29:24"
+  },
+  {
+    "id": "2602.16106",
+    "title": "Algorithm-Based Pipeline for Reliable and Intent-Preserving Code Translation with LLMs",
+    "abstract": "Code translation, the automatic conversion of programs between languages, is a growing use case for Large Language Models (LLMs). However, direct one-shot translation often fails to preserve program intent, leading to errors in control flow, type handling, and I/O behavior. We propose an algorithm-based pipeline that introduces a language-neutral intermediate specification to capture these details before code generation. This study empirically evaluates the extent to which structured planning can improve translation accuracy and reliability relative to direct translation. We conduct an automated paired experiment - direct and algorithm-based to translate between Python and Java using five widely used LLMs on the Avatar and CodeNet datasets. For each combination (model, dataset, approach, and direction), we compile and execute the translated program and run the tests provided. We record compilation results, runtime behavior, timeouts (e.g., infinite loop), and test outcomes. We compute accuracy from these tests, counting a translation as correct only if it compiles, runs without exceptions or timeouts, and passes all tests. We then map every failed compile-time and runtime case to a unified, language-aware taxonomy and compare subtype frequencies between the direct and algorithm-based approaches. Overall, the Algorithm-based approach increases micro-average accuracy from 67.7% to 78.5% (10.8% increase). It eliminates lexical and token errors by 100%, reduces incomplete constructs by 72.7%, and structural and declaration issues by 61.1%. It also substantially lowers runtime dependency and entry-point failures by 78.4%. These results demonstrate that algorithm-based pipelines enable more reliable, intent-preserving code translation, providing a foundation for robust multilingual programming assistants.",
+    "arxiv_url": "https://arxiv.org/abs/2602.16106",
+    "authors": [
+      "Shahriar Rumi Dipto",
+      "Saikat Mondal",
+      "Chanchal K. Roy"
+    ],
+    "first_author": "Shahriar Rumi Dipto",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Algorithmic Representation",
+      "Intent Preservation",
+      "I/O Contracts",
+      "Cross-Language Translation",
+      "Error Taxonomy",
+      "Structural Scaffolding",
+      "Type Handling",
+      "Chain-of-Thought",
+      "Reliability",
+      "Paired Evaluation"
+    ],
+    "summary": "本文提出一种在生成目标代码前先生成语言中立的算法规范的流水线，以提升基于LLM的Python↔Java代码翻译的意图保留性与可靠性，并通过对比实验证明其将微平均准确率从67.7%提升到78.5%，同时显著减少若干编译与运行时错误类别。",
+    "quality": "High",
+    "conference": "IEEE/ACM International Conference on Program Comprehension (ICPC 2026)",
+    "pdf_url": "https://arxiv.org/pdf/2602.16106v1",
+    "published": "2026-02-18",
+    "update_time": "2026-02-18",
+    "download_time": "2026-02-20 02:23:37"
+  },
+  {
+    "id": "2602.16069",
+    "title": "The Limits of Long-Context Reasoning in Automated Bug Fixing",
+    "abstract": "Rapidly increasing context lengths have led to the assumption that large language models (LLMs) can directly reason over entire codebases. Concurrently, recent advances in LLMs have enabled strong performance on software engineering benchmarks, particularly when paired with agentic workflows. In this work, we systematically evaluate whether current LLMs can reliably perform long-context code debugging and patch generation. Using SWE-bench Verified as a controlled experimental setting, we first evaluate state-of-the-art models within an agentic harness (mini-SWE-agent), where performance improves substantially: GPT-5-nano achieves up to a 31\\% resolve rate on 100 samples, and open-source models such as Deepseek-R1-0528 obtain competitive results. However, token-level analysis shows that successful agentic trajectories typically remain under 20k tokens, and that longer accumulated contexts correlate with lower success rates, indicating that agentic success primarily arises from task decomposition into short-context steps rather than effective long-context reasoning. To directly test long-context capability, we construct a data pipeline where we artificially inflate the context length of the input by placing the relevant files into the context (ensuring perfect retrieval recall); we then study single-shot patch generation under genuinely long contexts (64k-128k tokens). Despite this setup, performance degrades sharply: Qwen3-Coder-30B-A3B achieves only a 7\\% resolve rate at 64k context, while GPT-5-nano solves none of the tasks. Qualitative analysis reveals systematic failure modes, including hallucinated diffs, incorrect file targets, and malformed patch headers. Overall, our findings highlight a significant gap between nominal context length and usable context capacity in current LLMs, and suggest that existing agentic coding benchmarks do not meaningfully evaluate long-context reasoning.",
+    "arxiv_url": "https://arxiv.org/abs/2602.16069",
+    "authors": [
+      "Ravi Raju",
+      "Mengmeng Ji",
+      "Shubhangi Upasani",
+      "Bo Li",
+      "Urmish Thakker"
+    ],
+    "first_author": "Ravi Raju",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Program Repair",
+      "Long-Context Reasoning",
+      "Hallucination",
+      "Code Agents",
+      "Code RAG",
+      "Token-Length Analysis",
+      "Patch Generation",
+      "Failure Modes"
+    ],
+    "summary": "本文在SWE-bench Verified上系统评估了LLM对仓库级别自动修复的长上下文推理能力，发现尽管在agentic多步分解下表现良好，但在一次性注入64k–128k上下文的单次补丁生成中性能急剧下降，常见失败模式包括幻觉式diff、错误文件定位和损坏的补丁头，表明当前模型的名义上下文长度并不等于可用的长上下文推理能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.16069v1",
+    "published": "2026-02-17",
+    "update_time": "2026-02-17",
+    "download_time": "2026-02-20 02:24:03"
+  },
+  {
+    "id": "2602.17608",
+    "title": "Towards Anytime-Valid Statistical Watermarking",
+    "abstract": "The proliferation of Large Language Models (LLMs) necessitates efficient mechanisms to distinguish machine-generated content from human text. While statistical watermarking has emerged as a promising solution, existing methods suffer from two critical limitations: the lack of a principled approach for selecting sampling distributions and the reliance on fixed-horizon hypothesis testing, which precludes valid early stopping. In this paper, we bridge this gap by developing the first e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal sampling with anytime-valid inference. Unlike traditional approaches where optional stopping invalidates Type-I error guarantees, our framework enables valid, anytime-inference by constructing a test supermartingale for the detection process. By leveraging an anchor distribution to approximate the target model, we characterize the optimal e-value with respect to the worst-case log-growth rate and derive the optimal expected stopping time. Our theoretical claims are substantiated by simulations and evaluations on established benchmarks, showing that our framework can significantly enhance sample efficiency, reducing the average token budget required for detection by 13-15% relative to state-of-the-art baselines.",
+    "arxiv_url": "https://arxiv.org/abs/2602.17608",
+    "authors": [
+      "Baihe Huang",
+      "Eric Xu",
+      "Kannan Ramchandran",
+      "Jiantao Jiao",
+      "Michael I. Jordan"
+    ],
+    "first_author": "Baihe Huang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Watermarking & Provenance",
+    "task": "Anytime-valid e-value watermark detection",
+    "tags": [
+      "Statistical Watermarking",
+      "E-value Testing",
+      "Anytime-valid Sequential Test",
+      "Anchor Distribution",
+      "Optimal Seed Design",
+      "Sample Efficiency",
+      "Supermartingale",
+      "Robustness to Removal Attacks"
+    ],
+    "summary": "本文提出Anchored E‑Watermarking——一种基于锚分布和e值（超鞅）构造的任意时刻有效序贯水印检测框架，理论刻画最优对数增长率与期望停时并在基准上将检测所需token减少约13–15%。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.17608v1",
+    "published": "2026-02-19",
+    "update_time": "2026-02-19",
+    "download_time": "2026-02-20 02:25:09"
+  },
+  {
+    "id": "2602.17607",
+    "title": "AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing",
+    "abstract": "PDEs are central to scientific and engineering modeling, yet designing accurate numerical solvers typically requires substantial mathematical expertise and manual tuning. Recent neural network-based approaches improve flexibility but often demand high computational cost and suffer from limited interpretability. We introduce \\texttt{AutoNumerics}, a multi-agent framework that autonomously designs, implements, debugs, and verifies numerical solvers for general PDEs directly from natural language descriptions. Unlike black-box neural solvers, our framework generates transparent solvers grounded in classical numerical analysis. We introduce a coarse-to-fine execution strategy and a residual-based self-verification mechanism. Experiments on 24 canonical and real-world PDE problems demonstrate that \\texttt{AutoNumerics} achieves competitive or superior accuracy compared to existing neural and LLM-based baselines, and correctly selects numerical schemes based on PDE structural properties, suggesting its viability as an accessible paradigm for automated PDE solving.",
+    "arxiv_url": "https://arxiv.org/abs/2602.17607",
+    "authors": [
+      "Jianda Du",
+      "Youran Sun",
+      "Haizhao Yang"
+    ],
+    "first_author": "Jianda Du",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Code Agents",
+      "Autonomous Solver Synthesis",
+      "Numerical Scheme Selection",
+      "Residual Verification",
+      "Coarse-to-Fine Debugging",
+      "PDE Solver",
+      "Interpretability",
+      "Memory-Efficient Simulation"
+    ],
+    "summary": "本文提出AutoNumerics，一个多智能体自治流水线，能从自然语言描述自动设计、实现、调试并通过残差自检验证可解释的经典数值PDE求解器，并在包含200个PDE的大型基准与24个代表性问题上展示竞争性表现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.17607v1",
+    "published": "2026-02-19",
+    "update_time": "2026-02-19",
+    "download_time": "2026-02-20 02:25:30"
   }
 ]
