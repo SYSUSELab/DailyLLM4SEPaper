@@ -2746,5 +2746,158 @@
     "published": "2026-02-19",
     "update_time": "2026-02-19",
     "download_time": "2026-02-22 02:36:03"
+  },
+  {
+    "id": "2602.18307",
+    "title": "VeriSoftBench: Repository-Scale Formal Verification Benchmarks for Lean",
+    "abstract": "Large language models have achieved striking results in interactive theorem proving, particularly in Lean. However, most benchmarks for LLM-based proof automation are drawn from mathematics in the Mathlib ecosystem, whereas proofs in software verification are developed inside definition-rich codebases with substantial project-specific libraries. We introduce VeriSoftBench, a benchmark of 500 Lean 4 proof obligations drawn from open-source formal-methods developments and packaged to preserve realistic repository context and cross-file dependencies. Our evaluation of frontier LLMs and specialized provers yields three observations. First, provers tuned for Mathlib-style mathematics transfer poorly to this repository-centric setting. Second, success is strongly correlated with transitive repository dependence: tasks whose proofs draw on large, multi-hop dependency closures are less likely to be solved. Third, providing curated context restricted to a proof's dependency closure improves performance relative to exposing the full repository, but nevertheless leaves substantial room for improvement. Our benchmark and evaluation suite are released at https://github.com/utopia-group/VeriSoftBench.",
+    "arxiv_url": "https://arxiv.org/abs/2602.18307",
+    "authors": [
+      "Yutong Xin",
+      "Qiaochu Chen",
+      "Greg Durrett",
+      "Işil Dillig"
+    ],
+    "first_author": "Yutong Xin",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Reasoning",
+    "tags": [
+      "Repository-Scale Benchmark",
+      "Formal Verification",
+      "Proof Automation",
+      "Cross-File Dependencies",
+      "Context Retrieval",
+      "Transitive Dependency",
+      "Lean4"
+    ],
+    "summary": "本文提出了VeriSoftBench——一个包含500个来自真实开源形式化方法仓库、保留仓库上下文与跨文件依赖的Lean 4证明义务基准，并在精选依赖与全仓库两种上下文设置下评估前沿LLM与专用证明器，发现数学风格的证明器难以迁移到仓库级场景、跨依赖传递性显著影响成功率且精选上下文虽优于暴露全仓库但仍存在大幅改进空间。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.18307v1",
+    "published": "2026-02-20",
+    "update_time": "2026-02-20",
+    "download_time": "2026-02-23 02:28:31"
+  },
+  {
+    "id": "2602.18306",
+    "title": "ReqElicitGym: An Evaluation Environment for Interview Competence in Conversational Requirements Elicitation",
+    "abstract": "With the rapid improvement of LLMs' coding capabilities, the bottleneck of LLM-based automated software development is shifting from generating correct code to eliciting users' requirements. Despite growing interest, the interview competence of LLMs in conversational requirements elicitation remains fully underexplored. Existing evaluations often depend on a few scenarios, real user interaction, and subjective human scoring, which hinders systematic and quantitative comparison. To address these challenges, we propose ReqElicitGym, an interactive and automatic evaluation environment for assessing interview competence in conversational requirements elicitation. Specifically, ReqElicitGym introduces a new evaluation dataset and designs both an interactive oracle user and a task evaluator. The dataset contains 101 website requirements elicitation scenarios spanning 10 application types. Both the oracle user and the task evaluator achieve high agreement with real users and expert judgment. Using our ReqElicitGym, any automated conversational requirements elicitation approach (e.g., LLM-based agents) can be evaluated in a reproducible and quantitative manner through interaction with the environment. Based on our ReqElicitGym, we conduct a systematic empirical study on seven representative LLMs, and the results show that current LLMs still exhibit limited interview competence in uncovering implicit requirements. Particularly, they elicit less than half of the users' implicit requirements, and their effective elicitation questions often emerge in later turns of the dialogue. Besides, we found LLMs can elicit interaction and content implicit requirements, but consistently struggle with style-related requirements. We believe ReqElicitGym will facilitate the evaluation and development of automated conversational requirements elicitation.",
+    "arxiv_url": "https://arxiv.org/abs/2602.18306",
+    "authors": [
+      "Dongming Jin",
+      "Zhi Jin",
+      "Zheng Fang",
+      "Linyu Li",
+      "XiaoTian Yang",
+      "Yuanpeng He",
+      "Xiaohong Chen"
+    ],
+    "first_author": "Dongming Jin",
+    "category": [
+      "Benchmark",
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Elicitation",
+    "tags": [
+      "Conversational Elicitation",
+      "Oracle User Simulation",
+      "Task Evaluator",
+      "Implicit Requirement Elicitation",
+      "Turn-level Metrics",
+      "Interview Competence",
+      "Questioning Strategy Analysis",
+      "CoT Prompting Effect"
+    ],
+    "summary": "本文提出ReqElicitGym——一个包含101个网站需求访谈场景的自动交互评估环境，结合受控的oracle用户与基于LLM的任务评估器，实现对多轮会话式需求获取中访谈能力的可复现量化评估，并基于此对七款主流LLM进行了系统性实证分析，揭示其在发现隐式需求上的显著局限。 ",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.18306v1",
+    "published": "2026-02-20",
+    "update_time": "2026-02-20",
+    "download_time": "2026-02-23 02:28:47"
+  },
+  {
+    "id": "2602.18297",
+    "title": "Analyzing and Improving Chain-of-Thought Monitorability Through Information Theory",
+    "abstract": "Chain-of-thought (CoT) monitors are LLM-based systems that analyze reasoning traces to detect when outputs may exhibit attributes of interest, such as test-hacking behavior during code generation. In this paper, we use information-theoretic analysis to show that non-zero mutual information between CoT and output is a necessary but not sufficient condition for CoT monitorability. We identify two sources of approximation error that may undermine the performance of CoT monitors in practice: information gap, which measures the extent to which the monitor can extract the information available in CoT, and elicitation error, which measures the extent to which the monitor approximates the optimal monitoring function. We further demonstrate that CoT monitorability can be systematically improved through targeted training objectives. To this end, we propose two complementary approaches: (a) an oracle-based method that directly rewards the monitored model for producing CoTs that maximize monitor accuracy, and (b) a more practical, label-free approach that maximizes conditional mutual information between outputs and CoTs. Across multiple different environments, we show both methods significantly improve monitor accuracy while preventing CoT degeneration even when training against a monitor, thereby mitigating reward hacking when the task reward is imperfectly specified.",
+    "arxiv_url": "https://arxiv.org/abs/2602.18297",
+    "authors": [
+      "Usman Anwar",
+      "Tim Bakker",
+      "Dana Kianfar",
+      "Cristina Pinneri",
+      "Christos Louizos"
+    ],
+    "first_author": "Usman Anwar",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Alignment",
+    "tags": [
+      "CoT Monitorability",
+      "Information Gap",
+      "Elicitation Error",
+      "Conditional Mutual Information",
+      "MI-based RL Reward",
+      "Reward Hacking Mitigation",
+      "Monitor Robustness",
+      "Theoretical Information-Theoretic Analysis"
+    ],
+    "summary": "本文提出基于信息论的链式思维（CoT）可监测性框架，定义信息差与诱导误差两类近似误差，并通过一种基于条件互信息的无标签目标与一种oracle奖励方法改进CoT训练，从而提升监测器准确率并缓解在任务奖励不完善时的奖励黑客行为。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.18297v1",
+    "published": "2026-02-20",
+    "update_time": "2026-02-20",
+    "download_time": "2026-02-23 02:29:50"
+  },
+  {
+    "id": "2602.18008",
+    "title": "NIMMGen: Learning Neural-Integrated Mechanistic Digital Twins with LLMs",
+    "abstract": "Mechanistic models encode scientific knowledge about dynamical systems and are widely used in downstream scientific and policy applications. Recent work has explored LLM-based agentic frameworks to automatically construct mechanistic models from data; however, existing problem settings substantially oversimplify real-world conditions, leaving it unclear whether LLM-generated mechanistic models are reliable in practice. To address this gap, we introduce the Neural-Integrated Mechanistic Modeling (NIMM) evaluation framework, which evaluates LLM-generated mechanistic models under realistic settings with partial observations and diversified task objectives. Our evaluation reveals fundamental challenges in current baselines, ranging from model effectiveness to code-level correctness. Motivated by these findings, we design NIMMgen, an agentic framework for neural-integrated mechanistic modeling that enhances code correctness and practical validity through iterative refinement. Experiments across three datasets from diversified scientific domains demonstrate its strong performance. We also show that the learned mechanistic models support counterfactual intervention simulation.",
+    "arxiv_url": "https://arxiv.org/abs/2602.18008",
+    "authors": [
+      "Zihan Guan",
+      "Rituparna Datta",
+      "Mengxuan Hu",
+      "Shunshun Liu",
+      "Aiying Zhang",
+      "Prasanna Balachandran",
+      "Sheng Li",
+      "Anil Vullikanti"
+    ],
+    "first_author": "Zihan Guan",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Scientific Modeling & Digital Twins",
+    "task": "Neural-Integrated Mechanistic Modeling",
+    "tags": [
+      "Digital Twin",
+      "Neural-Integrated Modeling",
+      "Agentic Iterative Refinement",
+      "Code Error Correction",
+      "Verification Agent",
+      "Partial Observation",
+      "Spatiotemporal Forecasting",
+      "Counterfactual Simulation",
+      "Semantic Validation"
+    ],
+    "summary": "本文提出了NIMM评估框架并设计了NIMMGen——一个通过代理式迭代、错误记忆与验证模块来生成与修正神经-集成机理数字孪生模型的系统，在三类科学领域数据上展示了较强的预测性能与反事实模拟能力。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.18008v1",
+    "published": "2026-02-20",
+    "update_time": "2026-02-20",
+    "download_time": "2026-02-23 02:32:18"
   }
 ]
