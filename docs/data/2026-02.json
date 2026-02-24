@@ -2899,5 +2899,146 @@
     "published": "2026-02-20",
     "update_time": "2026-02-20",
     "download_time": "2026-02-23 02:32:18"
+  },
+  {
+    "id": "2602.18190",
+    "title": "Role and Identity Work of Software Engineering Professionals in the Generative AI Era",
+    "abstract": "The adoption of Generative AI (GenAI) suggests major changes for software engineering, including technical aspects but also human aspects of the professionals involved. One of these aspects is how individuals perceive themselves regarding their work, i.e., their work identity, and the processes they perform to form, adapt and reject these identities, i.e., identity work. Existent studies provide evidence of such identity work of software professionals triggered by the adoption of GenAI, however they do not consider differences among diverse roles, such as developers and testers. In this paper, we argue the need for considering the role as a factor defining the identity work of software professionals. To support our claim, we review some studies regarding different roles and also recent studies on how to adopt GenAI in software engineering. Then, we propose a research agenda to better understand how the role influences identity work of software professionals triggered by the adoption of GenAI, and, based on that, to propose new artifacts to support this adoption. We also discuss the potential implications for practice of the results to be obtained.",
+    "arxiv_url": "https://arxiv.org/abs/2602.18190",
+    "authors": [
+      "Jorge Melegati"
+    ],
+    "first_author": "Jorge Melegati",
+    "category": [
+      "Survey"
+    ],
+    "field": "Requirements & Design",
+    "task": "Management",
+    "tags": [
+      "Identity Work",
+      "Professional Identity",
+      "Role Conflict",
+      "GenAI Adoption",
+      "Developer-Tester Relations",
+      "Relatedness",
+      "Design Science",
+      "Qualitative Methods",
+      "Systematic Literature Review",
+      "Implementation Guidelines"
+    ],
+    "summary": "本文提出研究议程，审视生成式AI采用如何影响软件工程中不同角色（如开发者与测试者）的职业身份与身份工作，并提出基于文献综述、访谈与设计科学方法的研究与实践路线。",
+    "quality": "Middle",
+    "conference": "International Conference on Cooperative and Human Aspects of Software Engineering (CHASE) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2602.18190v1",
+    "published": "2026-02-20",
+    "update_time": "2026-02-20",
+    "download_time": "2026-02-24 02:25:36"
+  },
+  {
+    "id": "2602.18012",
+    "title": "DeCEAT: Decoding Carbon Emissions for AI-driven Software Testing",
+    "abstract": "The increasing use of language models in automated software testing raises concerns about their environmental impact, yet existing sustainability analyses focus almost exclusively on large language models. As a result, the energy and carbon characteristics of small language models (SLMs) during test generation remain largely unexplored. To address this gap, this work introduces the DeCEAT framework, which systematically evaluates the environmental and performance trade-offs of SLMs using the HumanEval benchmark and adaptive prompt variants (based on the Anthropic template). The framework quantifies emission and time-aware behavior under controlled conditions, with CodeCarbon measuring energy consumption and carbon emissions, and unit test coverage assessing the quality of generated tests. Our results show that different SLMs exhibit distinct sustainability strengths: some prioritize lower energy use and faster execution, while others maintain higher stability or accuracy under carbon constraints. These findings demonstrate that sustainability in the generation of SLM-driven tests is multidimensional and strongly shaped by prompt design. This work provides a focused sustainability evaluation framework specifically tailored to automated SLM-based test generation, clarifying how prompt structure and model choice jointly influence environmental and performance outcomes.",
+    "arxiv_url": "https://arxiv.org/abs/2602.18012",
+    "authors": [
+      "Pragati Kumari",
+      "Novarun Deb"
+    ],
+    "first_author": "Pragati Kumari",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Sustainable Test Generation",
+      "Carbon Measurement",
+      "Energy Profiling",
+      "Prompt Sensitivity",
+      "Quantized SLMs",
+      "Derived Sustainability Metrics",
+      "Unit Test Coverage",
+      "Run-to-run Stability"
+    ],
+    "summary": "本文提出DeCEAT框架，利用量化的小型语言模型和分层提示模板在HumanEval上生成单元测试，并通过能耗与碳排放测量（及一组新颖的可持续性度量）系统地评估测试质量与环境成本之间的权衡。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.18012v1",
+    "published": "2026-02-20",
+    "update_time": "2026-02-20",
+    "download_time": "2026-02-24 02:25:59"
+  },
+  {
+    "id": "2602.17990",
+    "title": "WorkflowPerturb: Calibrated Stress Tests for Evaluating Multi-Agent Workflow Metrics",
+    "abstract": "LLM-based systems increasingly generate structured workflows for complex tasks. In practice, automatic evaluation of these workflows is difficult, because metric scores are often not calibrated, and score changes do not directly communicate the severity of workflow degradation. We introduce WorkflowPerturb, a controlled benchmark for studying workflow evaluation metrics. It works by applying realistic, controlled perturbations to golden workflows. WorkflowPerturb contains 4,973 golden workflows and 44,757 perturbed variants across three perturbation types (Missing Steps, Compressed Steps, and Description Changes), each applied at severity levels of 10%, 30%, and 50%. We benchmark multiple metric families and analyze their sensitivity and calibration using expected score trajectories and residuals. Our results characterize systematic differences across metric families and support severity-aware interpretation of workflow evaluation scores. Our dataset will be released upon acceptance.",
+    "arxiv_url": "https://arxiv.org/abs/2602.17990",
+    "authors": [
+      "Madhav Kanda",
+      "Pedro Las-Casas",
+      "Alok Gautam Kumbhare",
+      "Rodrigo Fonseca",
+      "Sharad Agarwal"
+    ],
+    "first_author": "Madhav Kanda",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Specification & Validation",
+    "tags": [
+      "Workflow Evaluation",
+      "Controlled Perturbations",
+      "Metric Calibration",
+      "Missing Steps",
+      "Compressed Steps",
+      "Description Changes",
+      "Severity-aware Evaluation",
+      "Sensitivity Analysis",
+      "DAG Workflows",
+      "Static Validation"
+    ],
+    "summary": "本文提出WORKFLOWPERTURB基准，通过对黄金工作流施加受控的缺失、压缩和描述变更扰动（多级严重度）生成约44,000个变体，用于分析和校准自动化工作流评估指标的敏感性与可靠性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.17990v1",
+    "published": "2026-02-20",
+    "update_time": "2026-02-20",
+    "download_time": "2026-02-24 02:29:39"
+  },
+  {
+    "id": "2602.17875",
+    "title": "MultiVer: Zero-Shot Multi-Agent Vulnerability Detection",
+    "abstract": "We present MultiVer, a zero-shot multi-agent system for vulnerability detection that achieves state-of-the-art recall without fine-tuning. A four-agent ensemble (security, correctness, performance, style) with union voting achieves 82.7% recall on PyVul, exceeding fine-tuned GPT-3.5 (81.3%) by 1.4 percentage points -- the first zeroshot system to surpass fine-tuned performance on this benchmark. On SecurityEval, the same architecture achieves 91.7% detection rate, matching specialized systems. The recall improvement comes at a precision cost: 48.8% precision versus 63.9% for fine-tuned baselines, yielding 61.4% F1. Ablation experiments isolate component contributions: the multi-agent ensemble adds 17 percentage points recall over single-agent security analysis. These results demonstrate that for security applications where false negatives are costlier than false positives, zero-shot multi-agent ensembles can match and exceed fine-tuned models on the metric that matters most.",
+    "arxiv_url": "https://arxiv.org/abs/2602.17875",
+    "authors": [
+      "Shreshth Rajan"
+    ],
+    "first_author": "Shreshth Rajan",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Detection",
+    "tags": [
+      "Security and Vulnerabilities",
+      "Multi-Agent Ensemble",
+      "Zero-Shot Detection",
+      "Union Voting",
+      "Weighted Voting",
+      "RAG Retrieval",
+      "Pattern Matching",
+      "Self-Consistency Sampling",
+      "Context Extraction"
+    ],
+    "summary": "本文提出MULTIVER，一种零样本多代理漏洞检测系统，通过安全、正确性、性能和风格四个并行代理及基于检索的三级分析流水线和投票策略在PyVul上实现了比微调模型更高的召回率，但以精确率为代价。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.17875v1",
+    "published": "2026-02-19",
+    "update_time": "2026-02-19",
+    "download_time": "2026-02-24 02:31:06"
   }
 ]
