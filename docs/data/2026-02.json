@@ -3196,5 +3196,150 @@
     "published": "2026-02-23",
     "update_time": "2026-02-23",
     "download_time": "2026-02-25 02:32:15"
+  },
+  {
+    "id": "2602.22020",
+    "title": "Detecting UX smells in Visual Studio Code using LLMs",
+    "abstract": "Integrated Development Environments shape developers' daily experience, yet the empirical study of their usability and user experience (UX) remains limited. This work presents an LLM-assisted approach to detecting UX smells in Visual Studio Code by mining and classifying user-reported issues from the GitHub repository. Using a validated taxonomy and expert review, we identified recurring UX problems that affect the developer experience. Our results show that the majority of UX smells are concentrated in informativeness, clarity, intuitiveness, and efficiency, qualities that developers value most.",
+    "arxiv_url": "https://arxiv.org/abs/2602.22020",
+    "authors": [
+      "Andrés Rodriguez",
+      "Juan Cruz Gardey",
+      "Alejandra Garrido"
+    ],
+    "first_author": "Andrés Rodriguez",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Analysis",
+    "tags": [
+      "UX Smells",
+      "UXDebt",
+      "Developer Experience",
+      "LLM-Assisted Annotation",
+      "GitHub Issue Mining",
+      "Taxonomy Mapping",
+      "Cognitive Transparency",
+      "Semi-supervised Labeling"
+    ],
+    "summary": "本文通过对Visual Studio Code的GitHub UX标签问题进行挖掘，并采用LLM辅助的半自动标注与人工校验方法，识别并量化了集中在信息性、清晰性、直观性和效率等方面的常见UX smell，揭示其与IDE中UXDebt的关联。",
+    "quality": "Middle",
+    "conference": "3rd International Workshop on Integrated Development Environments (IDE 2026) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2602.22020v1",
+    "published": "2026-02-25",
+    "update_time": "2026-02-25",
+    "download_time": "2026-02-26 02:22:51"
+  },
+  {
+    "id": "2602.21997",
+    "title": "Enhancing LLM-Based Test Generation by Eliminating Covered Code",
+    "abstract": "Automated test generation is essential for software quality assurance, with coverage rate serving as a key metric to ensure thorough testing. Recent advancements in Large Language Models (LLMs) have shown promise in improving test generation, particularly in achieving higher coverage. However, while existing LLM-based test generation solutions perform well on small, isolated code snippets, they struggle when applied to complex methods under test. To address these issues, we propose a scalable LLM-based unit test generation method. Our approach consists of two key steps. The first step is context information retrieval, which uses both LLMs and static analysis to gather relevant contextual information associated with the complex methods under test. The second step, iterative test generation with code elimination, repeatedly generates unit tests for the code slice, tracks the achieved coverage, and selectively removes code segments that have already been covered. This process simplifies the testing task and mitigates issues arising from token limits or reduced reasoning effectiveness associated with excessively long contexts. Through comprehensive evaluations on open-source projects, our approach outperforms state-of-the-art LLM-based and search-based methods, demonstrating its effectiveness in achieving high coverage on complex methods.",
+    "arxiv_url": "https://arxiv.org/abs/2602.21997",
+    "authors": [
+      "WeiZhe Xu",
+      "Mengyu Liu",
+      "Fanxin Kong"
+    ],
+    "first_author": "WeiZhe Xu",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Covered Code Elimination",
+      "Iterative Test Generation",
+      "Context Summarization",
+      "AST-based Static Analysis",
+      "Coverage-guided Testing",
+      "Prompt Efficiency",
+      "Complex Method Handling",
+      "Python Unit Tests"
+    ],
+    "summary": "本文提出了一种针对Python复杂方法的自动化单元测试生成框架，结合静态分析与LLM摘要收集上下文，并通过迭代生成与已覆盖代码消除的策略逐步简化代码切片以提高覆盖率与提示效率，实验证明优于现有LLM和搜索式方法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.21997v1",
+    "published": "2026-02-25",
+    "update_time": "2026-02-25",
+    "download_time": "2026-02-26 02:23:09"
+  },
+  {
+    "id": "2602.21189",
+    "title": "Why Pass@k Optimization Can Degrade Pass@1: Prompt Interference in LLM Post-training",
+    "abstract": "Pass@k is a widely used performance metric for verifiable large language model tasks, including mathematical reasoning, code generation, and short-answer reasoning. It defines success if any of $k$ independently sampled solutions passes a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning methods that directly optimize pass@$k$. However, prior work reports a recurring trade-off: pass@k improves while pass@1 degrades under such methods. This trade-off is practically important because pass@1 often remains a hard operational constraint due to latency and cost budgets, imperfect verifier coverage, and the need for a reliable single-shot fallback. We study the origin of this trade-off and provide a theoretical characterization of when pass@k policy optimization can reduce pass@1 through gradient conflict induced by prompt interference. We show that pass@$k$ policy gradients can conflict with pass@1 gradients because pass@$k$ optimization implicitly reweights prompts toward low-success prompts; when these prompts are what we term negatively interfering, their upweighting can rotate the pass@k update direction away from the pass@1 direction. We illustrate our theoretical findings with large language model experiments on verifiable mathematical reasoning tasks.",
+    "arxiv_url": "https://arxiv.org/abs/2602.21189",
+    "authors": [
+      "Anas Barakat",
+      "Souradip Chakraborty",
+      "Khushbu Pahwa",
+      "Amrit Singh Bedi"
+    ],
+    "first_author": "Anas Barakat",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Instruction-Tuning",
+    "tags": [
+      "Prompt Interference",
+      "Pass@k Reweighting",
+      "Gradient Conflict",
+      "Policy Gradient Analysis",
+      "Single-shot Degradation",
+      "Verifier-aware Fine-tuning",
+      "Theoretical Characterization",
+      "Mathematical Reasoning"
+    ],
+    "summary": "本文提出“prompt 干扰”概念并从理论和实验证明，针对 pass@k 的策略梯度优化会通过对低成功率提示的隐式重加权引发梯度冲突，从而可能提升 pass@k 却降低关键的单次成功率（pass@1），并给出发生冲突的充分条件与步长约束证明。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.21189v1",
+    "published": "2026-02-24",
+    "update_time": "2026-02-24",
+    "download_time": "2026-02-26 02:23:49"
+  },
+  {
+    "id": "2602.21127",
+    "title": "\"Are You Sure?\": An Empirical Study of Human Perception Vulnerability in LLM-Driven Agentic Systems",
+    "abstract": "Large language model (LLM) agents are rapidly becoming trusted copilots in high-stakes domains like software development and healthcare. However, this deepening trust introduces a novel attack surface: Agent-Mediated Deception (AMD), where compromised agents are weaponized against their human users. While extensive research focuses on agent-centric threats, human susceptibility to deception by a compromised agent remains unexplored. We present the first large-scale empirical study with 303 participants to measure human susceptibility to AMD. This is based on HAT-Lab (Human-Agent Trust Laboratory), a high-fidelity research platform we develop, featuring nine carefully crafted scenarios spanning everyday and professional domains (e.g., healthcare, software development, human resources). Our 10 key findings reveal significant vulnerabilities and provide future defense perspectives. Specifically, only 8.6% of participants perceive AMD attacks, while domain experts show increased susceptibility in certain scenarios. We identify six cognitive failure modes in users and find that their risk awareness often fails to translate to protective behavior. The defense analysis reveals that effective warnings should interrupt workflows with low verification costs. With experiential learning based on HAT-Lab, over 90% of users who perceive risks report increased caution against AMD. This work provides empirical evidence and a platform for human-centric agent security research.",
+    "arxiv_url": "https://arxiv.org/abs/2602.21127",
+    "authors": [
+      "Xinfeng Li",
+      "Shenyu Dai",
+      "Kelong Zheng",
+      "Yue Xiao",
+      "Gelei Deng",
+      "Wei Dong",
+      "Xiaofeng Wang"
+    ],
+    "first_author": "Xinfeng Li",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Human-Agent Interaction & Security",
+    "task": "Agent-mediated deception susceptibility",
+    "tags": [
+      "Human-LLM Interaction",
+      "Security and Vulnerabilities",
+      "Agent-Mediated Deception",
+      "Cognitive Failure Modes",
+      "Trust Calibration",
+      "Security Mindset",
+      "Experiential Learning",
+      "Warning Design",
+      "High-Fidelity Platform",
+      "Behavioral Experiment"
+    ],
+    "summary": "本文基于开源平台HAT-Lab对303名参与者开展大规模沉浸式实验，首次系统量化了人类在LLM驱动代理系统中对代理媒介欺骗（AMD）的易感性，识别出六种认知失效模式并提出以“校准摩擦”和体验式训练为核心的人本防御原则。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.21127v1",
+    "published": "2026-02-24",
+    "update_time": "2026-02-24",
+    "download_time": "2026-02-26 02:24:55"
   }
 ]
