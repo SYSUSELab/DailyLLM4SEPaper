@@ -3489,5 +3489,151 @@
     "published": "2026-02-26",
     "update_time": "2026-02-26",
     "download_time": "2026-02-27 02:24:02"
+  },
+  {
+    "id": "2602.23331",
+    "title": "Utilizing LLMs for Industrial Process Automation",
+    "abstract": "A growing number of publications address the best practices to use Large Language Models (LLMs) for software engineering in recent years. However, most of this work focuses on widely-used general purpose programming languages like Python due to their widespread usage training data. The utility of LLMs for software within the industrial process automation domain, with highly-specialized languages that are typically only used in proprietary contexts, remains underexplored. This research aims to utilize and integrate LLMs in the industrial development process, solving real-life programming tasks (e.g., generating a movement routine for a robotic arm) and accelerating the development cycles of manufacturing systems.",
+    "arxiv_url": "https://arxiv.org/abs/2602.23331",
+    "authors": [
+      "Salim Fares"
+    ],
+    "first_author": "Salim Fares",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Prompting",
+    "tags": [
+      "Domain-Specific Language",
+      "PLC Programming",
+      "Prompt Engineering",
+      "Retrieval-Augmented Generation",
+      "LoRA Fine-Tuning",
+      "Multimodal Integration",
+      "Digital Twin Validation",
+      "Vendor-specific Languages"
+    ],
+    "summary": "本文探索将大语言模型应用于工业流程自动化中的专有编程语言（如PLC、RAPID），通过提示工程、RAG与轻量微调并整合多模态工业数据生成、验证和优化可部署控制代码以加速中小企业开发流程。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.23331v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-02-28 02:04:17"
+  },
+  {
+    "id": "2602.23065",
+    "title": "LLM-Powered Silent Bug Fuzzing in Deep Learning Libraries via Versatile and Controlled Bug Transfer",
+    "abstract": "Deep learning (DL) libraries are widely used in critical applications, where even subtle silent bugs can lead to serious consequences. While existing DL fuzzing techniques have made progress in detecting crashes, they inherently struggle to detect silent bugs due to the lack of effective test programs and corresponding oracles.   Building on the observation that historical bug reports contain rich, underutilized information about silent bugs, we leverage large language models (LLMs) to perform versatile yet controlled bug transfer for silent bug fuzzing. Specifically, our approach uses LLMs to extract context-aware bug patterns from historical issues, match semantically related Application Programming Interfaces (APIs) using functionality-based embeddings, and synthesize test cases with customized oracles. This enables proactive detection of silent bugs by transferring high-risk contexts and oracle designs from known buggy APIs to functionally similar target APIs. To ensure the reliability of our context-aware bug transfer, we introduce an LLM-powered self-validation module that systematically evaluates the validity of each transferred bug instance. We implement this methodology in a tool named TransFuzz and evaluate it on three mainstream DL libraries: PyTorch, TensorFlow, and MindSpore. TransFuzz successfully discovers 79 previously unknown bugs (12 confirmed as Common Vulnerabilities and Exposures (CVEs)) in 10 bug types, demonstrating its effectiveness and generalizability in migrating DL library bug discovery capabilities.",
+    "arxiv_url": "https://arxiv.org/abs/2602.23065",
+    "authors": [
+      "Kunpeng Zhang",
+      "Dongwei Xiao",
+      "Daoyuan Wu",
+      "Jiali Zhao",
+      "Yuanyi Lin",
+      "Tongtong Xu",
+      "Shaohua Wang",
+      "Shuai Wang"
+    ],
+    "first_author": "Kunpeng Zhang",
+    "category": [
+      "Technical"
+    ],
+    "field": "Software Testing",
+    "task": "Test Generation",
+    "tags": [
+      "Silent Bug Fuzzing",
+      "Context-Aware Bug Transfer",
+      "Oracle Synthesis",
+      "Functionality-Based API Matching",
+      "LLM Self-Validation",
+      "Test Program Synthesis",
+      "Bug Pattern Mining",
+      "Cross-Framework Transfer",
+      "High-Risk API Identification"
+    ],
+    "summary": "本文提出TransFuzz，一种基于LLM的“迁移-验证”模糊测试框架，通过从历史issue抽取上下文相关的漏洞模式、基于功能的API匹配生成带定制断言的测试用例并用LLM自验证，成功在PyTorch、TensorFlow和MindSpore中发现79个未知漏洞（含12个CVE）。",
+    "quality": "High",
+    "conference": "ACM Program",
+    "pdf_url": "https://arxiv.org/pdf/2602.23065v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-02-28 02:04:41"
+  },
+  {
+    "id": "2602.23349",
+    "title": "FlashOptim: Optimizers for Memory Efficient Training",
+    "abstract": "Standard mixed-precision training of neural networks requires many bytes of accelerator memory for each model parameter. These bytes reflect not just the parameter itself, but also its gradient and one or more optimizer state variables. With each of these values typically requiring 4 bytes, training even a 7 billion parameter model can be impractical for researchers with less than 100GB of accelerator memory.   We introduce FlashOptim, a suite of optimizations that reduces per-parameter memory by over 50% while preserving model quality and API compatibility. Our approach introduces two key techniques. First, we improve master weight splitting by finding and exploiting a tight bound on its quantization error. Second, we design companding functions that greatly reduce the error in 8-bit optimizer state quantization. Together with 16-bit gradients, these techniques reduce AdamW memory from 16 bytes to 7 bytes per parameter, or 5 bytes with gradient release. They also cut model checkpoint sizes by more than half.   Experiments with FlashOptim applied to SGD, AdamW, and Lion show no measurable quality degradation on any task from a collection of standard vision and language benchmarks, including Llama-3.1-8B finetuning.",
+    "arxiv_url": "https://arxiv.org/abs/2602.23349",
+    "authors": [
+      "Jose Javier Gonzalez Ortiz",
+      "Abhay Gupta",
+      "Chris Renard",
+      "Davis Blalock"
+    ],
+    "first_author": "Jose Javier Gonzalez Ortiz",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Training & Optimization",
+    "task": "Memory-Efficient Optimizers",
+    "tags": [
+      "Weight Splitting",
+      "Companded Quantization",
+      "8-bit Optimizer States",
+      "Fused Optimizer Kernels",
+      "Gradient Release",
+      "Checkpoint Compression",
+      "Memory Reduction"
+    ],
+    "summary": "FlashOptim 提出通过改进权重拆分和设计 companding 的 8 位优化器状态量化并实现融合内核，从而在不损失模型质量的前提下将训练时每参数内存显著降低（例如将 AdamW 从 16 字节降至 7 字节），并提供开源实现。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.23349v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-02-28 02:05:26"
+  },
+  {
+    "id": "2602.22871",
+    "title": "Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching",
+    "abstract": "Reasoning with large language models often benefits from generating multiple chains-of-thought, but existing aggregation strategies are typically trajectory-level (e.g., selecting the best trace or voting on the final answer), discarding useful intermediate work from partial or \"nearly correct\" attempts. We propose Stitching Noisy Diffusion Thoughts, a self-consistency framework that turns cheap diffusion-sampled reasoning into a reusable pool of step-level candidates. Given a problem, we (i) sample many diverse, low-cost reasoning trajectories using a masked diffusion language model, (ii) score every intermediate step with an off-the-shelf process reward model (PRM), and (iii) stitch these highest-quality steps across trajectories into a composite rationale. This rationale then conditions an autoregressive (AR) model (solver) to recompute only the final answer. This modular pipeline separates exploration (diffusion) from evaluation and solution synthesis, avoiding monolithic unified hybrids while preserving broad search. Across math reasoning benchmarks, we find that step-level recombination is most beneficial on harder problems, and ablations highlight the importance of the final AR solver in converting stitched but imperfect rationales into accurate answers. Using low-confidence diffusion sampling with parallel, independent rollouts, our training-free framework improves average accuracy by up to 23.8% across six math and coding tasks. At the same time, it achieves up to a 1.8x latency reduction relative to both traditional diffusion models (e.g., Dream, LLaDA) and unified architectures (e.g., TiDAR). Code is available at https://github.com/roymiles/diffusion-stitching.",
+    "arxiv_url": "https://arxiv.org/abs/2602.22871",
+    "authors": [
+      "Roy Miles",
+      "Aysim Toker",
+      "Andreea-Maria Oncescu",
+      "Songcen Xu",
+      "Jiankang Deng",
+      "Ismail Elezi"
+    ],
+    "first_author": "Roy Miles",
+    "category": [
+      "Technical"
+    ],
+    "field": "Test-Time Reasoning",
+    "task": "Step-level Stitching & Diffusion Exploration",
+    "tags": [
+      "Step-level Self-Consistency",
+      "Diffusion Exploration",
+      "Process Reward Scoring",
+      "Composite Rationale Stitching",
+      "Autoregressive Re-solving",
+      "Confidence-based Sampling",
+      "Parallel Sampling",
+      "Efficiency",
+      "Robustness",
+      "Math Reasoning"
+    ],
+    "summary": "提出一种模块化的测试时推理框架：用掩码扩散模型并行生成多条低成本推理轨迹、用过程奖励模型对每步评分并拼接高质量中间步骤，最后由小型自回归模型基于拼接的推理重算答案，从而在数学和编码推理任务上在延迟受限时显著提升准确率与效率。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.22871v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-02-28 02:10:31"
   }
 ]
