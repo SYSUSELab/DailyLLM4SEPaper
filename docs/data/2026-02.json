@@ -3635,5 +3635,159 @@
     "published": "2026-02-26",
     "update_time": "2026-02-26",
     "download_time": "2026-02-28 02:10:31"
+  },
+  {
+    "id": "2602.22764",
+    "title": "Evaluating and Improving Automated Repository-Level Rust Issue Resolution with LLM-based Agents",
+    "abstract": "The Rust programming language presents a steep learning curve and significant coding challenges, making the automation of issue resolution essential for its broader adoption. Recently, LLM-powered code agents have shown remarkable success in resolving complex software engineering tasks, yet their application to Rust has been limited by the absence of a large-scale, repository-level benchmark. To bridge this gap, we introduce Rust-SWE-bench, a benchmark comprising 500 real-world, repository-level software engineering tasks from 34 diverse and popular Rust repositories. We then perform a comprehensive study on Rust-SWE-bench with four representative agents and four state-of-the-art LLMs to establish a foundational understanding of their capabilities and limitations in the Rust ecosystem. Our extensive study reveals that while ReAct-style agents are promising, i.e., resolving up to 21.2% of issues, they are limited by two primary challenges: comprehending repository-wide code structure and complying with Rust's strict type and trait semantics. We also find that issue reproduction is rather critical for task resolution. Inspired by these findings, we propose RUSTFORGER, a novel agentic approach that integrates an automated test environment setup with a Rust metaprogramming-driven dynamic tracing strategy to facilitate reliable issue reproduction and dynamic analysis. The evaluation shows that RUSTFORGER using Claude-Sonnet-3.7 significantly outperforms all baselines, resolving 28.6% of tasks on Rust-SWE-bench, i.e., a 34.9% improvement over the strongest baseline, and, in aggregate, uniquely solves 46 tasks that no other agent could solve across all adopted advanced LLMs.",
+    "arxiv_url": "https://arxiv.org/abs/2602.22764",
+    "authors": [
+      "Jiahong Xiang",
+      "Wenxiao He",
+      "Xihua Wang",
+      "Hongliang Tian",
+      "Yuqun Zhang"
+    ],
+    "first_author": "Jiahong Xiang",
+    "category": [
+      "Benchmark",
+      "Empirical",
+      "Technical"
+    ],
+    "field": "Quality Management",
+    "task": "Bug Repair",
+    "tags": [
+      "Program Repair",
+      "Repository-Level Repair",
+      "Issue Reproduction",
+      "Dynamic Tracing",
+      "Procedural Macro Instrumentation",
+      "Automated Test Workspace",
+      "Rust Type & Trait Semantics",
+      "ReAct Agents",
+      "Agent Evaluation",
+      "Benchmark Construction"
+    ],
+    "summary": "本文构建了面向 Rust 的大型仓库级基准 Rust‑SWE‑bench，系统评估多种 LLM 代码代理并提出通过自动化测试环境与基于过程宏的跨项目动态追踪机制的 RustForger，从而显著提升仓库级问题的自动修复效果。",
+    "quality": "High",
+    "conference": "IEEE/ACM International Conference on Software Engineering (ICSE 2026)",
+    "pdf_url": "https://arxiv.org/pdf/2602.22764v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-03-01 02:34:50"
+  },
+  {
+    "id": "2602.22518",
+    "title": "RepoMod-Bench: A Benchmark for Code Repository Modernization via Implementation-Agnostic Testing",
+    "abstract": "The evolution of AI coding agents has shifted the frontier from simple snippet completion to autonomous repository-level engineering. However, evaluating these agents remains ill-posed in general code repository generation, where the lack of deterministic ground truth leads to ambiguous metrics. Code modernization via automated translation offers a more rigorous alternative by providing a fixed ground truth -- the source repository; yet existing benchmarks are limited to small-scale repositories and rely on language-specific unit tests visible to the agent, allowing test-driven overfitting.   We address these limitations by introducing a benchmarking framework for repository-level code modernization built on an implementation-agnostic evaluation paradigm. This framework is instantiated through RepoMod-Bench: a benchmark of 21 real-world repositories with standardized interfaces, spanning 8 programming languages. The benchmark contains 1.6M lines of code (LOC) and 11,616 tests, with repository sizes ranging from 14 to 211K LOC. By targeting repositories with standardized interfaces, we utilize an implementation-agnostic test suite to verify functional equivalence between source and target implementations. This black-box approach ensures verification remains consistent across languages, and our environment hides all test suites from agents to prevent test-driven shortcuts. Evaluating four state-of-the-art agent configurations reveals a sharp scaling collapse: average pass rates drop from 91.3% on projects under 10K LOC to 15.3% on projects exceeding 50K LOC. These results demonstrate that autonomous modernization at scale remains a significant open challenge. Our benchmark and code are available at https://github.com/Modelcode-ai/mcode-benchmark.",
+    "arxiv_url": "https://arxiv.org/abs/2602.22518",
+    "authors": [
+      "Xuefeng Li",
+      "Nir Ben-Israel",
+      "Yotam Raz",
+      "Belal Ahmed",
+      "Doron Serebro",
+      "Antoine Raux"
+    ],
+    "first_author": "Xuefeng Li",
+    "category": [
+      "Benchmark",
+      "Empirical"
+    ],
+    "field": "Coding Assistant",
+    "task": "Code Translation",
+    "tags": [
+      "Repository-Level Translation",
+      "Implementation-Agnostic Testing",
+      "Interface-Level Verification",
+      "Hidden Test Suite",
+      "Cross-Language Modernization",
+      "Dockerized Evaluation",
+      "Scaling Collapse",
+      "Agent Evaluation"
+    ],
+    "summary": "本文提出RepoMod-Bench——一个包含21个真实仓库（1.6M LOC、11,616测试）的跨语言代码现代化基准，采用接口级的实现无关隐藏测试并在隔离的Docker环境中评估AI代理的功能等价性，实验证明大规模仓库的自动化翻译性能显著下降。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.22518v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-03-01 02:35:34"
+  },
+  {
+    "id": "2602.23163",
+    "title": "A Decision-Theoretic Formalisation of Steganography With Applications to LLM Monitoring",
+    "abstract": "Large language models are beginning to show steganographic capabilities. Such capabilities could allow misaligned models to evade oversight mechanisms. Yet principled methods to detect and quantify such behaviours are lacking. Classical definitions of steganography, and detection methods based on them, require a known reference distribution of non-steganographic signals. For the case of steganographic reasoning in LLMs, knowing such a reference distribution is not feasible; this renders these approaches inapplicable. We propose an alternative, \\textbf{decision-theoretic view of steganography}. Our central insight is that steganography creates an asymmetry in usable information between agents who can and cannot decode the hidden content (present within a steganographic signal), and this otherwise latent asymmetry can be inferred from the agents' observable actions. To formalise this perspective, we introduce generalised $\\mathcal{V}$-information: a utilitarian framework for measuring the amount of usable information within some input. We use this to define the \\textbf{steganographic gap} -- a measure that quantifies steganography by comparing the downstream utility of the steganographic signal to agents that can and cannot decode the hidden content. We empirically validate our formalism, and show that it can be used to detect, quantify, and mitigate steganographic reasoning in LLMs.",
+    "arxiv_url": "https://arxiv.org/abs/2602.23163",
+    "authors": [
+      "Usman Anwar",
+      "Julianna Piskorz",
+      "David D. Baek",
+      "David Africa",
+      "Jim Weatherall",
+      "Max Tegmark",
+      "Christian Schroeder de Witt",
+      "Mihaela van der Schaar",
+      "David Krueger"
+    ],
+    "first_author": "Usman Anwar",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Model Monitoring & Safety",
+    "task": "Steganographic Detection in LLMs",
+    "tags": [
+      "Steganography",
+      "Decision-Theoretic Formalism",
+      "Generalized V-information",
+      "Steganographic Gap",
+      "Behavioral Monitoring",
+      "LLM Auditability",
+      "Mitigation",
+      "Usable Information"
+    ],
+    "summary": "本文提出一种基于决策理论的隐写形式化，通过推广V-信息定义可用信息并引入“隐写差距”来从代理的下游行为中检测、量化并缓解LLM的隐写推理，并通过受控实验验证该方法的有效性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.23163v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-03-01 02:38:43"
+  },
+  {
+    "id": "2602.22988",
+    "title": "Residual Koopman Spectral Profiling for Predicting and Preventing Transformer Training Instability",
+    "abstract": "Training divergence in transformers wastes compute, yet practitioners discover instability only after expensive runs begin. They therefore need an expected probability of failure for a transformer before training starts. Our study of Residual Koopman Spectral Profiling (RKSP) provides such an estimate. From a single forward pass at initialization, RKSP extracts Koopman spectral features by applying whitened dynamic mode decomposition to layer-wise residual snapshots. Our central diagnostic, the near-unit spectral mass, quantifies the fraction of modes concentrated near the unit circle, which captures instability risk. For predicting divergence across extensive configurations, this estimator achieves an AUROC of 0.995, outperforming the best gradient baseline. We further make this diagnostic actionable through Koopman Spectral Shaping (KSS), which reshapes spectra during training. We empirically validate that our method works in practice: RKSP predicts divergence at initialization, and when RKSP flags high risk, turning on KSS successfully prevents divergence. In the challenging high learning rate regime without normalization layers, KSS reduces the divergence rate from 66.7% to 12.5% and enables learning rates that are 50% to 150% higher. These findings generalize to WikiText-103 language modeling, vision transformers on CIFAR-10, and pretrained language models, including GPT-2 and LLaMA-2 up to 7B, as well as emerging architectures such as MoE, Mamba-style SSMs, and KAN.",
+    "arxiv_url": "https://arxiv.org/abs/2602.22988",
+    "authors": [
+      "Bum Jun Kim",
+      "Shohei Taniguchi",
+      "Makoto Kawano",
+      "Yusuke Iwasawa",
+      "Yutaka Matsuo"
+    ],
+    "first_author": "Bum Jun Kim",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Training & Optimization",
+    "task": "Training Divergence Prediction & Prevention",
+    "tags": [
+      "Koopman Spectra",
+      "Whitened DMD",
+      "Near-Unit Mass",
+      "Koopman Spectral Shaping",
+      "Initialization-Time Diagnostic",
+      "Layer-wise Stability",
+      "Learning Rate Scaling"
+    ],
+    "summary": "本文提出残差Koopman谱分析（RKSP）：通过对初始化时的层级残差流做白化动态模态分解提取谱特征（如近单位谱质量）以高精度预测Transformer训练发散风险，并引入谱整形（KSS）在训练中调节谱以有效防止发散并允许更高学习率，理论与在多种架构和数据集上的实验证明其有效性。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.22988v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-03-01 02:40:32"
   }
 ]
