@@ -3789,5 +3789,151 @@
     "published": "2026-02-26",
     "update_time": "2026-02-26",
     "download_time": "2026-03-01 02:40:32"
+  },
+  {
+    "id": "2602.23957",
+    "title": "The Vocabulary of Flaky Tests in the Context of SAP HANA",
+    "abstract": "Background. Automated test execution is an important activity to gather information about the quality of a software project. So-called flaky tests, however, negatively affect this process. Such tests fail seemingly at random without changes to the code and thus do not provide a clear signal. Previous work proposed to identify flaky tests based on the source code identifiers in the test code. So far, these approaches have not been evaluated in a large-scale industrial setting. Aims. We evaluate approaches to identify flaky tests and their root causes based on source code identifiers in the test code in a large-scale industrial project. Method. First, we replicate previous work by Pinto et al. in the context of SAP HANA. Second, we assess different feature extraction techniques, namely TF-IDF and TF-IDFC-RF. Third, we evaluate CodeBERT and XGBoost as classification models. For a sound comparison, we utilize both the data set from previous work and two data sets from SAP HANA. Results. Our replication shows similar results on the original data set and on one of the SAP HANA data sets. While the original approach yielded an F1-Score of 0.94 on the original data set and 0.92 on the SAP HANA data set, our extensions achieve F1-Scores of 0.96 and 0.99, respectively. The reliance on external data sources is a common root cause for test flakiness in the context of SAP HANA. Conclusions. The vocabulary of a large industrial project seems to be slightly different with respect to the exact terms, but the categories for the terms, such as remote dependencies, are similar to previous empirical findings. However, even with rather large F1-Scores, both finding source code identifiers for flakiness and a black box prediction have limited use in practice as the results are not actionable for developers.",
+    "arxiv_url": "https://arxiv.org/abs/2602.23957",
+    "authors": [
+      "Alexander Berndt",
+      "Zoltán Nochta",
+      "Thomas Bach"
+    ],
+    "first_author": "Alexander Berndt",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Software Testing",
+    "task": "Testing prediction",
+    "tags": [
+      "Identifier-based Flakiness Prediction",
+      "Supervised Term Weighting",
+      "TF-IDF",
+      "Information Gain",
+      "CI Noise Filtering",
+      "Industrial-scale Dataset",
+      "Remote Dependencies",
+      "Timeouts and Concurrency"
+    ],
+    "summary": "本文在大规模工业项目SAP HANA中复现并扩展了基于测试代码标识符的易波动测试检测方法，比较了多种特征提取与分类技术（如TF‑IDF/TF‑IDFC‑RF与基于预训练代码表示的模型），识别出触发易波动性的高信息增益词汇（如与远程依赖相关的“virtual”），并讨论了这些预测在实践中可操作性的局限性。",
+    "quality": "High",
+    "conference": "ESEM IGC 2023",
+    "pdf_url": "https://arxiv.org/pdf/2602.23957v1",
+    "published": "2026-02-27",
+    "update_time": "2026-02-27",
+    "download_time": "2026-03-02 02:27:04"
+  },
+  {
+    "id": "2602.23905",
+    "title": "Novice Developers Produce Larger Review Overhead for Project Maintainers while Vibe Coding",
+    "abstract": "AI coding agents allow software developers to generate code quickly, which raises a practical question for project managers and open source maintainers: can vibe coders with less development experience substitute for expert developers? To explore whether developer experience still matters in AI-assisted development, we study $22,953$ Pull Requests (PRs) from $1,719$ vibe coders in the GitHub repositories of the AIDev dataset. We split vibe coders into lower experience vibe coders ($\\mathit{Exp}_{Low}$) and higher experience vibe coders ($\\mathit{Exp}_{High}$) and compare contribution magnitude and PR acceptance rates across PR categories. We find that $\\mathit{Exp}_{Low}$ submits PRs with larger volume ($2.15\\times$ more commits and $1.47\\times$ more files changed) than $\\mathit{Exp}_{High}$. Moreover, $\\mathit{Exp}_{Low}$ PRs, when compared to $\\mathit{Exp}_{High}$, receive $4.52\\times$ more review comments, and have $31\\%$ lower acceptance rates, and remain open $5.16\\times$ longer before resolution. Our results indicate that low-experienced vibe coders focus on generating more code while shifting verification burden onto reviewers. For practice, project managers may not be able to safely replace experienced developers with low-experience vibe coders without increasing review capacity. Development teams should therefore combine targeted training for novices with adaptive PR review cycles.",
+    "arxiv_url": "https://arxiv.org/abs/2602.23905",
+    "authors": [
+      "Syed Ammar Asdaque",
+      "Imran Haider",
+      "Muhammad Umar Malik",
+      "Maryam Abdul Ghafoor",
+      "Abdul Ali Bangash"
+    ],
+    "first_author": "Syed Ammar Asdaque",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Maintenance",
+    "task": "Code Review",
+    "tags": [
+      "Human-LLM Interaction",
+      "Vibe Coding",
+      "Reviewer Burden",
+      "PR Acceptance",
+      "PR Resolution Time",
+      "Infrastructure Mismatch",
+      "Experience-aware Analysis",
+      "Repository-Level Coding"
+    ],
+    "summary": "本文基于 AIDev 数据集分析了 22,953 个 AI 辅助 PR，发现低经验的“vibe coder”提交的 PR 更大、修改更多文件且接受率更低、解决时间更长并产生更多审查评论，从而显著增加了维护者的审查负担。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.23905v1",
+    "published": "2026-02-27",
+    "update_time": "2026-02-27",
+    "download_time": "2026-03-02 02:27:34"
+  },
+  {
+    "id": "2602.22911",
+    "title": "NoRA: Breaking the Linear Ceiling of Low-Rank Adaptation via Manifold Expansion",
+    "abstract": "Low-Rank Adaptation (LoRA) dominates parameter-efficient fine-tuning (PEFT). However, it faces a critical ``linear ceiling'' in complex reasoning tasks: simply increasing the rank yields diminishing returns due to intrinsic linear constraints. We introduce NoRA (Non-linear Rank Adaptation), a weight-level parallel adapter that injects SiLU gating and structural dropout to induce manifold expansion. On the SlimOrca benchmark, NoRA breaks this linear barrier: NoRA remarkably at rank 64 (PPL 3.89) outperforms LoRA at rank 512 (PPL 3.90), demonstrating superior spectral efficiency. This advantage generalizes to mathematical reasoning, where NoRA achieves a perplexity of 1.97 on MathInstruct, significantly surpassing LoRA's saturation point of 2.07. Mechanism analysis via Singular Value Decomposition (SVD) confirms that NoRA activates the dormant tail of the singular value spectrum, effectively preventing the rank collapse observed in linear methods.",
+    "arxiv_url": "https://arxiv.org/abs/2602.22911",
+    "authors": [
+      "Hung-Hsuan Chen"
+    ],
+    "first_author": "Hung-Hsuan Chen",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Model Fine-Tuning & PEFT",
+    "task": "Parameter-Efficient Fine-Tuning (Adapter Design)",
+    "tags": [
+      "Non-linear Adapter",
+      "Weight-Level Adaptation",
+      "SiLU Gating",
+      "Structural Dropout",
+      "Manifold Expansion",
+      "Rank Saturation",
+      "Effective Rank Analysis",
+      "Spectral Analysis"
+    ],
+    "summary": "提出NoRA——一种在权重级并行适配器中注入SiLU门控和结构化dropout以实现流形扩展，从而打破LoRA在复杂推理任务中的线性秩天花板，并通过SVD/有效秩分析验证其机制与在SlimOrca和MathInstruct上的优越性能。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.22911v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-03-02 02:33:30"
+  },
+  {
+    "id": "2602.22724",
+    "title": "AgentSentry: Mitigating Indirect Prompt Injection in LLM Agents via Temporal Causal Diagnostics and Context Purification",
+    "abstract": "Large language model (LLM) agents increasingly rely on external tools and retrieval systems to autonomously complete complex tasks. However, this design exposes agents to indirect prompt injection (IPI), where attacker-controlled context embedded in tool outputs or retrieved content silently steers agent actions away from user intent. Unlike prompt-based attacks, IPI unfolds over multi-turn trajectories, making malicious control difficult to disentangle from legitimate task execution. Existing inference-time defenses primarily rely on heuristic detection and conservative blocking of high-risk actions, which can prematurely terminate workflows or broadly suppress tool usage under ambiguous multi-turn scenarios. We propose AgentSentry, a novel inference-time detection and mitigation framework for tool-augmented LLM agents. To the best of our knowledge, AgentSentry is the first inference-time defense to model multi-turn IPI as a temporal causal takeover. It localizes takeover points via controlled counterfactual re-executions at tool-return boundaries and enables safe continuation through causally guided context purification that removes attack-induced deviations while preserving task-relevant evidence. We evaluate AgentSentry on the \\textsc{AgentDojo} benchmark across four task suites, three IPI attack families, and multiple black-box LLMs. AgentSentry eliminates successful attacks and maintains strong utility under attack, achieving an average Utility Under Attack (UA) of 74.55 %, improving UA by 20.8 to 33.6 percentage points over the strongest baselines without degrading benign performance.",
+    "arxiv_url": "https://arxiv.org/abs/2602.22724",
+    "authors": [
+      "Tian Zhang",
+      "Yiwei Xu",
+      "Juan Wang",
+      "Keyan Guo",
+      "Xiaoyang Xu",
+      "Bowen Xiao",
+      "Quanlong Guan",
+      "Jinlin Fan",
+      "Jiawei Liu",
+      "Zhiquan Liu",
+      "Hongxin Hu"
+    ],
+    "first_author": "Tian Zhang",
+    "category": [
+      "Technical"
+    ],
+    "field": "LLM Agent Security",
+    "task": "Indirect Prompt Injection Mitigation",
+    "tags": [
+      "Temporal Causal Diagnostics",
+      "Counterfactual Re-execution",
+      "Context Purification",
+      "Indirect Prompt Injection",
+      "Tool-mediated Attacks",
+      "Safe Continuation",
+      "Black-box Inference Defense",
+      "Causal Localization"
+    ],
+    "summary": "本文提出AgentSentry——一种面向工具增强型LLM代理的推理时防御框架，通过在工具返回边界进行受控反事实重执行来做时序因果诊断并在必要时对上下文进行因果门控净化，从而定位并缓解间接提示注入攻击，实现将攻击成功率降为0%且在受攻下保持高任务效用。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2602.22724v1",
+    "published": "2026-02-26",
+    "update_time": "2026-02-26",
+    "download_time": "2026-03-02 02:37:01"
   }
 ]
