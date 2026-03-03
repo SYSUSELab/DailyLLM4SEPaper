@@ -1,0 +1,143 @@
+[
+  {
+    "id": "2603.00902",
+    "title": "Clawdrain: Exploiting Tool-Calling Chains for Stealthy Token Exhaustion in OpenClaw Agents",
+    "abstract": "Modern generative agents such as OpenClaw - an open-source, self-hosted personal assistant with a community skill ecosystem, are gaining attention and are used pervasively. However, the openness and rapid growth of these ecosystems often outpace systematic security evaluation. In this paper, we design, implement, and evaluate Clawdrain, a Trojanized skill that induces a multi-turn \"Segmented Verification Protocol\" via injected SKILL.md instructions and a companion script that returns PROGRESS/REPAIR/TERMINAL signals. We deploy Clawdrain in a production-like OpenClaw instance with real API billing and a production model (Gemini 2.5 Pro), and we measure 6-7x token amplification over a benign baseline, with a costly, failure configuration reaching approximately 9x. We observe a deployment-only phenomenon: the agent autonomously composes general-purpose tools (e.g., shell/Python) to route around brittle protocol steps, reducing amplification and altering attack dynamics. Finally, we identify production vectors enabled by OpenClaw's architecture, including SKILL.md prompt bloat, persistent tool-output pollution, cron/heartbeat frequency amplification, and behavioral instruction injection. Overall, we demonstrate that token-drain attacks remain feasible in real deployments, but their magnitude and observability are shaped by tool composition, recovery behavior, and interface design.",
+    "arxiv_url": "https://arxiv.org/abs/2603.00902",
+    "authors": [
+      "Ben Dong",
+      "Hui Feng",
+      "Qian Wang"
+    ],
+    "first_author": "Ben Dong",
+    "category": [
+      "Technical",
+      "Empirical"
+    ],
+    "field": "Agent Framework Security",
+    "task": "Resource Amplification / Token Exhaustion",
+    "tags": [
+      "Token Amplification",
+      "Segmented Verification Protocol",
+      "Prompt Injection",
+      "Supply-Chain Attack",
+      "Tool Composition",
+      "Persistent Context Pollution",
+      "Interface-dependent Stealth",
+      "Economic DoS",
+      "Autonomous Execution"
+    ],
+    "summary": "本文提出并在真实 OpenClaw 部署中实现了 Clawdrain——一种通过在技能文档和配套脚本中注入分段验证协议（SVP）诱导多轮工具调用和会话膨胀的恶意技能，实测在生产模型上能产生约6–9×的token放大，并分析了工具组合、恢复行为和界面设计对攻击幅度与可见性的影响。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.00902v1",
+    "published": "2026-03-01",
+    "update_time": "2026-03-01",
+    "download_time": "2026-03-03 02:26:53"
+  },
+  {
+    "id": "2603.00897",
+    "title": "Detect Repair Verify for Securing LLM Generated Code: A Multi-Language Empirical Study",
+    "abstract": "Large language models are increasingly used to produce runnable software. In practice, security is often addressed through a Detect--Repair--Verify (DRV) loop that detects issues, applies fixes, and verifies the result. This work studies such a workflow for project-level artifacts and addresses four gaps: L1, the lack of project-level benchmarks with executable function and security tests; L2, limited evidence on pipeline-level effectiveness beyond studying detection or repair alone; L3, unclear reliability of detection reports as repair guidance; and L4, uncertain repair trustworthiness and side effects under verification. A new benchmark dataset\\footnote{https://github.com/Hahappyppy2024/EmpricalVDR} is introduced, consisting of runnable web-application projects paired with functional tests and targeted security tests, and supporting three prompt granularities at the project, requirement, and function level. The evaluation compares generation-only, single-pass DRV, and bounded iterative DRV variants under comparable budget constraints. Outcomes are measured by secure and correct yield using test-grounded verification, and intermediate artifacts are analyzed to assess report actionability and post-repair failure modes such as regressions, semantic drift, and newly introduced security issues.",
+    "arxiv_url": "https://arxiv.org/abs/2603.00897",
+    "authors": [
+      "Cheng Cheng"
+    ],
+    "first_author": "Cheng Cheng",
+    "category": [
+      "Empirical",
+      "Benchmark"
+    ],
+    "field": "Quality Management",
+    "task": "Vulnerability Repair",
+    "tags": [
+      "Detect-Repair-Verify",
+      "Project-Level Benchmark",
+      "Test-Grounded Verification",
+      "Detection Actionability",
+      "Repair Trustworthiness",
+      "Iterative Repair",
+      "Functional Regression",
+      "Multi-Language Evaluation"
+    ],
+    "summary": "本文构建了一个包含可执行功能测试与安全测试的跨语言项目级基准，并基于此实证比较生成、单次与有界迭代的检测-修复-验证流水线，评估检测报告的可操作性、修复的可靠性及常见失败模式。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.00897v1",
+    "published": "2026-03-01",
+    "update_time": "2026-03-01",
+    "download_time": "2026-03-03 02:27:13"
+  },
+  {
+    "id": "2603.00910",
+    "title": "Curvature-Weighted Capacity Allocation: A Minimum Description Length Framework for Layer-Adaptive Large Language Model Optimization",
+    "abstract": "Layer-wise capacity in large language models is highly non-uniform: some layers contribute disproportionately to loss reduction while others are near-redundant. Existing methods for exploiting this non-uniformity, such as influence-function-based layer scoring, produce sensitivity estimates but offer no principled mechanism for translating them into allocation or pruning decisions under hardware constraints. We address this gap with a unified, curvature-aware framework grounded in the Minimum Description Length (MDL) principle. Our central quantity is the curvature-adjusted layer gain $ζ_k^2 = g_k^\\top \\widetilde{H}_{kk}^{-1} g_k$, which we show equals twice the maximal second-order reduction in empirical risk achievable by updating layer $k$ alone, and which strictly dominates gradient-norm-based scores by incorporating local curvature. Normalizing these gains into layer quality scores $q_k$, we formulate two convex MDL programs: a capacity allocation program that distributes expert slots or LoRA rank preferentially to high-curvature layers under diminishing returns, and a pruning program that concentrates sparsity on low-gain layers while protecting high-gain layers from degradation. Both programs admit unique closed-form solutions parameterized by a single dual variable, computable in $O(K \\log 1/\\varepsilon)$ via bisection. We prove an $O(δ^2)$ transfer regret bound showing that source-domain allocations remain near-optimal on target tasks when curvature scores drift by $δ$, with explicit constants tied to the condition number of the target program. Together, these results elevate layer-wise capacity optimization from an empirical heuristic to a theoretically grounded, computationally efficient framework with provable optimality and generalization guarantees.",
+    "arxiv_url": "https://arxiv.org/abs/2603.00910",
+    "authors": [
+      "Theophilus Amaefuna",
+      "Hitesh Vaidya",
+      "Anshuman Chhabra",
+      "Ankur Mali"
+    ],
+    "first_author": "Theophilus Amaefuna",
+    "category": [
+      "Technical"
+    ],
+    "field": "Model Optimization & Compression",
+    "task": "Layer-wise Capacity Allocation and Pruning",
+    "tags": [
+      "Curvature-aware Allocation",
+      "Minimum Description Length",
+      "Layer-wise Second-order Gain",
+      "Curvature-weighted Water-filling",
+      "Curvature-protected Pruning",
+      "Transfer Stability",
+      "LoRA Rank Allocation",
+      "Mixture-of-Experts Allocation",
+      "Hessian Approximation",
+      "Bisection Algorithms"
+    ],
+    "summary": "本文提出一个基于最小描述长度的曲率感知框架，利用二阶调整的层增益ζ_k^2构造凸优化程序以闭式分配（如LoRA秩或MoE槽）和受保护的按层剪枝，并证明了传输稳定性与高效的二分求解算法。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.00910v1",
+    "published": "2026-03-01",
+    "update_time": "2026-03-01",
+    "download_time": "2026-03-03 02:27:35"
+  },
+  {
+    "id": "2603.00856",
+    "title": "PARCER as an Operational Contract to Reduce Variance, Cost, and Risk in LLM Systems",
+    "abstract": "Systems based on Large Language Models (LLMs) have become formidable tools for automating research and software production. However, their governance remains a challenge when technical requirements demand absolute consistency, auditability, and predictable control over cost and latency. Recent literature highlights two phenomena that aggravate this scenario: the stochastic variance inherent in the model's judgment (often treated as \"systemic noise\") and the substantial degradation of context utilization in long inputs, with critical losses when decisive information is diluted in the middle of the prompt. This article proposes PARCER as an engineering response to these limitations. The framework acts as a declarative \"operational contract\" in YAML, transforming unstructured interactions into versioned and executable artifacts. PARCER imposes strict governance structured into seven operational phases, introducing decision hygiene practices inspired by legal judgments to mitigate noise, adaptive token budgeting, formalized recovery routes (fallbacks) for context preservation, and systemic observability via OpenTelemetry. The objective of this work is to present the conceptual and technical architecture of PARCER, positioning it as a necessary transition from simple \"prompt engineering\" to \"context engineering with governable governance\".",
+    "arxiv_url": "https://arxiv.org/abs/2603.00856",
+    "authors": [
+      "Elzo Brito dos Santos Filho"
+    ],
+    "first_author": "Elzo Brito dos Santos Filho",
+    "category": [
+      "Technical"
+    ],
+    "field": "Requirements & Design",
+    "task": "Management",
+    "tags": [
+      "Decision Hygiene",
+      "Context Engineering",
+      "Adaptive Budgeting",
+      "Fallback Nets",
+      "Operational Contract",
+      "Evidence Docket",
+      "Auditability",
+      "Deterministic Traceability",
+      "RAG Summarization",
+      "Token Budgeting",
+      "Observability"
+    ],
+    "summary": "本文提出 PARCER，一种以 YAML 描述的运维合约框架，通过七个执行阶段、决策卫生、自适应令牌预算、上下文回退机制与可观测性来降低基于 LLM 系统的判断方差、成本与风险。",
+    "quality": "Middle",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.00856v1",
+    "published": "2026-03-01",
+    "update_time": "2026-03-01",
+    "download_time": "2026-03-03 02:28:40"
+  }
+]
