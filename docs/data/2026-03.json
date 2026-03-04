@@ -139,5 +139,149 @@
     "published": "2026-03-01",
     "update_time": "2026-03-01",
     "download_time": "2026-03-03 02:28:40"
+  },
+  {
+    "id": "2603.03018",
+    "title": "REGAL: A Registry-Driven Architecture for Deterministic Grounding of Agentic AI in Enterprise Telemetry",
+    "abstract": "Enterprise engineering organizations produce high-volume, heterogeneous telemetry from version control systems, CI/CD pipelines, issue trackers, and observability platforms. Large Language Models (LLMs) enable new forms of agentic automation, but grounding such agents on private telemetry raises three practical challenges: limited model context, locally defined semantic concepts, and evolving metric interfaces.   We present REGAL, a registry-driven architecture for deterministic grounding of agentic AI systems in enterprise telemetry. REGAL adopts an explicitly architectural approach: deterministic telemetry computation is treated as a first-class primitive, and LLMs operate over a bounded, version-controlled action space rather than raw event streams.   The architecture combines (1) a Medallion ELT pipeline that produces replayable, semantically compressed Gold artifacts, and (2) a registry-driven compilation layer that synthesizes Model Context Protocol (MCP) tools from declarative metric definitions. The registry functions as an \"interface-as-code\" layer, ensuring alignment between tool specification and execution, mitigating tool drift, and embedding governance policies directly at the semantic boundary.   A prototype implementation and case study validate the feasibility of deterministic grounding and illustrate its implications for latency, token efficiency, and operational governance. This work systematizes an architectural pattern for enterprise LLM grounding; it does not propose new learning algorithms, but rather elevates deterministic computation and semantic compilation to first-class design primitives for agentic systems.",
+    "arxiv_url": "https://arxiv.org/abs/2603.03018",
+    "authors": [
+      "Yuvraj Agrawal"
+    ],
+    "first_author": "Yuvraj Agrawal",
+    "category": [
+      "Technical"
+    ],
+    "field": "AIOps",
+    "task": "Log Parsing",
+    "tags": [
+      "Registry-driven compilation",
+      "Interface-as-code",
+      "Deterministic grounding",
+      "Medallion ELT",
+      "Gold artifacts",
+      "Model Context Protocol",
+      "Governance",
+      "Hallucination reduction",
+      "Token efficiency"
+    ],
+    "summary": "本文提出REGAL——一种针对企业遥测的注册表驱动参考架构，通过将确定性ELT（Medallion）生成的可重放、版本化的Gold工件与由声明性指标定义编译出的受限MCP工具接口分离，实现对LLM代理的确定性落地、降低幻觉并内嵌治理策略，且通过原型与案例验证了其实用性与性能权衡。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.03018v1",
+    "published": "2026-03-03",
+    "update_time": "2026-03-03",
+    "download_time": "2026-03-04 02:12:43"
+  },
+  {
+    "id": "2603.02949",
+    "title": "SEALing the Gap: A Reference Framework for LLM Inference Carbon Estimation via Multi-Benchmark Driven Embodiment",
+    "abstract": "Large Language Models are rapidly gaining traction in software engineering, yet their growing carbon footprint raises pressing sustainability concerns. While training emissions are substantial, inference quickly surpasses them due to the sheer volume of prompts processed. This shift underscores the urgent need for accurate, prompt-level carbon measurement during inference to enable informed, sustainability-focused decision-making. To address the limitations of existing approaches, in this paper, we outline the guiding principles for a novel reference framework for LLM inference carbon estimation that can guide the design of future tools and provide a systematic foundation for advancing sustainability research in this domain. We also introduce SEAL, an early embodiment of these principles that leverages a multi-benchmark-driven approach for per-prompt carbon estimation. Its initial validation shows promising results, positioning SEAL as a foundation for standardized sustainability assessment across the LLM ecosystem.",
+    "arxiv_url": "https://arxiv.org/abs/2603.02949",
+    "authors": [
+      "Priyavanshi Pathania",
+      "Rohit Mehra",
+      "Vibhu Saujanya Sharma",
+      "Vikrant Kaulgud",
+      "Tiffani Nevels",
+      "Sanjay Podder",
+      "Adam P. Burden"
+    ],
+    "first_author": "Priyavanshi Pathania",
+    "category": [
+      "Technical"
+    ],
+    "field": "Green Software & Sustainability",
+    "task": "Inference Carbon Estimation",
+    "tags": [
+      "Prompt-level estimation",
+      "Non-intrusive estimation",
+      "Benchmark-driven modeling",
+      "Multi-benchmark fusion",
+      "Energy modeling",
+      "Carbon accounting",
+      "Prefill-decode coverage",
+      "Model-agnostic predictor",
+      "ML-based estimator",
+      "Runtime telemetry"
+    ],
+    "summary": "本文提出了面向LLM推理的参考碳估计框架，并实现了SEAL——一种基于多基准训练的非侵入式逐提示能耗/碳排放估计方法，覆盖prefill与decode阶段并进行了初步验证。",
+    "quality": "Middle",
+    "conference": "48th International Conference on Software Engineering (ICSE '26) 2026",
+    "pdf_url": "https://arxiv.org/pdf/2603.02949v1",
+    "published": "2026-03-03",
+    "update_time": "2026-03-03",
+    "download_time": "2026-03-04 02:13:08"
+  },
+  {
+    "id": "2603.02081",
+    "title": "GenDB: The Next Generation of Query Processing -- Synthesized, Not Engineered",
+    "abstract": "Traditional query processing relies on engines that are carefully optimized and engineered by many experts. However, new techniques and user requirements evolve rapidly, and existing systems often cannot keep pace. At the same time, these systems are difficult to extend due to their internal complexity, and developing new systems requires substantial engineering effort and cost. In this paper, we argue that recent advances in Large Language Models (LLMs) are starting to shape the next generation of query processing systems.   We propose using LLMs to synthesize execution code for each incoming query, instead of continuously building, extending, and maintaining complex query processing engines. As a proof of concept, we present GenDB, an LLM-powered agentic system that generates instance-optimized and customized query execution code tailored to specific data, workloads, and hardware resources.   We implemented an early prototype of GenDB that uses Claude Code Agent as the underlying component in the multi-agent system, and we evaluate it on OLAP workloads. We use queries from the well-known TPC-H benchmark and also construct a new benchmark designed to reduce potential data leakage from LLM training data. We compare GenDB with state-of-the-art query engines, including DuckDB, Umbra, MonetDB, ClickHouse, and PostgreSQL. GenDB achieves significantly better performance than these systems. Finally, we discuss the current limitations of GenDB and outline future extensions and related research challenges.",
+    "arxiv_url": "https://arxiv.org/abs/2603.02081",
+    "authors": [
+      "Jiale Lao",
+      "Immanuel Trummer"
+    ],
+    "first_author": "Jiale Lao",
+    "category": [
+      "Technical",
+      "Benchmark"
+    ],
+    "field": "Query Processing",
+    "task": "Query-Specific Execution Code Synthesis",
+    "tags": [
+      "Code Agents",
+      "Query Compilation",
+      "Instance-Optimized Code",
+      "Storage Layout Synthesis",
+      "Index Synthesis",
+      "Hardware-Aware Optimization",
+      "Runtime Feedback Optimization",
+      "OLAP Acceleration"
+    ],
+    "summary": "GenDB 提出利用多代理 LLM 为每个查询合成实例优化的可执行查询代码并自动设计存储与索引结构，在 OLAP 工作负载上通过迭代运行时反馈显著优于多种主流查询引擎，同时发布了一个减少 LLM 训练数据泄露风险的新基准。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.02081v1",
+    "published": "2026-03-02",
+    "update_time": "2026-03-02",
+    "download_time": "2026-03-04 02:15:37"
+  },
+  {
+    "id": "2603.01919",
+    "title": "Real Money, Fake Models: Deceptive Model Claims in Shadow APIs",
+    "abstract": "Access to frontier large language models (LLMs), such as GPT-5 and Gemini-2.5, is often hindered by high pricing, payment barriers, and regional restrictions. These limitations drive the proliferation of $\\textit{shadow APIs}$, third-party services that claim to provide access to official model services without regional limitations via indirect access. Despite their widespread use, it remains unclear whether shadow APIs deliver outputs consistent with those of the official APIs, raising concerns about the reliability of downstream applications and the validity of research findings that depend on them. In this paper, we present the first systematic audit between official LLM APIs and corresponding shadow APIs. We first identify 17 shadow APIs that have been utilized in 187 academic papers, with the most popular one reaching 5,966 citations and 58,639 GitHub stars by December 6, 2025. Through multidimensional auditing of three representative shadow APIs across utility, safety, and model verification, we uncover both indirect and direct evidence of deception practices in shadow APIs. Specifically, we reveal performance divergence reaching up to $47.21\\%$, significant unpredictability in safety behaviors, and identity verification failures in $45.83\\%$ of fingerprint tests. These deceptive practices critically undermine the reproducibility and validity of scientific research, harm the interests of shadow API users, and damage the reputation of official model providers.",
+    "arxiv_url": "https://arxiv.org/abs/2603.01919",
+    "authors": [
+      "Yage Zhang",
+      "Yukun Jiang",
+      "Zeyuan Chen",
+      "Michael Backes",
+      "Xinyue Shen",
+      "Yang Zhang"
+    ],
+    "first_author": "Yage Zhang",
+    "category": [
+      "Empirical"
+    ],
+    "field": "Model & API Governance",
+    "task": "Shadow API Auditing and Model Verification",
+    "tags": [
+      "Shadow APIs",
+      "Model Substitution",
+      "Model Fingerprinting",
+      "Performance Divergence",
+      "Safety Unpredictability",
+      "Reproducibility",
+      "API Provenance",
+      "Compliance and Transparency"
+    ],
+    "summary": "本文首次系统性审计了广泛使用的第三方“影子API”，发现其在效用、安全性和指纹验证上与官方API存在显著偏差与欺骗性声明，危及研究可复现性并提出基于指纹与元数据的验证与治理建议。",
+    "quality": "High",
+    "conference": null,
+    "pdf_url": "https://arxiv.org/pdf/2603.01919v1",
+    "published": "2026-03-02",
+    "update_time": "2026-03-02",
+    "download_time": "2026-03-04 02:18:35"
   }
 ]
