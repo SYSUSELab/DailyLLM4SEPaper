@@ -48,7 +48,7 @@ jobs:
 
       - name: Run daily arxiv 
         run: |
-          python run.py
+          # python run.py
           
           
       - name: Push new arxiv-daily
